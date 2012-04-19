@@ -1,0 +1,59 @@
+<!--  <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				oTable = $('#table_id').dataTable({
+					"bJQueryUI": true,
+					"sPaginationType": "full_numbers"
+				});
+			} );
+</script>
+<h2>Clients list : </h2>-->
+<div>
+	<a class="uibutton icon add "
+		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'add' ),'default',true);?>">Ajouter</a>
+	<a class="uibutton  icon edit  special"
+		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'modify' ),'default',true);?>">Modifier</a>
+	<a class="uibutton special"
+		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
+	<a class="uibutton confirm"
+		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'profil' ),'default',true);?>">Profil</a>
+</div>
+
+<?php
+echo '<div class="tableName">
+							<h3>Liste des clients</h3>
+
+<table class="display data_table2 dataTable" >
+	<thead>
+		<tr>
+			<th><div class="th_wrapp">Id</div></th>
+			<th><div class="th_wrapp">Nom</div></th>
+			<th><div class="th_wrapp">Prenom</div></th>
+			<th><div class="th_wrapp">Tel</div></th>	
+			<th><div class="th_wrapp">Fax</div></th>	
+			<th><div class="th_wrapp">Email</div></th>	
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Ali</td>
+			<td>Safrioui</td>
+			<td class="center">0612352499</td>
+			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
+			<td class="center">atttacksdfhsd@yahoo.fr</td>
+		</tr>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Ali</td>
+			<td>Safrioui</td>
+			<td class="center">0612352499</td>
+			<td class="center">0612352499</td>
+			<td class="center">atttacksdfhsd@yahoo.fr</td>
+		</tr>
+	</tbody>
+</table>
+</div>'?>
+
+
+
+

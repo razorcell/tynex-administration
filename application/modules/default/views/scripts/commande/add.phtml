@@ -1,0 +1,201 @@
+<form action="#">
+	<div class="section">
+		<label>Client<small>Le client qui a commander ce projet</small></label>
+		<div>
+			<select data-placeholder="Veuillez choisir un client..."
+				class="chzn-select" tabindex="2">
+				<option value=""></option>
+				<option value="United States">Ahmed</option>
+				<option value="United Kingdom">Ali</option>
+				<option value="Afghanistan">Meryam</option>
+			</select>
+		</div>
+	</div>
+	<div class="section">
+
+
+		<label>Formulaire d'ajout<small>Text custom</small></label>
+		<div>
+			<input type="checkbox" id="show_service" name="show_conmap"
+				class="show_conmap" value="1" /><span class="f_help">Service</span>
+		</div>
+		
+
+
+	</div>
+
+	<div id="f_service" class="formEl_b">
+
+		<form action="#">
+			<fieldset>
+				<legend>
+					Ajouter d'un service <span class="small s_color"></span>
+				</legend>
+				<form action="#">
+					<div class="section alphaonly">
+						<label>Description<small>Donner un petit mot sur le service</small></label>
+						<div>
+							<textarea name=""></textarea>
+						</div>
+					</div>
+					<div class="section">
+						<label>Type de Service<small>Veuillez choisir le type de service
+								demande</small></label>
+						<div>
+							<select data-placeholder="Veuillez choisir un type de service..."
+								class="chzn-select" tabindex="2">
+								<option value=""></option>
+								<option value="United States">Hebergement</option>
+								<option value="United Kingdom">Nom de Domaine</option>
+								<option value="Afghanistan">Audit</option>
+							</select>
+						</div>
+					</div>
+					<div class="section">
+						<label>Type de Pack<small>Veuillez choisir le pack demande</small></label>
+						<div>
+							<select data-placeholder="Veuillez choisir un type de pack..."
+								class="chzn-select" tabindex="2">
+								<option value=""></option>
+								<option value="United States">Tm Etudiant</option>
+								<option value="United Kingdom">Tm Start</option>
+								<option value="Afghanistan">Tm VIP</option>
+							</select>
+						</div>
+					</div>
+					<div class="section">
+						<label>Prix<small>Donner un prix en fonction du pack</small></label>
+						<div>
+							<input type="text" id="sStep" value="100" />
+						</div>
+					</div>
+
+
+
+					<div class="section">
+						<label>Date debut<small>Veuillez choisir la date de la demande du
+								service</small></label>
+						<div>
+							<input type="text" id="datepick" class="datepicker"
+								readonly="readonly" name="datepicker" />
+						</div>
+					</div>
+
+					<div class="section">
+						<label>Date fin<small>Veuillez choisir la date prevu pour la fin
+								du service</small></label>
+						<div>
+							<input type="text" id="datepick2" class="datepicker"
+								readonly="readonly" name="datepicker2" />
+						</div>
+					</div>
+
+					<div class="section">
+						<label>Date d'Activation<small>Veuillez choisir la date a la
+								quelle, le service doit etre active</small></label>
+						<div>
+							<input type="text" id="datepick3" class="datepicker"
+								readonly="readonly" name="datepicker3" />
+						</div>
+					</div>
+
+					<div class="section">
+						<label>Date de Desactivation<small>Veuillez choisir la date a la
+								quelle, le service doit etre desactive</small></label>
+						<div>
+							<input type="text" id="datepick42" class="datepicker"
+								readonly="readonly" name="datepicker4" />
+						</div>
+					</div>
+
+					<div class="section">
+						<label>Status<small>Veuillez definir un status initial pour ce
+								projet</small></label>
+						<div>
+							<input type="checkbox" id="preOrder" name="preOrder"
+								class="preOrder" value="1" /> <span class="f_help"></span>
+						</div>
+					</div>
+					<div class="section last">
+						<div>
+							<a class="uibutton submit_form">Enregistrer</a> <a
+								class="uibutton icon special answer ">Annuler</a>
+						</div>
+					</div>
+
+				</form>
+	
+	</div>
+	</fieldset>
+</form>
+
+</div>
+<div class="formEl_b" style="display: none">
+
+	<form action="#">
+		<fieldset>
+			<legend>
+				Ajouter d'un Projet <span class="small s_color"></span>
+			</legend>
+
+			<form action="#">
+
+				<div class="section alphaonly">
+					<label>Description<small>Un petit mot sur le projet</small></label>
+					<div>
+						<textarea name=""></textarea>
+					</div>
+				</div>
+				<div class="section">
+					<label>Prix<small>Donner un prix</small></label>
+					<div>
+						<input type="text" id="sStep" value="1000.25" />
+					</div>
+				</div>
+				<div class="section">
+					<label>Date debut</label>
+					<div>
+						<input type="text" id="datepick" class="datepicker"
+							readonly="readonly" name="datepicker" />
+					</div>
+				</div>
+
+				<div class="section">
+					<label>Date fin</label>
+					<div>
+						<input type="text" id="datepick2" class="datepicker"
+							readonly="readonly" name="datepicker2" />
+					</div>
+				</div>
+
+				<div class="section">
+					<label>Status<small>Veuillez definir un status initial pour ce
+							projet</small></label>
+					<div>
+						<input type="checkbox" id="preOrder" name="preOrder"
+							class="preOrder" value="1" /> <span class="f_help"></span>
+					</div>
+				</div>
+				<div class="section ">
+					<label> Cahier de charge <small>Telecharger</small></label>
+					<div>
+						<input type="file" class="fileupload" />
+					</div>
+				</div>
+				<div class="section last">
+					<div>
+						<a class="uibutton submit_form">Enregistrer</a> <a
+							class="uibutton icon special answer ">Annuler</a>
+					</div>
+				</div>
+
+			</form>
+
+</div>
+</fieldset>
+</form>
+
+</div>
+
+
+</form>

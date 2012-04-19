@@ -1,0 +1,65 @@
+<form action="#">
+	<div class="section">
+		<label>Client<small>Le client qui a commander ce projet</small></label>
+		<div>
+			<select data-placeholder="Veuillez choisir un poste..."
+				class="chzn-select" tabindex="2">
+				<option value=""></option>
+				<option value="United States">Ahmed</option>
+				<option value="United Kingdom">Ali</option>
+				<option value="Afghanistan">Meryam</option>
+			</select>
+		</div>
+	</div>
+
+
+	<div class="section alphaonly">
+		<label>Description<small>Un petit mot sur le projet</small></label>
+		<div>
+			<textarea name=""></textarea>
+		</div>
+	</div>
+	<div class="section">
+     <label>Prix<small>Donner un prix</small></label>
+         <div>
+             <input type="text" id="sStep" value="1000.25" />
+           </div>
+     </div>
+	<div class="section">
+		<label>Date debut</label>
+		<div>
+			<input type="text" id="datepick" class="datepicker"
+				readonly="readonly" name="datepicker" />
+		</div>
+	</div>
+
+	<div class="section">
+		<label>Date fin</label>
+		<div>
+			<input type="text" id="datepick2" class="datepicker"
+				readonly="readonly" name="datepicker2" />
+		</div>
+	</div>
+
+	<div class="section">
+		<label>Status<small>Veuillez definir un status initial pour ce projet</small></label>
+		<div>
+			<input type="checkbox" id="preOrder" name="preOrder" class="preOrder"
+				value="1" /> <span class="f_help"></span>
+		</div>
+	</div>
+	<div class="section ">
+		<label> Cahier de charge <small>Telecharger</small></label>
+		<div>
+			<input type="file" class="fileupload" />
+		</div>
+	</div>
+	<div class="section last">
+		<div>
+			<a class="uibutton submit_form">Enregistrer</a> <a
+				class="uibutton icon special answer ">Annuler</a>
+		</div>
+	</div>
+
+</form>
+

@@ -1,0 +1,74 @@
+
+<div>
+	<a class="uibutton icon add "
+		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'add' ),'default',true);?>">Ajouter</a>
+	<a class="uibutton  icon edit  special"
+		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'modify' ),'default',true);?>">Modifier</a>
+	<a class="uibutton special"
+		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
+	<a class="uibutton confirm"
+		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'profil' ),'default',true);?>">Plus de details</a>
+
+</div>
+
+
+
+<?php
+
+echo '<div class="tableName">
+							<h3>Liste des projets</h3>
+
+<table class="display data_table2 dataTable" >
+	<thead>
+		<tr>
+			<th><div class="th_wrapp">Id</div></th>
+			<th><div class="th_wrapp">Nom</div></th>
+			<th><div class="th_wrapp">Prenom</div></th>
+			<th><div class="th_wrapp">Sex</div></th>
+			<th><div class="th_wrapp">Adresse</div></th>
+			<th><div class="th_wrapp">Tel</div></th>
+			<th><div class="th_wrapp">Email</div></th>
+		
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Ali</td>
+			<td>Safrioui</td>
+			<td>Homme</td>
+			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
+			<td class="center">0612352499</td>
+			<td class="center">khalid.amrani@gmail.com</td>
+		</tr>
+		<tr class="odd gradeX">
+			<td>1</td>
+			<td>Majda</td>
+			<td>Kadiri</td>
+			<td>Femme</td>
+			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
+			<td class="center">0642518264</td>
+			<td class="center">majda.kadiri@gmail.com</td>
+		</tr>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Ali</td>
+			<td>Safrioui</td>
+			<td>Homme</td>
+			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
+			<td class="center">0612352499</td>
+			<td class="center">khalid.amrani@gmail.com</td>
+		</tr>
+		<tr class="odd gradeX">
+			<td>1</td>
+			<td>Majda</td>
+			<td>Kadiri</td>
+			<td>Femme</td>
+			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
+			<td class="center">0642518264</td>
+			<td class="center">majda.kadiri@gmail.com</td>
+		</tr>
+	</tbody>
+</table>
+</div>'?>
+

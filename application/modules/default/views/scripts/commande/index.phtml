@@ -1,0 +1,48 @@
+<!--  <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				oTable = $('#table_id').dataTable({
+					"bJQueryUI": true,
+					"sPaginationType": "full_numbers"
+				});
+			} );
+</script>
+<h2>Clients list : </h2>-->
+<div>
+	<a class="uibutton icon add" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'add' ),'default',true);?>"
+	>Ajouter</a>
+	<a class="uibutton  icon edit  special" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'modify' ),'default',true);?>"
+	>Modifier</a>
+	<a class="uibutton special" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'delete' ),'default',true);?>"
+	>Supprimer</a>
+	
+	</div>
+
+<?php 
+echo '<div class="tableName">
+							<h3>Liste des clients</h3>
+
+<table class="display data_table2 dataTable" >
+	<thead>
+		<tr>
+			<th><div class="th_wrapp">Numero de Commande </div></th>
+			<th><div class="th_wrapp">Nom du client</div></th>
+			<th><div class="th_wrapp">Libelle</div></th>	
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>1</td>
+			<td>Ali</td>
+			<td>Safrioui</td>
+
+		</tr>
+		<tr class="odd gradeX">
+			<td>2</td>
+			<td>Karima</td>
+			<td>Hamaz</td>
+		</tr>
+	</tbody>
+</table>
+						</div>'
+
+?>

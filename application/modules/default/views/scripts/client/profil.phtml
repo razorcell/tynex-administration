@@ -1,0 +1,108 @@
+
+<form action="#">
+	<div class="section alphaonly">
+		<label> Nom <small>Text custom</small></label>
+		<div>
+			<input name="text[]" type="text" class="medium" maxlength="4">
+		</div>
+	</div>
+	<div class="section alphaonly">
+		<label> Prenom <small>Text custom</small></label>
+		<div>
+			<input name="text[]" type="text" class="medium" maxlength="4">
+		</div>
+	</div>
+	<div class="section ">
+		<label>Sex<small>Text custom</small></label>
+		<div>
+			<div>
+				<input type="radio" name="opinions" id="radio-1" value="1"
+					class="ck" /> <label for="radio-1">Male</label>
+			</div>
+			<div>
+				<input type="radio" name="opinions" id="radio-2" value="1"
+					class="ck" checked="checked" /> <label for="radio-2">Female</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="section ">
+		<label> E-mail<small>Text custom</small></label>
+		<div>
+			<input type="text" class="validate[required,custom[email]]  large"
+				name="e_required" id="e_required">
+		</div>
+	</div>
+	<div class="section">
+		<label> Adresse <small>Text custom</small></label>
+		<div>
+			<input type="text" name="text[]" class=" full" /><span class="f_help">Text
+				custom help</span>
+		</div>
+	</div>
+
+	<div class="section numericonly">
+		<label> Telephone <small>Text custom</small></label>
+		<div>
+			<input name="text" type="text" class="small">
+		</div>
+	</div>
+
+	<div class="section numericonly">
+		<label> Fax <small>Text custom</small></label>
+		<div>
+			<input name="text" type="text" class="small">
+		</div>
+	</div>
+
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+	<a class="uibutton icon add "
+		href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'add' ),'default',true);?>">Ajouter</a>
+	<a class="uibutton  icon edit  special"
+		href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'modify' ),'default',true);?>">Modifier</a>
+	<a class="uibutton special"
+		href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
+</div>
+
+<?php
+echo '<div class="tableName">
+							<h3>Liste de ses commandes</h3>
+
+<table class="display data_table2 dataTable" >
+	<thead>
+		<tr>
+			<th><div class="th_wrapp">Id</div></th>
+			<th><div class="th_wrapp">Description</div></th>
+			
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>This is a command description</td>
+		</tr>
+
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>This is a command description</td>
+		</tr>
+
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>This is a command description</td>
+		</tr>
+
+		
+	</tbody>
+</table>
+</div>'?>
+

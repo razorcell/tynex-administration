@@ -1,0 +1,44 @@
+<div>
+	<a class="uibutton icon add " href="<?php echo $this->url(array('controller' => 'typeservice', 'action' => 'add' ),'default',true);?>"
+	>Ajouter</a>
+	<a class="uibutton  icon edit  special" href="<?php echo $this->url(array('controller' => 'typeservice', 'action' => 'modify' ),'default',true);?>"
+	>Modifier</a>
+	<a class="uibutton special" href="<?php echo $this->url(array('controller' => 'typeservice', 'action' => 'delete' ),'default',true);?>"
+	>Supprimer</a>
+</div>
+
+<?php
+echo '<div class="tableName">
+							<h3>Liste des types de projets</h3>
+
+<table class="display data_table2 dataTable">
+	<thead>
+		<tr>
+			<th><div class="th_wrapp">Id</div></th>
+			<th><div class="th_wrapp">Libellé</div></th>
+			
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Site web</td>
+		</tr>
+
+		<tr class="odd gradeX">
+			<td>1</td>
+			<td>This is a command description</td>
+		</tr>
+
+		<tr class="odd gradeX">
+			<td>0</td>
+			<td>Application bureau</td>
+		</tr>
+
+		
+	</tbody>
+</table>
+</div>'
+
+?>
