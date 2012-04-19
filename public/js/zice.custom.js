@@ -1190,12 +1190,12 @@ $(function() {
 			$('<div id="finder_'+callback+'"/>').elfinder({
 				 url : 'components/elfinder/connectors/php/connector-'+type+'.php', editorCallback : function(url) { $('#'+input).val(url);
 				},closeOnEditorCallback : true, dialog : { title : 'File manager',modal : true,width : 700 }
-			})							   
+			});							   
 	  }
 	  function fileDialog(callback,type){
 			$('<div id="finder_'+callback+'"/>').elfinder({
 				  url : 'components/elfinder/connectors/php/connector-'+type+'.php',dialog : { title : 'File manager',modal : true,width : 700 }
-			})							   
+			});							   
 	  }
 		  
 	  //Delete(id_occup,name,row,0,action_destination);
@@ -1206,7 +1206,7 @@ $(function() {
 							{'Yes': 
 								{'class': 'special',
 								'action': function(){		
-													var data_to_send = [];
+													
 													var json_to_send = '{"id" : "'+id+'"}';
 													json_to_send = $.parseJSON(json_to_send);											
 													$('.test').append('Donner à envoyer au serveur : ');
@@ -1222,7 +1222,7 @@ $(function() {
 																	var json = $.parseJSON(data);
 																	
 																	if (json.message == 'erreur') {																													
-																				row.slideUp(function(){   showError('message '+json.message+'- nbr_lignes_supprimés '+json.n_lignes_supprime,5000); unloading(); }); return false;			
+																				row.slideUp(function(){   showError('message : '+json.message,5000); unloading(); }); return false;			
 																	} else {
 																			row.slideUp(function(){   showSuccess(json.message,5000); unloading(); }); return false;
 

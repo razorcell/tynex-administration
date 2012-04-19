@@ -1,14 +1,17 @@
-<form action="#">
+<?php 
+
+echo '
+<form id="validation" action="#">
 	<div class="section alphaonly">
 		<label> Nom <small></small></label>
 		<div>
-			<input name="text[]" type="text" class="medium" maxlength="20">
+			<input id="name="nom" type="text" class="validate[required] medium" maxlength="20">
 		</div>
 	</div>
 	<div class="section alphaonly">
 		<label> Prénom <small></small></label>
 		<div>
-			<input name="text[]" type="text" class="medium" maxlength="20">
+			<input id="prenam="prenom" type="text" class="validate[required] medium" maxlength="20">
 		</div>
 	</div>
 	<div class="section ">
@@ -29,13 +32,13 @@
 		<label> E-mail<small>Text custom</small></label>
 		<div>
 			<input type="text" class="validate[required,custom[email]]  large"
-				name="e_required" id="e_required">
+				name="email" id="e_required">
 		</div>
 	</div>
 	<div class="section">
 		<label> Adresse <small>Text custom</small></label>
 		<div>
-			<input type="text" name="text[]" class=" full" /><span class="f_help">Text
+			<input type="text" name="adresse" class=" full" /><span class="f_help">Text
 				custom help</span>
 		</div>
 	</div>
@@ -45,16 +48,16 @@
 	<div class="section numericonly">
 		<label> Telephone <small>Text custom</small></label>
 		<div>
-			<input name="text" type="text" class="small">
+			<input id="tel="tel" type="text" class="validate[required] small" maxlength="20">
 		</div>
 	</div>
 
 	<div class="section">
-		<label> Compte d'utilisateur <small>Text custom</small></label>
+		<label> Compte d\'utilisateur <small>Text custom</small></label>
 		<div>
 			<input type="text" name="username" id="username"
 				class="validate[required,minSize[3],maxSize[20],] medium" /><label>Nom
-				d'utilisateur</label> <span class="f_help"> Username login or
+				d\'utilisateur</label> <span class="f_help"> Username login or
 				register. <br />Should be between 3 and not more than 20 characters.
 			</span>
 		</div>
@@ -69,37 +72,45 @@
 				passe</label> <span class="f_help"> Your password should be at least
 				6 characters.</span>
 		</div>
-	</div>
+	</div>';
 
-
-	<div class="section">
-		<label>Poste<small>some text</small></label>
-		<div>
-			<select data-placeholder="Veuillez choisir un poste..."
-				class="chzn-select" tabindex="2">
-				<option value=""></option>
-				<option value="United States">Employé</option>
-				<option value="United Kingdom">Stagiaire</option>
-				<option value="Afghanistan">Freelance</option>
-			</select>
-		</div>
+echo '<div class="section">
+	<label>Poste<small>some text</small></label>
+	<div>
+	<select data-placeholder="Veuillez choisir un poste..."
+	class="chzn-select" tabindex="2">
+	<option value=""></option>';
+foreach($this->list_postes as $poste){
+	
+	echo "<option value=".$poste['nom_poste'].">".$poste['nom_poste']."</option>";
+	
+}
+echo '</select>
 	</div>
+	</div>';
+	
+echo '	
 	<div class="section">
 		<label> Occupation <small>Text custom</small></label>
 		<div>
 			<select class="chzn-select " multiple tabindex="4">
-				<option value=""></option>
-				<option value="United States">Programmeur</option>
-				<option value="United Kingdom">Designateur</option>
-				<option value="United Kingdom">Integrateur</option>
-				<option value="United Kingdom">Analyste et modelisateur</option>
-			</select>
+				<option value=""></option>';
+foreach($this->list_occupations as $occupation)
+{
+	echo "<option value=".$occupation['nom_occup'].">".$occupation['nom_occup']."</option>";
+}
+					
+echo'	</select>
 		</div>
 	</div>
 	<div class="section last">
 		<div>
-			<a class="uibutton submit_form">Enregistrer</a>
+			<a class="uibutton add_employe">Enregistrer</a>
+			<a id="reset" class="uibutton special">Reset</a>
 		</div>
 	</div>
-
 </form>
+
+';
+
+?>

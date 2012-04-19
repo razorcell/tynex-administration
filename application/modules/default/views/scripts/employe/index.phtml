@@ -1,60 +1,90 @@
 
-<div>
-	<a class="uibutton icon add "
-		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'add' ),'default',true);?>">Ajouter</a>
-	<a class="uibutton  icon edit  special"
-		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'modify' ),'default',true);?>">Modifier</a>
-	<a class="uibutton special"
-		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
-	<a class="uibutton confirm"
-		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'profil' ),'default',true);?>">Profil</a>
+
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/employe.js');?>"></script>
+
+<h5 class="test"></h5>
+
+<ul class="uibutton-group">
+	<li><a class="uibutton icon add "
+		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'add' ),'default',true);?>">Ajouter</a></li>
+	<li class="delete_b"><a class="uibutton special">Supprimer</a></li>
+	<li class="selectall"><a class="uibutton confirm">De/Selectionner tous</a></li>
+	
+</ul>
+	
+	
+<?php
+$i = 0;
+$poste_name = NULL;
+echo '
+<div id="UITab">
+
+<div class="tab_container">
+
+<div id="tab1" class="tab_content">
+<div class="load_page">
+
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 employe"  id="data_table3">
+<thead>
+<tr>
+
+<th align="left">Id</th>
+<th>Nom</th>
+<th>Prenom</th>
+<th>Email</th>
+<th>Poste</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+foreach ( $this->list_employes as $employe ) {
+	echo '<tr>
+<td  class="id_employe" align ="left">' . $employe ['id_employe'] . '</td>
+<td class="nom">' . $employe ['nom'] . '</td>
+<td>' . $employe ['prenom'] . '</td>
+<td>' . $employe ['mail'] . '</td>';
+//get the poste name
+foreach($this->list_postes as $poste){
+	if($poste['id_poste'] == $employe ['id_poste'])
+	{
+		$poste_name = $poste['nom_poste'];
+	}
+}
+
+echo '
+<td>' . $poste_name . '</td>
+
+<td>
+	<span class="tip" >
+	<a  title="Edit" class="edit" href="';
+	echo $this->url(array('id' => $employe ['id_employe']),'employemodify');
+	echo '">
+	<img src="images/icon/icon_edit.png" >
+	</a>
+	</span>
+	<span class="tip" >
+	<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+	<img src="images/icon/icon_delete.png">
+	</a>
+	</span>
+</td>
+</tr>';
+	$i ++;
+};
+echo '</tbody>
+</table>
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
 </div>
-
-
-
-<?php
-echo '<div class="tableName">
-							<h3>Liste des employés</h3>
-
-<table class="display data_table2 dataTable" >
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">Id</div></th>
-			<th><div class="th_wrapp">Nom</div></th>
-			<th><div class="th_wrapp">Prenom</div></th>
-			<th><div class="th_wrapp">Nom d\'Utilisateur</div></th>
-			<th><div class="th_wrapp">Genre</div></th>
-			<th><div class="th_wrapp">Tel</div></th>
-			<th><div class="th_wrapp">Email</div></th>
-			<th><div class="th_wrapp">Adresse</div></th>
-			<th><div class="th_wrapp">Poste</div></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td>Homme</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">0612352499</td>
-			<td class="center">khalid.amrani@gmail.com</td>
-			<td class="center">0612352499</td>
-			<td class="center">khalid.amrani@gmail.com</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>Majda</td>
-			<td>Kadiri</td>
-			<td>Femme</td>
-			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
-			<td class="center">0642518264</td>
-			<td class="center">majda.kadiri@gmail.com</td>
-			<td class="center">0612352499</td>
-			<td class="center">khalid.amrani@gmail.com</td>
-		</tr>
-	</tbody>
-</table>
-</div>'?>
-
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
+?>
