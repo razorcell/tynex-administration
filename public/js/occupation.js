@@ -95,11 +95,11 @@ $(document).ready(
 						
 						 if(lines_to_delete.length > 0)
 							 {
-							 DeleteAll(lines_to_delete);
+							 DeleteAll(lines_to_delete,'occupation');
 							 }
 						 else
 							 {
-							 showWarning('Vous n\'avez rien selectionner',5000)
+							 showWarning('Vous n\'avez rien selectionner',5000);
 							 }
 				 
 				
@@ -115,7 +115,7 @@ $(document).ready(
 				// id).is(':checked'));
 
 			});
-			$('.save_occup').click(function() {
+			$('.add_occup').click(function() {
 				var data = $('.f_o_add').serializeArray();// convertir les
 				// données du
 				// formulaire vers un

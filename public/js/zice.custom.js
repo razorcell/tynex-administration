@@ -1245,7 +1245,7 @@ $(function() {
 			});//end confirm function
 	}//end Delete function
 	  
-	  function DeleteAll(lines_to_delete){
+	  function DeleteAll(lines_to_delete,controller){
 
 			$.confirm({
 					'title': 'CONFIRMATION DE LA SUPPRESSION','message': " <strong>VOUS VOULLEZ VRAIMMANT SUPPRIMER LES ELEMENTS SELECTIONNER</strong><br /><font color=red></font> ",
@@ -1276,7 +1276,7 @@ $(function() {
 
 																	$.ajax({ 
 																		type : "POST",
-																		url : '/occupation/deleteall',
+																		url : '/'+controller+'/deleteall',
 																		data : json_to_send,
 																		success : function(data) {
 																			$('.test').append(' ------> Réponse du serveur (JSON)= >'+data);
