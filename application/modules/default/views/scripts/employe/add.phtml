@@ -1,34 +1,39 @@
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/employe.js');?>"></script>
+
+
 <?php 
 
 echo '
-<form id="validation" action="#">
+<h3 class="test"></h3>
+<form id="validation" class="f_e_add">
 	<div class="section alphaonly">
 		<label> Nom <small></small></label>
 		<div>
-			<input id="name="nom" type="text" class="validate[required] medium" maxlength="20">
+			<input id="lastname" name="nom" type="text" class="validate[required] medium" maxlength="20">
 		</div>
 	</div>
 	<div class="section alphaonly">
 		<label> Prénom <small></small></label>
 		<div>
-			<input id="prenam="prenom" type="text" class="validate[required] medium" maxlength="20">
+			<input id="firstname" name="prenom" type="text" class="validate[required] medium" maxlength="20">
 		</div>
 	</div>
 	<div class="section ">
-		<label>Genre<small>Text custom</small></label>
+		<label>Gender<small>Text custom</small></label>
 		<div>
 			<div>
-				<input type="radio" name="opinions" id="radio-1" value="1"
-					class="ck" /> <label for="radio-1">Homme</label>
+				<input type="radio" name="Gender" id="radio-1" value="0"
+					class="ck" checked="checked"/> <label for="radio-1">Homme</label>
 			</div>
 			<div>
-				<input type="radio" name="opinions" id="radio-2" value="1"
-					class="ck" checked="checked" /> <label for="radio-2">Femme</label>
+				<input type="radio" name="Gender" id="radio-2" value="1"
+					class="ck"  /> <label for="radio-2">Femme</label>
 			</div>
 		</div>
 	</div>
 
-	<div class="section ">
+	<div class="section">
 		<label> E-mail<small>Text custom</small></label>
 		<div>
 			<input type="text" class="validate[required,custom[email]]  large"
@@ -48,7 +53,7 @@ echo '
 	<div class="section numericonly">
 		<label> Telephone <small>Text custom</small></label>
 		<div>
-			<input id="tel="tel" type="text" class="validate[required] small" maxlength="20">
+			<input id="tel" name="tel" type="text" class="validate[required] small" maxlength="20">
 		</div>
 	</div>
 
@@ -93,7 +98,7 @@ echo '
 	<div class="section">
 		<label> Occupation <small>Text custom</small></label>
 		<div>
-			<select class="chzn-select " multiple tabindex="4">
+			<select class="chzn-select" multiple tabindex="4">
 				<option value=""></option>';
 foreach($this->list_occupations as $occupation)
 {
@@ -105,7 +110,7 @@ echo'	</select>
 	</div>
 	<div class="section last">
 		<div>
-			<a class="uibutton add_employe">Enregistrer</a>
+			<a class="uibutton add_employe">Ajouter</a>
 			<a id="reset" class="uibutton special">Reset</a>
 		</div>
 	</div>

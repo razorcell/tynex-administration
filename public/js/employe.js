@@ -80,17 +80,56 @@ $(document).ready(
 				
 			});
 			$('.add_employe').click(function() {
-				var data = $('.f_e_add').serializeArray();// convertir les
-			
+				var form_data = $('.f_e_add').serializeArray();
+				var poste = $('a.chzn-single').find('span').html();
+				var i=0;
+				/*json = {};
+				for(i in form_data)
+					{
+						json[form_data[i].name] = form_data[i].value;
+					}*/
+				/*var selected_occupations = [];
+				$('ul.chzn-choices').find('li').each(function(){
+					if($(this).find('span').length > 0)
+						{
+							selected_occupations.push($(this).find('span').html());
+						}
+				});*/
+				
+				var json_to_send = '{';
+				
+				for(i=0;i<form_data.length;i++)
+					{
+						if(i==0){
+								json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+							}
+						else{
+							json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+
+						}
+					}
+			 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
+			i=0;
+			$('ul.chzn-choices').find('li').each(function(){
+					if($(this).find('span').length > 0)//if span exists
+						{
+							var occupation = $(this).find('span').html();
+							json_to_send = json_to_send + ',"occupation'+i+'" : "'+occupation+'"';
+							i++;
+						}
+					
+				});
+				json_to_send = json_to_send + '}';
+				//$('.test').html(json_to_send);
+				json_to_send = $.parseJSON(json_to_send);
 				$.ajax({ 
 					type : "POST",
 					url : "/employe/submit",
-				
-					data : data,
+					data : json_to_send,
 					success : function(data) {
 						var json = $.parseJSON(data);
 					
-						if (json.message == 'erreur') {// maintenant on peut
+						if (json.message == 'erreur') {
 						
 							showError(json.message, 3000);
 						} else {

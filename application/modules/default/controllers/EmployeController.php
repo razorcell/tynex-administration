@@ -34,7 +34,7 @@ class EmployeController extends Zend_Controller_Action {
 		$this->view->list_occupations = $this->db->fetchAssoc ( $sql );
 	
 	}
-	public function submitAction() {
+	public function submitAction() {/*
 		$table_reponse = array ('message' => '' );
 		
 		$this->_helper->layout->disableLayout ();
@@ -54,7 +54,7 @@ class EmployeController extends Zend_Controller_Action {
 			$table_reponse ['message'] = 'erreur';
 		}
 		$json = Zend_Json::encode ( $table_reponse );
-		echo $json;
+		echo $json;*/
 	}
 	public function modifyAction() { // brush
 		$table_reponse = array ('message' => '' );
