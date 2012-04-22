@@ -59,7 +59,6 @@ class PosteController extends Zend_Controller_Action {
 		$data_from_user = $this->_getAllParams ();
 		
 		if (! empty ( $data_from_user ['nom_poste'] )) {
-			
 			$new_data = array ('nom_poste' => $data_from_user ['nom_poste'] );
 			$id_poste = $data_from_user ['id_poste'];
 			$condition = "id_poste = $id_poste";

@@ -118,9 +118,7 @@ $(document).ready(
 				  Delete(id_poste,description,row,0,action_destination);
 			});
 			$('.modify_poste').click(function() {
-				var data = $('.f_p_modify').serializeArray();
-			
-				
+				var data = $('.f_p_modify').serializeArray();	
 				$.ajax({ 
 					type : "POST",
 					url : "/poste/modify",

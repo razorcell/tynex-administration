@@ -43,10 +43,10 @@ $(document).ready(
 				$(this).toggleClass('row_selected');
 			});
 		
-			
-
 			$('#reset').click(function() {
-				$('input').val('');
+				$('input:not(.id_employe)').val('');
+
+			//	$('input').val('');
 				showError('formulaire vidé', 3000);
 			});
 			$('.delete_b').click(
@@ -113,9 +113,9 @@ $(document).ready(
 				{
 					valide = false;
 				}
-				var pass = $('#password').html();
-				var passCon = $('#passwordCon').html();
-				if(pass != passCon)
+				var pass = $('#password').attr("value");
+				var passCon = $('#passwordCon').attr("value");
+				if(pass != passCon || pass == '' || passCon == '')
 					{
 						valide = false;
 					}
@@ -136,7 +136,6 @@ $(document).ready(
 								}
 							else{
 								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
-
 							}
 						}
 				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
@@ -221,8 +220,6 @@ $(document).ready(
 			});
 			$('.modify_employe').click(function() {
 				var data = $('.f_e_modify').serializeArray();
-			
-				
 				$.ajax({ 
 					type : "POST",
 					url : "/employe/modify",

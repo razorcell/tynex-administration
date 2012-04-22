@@ -181,14 +181,29 @@ class EmployeController extends Zend_Controller_Action {
 	}
 	public function modifyformAction() {
 		$this->view->general_icon = 'ico color brush';
-		$this->view->title = 'Modifier une employe';
+		$this->view->title = 'Modifier un employe';
 		
 		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
 		$req_id = $this->getRequest ()->getParam ( 'id' );
 		$id = $this->db->quote ( $req_id );
-		$sql = "SELECT id_employe, nom_employe FROM employe WHERE id_employe = $id";
+		
+		//recupperation des infos de l'employe stocker dans la table EMPLOYE
+		
+		$sql = "SELECT * FROM employe WHERE id_employe = $id";
 		$this->view->employe = $this->db->fetchRow ( $sql );
-	
+		//recupperation de la liste des poste pour la convertion id_poste => nom_poste
+		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
+		$sql = 'SELECT * FROM poste';
+		$this->view->list_postes = $this->db->fetchAssoc ( $sql );
+		//$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAssoc ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		
+		//recupperation de la liste des occupations
+		$sql = 'SELECT * FROM occupation';
+		$this->view->list_occupations = $this->db->fetchAssoc ( $sql );
+		//recupperation des occupations de cette employe
+		$sql = "SELECT * FROM occuper WHERE id_employe = $id";
+		$this->view->employe_occupations = $this->db->fetchAll ( $sql );
+		$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAll ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 	}
 	public function deleteAction() {
 		$n_lignes_supprime = NULL;
@@ -198,7 +213,7 @@ class EmployeController extends Zend_Controller_Action {
 		
 		$data_from_user = $this->_getAllParams ();
 		$condition = 'id_employe = ' . $data_from_user ['id'];
-		
+	
 		try {
 			$n_lignes_supprime = $this->db->delete ( 'employe', $condition );
 			$table_reponse ['message'] = 'L\'employe a été supprimer';
