@@ -5,13 +5,11 @@
 
 <h5 class="test"></h5>
 
-<ul class="uibutton-group">
-	<li><a class="uibutton icon add "
-		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'add' ),'default',true);?>">Ajouter</a></li>
-	<li class="delete_b"><a class="uibutton special">Supprimer</a></li>
-	<li class="selectall"><a class="uibutton confirm">De/Selectionner tous</a></li>
+<a class="button green back"
+		href="<?php echo $this->url(array('controller' => 'employe', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
 	
-</ul>
+	<a class="delete_b button pink glossy glass">- Supprimer</a>
+ <a class="selectall button blue morph">De/Selectionner tous</a>
 	
 	
 <?php
@@ -46,7 +44,7 @@ foreach ( $this->list_employes as $employe ) {
 <td  class="id_employe" align ="left">' . $employe ['id_employe'] . '</td>
 <td class="nom">' . $employe ['nom'] . '</td>
 <td>' . $employe ['prenom'] . '</td>
-<td>' . $employe ['mail'] . '</td>';
+<td>' . $employe ['email'] . '</td>';
 //get the poste name
 foreach($this->list_postes as $poste){
 	if($poste['id_poste'] == $employe ['id_poste'])

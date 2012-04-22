@@ -110,18 +110,29 @@ $(document).ready(
 					}
 			 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
 			i=0;
+			json_to_send = json_to_send + ',"occupations" : [';//open occupations json
 			$('ul.chzn-choices').find('li').each(function(){
 					if($(this).find('span').length > 0)//if span exists
 						{
-							var occupation = $(this).find('span').html();
-							json_to_send = json_to_send + ',"occupation'+i+'" : "'+occupation+'"';
+							if(i==0)
+								{
+									var occupation = $(this).find('span').html();
+									json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
+								}
+							else
+								{
+									var occupation = $(this).find('span').html();
+									json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
+								}
 							i++;
 						}
 					
 				});
+				json_to_send = json_to_send + ']';//close occupations json
 				json_to_send = json_to_send + '}';
 				//$('.test').html(json_to_send);
-				json_to_send = $.parseJSON(json_to_send);
+				//json_to_send = $.parseJSON(json_to_send);
+				
 				$.ajax({ 
 					type : "POST",
 					url : "/employe/submit",
@@ -129,14 +140,15 @@ $(document).ready(
 					success : function(data) {
 						var json = $.parseJSON(data);
 					
-						if (json.message == 'erreur') {
-						
+						if (json.message == 'erreur') {// maintenant on peut
+							
 							showError(json.message, 3000);
 						} else {
 							showSuccess(json.message, 3000);
 						}
 						;
 					}
+				
 				});
 			});
 		

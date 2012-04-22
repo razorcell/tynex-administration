@@ -4,8 +4,8 @@
 			return false;
 		}		
 		var buttonHTML = '';
-		$.each(params.buttons,function(name,obj){					
-			buttonHTML += '<a href="#" class="uibutton large '+obj['class']+'">'+name+'<span></span></a>';			
+		$.each(params.buttons,function(name,obj){			
+			buttonHTML += '<a href="#" class="button glossy glass '+obj['class']+'">'+name+'<span></span></a>';			
 			if(!obj.action){
 				obj.action = function(){};
 			}
@@ -15,7 +15,8 @@
 		  $('#confirmOverlay').css('opacity',0.3).fadeIn(400,function(){
 			$('#confirmBox').fadeIn(200);
 		})
-		var buttons = $('#confirmBox .uibutton');
+		//var buttons = $('#confirmBox .uibutton');
+		var buttons = $('#confirmBox .button');
 		i = 0;
 		$.each(params.buttons,function(name,obj){
 			buttons.eq(i++).click(function(){
