@@ -138,15 +138,14 @@ $(document).ready(
 					url : "/employe/submit",
 					data : json_to_send,
 					success : function(data) {
-						var json = $.parseJSON(data);
+						//var json = $.parseJSON(data);
 					
-						if (json.message == 'erreur') {// maintenant on peut
+						if (data == 'success') {// maintenant on peut
+							showSuccess('Employé ajouté', 3000);
 							
-							showError(json.message, 3000);
 						} else {
-							showSuccess(json.message, 3000);
+							showError(data, 3000);
 						}
-						;
 					}
 				
 				});

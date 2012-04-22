@@ -41,46 +41,9 @@ class EmployeController extends Zend_Controller_Action {
 	}
 	public function submitAction() {
 		$this->logger->info('submitAction()');
-		/*TEST BLOCK
-		//SOLUTION 2
-		
-		//$data_from_user = $this->getRequest()->getRawBody();
-		$json_string = '{"nom" : "rmili","prenom" : "khalifa","Gender" : "0","email" : "khalifa.rmili@gmail.com","adresse" : "Bloc A N71 HAY EZZAITOUNE TIKIOUINE","tel" : "0600775184",
-		"username" : "user","password" : "pass","passwordCon" : "pass","poste" : "Stagiaire","occupations" : [{"name " : "Developpeur Web"},{"name " : "Integrateur"}]}';
-		$object_from_user = Zend_Json::decode($json_string);
-		echo var_dump($object_from_user);
-		echo '<br/><br/>';
-		echo  var_dump($object_from_user['occupations']);
-		echo '<br/>';
-		echo '<br/>';
-		
-		foreach ($object_from_user['occupations'] as $occupation)
-		{
-			echo '<br/>';
-			echo var_dump($occupation);
-			echo '<br/>';
-			foreach ($occupation as $second_level_occupation)
-			{
-				echo '<br/>';
-				echo var_dump($second_level_occupation);
-				echo '&nbsp; : &nbsp;';
-				echo $second_level_occupation;
-			}
-			echo '<br/>';
-			echo '<br/>';
-			
-		}
-		echo '<br/>foreach with access to variable';
-		foreach ($object_from_user->occupations as $occupation)
-		{
-			echo '<br/>';
-			echo $occupation->name;
-				
-		}
-		*/
-		
 		//stocker les messages d'erreur/succe pour les retourner à l'utilisateur
-		$table_reponse = array ('message' => '');
+		//$table_reponse = array ('message' => '');
+		$reponse = '';
 		$id_employe_enregistrer = NULL;//on va l'utiliser pour se rappeller de l'id de l'employe enregistrer dans la BD
 		
 		$this->_helper->layout->disableLayout ();//on veut desactiver l'affichage par défault
@@ -101,8 +64,6 @@ class EmployeController extends Zend_Controller_Action {
 				$this->logger->info($nom_occupation);
 			}
 		}
-		
-	
 		$nom = $data_from_user ['nom'];
 		$prenom = $data_from_user ['prenom'];
 		$gender = $data_from_user ['gender'];
@@ -116,6 +77,7 @@ class EmployeController extends Zend_Controller_Action {
 		
 		//PHASE D INSERTION DE L EMPLOYE DANS LA TABLE 'employe'
 		//recupperation de id_poste equivalent au nom du poste de l'employe
+		$this->logger->info('*********************PHASE D INSERTION DE L EMPLOYE************');
 		$sql = 'SELECT * FROM poste';
 		$list_postes = $this->db->fetchAssoc ( $sql );
 		$poste_id = NULL;
@@ -137,7 +99,8 @@ class EmployeController extends Zend_Controller_Action {
 			$gender_string = 'Femme';
 		}
 		//construire le tableau pour l'enregistrement de l'employe 
-		$employe_to_save = array ('nom' => $nom,
+		$employe_to_save = array (
+				'nom' => $nom,
 				'prenom' => $prenom,
 				'genre' => $gender_string,
 				'username' => $username,
@@ -147,42 +110,50 @@ class EmployeController extends Zend_Controller_Action {
 				'adresse' => $adress,
 				'id_poste' => $poste_id
 		);
-		$this->logger->info(Zend_Debug::dump($employe_to_save));
+		$this->logger->info(html_entity_decode(Zend_Debug::dump($employe_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 		try {
-			$id_employe_enregistrer = $this->db->insert ( 'employe', $employe_to_save );
-			$table_reponse ['message'] = 'Employe <em> '.$nom.' </em> ajouté';
-			$this->logger->info('table_reponse : '.$table_reponse ['message']);
+			$this->db->insert ( 'employe', $employe_to_save );
+			$id_employe_enregistrer = $this->db->lastInsertId();
+			$this->logger->info('last inserted ID = '.$id_employe_enregistrer);
+			$reponse = 'success';
+			$this->logger->info('insertion - EMPLOYE - OUI');
 		} catch ( Zend_Db_Adapter_Exception $e ) {
-			$table_reponse ['message'] = 'erreur';
+			$reponse= 'Erreur';
 			$this->logger->info('Requete erreur : '.$e->getMessage());			
 		}
-		/*
+		
 		//PHASE D INSERTION DES TUPLES id_employ | id_occupation DANS LA TABLE 'OCCUPER'
+		$this->logger->info('*****************HASE D INSERTION DES TUPLES id_employ | id_occupation************');
 		//recupperer la liste des occupation 
 		$sql = 'SELECT * FROM occupation';
 		$list_occupations = $this->db->fetchAssoc ( $sql );
 		
-		foreach($data_from_user ['occupations'] as $occupation_employe)// !!!!!!!!!!!!!!!!!!
-		{//itterer dans tous les occupations de l'employe
-			foreach ($list_occupations as $occupation)
-			{//itterer dans les occupation de la BD
-				if($occupation['nom_occup'] == $occupation_employe['name'])// !!!!!!!!!!!!!!!!!!
-				{//l'employe a cette occupation, on cherche id_occup equivalent et on insert dans la BD
-					$id_occup_courant = $occupation['id_occup'];
-					//construire le tableau pour l'enregistrement du tuple id_employe | id_occup
-					$tuple_employe_occup = array('id_occup' => $id_occup_courant,
-												'id_employe' => $id_employe_enregistrer);
-					try {
-						$this->db->insert ( 'occuper', $tuple_employe_occup );
-						$table_reponse ['message 2'] = 'success';
-					} catch ( Zend_Db_Adapter_Exception $e ) {
-						$table_reponse ['message 2'] = $e->getMessage ();
+		foreach($data_from_user ['occupations'] as $table_occupation)// !!!!!!!!!!!!!!!!!! $data_from_user ['occupations'] : Tableau des tableaux des occupations
+		{//itterrer dans le champs des occupations de l'employe
+			foreach ($table_occupation as $occupation){//$table_occupation : tableau des occupations
+				//itterer dans tous les occupations de l'employe
+					foreach ($list_occupations as $occupation_from_db)
+					{//itterer dans les occupation de la BD
+						if($occupation_from_db['nom_occup'] == $occupation)// !!!!!!!!!!!!!!!!!!
+						{//l'employe a cette occupation, on cherche id_occup equivalent et on insert dans la BD
+						$id_occup_courant = $occupation_from_db['id_occup'];
+						//construire le tableau pour l'enregistrement du tuple id_employe | id_occup
+						$tuple_employe_occup = array('id_employe' => $id_employe_enregistrer,
+																				'id_occup' => $id_occup_courant);
+						try {
+							$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_employe_occup,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+							$this->db->insert ( 'occuper', $tuple_employe_occup );
+							$this->logger->info('insertion - OCCUPER - OUI');
+							$reponse = 'success';
+						} catch ( Zend_Db_Adapter_Exception $e ) {
+							$this->logger->info($e->getMessage ());
+						}
 					}
-				}	
-			}
-		}*/
-		$json = Zend_Json::encode($table_reponse);
-		echo $json;
+				}
+			}	
+		}
+		//$json = Zend_Json::encode($table_reponse);
+		echo $reponse;
 	}
 	public function modifyAction() { // brush
 		$table_reponse = array ('message' => '' );
