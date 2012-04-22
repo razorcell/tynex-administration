@@ -2,7 +2,7 @@
 	src="<?php echo $this->baseUrl('js/employe.js');?>"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
+			//check the right gender 'homme' ou 'femme'
 			if($('.hidden_gender').attr('value') == 0){
 					$('label[for="radio-1"]').addClass('checked');
 					$('label[for="radio-2"]').removeClass('checked');
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 
 </script>
-<?php 
+<?php
 
 echo '
 <h3 class="test"></h3>
@@ -25,19 +25,19 @@ echo '
 	<div class="section">
 		<label> Id <small></small></label>
 		<div>
-			<input disabled="disabled" id="id" name="id" type="text" class="validate[required] medium id_employe" maxlength="20" value="'.$this->employe->id_employe.'">
+			<input disabled="disabled" id="id" name="id" type="text" class="validate[required] medium id_employe" maxlength="20" value="' . $this->employe->id_employe . '">
 		</div>
 	</div>
 	<div class="section alphaonly">
 		<label> Nom <small></small></label>
 		<div>
-			<input id="lastname" name="nom" type="text" class="validate[required] medium" maxlength="20" value="'.$this->employe->nom.'">
+			<input id="lastname" name="nom" type="text" class="validate[required] medium" maxlength="20" value="' . $this->employe->nom . '">
 		</div>
 	</div>
 	<div class="section alphaonly">
 		<label> Prénom <small></small></label>
 		<div>
-			<input id="firstname" name="prenom" type="text" class="validate[required] medium" maxlength="20" value="'.$this->employe->prenom.'">
+			<input id="firstname" name="prenom" type="text" class="validate[required] medium" maxlength="20" value="' . $this->employe->prenom . '">
 		</div>
 	</div>
 	<div class="section ">
@@ -45,13 +45,13 @@ echo '
 		<div>
 			<div>
 				<input type="radio" name="gender" id="radio-1" value="0"
-					class="ck" /> 
-					<input class="hidden_gender" type="hidden" value="'.($this->employe->genre ==  "Homme" ? "0" : "1").'">
-					<label for="radio-1" class="">Homme</label>
+					class="ck"/> 
+					<label for="radio-1">Homme</label>
 			</div>
 			<div>
 				<input type="radio" name="gender" id="radio-2" value="1"
-					class="ck"  /> <label for="radio-2" checked="">Femme</label>
+					class="ck"  /> 
+					<label for="radio-2">Femme</label>
 			</div>
 		</div>
 	</div>
@@ -60,13 +60,13 @@ echo '
 		<label> E-mail<small>Text custom</small></label>
 		<div>
 			<input type="text" class="validate[required,custom[email]]  large email"
-				name="email" id="e_required" value="'.$this->employe->email.'">
+				name="email" id="e_required" value="' . $this->employe->email . '">
 		</div>
 	</div>
 	<div class="section">
 		<label> Adresse <small>Text custom</small></label>
 		<div>
-			<input type="text" name="adresse" class=" full" value="'.$this->employe->adresse.'"/><span class="f_help">Text
+			<input type="text" name="adresse" class=" full" value="' . $this->employe->adresse . '"/><span class="f_help">Text
 				custom help</span>
 		</div>
 	</div>
@@ -76,7 +76,7 @@ echo '
 	<div class="section numericonly">
 		<label> Telephone <small>Text custom</small></label>
 		<div>
-			<input id="tel" name="tel" type="text" class="validate[required] small" maxlength="20" value="'.$this->employe->tel.'">
+			<input id="tel" name="tel" type="text" class="validate[required] small" maxlength="20" value="' . $this->employe->tel . '">
 		</div>
 	</div>
 
@@ -84,67 +84,59 @@ echo '
 		<label> Compte d\'utilisateur <small>Text custom</small></label>
 		<div>
 			<input type="text" name="username" id="username"
-				class="validate[required,minSize[3],maxSize[20],] medium" value="'.$this->employe->username.'"/><label>Nom
+				class="validate[required,minSize[3],maxSize[20],] medium" value="' . $this->employe->username . '"/><label>Nom
 				d\'utilisateur</label> <span class="f_help"> Username login or
 				register. <br />Should be between 3 and not more than 20 characters.
 			</span>
 		</div>
 		<div>
 			<input type="password" class="validate[required,minSize[3]] medium"
-				name="password" id="password" value="'.$this->employe->password.'"/><label>Mot de passe</label>
+				name="password" id="password" value="' . $this->employe->password . '"/><label>Mot de passe</label>
 		</div>
 		<div>
 			<input type="password"
 				class="validate[required,equals[password]] medium"
-				name="passwordCon" id="passwordCon" value="'.$this->employe->password.'"/><label>Confirmer le mot de
+				name="passwordCon" id="passwordCon" value="' . $this->employe->password . '"/><label>Confirmer le mot de
 				passe</label> <span class="f_help"> Your password should be at least
 				6 characters.</span>
 		</div>
 	</div>';
-//Affichage du poste
+// Affichage du poste
 $poste_string = NULL;
-foreach ($this->list_postes as $poste)
-{
-	if($poste['id_poste'] == $this->employe->id_poste)
-	{
-		$poste_string = $poste['nom_poste'];
+foreach ( $this->list_postes as $poste ) {
+	if ($poste ['id_poste'] == $this->employe->id_poste) {
+		$poste_string = $poste ['nom_poste'];
 	}
 }
 echo '<div class="section">
 	<label>Poste<small>some text</small></label>
 	<div>
-	<select data-placeholder="'.$poste_string.'"
+	<select data-placeholder="' . $poste_string . '"
 	class="chzn-select" tabindex="2">
 	<option value=""></option>';
-foreach($this->list_postes as $poste){
-	echo "<option value=".$poste['nom_poste'].">".$poste['nom_poste']."</option>";
+foreach ( $this->list_postes as $poste ) {
+	echo "<option value=" . $poste ['nom_poste'] . ">" . $poste ['nom_poste'] . "</option>";
 }
 echo '</select><span class="f_help">Veuillez choisir un poste</span>
 	</div>
 	</div>';
-//affichage des occupations
+// affichage des occupations
 echo '<div class="section">
 		<label> Occupations courrantes <small>les occupations actuellement prise par cette employé</small></label>
 		<div>
 			<ul>';
-foreach ($this->employe_occupations as $employe_occupation)
-{
-	foreach($this->list_occupations as $occupation)
-	{
-		if($employe_occupation['id_occup'] == $occupation['id_occup'])
-		{
-			echo '<li ><em><strong>'.$occupation['nom_occup'].'</strong></em></li>';
+foreach ( $this->employe_occupations as $employe_occupation ) {
+	foreach ( $this->list_occupations as $occupation ) {
+		if ($employe_occupation ['id_occup'] == $occupation ['id_occup']) {
+			echo '<li ><em><strong>' . $occupation ['nom_occup'] . '</strong></em></li>';
 		}
 	}
-	
+
 }
 
-
-				
-echo 			'</ul>
+echo '</ul>
 		</div>
 	</div>';
-
 
 echo '	
 	<div class="section">
@@ -152,18 +144,18 @@ echo '
 		<div>
 			<select class="chzn-select" multiple tabindex="4">
 				<option value=""></option>';
-foreach($this->list_occupations as $occupation)
-{
-	echo "<option value=".$occupation['nom_occup'].">".$occupation['nom_occup']."</option>";
+foreach ( $this->list_occupations as $occupation ) {
+	echo "<option value=" . $occupation ['nom_occup'] . ">" . $occupation ['nom_occup'] . "</option>";
 }
-					
-echo'	</select>
+
+echo '	</select>
 		</div>
 	</div>
 	<div class="section last">
 		<div>
-			<a class="button green back submit_form modify_employe" data-icon="⏏">Ajouter</a>
+			<a class="button green back submit_form modify_employe" data-icon="⏏">Update</a>
 			<a id="reset" class="button pink glossy glass">Reset</a>
+			<input class="hidden_gender" type="hidden" value="' . ($this->employe->genre == "Homme" ? "0" : "1") . '">
 		</div>
 	</div>
 </form>

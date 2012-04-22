@@ -219,25 +219,124 @@ $(document).ready(
 				  Delete(id_employe,description,row,0,action_destination);
 			});
 			$('.modify_employe').click(function() {
-				var data = $('.f_e_modify').serializeArray();
-				$.ajax({ 
-					type : "POST",
-					url : "/employe/modify",
-					
-					data : data,
-					success : function(data) {
-						var json = $.parseJSON(data);
-					
-						if (json.message == 'erreur') {
-						
-							showError(json.message, 3000);
-						} else {
-							showSuccess(json.message, 3000);
-						}
-						;
+				var form_data = $('.f_e_modify').serializeArray();
+				var poste = $('a.chzn-single').find('span').html();
+				var i=0;
+				//form validation
+				var valide = true;
+				if($('#lastname').val().length == 0)
+					{
+						valide = false;
 					}
-				});
-			});
+				else if($('#firstname').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('.email').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#tel').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#username').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#password').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#passwordCon').val().length == 0)
+				{
+					valide = false;
+				}
+				var pass = $('#password').attr("value");
+				var passCon = $('#passwordCon').attr("value");
+				if(pass != passCon || pass == '' || passCon == '')
+					{
+						valide = false;
+					}
+				var poste = $('.chzn-single').find('span').html();
+				if(poste == 'Veuillez choisir un poste...')
+					{
+						valide =false;
+						
+					}
+				if(valide)
+					{
+					var json_to_send = '{';
+					
+					for(i=0;i<form_data.length;i++)
+						{
+							if(i==0){
+									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
+							else{
+								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+							}
+						}
+					//add id value
+					var id = $('.id_employe').attr('value');
+					 json_to_send = json_to_send + ',"id" : "'+id+'"';
+					 //add 'poste' value
+				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
+				 //add gender !!!! i don't know why it doesn't get added automaticly it does for add employe
+				 if($('label[for="radio-1"]').hasClass('checked')) {
+					 json_to_send = json_to_send + ',"gender" : "0"';
+					 }
+				 else{
+					 json_to_send = json_to_send + ',"gender" : "1"';
+				 }
+				 if($('ul.chzn-choices').find('li').length > 1){
+					 	i=0;
+						json_to_send = json_to_send + ',"occupations" : [';//open occupations json
+						$('ul.chzn-choices').find('li').each(function(){
+								if($(this).find('span').length > 0)//if span exists
+									{
+										if(i==0)
+											{
+												var occupation = $(this).find('span').html();
+												json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
+											}
+										else
+											{
+												var occupation = $(this).find('span').html();
+												json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
+											}
+										i++;
+									}
+								
+							});//la fin de l'ajout des occupations à la chaine de caractére qui va etre envoyer au serveur
+							json_to_send = json_to_send + ']';//close occupations json
+				 }
+					json_to_send = json_to_send + '}';
+					//$('.test').html(json_to_send);
+					//json_to_send = $.parseJSON(json_to_send);
+					
+					
+					$.ajax({ 
+						type : "POST",
+						url : "/employe/modify",
+						data : json_to_send,
+						success : function(data) {
+							//var json = $.parseJSON(data);
+						
+							if (data == 'success') {// maintenant on peut
+								showSuccess('Mise à jour avec succée', 3000);
+								
+							} else {
+								showError(data, 100000);
+							}
+						}
+					
+					});
+					}else{
+						showError('Veuillez revoir le formulaire', 3000);
+					}
+				
+			});//end modify.click()
 	
 		});
 
