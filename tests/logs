@@ -198,3 +198,147 @@
 2012-04-22T18:08:45+02:00 INFO (6): Fonction init() executée
 2012-04-22T18:08:46+02:00 INFO (6): Fonction init() executée
 2012-04-22T18:08:46+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:21:57+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:21:57+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:34:06+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:34:07+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:34:09+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:34:09+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:36:42+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:36:42+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:36:43+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:36:43+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:39:26+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:39:26+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:39:27+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:39:27+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:40:06+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:40:07+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:40:07+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:40:07+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:20+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:21+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:46+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:46+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:48+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:41:48+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:42:03+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:42:03+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:42:04+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:42:05+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:46:52+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:46:52+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:46:53+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:46:54+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:47:16+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:47:16+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:47:18+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:47:18+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:48:26+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:48:26+02:00 INFO (6): submitAction()
+2012-04-22T18:48:26+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa.rmili@gmail.com","adresse" : "Bloc A N71 HAY EZZAITOUNE TIKIOUINE","tel" : "0600775184","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "null","occupations" : []}
+2012-04-22T18:48:26+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-04-22T18:48:26+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "user"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(23) "khalifa.rmili@gmail.com"
+  ["adresse"] => string(35) "Bloc A N71 HAY EZZAITOUNE TIKIOUINE"
+  ["id_poste"] => NULL
+}
+</pre>
+2012-04-22T18:48:49+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:48:50+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:48:50+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:48:50+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:49:01+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:49:01+02:00 INFO (6): submitAction()
+2012-04-22T18:49:01+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa.rmili@gmail.com","adresse" : "Bloc A N71 HAY EZZAITOUNE TIKIOUINE","tel" : "0600775184","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "null","occupations" : []}
+2012-04-22T18:49:01+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-04-22T18:49:01+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "user"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(23) "khalifa.rmili@gmail.com"
+  ["adresse"] => string(35) "Bloc A N71 HAY EZZAITOUNE TIKIOUINE"
+  ["id_poste"] => NULL
+}
+</pre>
+2012-04-22T18:49:37+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:49:38+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:49:38+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:49:38+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:50:05+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:50:05+02:00 INFO (6): submitAction()
+2012-04-22T18:50:05+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa.rmili@gmail.com","adresse" : "Bloc A N71 HAY EZZAITOUNE TIKIOUINE","tel" : "0600775184","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "Freelance","occupations" : []}
+2012-04-22T18:50:05+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-04-22T18:50:05+02:00 INFO (6): id poste trouvé = 5
+2012-04-22T18:50:05+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "user"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(23) "khalifa.rmili@gmail.com"
+  ["adresse"] => string(35) "Bloc A N71 HAY EZZAITOUNE TIKIOUINE"
+  ["id_poste"] => string(1) "5"
+}
+</pre>
+2012-04-22T18:50:05+02:00 INFO (6): last inserted ID = 60
+2012-04-22T18:50:05+02:00 INFO (6): insertion - EMPLOYE - OUI
+2012-04-22T18:50:05+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-22T18:50:10+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:50:28+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:55:15+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:57:34+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:57:40+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:57:40+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:57:40+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:57:40+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:58:22+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:58:22+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:58:55+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:58:55+02:00 INFO (6): submitAction()
+2012-04-22T18:58:55+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa.rmili@gmail.com","adresse" : "","tel" : "0600775184","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "Personnel","occupations" : [{"name " : "Agent Commercial"},{"name " : "Finance Manager"}]}
+2012-04-22T18:58:55+02:00 INFO (6): Agent Commercial
+2012-04-22T18:58:55+02:00 INFO (6): Finance Manager
+2012-04-22T18:58:55+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-04-22T18:58:55+02:00 INFO (6): id poste trouvé = 1
+2012-04-22T18:58:55+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "user"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(23) "khalifa.rmili@gmail.com"
+  ["adresse"] => string(0) ""
+  ["id_poste"] => string(1) "1"
+}
+</pre>
+2012-04-22T18:58:55+02:00 INFO (6): last inserted ID = 61
+2012-04-22T18:58:55+02:00 INFO (6): insertion - EMPLOYE - OUI
+2012-04-22T18:58:55+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-22T18:58:55+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "61"
+  ["id_occup"] => string(1) "2"
+}
+</pre>
+2012-04-22T18:58:55+02:00 INFO (6): insertion - OCCUPER - OUI
+2012-04-22T18:58:55+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "61"
+  ["id_occup"] => string(1) "4"
+}
+</pre>
+2012-04-22T18:58:55+02:00 INFO (6): insertion - OCCUPER - OUI
+2012-04-22T18:59:13+02:00 INFO (6): Fonction init() executée
+2012-04-22T18:59:25+02:00 INFO (6): Fonction init() executée
+2012-04-22T19:02:23+02:00 INFO (6): Fonction init() executée
+2012-04-22T19:02:32+02:00 INFO (6): Fonction init() executée

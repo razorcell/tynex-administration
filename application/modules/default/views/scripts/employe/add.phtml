@@ -36,7 +36,7 @@ echo '
 	<div class="section">
 		<label> E-mail<small>Text custom</small></label>
 		<div>
-			<input type="text" class="validate[required,custom[email]]  large"
+			<input type="text" class="validate[required,custom[email]]  large email"
 				name="email" id="e_required">
 		</div>
 	</div>
@@ -90,7 +90,7 @@ foreach($this->list_postes as $poste){
 	echo "<option value=".$poste['nom_poste'].">".$poste['nom_poste']."</option>";
 	
 }
-echo '</select>
+echo '</select><span class="f_help">Veuillez choisir un poste</span>
 	</div>
 	</div>';
 	

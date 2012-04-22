@@ -1210,16 +1210,16 @@ $(function() {
 													
 													var json_to_send = '{"id" : "'+id+'"}';
 													json_to_send = $.parseJSON(json_to_send);											
-													$('.test').append('Donner à envoyer au serveur : ');
-													$.each(json_to_send, function(i, item) {		
-														$('.test').append(' = > index :'+i+' -  valeur : '+item);
-													});
+													//$('.test').append('Donner à envoyer au serveur : ');
+													//$.each(json_to_send, function(i, item) {		
+													//	$('.test').append(' = > index :'+i+' -  valeur : '+item);
+													//});
 															$.ajax({ 
 																type : "POST",
 																url : action_destination,
 																data : json_to_send,
 																success : function(data) {
-																	$('.test').append(' ------> Réponse du serveur (JSON)= >'+data);
+																	//$('.test').append(' ------> Réponse du serveur (JSON)= >'+data);
 																	var json = $.parseJSON(data);
 																	
 																	if (json.message == 'erreur') {																													
@@ -1230,7 +1230,7 @@ $(function() {
 																	}
 																},
 															fail : function() {
-																$('.test').append('failed');
+																//$('.test').append('failed');
 																showError('Operation failed',5000);
 																}//end fail
 													});//end .ajax()
@@ -1268,8 +1268,8 @@ $(function() {
 															var json_to_send_length = lines_to_delete.length;
 															json_to_send = json_to_send + ',"taille" : "'+json_to_send_length+'"';
 															json_to_send = json_to_send + '}';
-															$('.test').append('Donner à envoyer au serveur : ');
-															$('.test').append(json_to_send);
+															//$('.test').append('Donner à envoyer au serveur : ');
+															//$('.test').append(json_to_send);
 															json_to_send = $.parseJSON(json_to_send);											
 															/*$.each(json_to_send, function(i, item) {		
 																$('.test').append(' = > index :'+i+' -  valeur : '+item);
@@ -1280,7 +1280,7 @@ $(function() {
 																		url : '/'+controller+'/deleteall',
 																		data : json_to_send,
 																		success : function(data) {
-																			$('.test').append(' ------> Réponse du serveur (JSON)= >'+data);
+																			//$('.test').append(' ------> Réponse du serveur (JSON)= >'+data);
 																			var json = $.parseJSON(data);
 																			if (json.message == 'erreur') {																													
 																						showError(json.message,5000);																	
@@ -1290,7 +1290,7 @@ $(function() {
 																			};
 																		},
 																	fail : function() {
-																		$('.test').append('failed');
+																		//$('.test').append('failed');
 																		showError('Operation failed',5000);
 																		}//end fail
 															});//end .ajax()

@@ -83,6 +83,110 @@ $(document).ready(
 				var form_data = $('.f_e_add').serializeArray();
 				var poste = $('a.chzn-single').find('span').html();
 				var i=0;
+				//form validation
+				var valide = true;
+				if($('#lastname').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('#firstname').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('.email').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#tel').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#username').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#password').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#passwordCon').val().length == 0)
+				{
+					valide = false;
+				}
+				var pass = $('#password').html();
+				var passCon = $('#passwordCon').html();
+				if(pass != passCon)
+					{
+						valide = false;
+					}
+				var poste = $('.chzn-single').find('span').html();
+				if(poste == 'Veuillez choisir un poste...')
+					{
+						valide =false;
+						
+					}
+				if(valide)
+					{
+					var json_to_send = '{';
+					
+					for(i=0;i<form_data.length;i++)
+						{
+							if(i==0){
+									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
+							else{
+								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+
+							}
+						}
+				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
+				i=0;
+				json_to_send = json_to_send + ',"occupations" : [';//open occupations json
+				$('ul.chzn-choices').find('li').each(function(){
+						if($(this).find('span').length > 0)//if span exists
+							{
+								if(i==0)
+									{
+										var occupation = $(this).find('span').html();
+										json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
+									}
+								else
+									{
+										var occupation = $(this).find('span').html();
+										json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
+									}
+								i++;
+							}
+						
+					});
+					json_to_send = json_to_send + ']';//close occupations json
+					json_to_send = json_to_send + '}';
+					//$('.test').html(json_to_send);
+					//json_to_send = $.parseJSON(json_to_send);
+					
+					
+					$.ajax({ 
+						type : "POST",
+						url : "/employe/submit",
+						data : json_to_send,
+						success : function(data) {
+							//var json = $.parseJSON(data);
+						
+							if (data == 'success') {// maintenant on peut
+								showSuccess('Employé ajouté', 3000);
+								
+							} else {
+								showError(data, 3000);
+							}
+						}
+					
+					});
+					
+					
+					
+					}else{
+						showError('Veuillez revoir le formulaire', 3000);
+					}
 				/*json = {};
 				for(i in form_data)
 					{
@@ -96,59 +200,7 @@ $(document).ready(
 						}
 				});*/
 				
-				var json_to_send = '{';
 				
-				for(i=0;i<form_data.length;i++)
-					{
-						if(i==0){
-								json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
-							}
-						else{
-							json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
-
-						}
-					}
-			 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
-			i=0;
-			json_to_send = json_to_send + ',"occupations" : [';//open occupations json
-			$('ul.chzn-choices').find('li').each(function(){
-					if($(this).find('span').length > 0)//if span exists
-						{
-							if(i==0)
-								{
-									var occupation = $(this).find('span').html();
-									json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
-								}
-							else
-								{
-									var occupation = $(this).find('span').html();
-									json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
-								}
-							i++;
-						}
-					
-				});
-				json_to_send = json_to_send + ']';//close occupations json
-				json_to_send = json_to_send + '}';
-				//$('.test').html(json_to_send);
-				//json_to_send = $.parseJSON(json_to_send);
-				
-				$.ajax({ 
-					type : "POST",
-					url : "/employe/submit",
-					data : json_to_send,
-					success : function(data) {
-						//var json = $.parseJSON(data);
-					
-						if (data == 'success') {// maintenant on peut
-							showSuccess('Employé ajouté', 3000);
-							
-						} else {
-							showError(data, 3000);
-						}
-					}
-				
-				});
 			});
 		
 			$(".Delete").live('click',function() { 
