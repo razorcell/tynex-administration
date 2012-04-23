@@ -20,7 +20,7 @@ $(document).ready(function(){
 <?php
 
 echo '
-<h3 class="test"></h3>
+<h5 class="test"></h5>
 <form id="validation" class="f_e_modify">
 	<div class="section">
 		<label> Id <small></small></label>
@@ -125,14 +125,20 @@ echo '<div class="section">
 		<label> Occupations courrantes <small>les occupations actuellement prise par cette employé</small></label>
 		<div>
 			<ul>';
-foreach ( $this->employe_occupations as $employe_occupation ) {
-	foreach ( $this->list_occupations as $occupation ) {
-		if ($employe_occupation ['id_occup'] == $occupation ['id_occup']) {
-			echo '<li ><em><strong>' . $occupation ['nom_occup'] . '</strong></em></li>';
+if(count(($this->employe_occupations))>0)//compter le nombre d'occupation de cette employé
+{
+	foreach ( $this->employe_occupations as $employe_occupation ) {
+		foreach ( $this->list_occupations as $occupation ) {
+			if ($employe_occupation ['id_occup'] == $occupation ['id_occup']) {
+				echo '<li ><em><strong>' . $occupation ['nom_occup'] . '</strong></em></li>';
+			}
 		}
+	
 	}
-
+}else{
+	echo '<li ><em><strong>Cette employé n\'a aucune occupation </strong></em></li>';
 }
+echo '<br/>';
 
 echo '</ul>
 		</div>

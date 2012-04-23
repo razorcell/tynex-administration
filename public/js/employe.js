@@ -312,7 +312,7 @@ $(document).ready(
 							json_to_send = json_to_send + ']';//close occupations json
 				 }
 					json_to_send = json_to_send + '}';
-					//$('.test').html(json_to_send);
+					$('.test').html(json_to_send);
 					//json_to_send = $.parseJSON(json_to_send);
 					
 					

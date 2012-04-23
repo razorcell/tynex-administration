@@ -1,352 +1,231 @@
-2012-04-23T01:24:25+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:24:25+02:00 INFO (6): modifyAction()
-2012-04-23T01:24:25+02:00 INFO (6): Request body : {"nom" : "newffffff","prenom" : "ffffffffff","email" : "ffffffff@gmail.com","adresse" : "fffffffffffffffffff","tel" : "053869653","username" : "user","password" : "pass","passwordCon" : "pass","id" : "64","poste" : "Freelance"}
-2012-04-23T01:24:25+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:24:25+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:24:25+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(9) "newffffff"
-  ["prenom"] => string(10) "ffffffffff"
+2012-04-23T11:59:32+02:00 INFO (6): Fonction init() executée
+2012-04-23T11:59:32+02:00 INFO (6): <pre>array(0) {
+}
+</pre>
+2012-04-23T11:59:46+02:00 INFO (6): Fonction init() executée
+2012-04-23T11:59:46+02:00 INFO (6): modifyAction()
+2012-04-23T11:59:46+02:00 INFO (6): Request body : {"nom" : "newtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
+2012-04-23T11:59:46+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T11:59:46+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T11:59:46+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(13) "newtttttttttt"
+  ["prenom"] => string(7) "ttttttt"
   ["genre"] => string(5) "Homme"
   ["username"] => string(4) "user"
   ["password"] => string(4) "pass"
-  ["tel"] => string(9) "053869653"
-  ["email"] => string(18) "ffffffff@gmail.com"
-  ["adresse"] => string(19) "fffffffffffffffffff"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
   ["id_poste"] => string(1) "5"
 }
 </pre>
-2012-04-23T01:24:25+02:00 INFO (6): update condition : id_employe = 64
-2012-04-23T01:24:25+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 64)
-2012-04-23T01:24:25+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:24:25+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:25:57+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:25:57+02:00 INFO (6): <pre>array(2) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "5"
-  }
-  [1] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "6"
-  }
-}
-</pre>
-2012-04-23T01:26:20+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:26:20+02:00 INFO (6): modifyAction()
-2012-04-23T01:26:20+02:00 INFO (6): Request body : {"nom" : "newffffff","prenom" : "ffffffffff","email" : "ffffffff@gmail.com","adresse" : "fffffffffffffffffff","tel" : "053869653","username" : "user","password" : "pass","passwordCon" : "pass","id" : "64","poste" : "Freelance"}
-2012-04-23T01:26:20+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:26:20+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:26:20+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(9) "newffffff"
-  ["prenom"] => string(10) "ffffffffff"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(9) "053869653"
-  ["email"] => string(18) "ffffffff@gmail.com"
-  ["adresse"] => string(19) "fffffffffffffffffff"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T01:26:20+02:00 INFO (6): update condition : id_employe = 64
-2012-04-23T01:26:20+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 64)
-2012-04-23T01:26:20+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T01:26:20+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:31:44+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:31:44+02:00 INFO (6): <pre>array(2) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "5"
-  }
-  [1] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "6"
-  }
-}
-</pre>
-2012-04-23T01:32:07+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:32:07+02:00 INFO (6): modifyAction()
-2012-04-23T01:32:07+02:00 INFO (6): Request body : {"nom" : "newnewffffff","prenom" : "ffffffffff","email" : "ffffffff@gmail.com","adresse" : "fffffffffffffffffff","tel" : "053869653","username" : "user","password" : "pass","passwordCon" : "pass","id" : "64","poste" : "Freelance"}
-2012-04-23T01:32:07+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:32:07+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:32:07+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(12) "newnewffffff"
-  ["prenom"] => string(10) "ffffffffff"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(9) "053869653"
-  ["email"] => string(18) "ffffffff@gmail.com"
-  ["adresse"] => string(19) "fffffffffffffffffff"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T01:32:07+02:00 INFO (6): update condition : id_employe = 64
-2012-04-23T01:32:07+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 64)
-2012-04-23T01:32:07+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:32:07+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:32:22+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:32:22+02:00 INFO (6): <pre>array(2) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "5"
-  }
-  [1] => array(2) {
-    ["id_employe"] => string(2) "64"
-    ["id_occup"] => string(1) "6"
-  }
-}
-</pre>
-2012-04-23T01:33:29+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:33:29+02:00 INFO (6): modifyAction()
-2012-04-23T01:33:29+02:00 INFO (6): Request body : {"nom" : "newnewffffff","prenom" : "ffffffffff","email" : "ffffffff@gmail.com","adresse" : "fffffffffffffffffff","tel" : "053869653","username" : "user","password" : "pass","passwordCon" : "pass","id" : "64","poste" : "Freelance"}
-2012-04-23T01:33:29+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:33:29+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:33:29+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(12) "newnewffffff"
-  ["prenom"] => string(10) "ffffffffff"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(9) "053869653"
-  ["email"] => string(18) "ffffffff@gmail.com"
-  ["adresse"] => string(19) "fffffffffffffffffff"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T01:33:29+02:00 INFO (6): update condition : id_employe = 64
-2012-04-23T01:33:30+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 64)
-2012-04-23T01:33:30+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T01:33:30+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:36:29+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:36:31+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:36:31+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:36:31+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:36:32+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:37:07+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:37:07+02:00 INFO (6): submitAction()
-2012-04-23T01:37:07+02:00 INFO (6): Request body : {"nom" : "zzzz","prenom" : "zzzzz","gender" : "0","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "Freelance","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T01:37:07+02:00 INFO (6): Agent Commercial
-2012-04-23T01:37:07+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
-2012-04-23T01:37:07+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:37:07+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(4) "zzzz"
-  ["prenom"] => string(5) "zzzzz"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T01:37:07+02:00 INFO (6): last inserted ID = 71
-2012-04-23T01:37:07+02:00 INFO (6): insertion - EMPLOYE - OUI
-2012-04-23T01:37:07+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T01:37:07+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "71"
+2012-04-23T11:59:46+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T11:59:46+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T11:59:46+02:00 INFO (6): nbr de lignes  = 0
+2012-04-23T11:59:46+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T11:59:46+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T11:59:46+02:00 INFO (6): Occuper update condition : id_employe = 63
+2012-04-23T11:59:46+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T11:59:46+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T11:59:46+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => NULL
   ["id_occup"] => string(1) "2"
 }
 </pre>
-2012-04-23T01:37:07+02:00 INFO (6): insertion - OCCUPER - OUI
-2012-04-23T01:38:40+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:38:40+02:00 INFO (6): submitAction()
-2012-04-23T01:38:40+02:00 INFO (6): Request body : {"nom" : "zzzzrrrrrrr","prenom" : "zzzzz","gender" : "0","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","poste" : "Freelance","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T01:38:40+02:00 INFO (6): Agent Commercial
-2012-04-23T01:38:40+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
-2012-04-23T01:38:40+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:38:40+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(11) "zzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
+2012-04-23T12:01:13+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:01:13+02:00 INFO (6): modifyAction()
+2012-04-23T12:01:13+02:00 INFO (6): Request body : {"nom" : "newtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
+2012-04-23T12:01:13+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T12:01:13+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T12:01:13+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(13) "newtttttttttt"
+  ["prenom"] => string(7) "ttttttt"
   ["genre"] => string(5) "Homme"
   ["username"] => string(4) "user"
   ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
   ["id_poste"] => string(1) "5"
 }
 </pre>
-2012-04-23T01:38:40+02:00 INFO (6): last inserted ID = 72
-2012-04-23T01:38:40+02:00 INFO (6): insertion - EMPLOYE - OUI
-2012-04-23T01:38:40+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T01:38:40+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "72"
+2012-04-23T12:01:13+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T12:01:13+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T12:01:13+02:00 INFO (6): nbr de lignes  = 0
+2012-04-23T12:01:13+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T12:01:13+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T12:01:13+02:00 INFO (6): Occuper update condition : id_employe = 63
+2012-04-23T12:01:13+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T12:01:13+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T12:01:13+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => NULL
   ["id_occup"] => string(1) "2"
 }
 </pre>
-2012-04-23T01:38:40+02:00 INFO (6): insertion - OCCUPER - OUI
-2012-04-23T01:42:08+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:42:32+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:42:32+02:00 INFO (6): <pre>array(1) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "72"
-    ["id_occup"] => string(1) "2"
-  }
-}
-</pre>
-2012-04-23T01:42:55+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:42:55+02:00 INFO (6): modifyAction()
-2012-04-23T01:42:55+02:00 INFO (6): Request body : {"nom" : "newzzzzrrrrrrr","prenom" : "zzzzz","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","id" : "72","poste" : "Freelance"}
-2012-04-23T01:42:55+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:42:55+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:42:55+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(14) "newzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
+2012-04-23T12:02:56+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:02:56+02:00 INFO (6): modifyAction()
+2012-04-23T12:02:56+02:00 INFO (6): Request body : {"nom" : "newnewtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
+2012-04-23T12:02:56+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T12:02:56+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T12:02:56+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(16) "newnewtttttttttt"
+  ["prenom"] => string(7) "ttttttt"
   ["genre"] => string(5) "Homme"
   ["username"] => string(4) "user"
   ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
   ["id_poste"] => string(1) "5"
 }
 </pre>
-2012-04-23T01:42:55+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:42:55+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:42:55+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:42:55+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:43:32+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:43:32+02:00 INFO (6): <pre>array(1) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "72"
-    ["id_occup"] => string(1) "2"
-  }
+2012-04-23T12:02:56+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T12:02:56+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T12:02:56+02:00 INFO (6): nbr de lignes  = 1
+2012-04-23T12:02:56+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T12:02:56+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T12:02:56+02:00 INFO (6): Occuper update condition : id_employe = 63
+2012-04-23T12:02:56+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T12:02:56+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T12:02:56+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => NULL
+  ["id_occup"] => string(1) "2"
 }
 </pre>
-2012-04-23T01:49:59+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:49:59+02:00 INFO (6): <pre>array(1) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "72"
-    ["id_occup"] => string(1) "2"
-  }
-}
-</pre>
-2012-04-23T01:50:24+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:50:25+02:00 INFO (6): modifyAction()
-2012-04-23T01:50:25+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","id" : "72","poste" : "Freelance","gender" : "0"}
-2012-04-23T01:50:25+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:50:25+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:50:25+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
+-------------------------------------------------------------------------------------------------------2012-04-23T12:07:10+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:07:10+02:00 INFO (6): modifyAction()
+2012-04-23T12:07:10+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
+2012-04-23T12:07:10+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T12:07:10+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T12:07:10+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(10) "tttttttttt"
+  ["prenom"] => string(7) "ttttttt"
   ["genre"] => string(5) "Homme"
   ["username"] => string(4) "user"
   ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
   ["id_poste"] => string(1) "5"
 }
 </pre>
-2012-04-23T01:50:25+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:50:25+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:50:25+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:50:25+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:50:38+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:50:38+02:00 INFO (6): modifyAction()
-2012-04-23T01:50:38+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","gender" : "1","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","id" : "72","poste" : "Freelance","gender" : "1"}
-2012-04-23T01:50:38+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:50:38+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T01:50:38+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
-  ["genre"] => string(5) "Femme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "5"
+2012-04-23T12:07:10+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T12:07:10+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T12:07:10+02:00 INFO (6): nbr de lignes  = 1
+2012-04-23T12:07:10+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T12:07:10+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T12:07:10+02:00 INFO (6): Occuper delete condition : id_employe = 63
+2012-04-23T12:07:10+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T12:07:10+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T12:07:10+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "63"
+  ["id_occup"] => string(1) "2"
 }
 </pre>
-2012-04-23T01:50:38+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:50:38+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:50:38+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:50:38+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:50:51+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:50:51+02:00 INFO (6): modifyAction()
-2012-04-23T01:50:51+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","gender" : "1","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","id" : "72","poste" : "Personnel","gender" : "1"}
-2012-04-23T01:50:51+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:50:51+02:00 INFO (6): id poste trouvé = 1
-2012-04-23T01:50:51+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
-  ["genre"] => string(5) "Femme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "1"
-}
-</pre>
-2012-04-23T01:50:51+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:50:51+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:50:51+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:50:51+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:51:13+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:51:13+02:00 INFO (6): modifyAction()
-2012-04-23T01:51:13+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","gender" : "1","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "pass","passwordCon" : "pass","id" : "72","poste" : "Stagiaire","gender" : "1"}
-2012-04-23T01:51:13+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:51:13+02:00 INFO (6): id poste trouvé = 2
-2012-04-23T01:51:13+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
-  ["genre"] => string(5) "Femme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "2"
-}
-</pre>
-2012-04-23T01:51:13+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:51:13+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:51:13+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:51:13+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:51:46+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:51:46+02:00 INFO (6): modifyAction()
-2012-04-23T01:51:46+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","gender" : "1","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "passwordzzz","passwordCon" : "passwordzzz","id" : "72","poste" : "Stagiaire","gender" : "1"}
-2012-04-23T01:51:46+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:51:46+02:00 INFO (6): id poste trouvé = 2
-2012-04-23T01:51:46+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
-  ["genre"] => string(5) "Femme"
-  ["username"] => string(4) "user"
-  ["password"] => string(11) "passwordzzz"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "2"
-}
-</pre>
-2012-04-23T01:51:46+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:51:46+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:51:46+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:51:46+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:51:59+02:00 INFO (6): Fonction init() executée
-2012-04-23T01:51:59+02:00 INFO (6): modifyAction()
-2012-04-23T01:51:59+02:00 INFO (6): Request body : {"nom" : "newnewzzzzrrrrrrr","prenom" : "zzzzz","gender" : "0","email" : "zzzz@gmail.com","adresse" : "zzzz adresse","tel" : "0632152365","username" : "user","password" : "passwordzzz","passwordCon" : "passwordzzz","id" : "72","poste" : "Stagiaire","gender" : "0"}
-2012-04-23T01:51:59+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T01:51:59+02:00 INFO (6): id poste trouvé = 2
-2012-04-23T01:51:59+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(17) "newnewzzzzrrrrrrr"
-  ["prenom"] => string(5) "zzzzz"
+2012-04-23T12:07:10+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-04-23T12:08:51+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:08:51+02:00 INFO (6): modifyAction()
+2012-04-23T12:08:51+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"},{"name " : "Developpeur Web"},{"name " : "Finance Manager"}]}
+2012-04-23T12:08:51+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T12:08:51+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T12:08:51+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(10) "tttttttttt"
+  ["prenom"] => string(7) "ttttttt"
   ["genre"] => string(5) "Homme"
   ["username"] => string(4) "user"
-  ["password"] => string(11) "passwordzzz"
-  ["tel"] => string(10) "0632152365"
-  ["email"] => string(14) "zzzz@gmail.com"
-  ["adresse"] => string(12) "zzzz adresse"
-  ["id_poste"] => string(1) "2"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
+  ["id_poste"] => string(1) "5"
 }
 </pre>
-2012-04-23T01:51:59+02:00 INFO (6): update condition : id_employe = 72
-2012-04-23T01:52:00+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 72)
-2012-04-23T01:52:00+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T01:52:00+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T01:52:26+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:08:51+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T12:08:51+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T12:08:51+02:00 INFO (6): nbr de lignes  = 0
+2012-04-23T12:08:51+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T12:08:51+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T12:08:51+02:00 INFO (6): Occuper delete condition : id_employe = 63
+2012-04-23T12:08:51+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T12:08:51+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T12:08:51+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "63"
+  ["id_occup"] => string(1) "2"
+}
+</pre>
+2012-04-23T12:08:51+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-04-23T12:08:51+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "63"
+  ["id_occup"] => string(1) "5"
+}
+</pre>
+2012-04-23T12:08:52+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-04-23T12:08:52+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "63"
+  ["id_occup"] => string(1) "4"
+}
+</pre>
+2012-04-23T12:08:52+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-04-23T12:08:56+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:08:56+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "2"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "4"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "5"
+  }
+}
+</pre>
+2012-04-23T12:09:13+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:09:13+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "2"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "4"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(2) "63"
+    ["id_occup"] => string(1) "5"
+  }
+}
+</pre>
+2012-04-23T12:09:21+02:00 INFO (6): Fonction init() executée
+2012-04-23T12:09:21+02:00 INFO (6): modifyAction()
+2012-04-23T12:09:21+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Programmeur"}]}
+2012-04-23T12:09:21+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-04-23T12:09:21+02:00 INFO (6): id poste trouvé = 5
+2012-04-23T12:09:21+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(10) "tttttttttt"
+  ["prenom"] => string(7) "ttttttt"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "user"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0632457582"
+  ["email"] => string(14) "tttt@gmail.com"
+  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
+  ["id_poste"] => string(1) "5"
+}
+</pre>
+2012-04-23T12:09:21+02:00 INFO (6): employe update condition : id_employe = 63
+2012-04-23T12:09:21+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
+2012-04-23T12:09:21+02:00 INFO (6): nbr de lignes  = 0
+2012-04-23T12:09:21+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-04-23T12:09:21+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-04-23T12:09:21+02:00 INFO (6): Occuper delete condition : id_employe = 63
+2012-04-23T12:09:21+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
+2012-04-23T12:09:21+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-23T12:09:21+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "63"
+  ["id_occup"] => string(1) "1"
+}
+</pre>
+2012-04-23T12:09:21+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI

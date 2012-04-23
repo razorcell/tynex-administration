@@ -231,11 +231,11 @@ class EmployeController extends Zend_Controller_Action {
 		$this->logger->info(html_entity_decode(Zend_Debug::dump($employe_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 		try {
 			$condition = "id_employe = $id";
-			$this->logger->info('update condition : '.$condition);
+			$this->logger->info('employe update condition : '.$condition);
 			$n = $this->db->update ( 'employe', $employe_to_save, $condition);
 			
 			$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
-			$this->db->getProfiler()->setEnabled(false);
+			
 			
 			//$id_employe_enregistrer = $this->db->lastInsertId();
 			$this->logger->info('nbr de lignes  = '.$n);
@@ -248,9 +248,12 @@ class EmployeController extends Zend_Controller_Action {
 		
 		//PHASE D INSERTION DES TUPLES id_employ | id_occupation DANS LA TABLE 'OCCUPER'
 		if(isset($data_from_user ['occupations'])){
-				$this->logger->info('*****************PHASE DE TUPLES id_employ | id_occupation existant************');
-				$this->db->delete('occuper', "id_employe = $id");
-			
+				$this->logger->info('*****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************');
+				$condition = "id_employe = $id";
+				$this->logger->info('Occuper delete condition : '.$condition);
+				$this->db->delete('occuper', $condition);
+				$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				
 				$this->logger->info('*****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************');
 				//recupperer la liste des occupation
 				$sql = 'SELECT * FROM occupation';
@@ -266,7 +269,7 @@ class EmployeController extends Zend_Controller_Action {
 						{//l'employe a cette occupation, on cherche id_occup equivalent et on insert dans la BD
 							$id_occup_courant = $occupation_from_db['id_occup'];
 							//construire le tableau pour l'enregistrement du tuple id_employe | id_occup
-							$tuple_employe_occup = array('id_employe' => $id_employe_enregistrer,
+							$tuple_employe_occup = array('id_employe' => $id,
 									'id_occup' => $id_occup_courant);
 							try {
 								$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_employe_occup,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
@@ -283,7 +286,7 @@ class EmployeController extends Zend_Controller_Action {
 			
 			
 		}
-		
+		$this->db->getProfiler()->setEnabled(false);
 		//$json = Zend_Json::encode($table_reponse);
 		echo $reponse;
 	}
