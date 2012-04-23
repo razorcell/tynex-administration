@@ -2,10 +2,6 @@ function Refresh() {
 location.reload();
 };
 
-
-
-
-
 $.fn.imgdata = function(key){
 	return this.find('.dataImg li:eq('+key+')').text();
 }

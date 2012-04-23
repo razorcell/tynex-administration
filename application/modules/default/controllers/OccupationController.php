@@ -4,6 +4,8 @@ class OccupationController extends Zend_Controller_Action {
 	private $config = NULL;
 	private $db = NULL;
 	public function init() {
+		$this->ctrl = $this->_request->getControllerName ();
+		$this->view->ctrl = $this->ctrl;
 		// setup database connection parameters
 		$this->config = new Zend_Config_Ini ( APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV );
 		// try connection to database
@@ -18,12 +20,16 @@ class OccupationController extends Zend_Controller_Action {
 		$this->view->general_icon = 'ico color hammer';
 	}
 	public function indexAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->title = 'Occupation';
 		
 		$sql = 'SELECT * FROM occupation';
 		$this->view->list_occupations = $this->db->fetchAssoc ( $sql );
 	}
 	public function addAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		/*
 		 * $params = NULL; if($this->getRequest()->isPost()) {//if envoyer is
 		 * clicked $params = $this->getRequest()->getParams(); }
@@ -94,6 +100,8 @@ class OccupationController extends Zend_Controller_Action {
 	}
 	public function modifyformAction()
 	{
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
 		$this->view->title = 'Modifier une occupation';
 		

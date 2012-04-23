@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- Généré le : Ven 20 Avril 2012 à 16:15
+-- Généré le : Lun 23 Avril 2012 à 16:41
 -- Version du serveur: 5.5.8
 -- Version de PHP: 5.3.5
 
@@ -29,22 +29,34 @@ CREATE TABLE IF NOT EXISTS `client` (
   `id_client` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(20) NOT NULL,
   `prenom` varchar(30) NOT NULL,
-  `genre_client` enum('Femme','Homme') NOT NULL,
   `tel` varchar(15) NOT NULL,
-  `tel2` varchar(15) NOT NULL,
+  `tel_societe` varchar(15) NOT NULL,
   `fax` varchar(15) NOT NULL,
   `email` varchar(30) NOT NULL,
   `adresse` text NOT NULL,
-  PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `type` enum('Particulier','Entreprise') NOT NULL,
+  `gender` enum('Homme','Femme') NOT NULL,
+  `societe` varchar(35) NOT NULL,
+  `email_societe` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_client`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `tel` (`tel`),
+  UNIQUE KEY `societe` (`societe`),
+  UNIQUE KEY `email_societe` (`email_societe`),
+  UNIQUE KEY `tel_societe` (`tel_societe`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `client`
 --
 
-INSERT INTO `client` (`id_client`, `nom`, `prenom`, `genre_client`, `tel`, `tel2`, `fax`, `email`, `adresse`) VALUES
-(1, 'Pacha', 'CISSE', 'Femme', '05 27 68 47 0.3', '05 23 56 89 02', '05 26 25 26 24', 'attack2363@yahoo.fr', 'Salam; Dahkla, Agadir'),
-(2, 'Phenix', 'Man', 'Femme', '02 56 58 69 45', '05 12 45 78 63 ', '05 25 25 25 25', 'atack23@yahoo.fr', 'Ansermat, Agadir, Maroc');
+INSERT INTO `client` (`id_client`, `nom`, `prenom`, `tel`, `tel_societe`, `fax`, `email`, `adresse`, `type`, `gender`, `societe`, `email_societe`) VALUES
+(1, 'Pacha', 'CISSE', '05 27 68 47 0.3', '05 23 56 89 02', '05 26 25 26 24', 'attack2363@yahoo.fr', 'Salam; Dahkla, Agadir', 'Particulier', 'Homme', 'Tynex', 'dfgsattack2363@yahoo.fr'),
+(2, 'Phenix', 'Man', '02 56 58 69 45', '05 12 45 78 63 ', '05 25 25 25 25', 'atack23@yahoo.fr', 'Ansermat, Agadir, Maroc', 'Particulier', 'Homme', 'TynexMedia', ''),
+(3, 'sdfg sdf', ' sdfgs dgsdfg ', '5450345343', '4534152345345', '4534523213', '45dfg dfg', 'dfg gfdh cvbfgh fgh fgcvbnfg', 'Entreprise', 'Femme', ' fghfghdf', ' dfghdfghfgh dfg'),
+(4, ' dfhdfgh fgh', ' hdfghdfgh', '154534', '1253453', '4534534', 'cfhgdfgh dfghdfgth', 'gdfgnhd fdgn dfgnhfdgh f', 'Entreprise', 'Femme', ' fghdfg', ' dfghdfgh'),
+(5, 'fg fgh dfg ', 'hgdfghdfg', '4534534534', '45345345', '43453444', 'dfg sdfg sdfg', ' dgdfg df sd', 'Particulier', 'Homme', ' fshfh fghd gdffg hdfg', ' fghdfghdfghdfghd'),
+(6, ' fghdgh dfg', 'h dfghdfs hbn', 'b ncvs fgbvcx ', 'vcxbsdfgh sf', ' cfgdfgh', ' sfghsfgh ', ' dfhgsdfgh fhfg fgh fghfg', 'Particulier', 'Homme', ' fghdfh dfgh dfgh', ' fdgh dfghfgh');
 
 -- --------------------------------------------------------
 
@@ -58,21 +70,12 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `libelle_commande` varchar(30) NOT NULL,
   PRIMARY KEY (`id_commande`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `commande`
 --
 
-INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
-(3, 2, 'Application Web'),
-(4, 2, 'Application Bureau'),
-(5, 2, 'Application Web'),
-(6, 2, 'Application Bureau'),
-(7, 2, 'Application Web'),
-(8, 2, 'Application Bureau'),
-(9, 2, 'Application Web'),
-(10, 2, 'Application Bureau');
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
 
 CREATE TABLE IF NOT EXISTS `commentaire` (
   `id_commentaire` int(11) NOT NULL AUTO_INCREMENT,
-  `texte_commentaire` varchar(200) NOT NULL,
+  `texte` varchar(200) NOT NULL,
   `id_employe` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
   PRIMARY KEY (`id_commentaire`),
@@ -94,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `commentaire` (
 -- Contenu de la table `commentaire`
 --
 
-INSERT INTO `commentaire` (`id_commentaire`, `texte_commentaire`, `id_employe`, `id_projet`) VALUES
+INSERT INTO `commentaire` (`id_commentaire`, `texte`, `id_employe`, `id_projet`) VALUES
 (9, 'xxcbcx cbcx bcvb xcvb', 9, 0),
 (10, 'xc vb cb cvbxc', 5, 0),
 (11, 'xxcbcx cbcx bcvb xcvb', 9, 0),
@@ -116,10 +119,13 @@ CREATE TABLE IF NOT EXISTS `employe` (
   `username` varchar(15) NOT NULL,
   `password` varchar(15) NOT NULL,
   `tel` varchar(15) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(35) NOT NULL,
   `adresse` text NOT NULL,
   `id_poste` int(11) NOT NULL,
   PRIMARY KEY (`id_employe`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `email_2` (`email`),
   KEY `id_poste` (`id_poste`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
@@ -128,12 +134,12 @@ CREATE TABLE IF NOT EXISTS `employe` (
 --
 
 INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES
-(5, 'Boul', 'Hassane', 'Femme', 'khalifa', 'khalifa', '02 23 23 2 33', 'hassane@mail.com', 'xgfgfgfg', 2),
-(6, 'Farel', 'Man', 'Femme', 'karima', 'karima', '45 45 45 4 5 45', 'farel@mail.com', 'fdhfdfc', 5),
-(7, 'Boul', 'Hassane', 'Femme', 'khalifa', 'khalifa', '02 23 23 2 33', 'hassane@mail.com', 'xgfgfgfg', 2),
-(8, 'Farel', 'Man', 'Femme', 'karima', 'karima', '45 45 45 4 5 45', 'farel@mail.com', 'fdhfdfc', 5),
-(9, 'Boul', 'Hassane', 'Femme', 'khalifa', 'khalifa', '02 23 23 2 33', 'hassane@mail.com', 'xgfgfgfg', 2),
-(10, 'Farel', 'Man', 'Femme', 'karima', 'karima', '45 45 45 4 5 45', 'farel@mail.com', 'fdhfdfc', 5);
+(5, 'Boul', 'Hassane', 'Femme', 'khalifacbvcb', 'khalifa', '02 23 212 ', 'hassafgddfne@mail.co', 'xgfgfgfg', 2),
+(6, 'Farel', 'Man', 'Femme', 'karimavbncv', 'karima', '45 45 45 4', 'farexcvxl@mail.com', 'fdhfdfc', 5),
+(7, 'Boul', 'Hassane', 'Femme', 'khalifavbvcbn', 'khalifa', '02 23 2', 'hassane@mail.com', 'xgfgfgfg', 2),
+(8, 'Farel', 'Man', 'Femme', 'karimanvcbnvb', 'karima', '45 45 45 4 5 45', 'farel@mail.com', 'fdhfdfc', 5),
+(9, 'Boul', 'Hassane', 'Femme', 'khalifa', 'khalifa', '02 23 23 ', 'hassanxvxe@mail.com', 'xgfgfgfg', 2),
+(10, 'Farel', 'Man', 'Femme', 'karima', 'karima', '45 45 45 4 5', 'farexvxl@mail.com', 'fdhfdfc', 5);
 
 -- --------------------------------------------------------
 
@@ -147,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `occupation` (
   PRIMARY KEY (`id_occup`),
   UNIQUE KEY `nom_occup` (`nom_occup`),
   KEY `nom_occup_2` (`nom_occup`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `occupation`
@@ -187,24 +193,16 @@ CREATE TABLE IF NOT EXISTS `occuper` (
 CREATE TABLE IF NOT EXISTS `pack_service` (
   `id_pack` int(10) NOT NULL AUTO_INCREMENT,
   `libelle_pack` varchar(20) NOT NULL,
+  `id_type_service` int(11) NOT NULL,
   PRIMARY KEY (`id_pack`),
-  UNIQUE KEY `libelle_pack_2` (`libelle_pack`),
-  KEY `libelle_pack` (`libelle_pack`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+  KEY `libelle_pack` (`libelle_pack`),
+  KEY `id_type_service` (`id_type_service`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `pack_service`
 --
 
-INSERT INTO `pack_service` (`id_pack`, `libelle_pack`) VALUES
-(7, 'Audit'),
-(8, 'Nom de Domaine'),
-(3, 'tm Basic'),
-(4, 'tm Business'),
-(1, 'tm Etudiant'),
-(5, 'tm Pro'),
-(2, 'tm Start'),
-(6, 'tm VPServer');
 
 -- --------------------------------------------------------
 
@@ -249,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
   KEY `id_employe` (`id_employe`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `projet`
@@ -319,22 +317,20 @@ INSERT INTO `type_projet` (`id_type_projet`, `nom_type_projet`) VALUES
 
 CREATE TABLE IF NOT EXISTS `type_service` (
   `id_type_service` int(10) NOT NULL AUTO_INCREMENT,
-  `id_pack` int(11) NOT NULL,
   `libelle_type_service` varchar(30) NOT NULL,
   PRIMARY KEY (`id_type_service`),
-  UNIQUE KEY `libelle_type_service` (`libelle_type_service`),
-  KEY `id_pack` (`id_pack`)
+  UNIQUE KEY `libelle_type_service` (`libelle_type_service`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `type_service`
 --
 
-INSERT INTO `type_service` (`id_type_service`, `id_pack`, `libelle_type_service`) VALUES
-(1, 1, 'Hebergement'),
-(2, 2, 'Audit'),
-(3, 3, 'Web Design'),
-(4, 4, 'Nom de Domaine');
+INSERT INTO `type_service` (`id_type_service`, `libelle_type_service`) VALUES
+(2, 'Audit'),
+(1, 'Hebergement'),
+(4, 'Nom de Domaine'),
+(3, 'Web Design');
 
 --
 -- Contraintes pour les tables exportées
@@ -359,6 +355,12 @@ ALTER TABLE `employe`
   ADD CONSTRAINT `employe_ibfk_1` FOREIGN KEY (`id_poste`) REFERENCES `poste` (`id_poste`);
 
 --
+-- Contraintes pour la table `pack_service`
+--
+ALTER TABLE `pack_service`
+  ADD CONSTRAINT `pack_service_ibfk_1` FOREIGN KEY (`id_type_service`) REFERENCES `type_service` (`id_type_service`);
+
+--
 -- Contraintes pour la table `projet`
 --
 ALTER TABLE `projet`
@@ -370,9 +372,3 @@ ALTER TABLE `projet`
 --
 ALTER TABLE `service`
   ADD CONSTRAINT `service_ibfk_1` FOREIGN KEY (`id_type_service`) REFERENCES `type_service` (`id_type_service`);
-
---
--- Contraintes pour la table `type_service`
---
-ALTER TABLE `type_service`
-  ADD CONSTRAINT `type_service_ibfk_1` FOREIGN KEY (`id_pack`) REFERENCES `pack_service` (`id_pack`);

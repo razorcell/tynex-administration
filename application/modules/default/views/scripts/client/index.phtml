@@ -1,59 +1,109 @@
-<!--  <script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				oTable = $('#table_id').dataTable({
-					"bJQueryUI": true,
-					"sPaginationType": "full_numbers"
-				});
-			} );
-</script>
-<h2>Clients list : </h2>-->
-<div>
-	<a class="uibutton icon add "
-		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'add' ),'default',true);?>">Ajouter</a>
-	<a class="uibutton  icon edit  special"
-		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'modify' ),'default',true);?>">Modifier</a>
-	<a class="uibutton special"
-		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
-	<a class="uibutton confirm"
-		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'profil' ),'default',true);?>">Profil</a>
-</div>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/client.js');?>"></script>
+
+<h5 class="test"></h5>
+
+<a class="button green back"
+		href="<?php echo $this->url(array('controller' => 'client', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
+	
+	<a class="delete_b button pink glossy glass">- Supprimer</a>
+ <a class="selectall button blue morph">De/Selectionner tous</a>
 
 <?php
-echo '<div class="tableName">
-							<h3>Liste des clients</h3>
+$i = 0;
+echo '
+<div id="UITab">
 
-<table class="display data_table2 dataTable" >
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">Id</div></th>
-			<th><div class="th_wrapp">Nom</div></th>
-			<th><div class="th_wrapp">Prenom</div></th>
-			<th><div class="th_wrapp">Tel</div></th>	
-			<th><div class="th_wrapp">Fax</div></th>	
-			<th><div class="th_wrapp">Email</div></th>	
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td class="center">0612352499</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">atttacksdfhsd@yahoo.fr</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td class="center">0612352499</td>
-			<td class="center">0612352499</td>
-			<td class="center">atttacksdfhsd@yahoo.fr</td>
-		</tr>
-	</tbody>
+<div class="tab_container">
+
+<div id="tab1" class="tab_content">
+<div class="load_page">
+
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 client"  id="data_table3">
+<thead>
+<tr>
+
+<th align="left">Id</th>
+<th>Type</th>
+<th>Nom</th>
+<th>Email</th>
+<th>Tel</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+
+foreach ( $this->list_clients as $client ) {
+	
+	echo '<tr>
+	<td  class="id_client" align ="left">' . $client ['id_client'] . '</td>';
+	
+	if($client['type'] == 'Entreprise')
+	{
+		
+		
+		echo '<td class="type">' . $client ['type'] . '</td>
+		<td class="nom">' . $client ['societe'] . '</td>
+		<td>' . $client ['email_societe'] . '</td>
+		<td>' . $client ['tel_societe'] . '</td>';
+		//get the poste name
+		echo '
+		<td>
+		<span class="tip" >
+		<a  title="Edit" class="edit" href="';
+		echo $this->url(array('id' => $client ['id_client']),'clientmodify');
+		echo '">
+		<img src="images/icon/icon_edit.png" >
+		</a>
+		</span>
+		<span class="tip" >
+		<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+		<img src="images/icon/icon_delete.png">
+		</a>
+		</span>
+		</td>
+		</tr>';
+		$i ++;
+		}else if($client['type'] == 'Particulier'){
+			echo '<td class="type">' . $client ['type'] . '</td>
+			<td class="nom">' . $client ['nom'] . '</td>
+			<td>' . $client ['email'] . '</td>
+			<td>' . $client ['tel'] . '</td>';
+			//get the poste name
+			echo '
+			<td>
+			<span class="tip" >
+			<a  title="Edit" class="edit" href="';
+			echo $this->url(array('id' => $client ['id_client']),'clientmodify');
+			echo '">
+			<img src="images/icon/icon_edit.png" >
+			</a>
+			</span>
+			<span class="tip" >
+			<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+			<img src="images/icon/icon_delete.png">
+			</a>
+			</span>
+			</td>
+			</tr>';
+			$i ++;
+	}
+	
+}
+	
+echo '</tbody>
 </table>
-</div>'?>
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
-
-
-
+</div>
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
+?>

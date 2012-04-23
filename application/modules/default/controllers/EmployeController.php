@@ -6,6 +6,8 @@ class EmployeController extends Zend_Controller_Action {
 	private $writer = NULL;
 	private $logger = NULL;
 	public function init() {
+		$this->ctrl = $this->_request->getControllerName ();
+		$this->view->ctrl = $this->ctrl;
 		$this->writer = new Zend_Log_Writer_Stream(APPLICATION_PATH.'/../tests/logs');
 		$this->logger = new Zend_Log($this->writer);
 		 
@@ -30,6 +32,8 @@ class EmployeController extends Zend_Controller_Action {
 	}
 	public function indexAction() {
 		$this->view->title = 'employe';
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		
 		$sql = 'SELECT * FROM employe';
 		$this->view->list_employes = $this->db->fetchAssoc ( $sql );
@@ -37,6 +41,8 @@ class EmployeController extends Zend_Controller_Action {
 		$this->view->list_postes = $this->db->fetchAssoc ( $sql );
 	}
 	public function addAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color add';
 		$this->view->title = 'Ajouter un employe';
 		$sql = 'SELECT * FROM poste';
@@ -46,6 +52,8 @@ class EmployeController extends Zend_Controller_Action {
 	
 	}
 	public function submitAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->logger->info('submitAction()');
 		//stocker les messages d'erreur/succe pour les retourner à l'utilisateur
 		//$table_reponse = array ('message' => '');
@@ -162,6 +170,7 @@ class EmployeController extends Zend_Controller_Action {
 		echo $reponse;
 	}
 	public function modifyAction() { // brush
+		
 		$this->logger->info('modifyAction()');
 		//stocker les messages d'erreur/succe pour les retourner à l'utilisateur
 		//$table_reponse = array ('message' => '');
@@ -291,6 +300,8 @@ class EmployeController extends Zend_Controller_Action {
 		echo $reponse;
 	}
 	public function modifyformAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
 		$this->view->title = 'Modifier un employe';
 		
@@ -317,6 +328,7 @@ class EmployeController extends Zend_Controller_Action {
 		$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAll ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 	}
 	public function deleteAction() {
+		
 		$n_lignes_supprime = NULL;
 		$table_reponse = array ('message' => '' );
 		$this->_helper->layout->disableLayout ();

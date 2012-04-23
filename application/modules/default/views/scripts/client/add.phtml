@@ -1,65 +1,186 @@
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/client.js');?>"></script>
 
-
-<form action="#">
-	<div class="section alphaonly">
-		<label> Nom <small>Nom du client</small></label>
-		<div>
-			<input name="text[]" type="text" class="medium" maxlength="4">
-		</div>
-	</div>
-	<div class="section alphaonly">
-		<label> Prenom <small>Prenom complet du client</small></label>
-		<div>
-			<input name="text[]" type="text" class="medium" maxlength="4">
-		</div>
-	</div>
-	<div class="section ">
-		<label>Genre<small></small></label>
-		<div>
-			<div>
-				<input type="radio" name="opinions" id="radio-1" value="1"
-					class="ck" /> <label for="radio-1">Homme</label>
-			</div>
-			<div>
-				<input type="radio" name="opinions" id="radio-2" value="1"
-					class="ck" checked="checked" /> <label for="radio-2">Femme</label>
-			</div>
-		</div>
-	</div>
-
-	<div class="section ">
-		<label> E-mail<small>l'adresse mail du client</small></label>
-		<div>
-			<input type="text" class="validate[required,custom[email]]  large"
-				name="e_required" id="e_required">
-		</div>
-	</div>
+<form id="entreprise" class="entreprise visible">
 	<div class="section">
-		<label> Adresse <small>L'adresse complet du client</small></label>
+		<label>Type de client<small>Veuillez definir le type de votre client</small></label>
 		<div>
-			<input type="text" name="text[]" class=" full" /><span class="f_help">Ex : Adresse du bureau ou de la maison</span>
+			<input type="checkbox" id="show_service" name="type" class="type"
+				value="1" /><span class="f_help"></span>
 		</div>
 	</div>
 
-	<div class="section numericonly">
-		<label> Telephone <small>Numero de Telephone</small></label>
-		<div>
-			<input name="text" type="text" class="small">
-		</div>
-	</div>
+	<div class="formEl_b f_c_add">
+		<form  class="f_e_add">
+			<fieldset>
+				<legend>
+					Entreprise <span class="small s_color"></span>
+				</legend>
+					<div class="section alphaonly">
+						<label> Nom de l'entreprise<small></small></label>
+						<div>
+							<input id="lastname" name="nom" type="text"
+								class="validate[required] medium" maxlength="20">
+						</div>
+					</div>
+					<div class="section">
+						<label> E-mail<small>Email générale de la societé</small></label>
+						<div>
+							<input type="text"
+								class="validate[required,custom[email]]  large email"
+								name="email" id="e_required">
+						</div>
+					</div>
+					<div class="section numericonly">
+						<label> Telephone <small>Text custom</small></label>
+						<div>
+							<input id="tel" name="tel" type="text"
+								class="validate[required] small" maxlength="20">
+						</div>
+					</div>
+					<div class="section numericonly">
+						<label>Fax<small>Fax de la societé</small></label>
+						<div>
+							<input type="text" class="validate[required]  large" name="fax">
+						</div>
+					</div>
+					<div class="section">
+						<label> Adresse <small>Text custom</small></label>
+						<div>
+							<input type="text" name="adresse" class=" full" /><span
+								class="f_help">Text custom help</span>
+						</div>
+					</div>
+					</br>
+					<fieldset>
+						<legend>
+							Représentant <span class="small s_color"></span>
+						</legend>
+						<div class="section alphaonly">
+							<label>Nom<small></small></label>
+							<div>
+								<input id="nom_representant" name="nom_r" type="text"
+									class="validate[required] medium" maxlength="20">
+							</div>
+						</div>
+						<div class="section alphaonly">
+							<label> Prénom <small></small></label>
+							<div>
+								<input id="firstname" name="prenom" type="text" class="medium"
+									maxlength="20">
+							</div>
+						</div>
+						<div class="section ">
+							<label>gender<small>Text custom</small></label>
+							<div>
+								<div>
+									<input type="radio" name="gender_r" id="radio-1" value="0"
+										class="ck" /> <label for="radio-1">Homme</label>
+								</div>
+								<div>
+									<input type="radio" name="gender_r" id="radio-2" value="1"
+										class="ck" /> <label for="radio-2">Femme</label>
+								</div>
+							</div>
+						</div>
 
-	<div class="section numericonly">
-		<label> Fax <small>Numero de Fax</small></label>
-		<div>
-			<input name="text" type="text" class="small">
-		</div>
+						<div class="section">
+							<label> E-mail<small>Text custom</small></label>
+							<div>
+								<input type="text"
+									class="validate[required,custom[email]]  large email"
+									name="email" id="">
+							</div>
+						</div>
+						<div class="section numericonly">
+							<label> Tél <small>Text custom</small></label>
+							<div>
+								<input id="tel" name="tel" type="text" class="small"
+									maxlength="20">
+							</div>
+						</div>
+					</fieldset>
+					<div class="section last">
+						<div>
+							<a class="button green back submit_form add_employe"
+								data-icon="⏏">Ajouter</a> <a id="reset"
+								class="button pink glossy glass">Reset</a>
+						</div>
+					</div>
+					</fieldset>
+				</form>
+	
 	</div>
+	
 
-	<div class="section last">
-		<div>
-			<a class="uibutton submit_form">Enregistrer</a>
-			<a class="uibutton special" title="Reset Form" onclick="ResetForm()">Reprendre</a>
+</form>
+
+</div>
+<div class="formEl_b f_c_add" style="display: none">
+	<form id="particulier" class="particulier">
+		<fieldset>
+			<legend>
+				Particulier <span class="small s_color"></span>
+			</legend>
+			<form>
+				<div class="section alphaonly">
+					<label>Nom<small></small></label>
+					<div>
+						<input id="nom_p" name="nom_p" type="text"
+							class="validate[required] medium" maxlength="20">
+					</div>
+				</div>
+				<div class="section alphaonly">
+					<label> Prénom <small></small></label>
+					<div>
+						<input id="firstname_p" name="prenom_p" type="text" class="medium"
+							maxlength="20">
+					</div>
+				</div>
+				<div class="section ">
+					<label>gender<small>Text custom</small></label>
+					<div>
+						<div>
+							<input type="radio" name="gender_p" id="radio-3" value="0"
+								class="ck_p" /> <label for="radio-3">Homme</label>
+						</div>
+						<div>
+							<input type="radio" name="gender_p" id="radio-4" value="1"
+								class="ck_p" /> <label for="radio-4">Femme</label>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<label> E-mail<small>Text custom</small></label>
+					<div>
+						<input type="text"
+							class="validate[required,custom[email]]  large email"
+							name="email" id="">
+					</div>
+				</div>
+				<div class="section numericonly">
+					<label> Tél <small>Text custom</small></label>
+					<div>
+						<input id="tel_p" name="tel_p" type="text" class="validate[required] small"
+							maxlength="20">
+					</div>
+				</div>
+		
+		</fieldset>
+		<div class="section last">
+			<div>
+				<a class="button green back submit_form add_client" data-icon="⏏">Ajouter</a>
+				<a id="reset" class="button pink glossy glass">Reset</a>
+			</div>
 		</div>
-	</div>
+
+	</form>
+
+</div>
+</fieldset>
+</form>
+
+</div>
+
 
 </form>

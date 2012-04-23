@@ -4,7 +4,8 @@ class PosteController extends Zend_Controller_Action {
 	private $config = NULL;
 	private $db = NULL;
 	public function init() {
-		
+		$this->ctrl = $this->_request->getControllerName ();
+		$this->view->ctrl = $this->ctrl;
 		$this->config = new Zend_Config_Ini ( APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV );
 		
 		try {
@@ -18,12 +19,16 @@ class PosteController extends Zend_Controller_Action {
 		$this->view->general_icon = 'ico color certificate';
 	}
 	public function indexAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->title = 'Poste';
 		
 		$sql = 'SELECT * FROM poste';
 		$this->view->list_postes = $this->db->fetchAssoc ( $sql );
 	}
 	public function addAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		
 		$this->view->general_icon = 'ico color add';
 		$this->view->title = 'Ajouter un poste';
@@ -75,6 +80,8 @@ class PosteController extends Zend_Controller_Action {
 		echo $json;
 	}
 	public function modifyformAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
 		$this->view->title = 'Modifier une poste';
 		

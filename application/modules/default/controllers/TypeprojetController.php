@@ -6,6 +6,8 @@ class TypeprojetController extends Zend_Controller_Action {
 	private $writer = NULL;
 	private $logger = NULL;
 	public function init() {
+		$this->ctrl = $this->_request->getControllerName ();
+		$this->view->ctrl = $this->ctrl;
 		$this->writer = new Zend_Log_Writer_Stream(APPLICATION_PATH.'/../tests/logs');
 		$this->logger = new Zend_Log($this->writer);
 		
@@ -24,13 +26,16 @@ class TypeprojetController extends Zend_Controller_Action {
 		$this->view->general_icon = 'ico color coin';
 	}
 	public function indexAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->title = 'type_projet';
 		
 		$sql = 'SELECT * FROM type_projet';
 		$this->view->list_type_projets = $this->db->fetchAssoc ( $sql );
 	}
 	public function addAction() {
-		
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color add';
 		$this->view->title = 'Ajouter un type_projet';
 	
@@ -87,6 +92,8 @@ class TypeprojetController extends Zend_Controller_Action {
 		echo $json;
 	}
 	public function modifyformAction() {
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
 		$this->view->title = 'Modifier une type_projet';
 		
