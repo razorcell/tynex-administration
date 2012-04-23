@@ -1,44 +1,70 @@
-<div>
-	<a class="uibutton icon add " href="<?php echo $this->url(array('controller' => 'typeprojet', 'action' => 'add' ),'default',true);?>"
-	>Ajouter</a>
-	<a class="uibutton  icon edit  special" href="<?php echo $this->url(array('controller' => 'typeprojet', 'action' => 'modify' ),'default',true);?>"
-	>Modifier</a>
-	<a class="uibutton special" href="<?php echo $this->url(array('controller' => 'typeprojet', 'action' => 'delete' ),'default',true);?>"
-	>Supprimer</a>
-</div>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/type_projet.js');?>"></script>
 
+<h5 class="test"></h5>
+
+<a class="button green back"
+		href="<?php echo $this->url(array('controller' => 'typeprojet', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
+	
+	<a class="delete_b button pink glossy glass">- Supprimer</a>
+ <a class="selectall button blue morph">De/Selectionner tous</a>
 <?php
-echo '<div class="tableName">
-							<h3>Liste des types de projets</h3>
+$i = 0;
+echo '
+<div id="UITab">
 
-<table class="display data_table2 dataTable">
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">Id</div></th>
-			<th><div class="th_wrapp">Libellé</div></th>
-			
-			
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Site web</td>
-		</tr>
+<div class="tab_container">
 
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>This is a command description</td>
-		</tr>
+<div id="tab1" class="tab_content">
+<div class="load_page">
 
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Application bureau</td>
-		</tr>
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 type_projet"  id="data_table3">
+<thead>
+<tr>
 
-		
-	</tbody>
+<th align="left">Id</th>
+<th>Libellé</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+
+foreach ( $this->list_type_projets as $type_projet ) {
+	echo '<tr>
+<td  class="id_type_projet" align ="left">' . $type_projet ['id_type_projet'] . '</td>
+<td class="nom_type_projet">' . $type_projet ['nom_type_projet'] . '</td>
+<td>
+<span class="tip">
+<a  title="Edit" class="edit" href="';
+echo $this->url(array('id' => $type_projet ['id_type_projet']),'typeprojetmodify');
+echo '">
+<img src="images/icon/icon_edit.png" >
+</a>
+</span>
+<span class="tip" >
+<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+<img src="images/icon/icon_delete.png">
+</a>
+</span>
+</td>
+</tr>';
+	$i ++;
+};
+echo '</tbody>
 </table>
-</div>'
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
+</div>
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
 ?>
+
+

@@ -325,6 +325,7 @@ $(document).ready(
 						
 							if (data == 'success') {// maintenant on peut
 								showSuccess('Mise à jour avec succée', 3000);
+								setTimeout("Refresh()", 500);
 								
 							} else {
 								showError(data, 100000);

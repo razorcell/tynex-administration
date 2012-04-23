@@ -1,15 +1,21 @@
-<form action="#">
-	<div class="section alphaonly">
-		<label>Libellé<small>Le libellé du type de projet</small></label>
+
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/type_projet.js');?>"></script>
+
+
+<form id="validation" class="f_t_p_add">
+	<div class="section textonly">
+		<label> Nom du type de projet <small>Une description pour ce type de projet</small></label>
 		<div>
-			<input name="text[]" type="text" class="medium" maxlength="4">
+			<input id="f_required" name="nom_type_projet" type="text"
+				class="validate[required] medium">
 		</div>
 	</div>
-
 	<div class="section last">
 		<div>
-			<a class="uibutton submit_form">Enregistrer</a>
+			<a class="button green back add_type_projet">Ajouter</a> 
+			<a id="reset" class="button pink glossy glass">Reset</a>
 		</div>
 	</div>
-
+	
 </form>

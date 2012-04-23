@@ -1,10 +1,10 @@
 <script type="text/javascript"
-	src="<?php echo $this->baseUrl('js/typeservice.js');?>"></script>
+	src="<?php echo $this->baseUrl('js/pack.js');?>"></script>
 
 <h5 class="test"></h5>
 
 <a class="button green back"
-		href="<?php echo $this->url(array('controller' => 'typeservice', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
+		href="<?php echo $this->url(array('controller' => 'pack', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
 	
 	<a class="delete_b button pink glossy glass">- Supprimer</a>
  <a class="selectall button blue morph">De/Selectionner tous</a>
@@ -21,7 +21,7 @@ echo '
 <form>
 <div class="tableName inTab">
 <h3 id="test"></h3>
-<table class="display data_table2 typeservice"  id="data_table3">
+<table class="display data_table2 pack"  id="data_table3">
 <thead>
 <tr>
 
@@ -32,14 +32,14 @@ echo '
 </thead>
 <tbody>';
 
-foreach ( $this->list_typeservices as $typeservice ) {
+foreach ( $this->list_packs as $pack ) {
 	echo '<tr>
-<td  class="id_typeservice" align ="left">' . $typeservice ['id_type_service'] . '</td>
-<td class="nom_typeservice">' . $typeservice ['libelle_type_service'] . '</td>
+<td  class="id_pack" align ="left">' . $pack ['id_pack'] . '</td>
+<td class="libelle_pack">' . $pack ['libelle_pack'] . '</td>
 <td>
-<span class="tip">
+<span class="tip" >
 <a  title="Edit" class="edit" href="';
-echo $this->url(array('id' => $typeservice ['id_type_service']),'typeservicemodify');
+echo $this->url(array('id' => $pack ['id_pack']),'packmodify');
 echo '">
 <img src="images/icon/icon_edit.png" >
 </a>

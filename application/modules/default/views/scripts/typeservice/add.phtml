@@ -1,15 +1,21 @@
-<form action="#">
-	<div class="section alphaonly">
-		<label>Libellé<small>Le libellé du type de projet</small></label>
+
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/typeservice.js');?>"></script>
+
+
+<form id="validation" class="f_t_s_add">
+	<div class="section textonly">
+		<label> Libellé du type de service <small>Une sorte de description pour ce type de service</small></label>
 		<div>
-			<input name="text[]" type="text" class="medium" maxlength="4">
+			<input id="f_required" name="libelle_typeservice" type="text"
+				class="validate[required] medium">
 		</div>
 	</div>
-
 	<div class="section last">
 		<div>
-			<a class="uibutton submit_form">Enregistrer</a>
+			<a class="button green back add_typeservice">Ajouter</a> 
+			<a id="reset" class="button pink glossy glass">Reset</a>
 		</div>
 	</div>
-
+	
 </form>

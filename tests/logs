@@ -1,231 +1,60 @@
-2012-04-23T11:59:32+02:00 INFO (6): Fonction init() executée
-2012-04-23T11:59:32+02:00 INFO (6): <pre>array(0) {
+2012-04-23T14:32:42+02:00 INFO (6): typeprojet/Delete
+2012-04-23T14:32:42+02:00 INFO (6): la condition de suppression : id_type_projet = 8
+2012-04-23T14:33:19+02:00 INFO (6): typeprojet/Delete
+2012-04-23T14:33:19+02:00 INFO (6): la condition de suppression : id_type_projet = 8
+2012-04-23T14:33:19+02:00 INFO (6): update query : DELETE FROM `type_projet` WHERE (id_type_projet = 8)
+2012-04-23T14:35:20+02:00 INFO (6): Typeprojet : submitAction()
+2012-04-23T14:35:20+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(13) "ppppppppppppp"
 }
 </pre>
-2012-04-23T11:59:46+02:00 INFO (6): Fonction init() executée
-2012-04-23T11:59:46+02:00 INFO (6): modifyAction()
-2012-04-23T11:59:46+02:00 INFO (6): Request body : {"nom" : "newtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T11:59:46+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T11:59:46+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T11:59:46+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(13) "newtttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
+2012-04-23T14:35:20+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:35:20+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:53:46+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:53:46+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(10) "tttttttttt"
 }
 </pre>
-2012-04-23T11:59:46+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T11:59:46+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T11:59:46+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T11:59:46+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T11:59:46+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T11:59:46+02:00 INFO (6): Occuper update condition : id_employe = 63
-2012-04-23T11:59:46+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T11:59:46+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T11:59:46+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => NULL
-  ["id_occup"] => string(1) "2"
+2012-04-23T14:53:46+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:53:46+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:54:18+02:00 INFO (6): typeprojet/Delete
+2012-04-23T14:54:18+02:00 INFO (6): la condition de suppression : id_type_projet = 10
+2012-04-23T14:54:18+02:00 INFO (6): update query : DELETE FROM `type_projet` WHERE (id_type_projet = 10)
+2012-04-23T14:54:23+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:54:23+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(11) "ttttttttttt"
 }
 </pre>
-2012-04-23T12:01:13+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:01:13+02:00 INFO (6): modifyAction()
-2012-04-23T12:01:13+02:00 INFO (6): Request body : {"nom" : "newtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T12:01:13+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T12:01:13+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T12:01:13+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(13) "newtttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
+2012-04-23T14:54:23+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:54:23+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:54:26+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:54:26+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(12) "zzzzzzzzzzzz"
 }
 </pre>
-2012-04-23T12:01:13+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T12:01:13+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T12:01:13+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T12:01:13+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T12:01:13+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T12:01:13+02:00 INFO (6): Occuper update condition : id_employe = 63
-2012-04-23T12:01:13+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T12:01:13+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T12:01:13+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => NULL
-  ["id_occup"] => string(1) "2"
+2012-04-23T14:54:26+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:54:26+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:54:29+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:54:29+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(11) "aaaaaaaaaaa"
 }
 </pre>
-2012-04-23T12:02:56+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:02:56+02:00 INFO (6): modifyAction()
-2012-04-23T12:02:56+02:00 INFO (6): Request body : {"nom" : "newnewtttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T12:02:56+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T12:02:56+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T12:02:56+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(16) "newnewtttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
+2012-04-23T14:54:29+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:54:29+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:57:49+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:57:49+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(11) "aaaaaaaaaaa"
 }
 </pre>
-2012-04-23T12:02:56+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T12:02:56+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T12:02:56+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T12:02:56+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T12:02:56+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T12:02:56+02:00 INFO (6): Occuper update condition : id_employe = 63
-2012-04-23T12:02:56+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T12:02:56+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T12:02:56+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => NULL
-  ["id_occup"] => string(1) "2"
+2012-04-23T14:57:49+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:57:49+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T14:57:53+02:00 INFO (6): type_projet : submitAction()
+2012-04-23T14:57:53+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(12) "zzzzzzzzzzzz"
 }
 </pre>
--------------------------------------------------------------------------------------------------------2012-04-23T12:07:10+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:07:10+02:00 INFO (6): modifyAction()
-2012-04-23T12:07:10+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"}]}
-2012-04-23T12:07:10+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T12:07:10+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T12:07:10+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(10) "tttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T12:07:10+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T12:07:10+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T12:07:10+02:00 INFO (6): nbr de lignes  = 1
-2012-04-23T12:07:10+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T12:07:10+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T12:07:10+02:00 INFO (6): Occuper delete condition : id_employe = 63
-2012-04-23T12:07:10+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T12:07:10+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T12:07:10+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "63"
-  ["id_occup"] => string(1) "2"
-}
-</pre>
-2012-04-23T12:07:10+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
-2012-04-23T12:08:51+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:08:51+02:00 INFO (6): modifyAction()
-2012-04-23T12:08:51+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Agent Commercial"},{"name " : "Developpeur Web"},{"name " : "Finance Manager"}]}
-2012-04-23T12:08:51+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T12:08:51+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T12:08:51+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(10) "tttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T12:08:51+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T12:08:51+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T12:08:51+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T12:08:51+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T12:08:51+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T12:08:51+02:00 INFO (6): Occuper delete condition : id_employe = 63
-2012-04-23T12:08:51+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T12:08:51+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T12:08:51+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "63"
-  ["id_occup"] => string(1) "2"
-}
-</pre>
-2012-04-23T12:08:51+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
-2012-04-23T12:08:51+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "63"
-  ["id_occup"] => string(1) "5"
-}
-</pre>
-2012-04-23T12:08:52+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
-2012-04-23T12:08:52+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "63"
-  ["id_occup"] => string(1) "4"
-}
-</pre>
-2012-04-23T12:08:52+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
-2012-04-23T12:08:56+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:08:56+02:00 INFO (6): <pre>array(3) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "2"
-  }
-  [1] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "4"
-  }
-  [2] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "5"
-  }
-}
-</pre>
-2012-04-23T12:09:13+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:09:13+02:00 INFO (6): <pre>array(3) {
-  [0] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "2"
-  }
-  [1] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "4"
-  }
-  [2] => array(2) {
-    ["id_employe"] => string(2) "63"
-    ["id_occup"] => string(1) "5"
-  }
-}
-</pre>
-2012-04-23T12:09:21+02:00 INFO (6): Fonction init() executée
-2012-04-23T12:09:21+02:00 INFO (6): modifyAction()
-2012-04-23T12:09:21+02:00 INFO (6): Request body : {"nom" : "tttttttttt","prenom" : "ttttttt","email" : "tttt@gmail.com","adresse" : "ttttttttttttttttttttttttttttttt","tel" : "0632457582","username" : "user","password" : "pass","passwordCon" : "pass","id" : "63","poste" : "Freelance","gender" : "0","occupations" : [{"name " : "Programmeur"}]}
-2012-04-23T12:09:21+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
-2012-04-23T12:09:21+02:00 INFO (6): id poste trouvé = 5
-2012-04-23T12:09:21+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(10) "tttttttttt"
-  ["prenom"] => string(7) "ttttttt"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(4) "user"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0632457582"
-  ["email"] => string(14) "tttt@gmail.com"
-  ["adresse"] => string(31) "ttttttttttttttttttttttttttttttt"
-  ["id_poste"] => string(1) "5"
-}
-</pre>
-2012-04-23T12:09:21+02:00 INFO (6): employe update condition : id_employe = 63
-2012-04-23T12:09:21+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 63)
-2012-04-23T12:09:21+02:00 INFO (6): nbr de lignes  = 0
-2012-04-23T12:09:21+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
-2012-04-23T12:09:21+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
-2012-04-23T12:09:21+02:00 INFO (6): Occuper delete condition : id_employe = 63
-2012-04-23T12:09:21+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 63)
-2012-04-23T12:09:21+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-23T12:09:21+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "63"
-  ["id_occup"] => string(1) "1"
-}
-</pre>
-2012-04-23T12:09:21+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-04-23T14:57:53+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-23T14:57:53+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-23T16:16:08+02:00 INFO (6): typeprojet/Delete
+2012-04-23T16:16:08+02:00 INFO (6): la condition de suppression : id_type_projet = 15
+2012-04-23T16:16:08+02:00 INFO (6): update query : DELETE FROM `type_projet` WHERE (id_type_projet = 15)
