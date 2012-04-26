@@ -34,7 +34,6 @@ class ClientController extends Zend_Controller_Action {
 		
 		$sql = 'SELECT * FROM client';
 		$this->view->list_clients = $this->db->fetchAssoc ( $sql );
-		
 	}
 	public function addAction() {
 		$this->action = $this->_request->getActionName ();
@@ -65,104 +64,75 @@ class ClientController extends Zend_Controller_Action {
 		$this->logger->info('Request body : '.$request_body);
 		$data_from_user = Zend_Json::decode($request_body);
 		//Activer cette ligne pour voir le resultat du decodage
-		//$this->logger->info(Zend_Debug::dump($data_from_user));
-		foreach ($data_from_user['occupations'] as $occupation)
-		{
-			foreach ($occupation as $nom_occupation)
+		
+		$this->logger->info(html_entity_decode(Zend_Debug::dump($data_from_user,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		$nom;
+		$prenom;
+		$tel;
+		$tel_societe;
+		$fax;
+		$email;
+		$adresse;
+		$gender;
+		$societe;
+		$email_societe;
+		
+		
+		if($data_from_user['type'] == 'particulier'){
+			$nom = $data_from_user ['nom_p'];
+			$prenom = $data_from_user ['prenom_p'];
+			$gender = $data_from_user ['gender_p'];
+			$email = $data_from_user ['email_p'];
+			$tel = $data_from_user ['tel_p'];
+			
+			//PHASE D INSERTION DE L client DANS LA TABLE 'client'
+			
+			$this->logger->info('*********************PHASE D INSERTION Du client************');
+			
+			//recupperation de la chaine de caractéres representant le gender
+			$gender_string = NULL;
+			if($data_from_user ['gender'] == 0)
 			{
-				$this->logger->info($nom_occupation);
+				$gender_string = 'Homme';
 			}
-		}
-		$nom = $data_from_user ['nom'];
-		$prenom = $data_from_user ['prenom'];
-		$gender = $data_from_user ['gender'];
-		$email = $data_from_user ['email'];
-		$adress = $data_from_user ['adresse'];
-		$tel = $data_from_user ['tel'];
-		$username = $data_from_user ['username'];
-		$password = $data_from_user ['password'];
-		$client_poste_string = $data_from_user ['poste'];
-		
-		
-		//PHASE D INSERTION DE L client DANS LA TABLE 'client'
-		//recupperation de id_poste equivalent au nom du poste de l'client
-		$this->logger->info('*********************PHASE D INSERTION DE L client************');
-		$sql = 'SELECT * FROM poste';
-		$list_postes = $this->db->fetchAssoc ( $sql );
-		$poste_id = NULL;
-		foreach ($list_postes as $poste)
-		{
-			if($poste['nom_poste'] == $client_poste_string)
-			{
-				$poste_id = $poste['id_poste'];
-				$this->logger->info('id poste trouvé = '.$poste_id);
+			else{
+				$gender_string = 'Femme';
 			}
-		}
-		//recupperation de la chaine de caractéres representant le gender
-		$gender_string = NULL;
-		if($data_from_user ['gender'] == 0)
-		{
-			$gender_string = 'Homme';
-		}
-		else{
-			$gender_string = 'Femme';
-		}
-		//construire le tableau pour l'enregistrement de l'client 
-		$client_to_save = array (
-				'nom' => $nom,
-				'prenom' => $prenom,
-				'genre' => $gender_string,
-				'username' => $username,
-				'password' => $password,
-				'tel' => $tel,
-				'email' => $email,
-				'adresse' => $adress,
-				'id_poste' => $poste_id
-		);
-		$this->logger->info(html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-		try {
-			$this->db->insert ( 'client', $client_to_save );
-			$id_client_enregistrer = $this->db->lastInsertId();
-			$this->logger->info('last inserted ID = '.$id_client_enregistrer);
-			$reponse = 'success';
-			$this->logger->info('insertion - client - OUI');
-		} catch ( Zend_Db_Adapter_Exception $e ) {
-			$reponse= 'Erreur';
-			$this->logger->info('Requete erreur : '.$e->getMessage());			
+			//construire le tableau pour l'enregistrement de l'client
+			$client_to_save = array (
+					'nom' => $nom,
+					'prenom' => $prenom,
+					'gender' => $gender_string,
+					'tel' => $tel,
+					'tel_societe' => '',
+					'fax' => '',
+					'email' => $email,
+					'adresse' => '',
+					'societe' => '',
+					'email_societe' => '',		
+					'type' => 'Particulier',
+			);
+			$this->logger->info(html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {
+				$this->db->insert ( 'client', $client_to_save );
+				$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$id_client_enregistrer = $this->db->lastInsertId();
+				$this->logger->info('last inserted ID = '.$id_client_enregistrer);
+				$reponse = 'success';
+				$this->logger->info('insertion - particulier - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
+			}
+			
 		}
 		
-		//PHASE D INSERTION DES TUPLES id_employ | id_occupation DANS LA TABLE 'OCCUPER'
-		$this->logger->info('*****************HASE D INSERTION DES TUPLES id_employ | id_occupation************');
-		//recupperer la liste des occupation 
-		$sql = 'SELECT * FROM occupation';
-		$list_occupations = $this->db->fetchAssoc ( $sql );
 		
-		foreach($data_from_user ['occupations'] as $table_occupation)// !!!!!!!!!!!!!!!!!! $data_from_user ['occupations'] : Tableau des tableaux des occupations
-		{//itterrer dans le champs des occupations de l'client
-			foreach ($table_occupation as $occupation){//$table_occupation : tableau des occupations
-				//itterer dans tous les occupations de l'client
-					foreach ($list_occupations as $occupation_from_db)
-					{//itterer dans les occupation de la BD
-						if($occupation_from_db['nom_occup'] == $occupation)// !!!!!!!!!!!!!!!!!!
-						{//l'client a cette occupation, on cherche id_occup equivalent et on insert dans la BD
-						$id_occup_courant = $occupation_from_db['id_occup'];
-						//construire le tableau pour l'enregistrement du tuple id_client | id_occup
-						$tuple_client_occup = array('id_client' => $id_client_enregistrer,
-																				'id_occup' => $id_occup_courant);
-						try {
-							$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_client_occup,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-							$this->db->insert ( 'occuper', $tuple_client_occup );
-							$this->logger->info('insertion - OCCUPER - OUI');
-							$reponse = 'success';
-						} catch ( Zend_Db_Adapter_Exception $e ) {
-							$this->logger->info($e->getMessage ());
-						}
-					}
-				}
-			}	
-		}
+		
+		
 		//$json = Zend_Json::encode($table_reponse);
 		echo $reponse;
+		$this->db->getProfiler()->setEnabled(false);
 	}
 	public function modifyAction() { // brush
 		$this->logger->info('modifyAction()');
