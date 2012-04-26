@@ -169,6 +169,7 @@ $(document).ready(
 						url : "/employe/submit",
 						data : json_to_send,
 						success : function(data) {
+							//alert('success');
 							//var json = $.parseJSON(data);
 						
 							if (data == 'success') {// maintenant on peut

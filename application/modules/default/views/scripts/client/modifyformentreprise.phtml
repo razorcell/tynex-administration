@@ -1,0 +1,133 @@
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/client.js');?>"></script>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+			//check the right gender 'homme' ou 'femme'
+			if($('.hidden_gender').attr('value') == 0){
+					$('label[for="radio-1"]').addClass('checked');
+					$('label[for="radio-2"]').removeClass('checked');
+
+				}else{
+					$('label[for="radio-2"]').addClass('checked');
+					$('label[for="radio-1"]').removeClass('checked');
+					}
+});
+</script>
+
+<?php 
+echo '
+<div class="widget" style="padding:20px ;border:0px">
+
+<form id="entreprise" class="formEl_b f_c_e_modify">
+<fieldset>
+<legend>
+Entreprise <span class="small s_color"></span>
+</legend>
+<div class="section">
+		<label> Id <small></small></label>
+		<div>
+			<input disabled="disabled" id="id" name="id" type="text" class="validate[required] medium id_client" maxlength="20" value="' . $this->client['id_client'] . '">
+		</div>
+	</div>
+<div class="section alphaonly">
+<label> Nom de l\'entreprise<small></small></label>
+<div>
+<input id="lastname" name="nom_e" type="text"
+class="validate[required] medium nom_e" maxlength="20" value="' . $this->client['societe'] . '">
+</div>
+</div>
+<div class="section">
+<label> E-mail<small>Email générale de la societé</small></label>
+<div>
+<input type="text"
+class="validate[required,custom[email]]  large email_e"
+name="email_e" id="e_required" value="' . $this->client['email_societe'] . '">
+</div>
+</div>
+<div class="section numericonly">
+<label> Telephone <small>Text custom</small></label>
+<div>
+<input id="tel" name="tel_e" type="text"
+class="validate[required] small tel_e" maxlength="20" value="' . $this->client['tel_societe'] . '">
+</div>
+</div>
+<div class="section numericonly">
+<label>Fax<small>Fax de la societé</small></label>
+<div>
+<input type="text" class="validate[required]  large fax_e"
+name="fax_e" value="' . $this->client['fax'] . '">
+</div>
+</div>
+<div class="section">
+<label> Adresse <small>Text custom</small></label>
+<div>
+<input type="text" name="adresse_e" class=" full adresse_e" value="' . $this->client['adresse'] . '"/><span
+class="f_help">Text custom help</span>
+</div>
+</div>
+</br>
+<fieldset>
+<legend>
+Représentant <span class="small s_color"></span>
+</legend>
+<div class="section alphaonly">
+<label>Nom<small></small></label>
+<div>
+<input id="nom_representant" name="nom_r" type="text"
+class="validate[required] medium nom_r" maxlength="20" value="' . $this->client['nom'] . '">
+</div>
+</div>
+<div class="section alphaonly">
+<label> Prénom <small></small></label>
+<div>
+<input id="firstname" name="prenom_r" type="text"
+class="medium prenom_r" maxlength="20" value="' . $this->client['prenom'] . '">
+</div>
+</div>
+<div class="section ">
+<label>gender<small>Text custom</small></label>
+<div>
+<div>
+<input type="radio" name="gender_r" id="radio-1" value="0"
+class="ck gender_r" /> <label for="radio-1">Homme</label>
+</div>
+<div>
+<input type="radio" name="gender_r" id="radio-2" value="1"
+class="ck gender_r" /> <label for="radio-2">Femme</label>
+</div>
+</div>
+</div>
+
+<div class="section">
+<label> E-mail<small>Text custom</small></label>
+<div>
+<input type="text"
+class="validate[required,custom[email]]  large email_r"
+name="email_r" id="" value="' . $this->client['email'] . '">
+</div>
+</div>
+<div class="section numericonly">
+<label> Tél <small>Text custom</small></label>
+<div>
+<input id="tel" name="tel_r" type="text" class="small tel_r"
+maxlength="20" value="' . $this->client['tel'] . '">
+</div>
+</div>
+</fieldset>
+<div class="section last">
+<div>
+<a class="button blue back submit_form modify_client_entreprise"
+data-icon="⏏">Update</a> <a id="reset_e"
+class="button pink glossy glass">Reset</a>
+<input class="hidden_gender" type="hidden" value="' . ($this->client['gender'] == "Homme" ? "0" : "1") . '">
+</div>
+</div>
+</fieldset>
+</form>
+</div>';
+
+
+
+
+?>

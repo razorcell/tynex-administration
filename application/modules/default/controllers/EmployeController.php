@@ -128,6 +128,7 @@ class EmployeController extends Zend_Controller_Action {
 		try {
 			$this->db->insert ( 'employe', $employe_to_save );
 			$id_employe_enregistrer = $this->db->lastInsertId();
+			$this->logger->info('add an employe : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
 			$this->logger->info('last inserted ID = '.$id_employe_enregistrer);
 			$reponse = 'success';
 			$this->logger->info('insertion - EMPLOYE - OUI');
@@ -157,6 +158,7 @@ class EmployeController extends Zend_Controller_Action {
 						try {
 							$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_employe_occup,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 							$this->db->insert ( 'occuper', $tuple_employe_occup );
+							$this->logger->info('add occupation : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
 							$this->logger->info('insertion - OCCUPER - OUI');
 							$reponse = 'success';
 						} catch ( Zend_Db_Adapter_Exception $e ) {
@@ -167,6 +169,7 @@ class EmployeController extends Zend_Controller_Action {
 			}	
 		}
 		//$json = Zend_Json::encode($table_reponse);
+		$this->db->getProfiler()->setEnabled(false);
 		echo $reponse;
 	}
 	public function modifyAction() { // brush

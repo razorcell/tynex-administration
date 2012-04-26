@@ -34,6 +34,8 @@ class ClientController extends Zend_Controller_Action {
 		
 		$sql = 'SELECT * FROM client';
 		$this->view->list_clients = $this->db->fetchAssoc ( $sql );
+		$this->logger->info('get all clients : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+		$this->db->getProfiler()->setEnabled(false);
 	}
 	public function addAction() {
 		$this->action = $this->_request->getActionName ();
@@ -48,7 +50,7 @@ class ClientController extends Zend_Controller_Action {
 	
 	}
 	public function submitAction() {
-		$this->logger->info('submitAction()');
+		$this->logger->info('client submitAction()');
 		//stocker les messages d'erreur/succe pour les retourner à l'utilisateur
 		//$table_reponse = array ('message' => '');
 		$reponse = '';
@@ -65,7 +67,7 @@ class ClientController extends Zend_Controller_Action {
 		$data_from_user = Zend_Json::decode($request_body);
 		//Activer cette ligne pour voir le resultat du decodage
 		
-		$this->logger->info(html_entity_decode(Zend_Debug::dump($data_from_user,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		$this->logger->info('Decoded data from user : '.html_entity_decode(Zend_Debug::dump($data_from_user,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 		$nom;
 		$prenom;
 		$tel;
@@ -76,22 +78,25 @@ class ClientController extends Zend_Controller_Action {
 		$gender;
 		$societe;
 		$email_societe;
+		if($data_from_user['type'] == 'entreprise'){
+			$nom = $data_from_user ['nom_r'];
+			$prenom = $data_from_user ['prenom_r'];
+			$gender = $data_from_user ['gender_r'];
+			$email = $data_from_user ['email_r'];
+			$tel = $data_from_user ['tel_r'];
+			$societe = $data_from_user['nom_e'];
+			$email_societe = $data_from_user['email_e'];
+			$tel_societe = $data_from_user['tel_e'];
+			$fax = $data_from_user['fax_e'];
+			$adresse = $data_from_user['adresse_e'];
 		
-		
-		if($data_from_user['type'] == 'particulier'){
-			$nom = $data_from_user ['nom_p'];
-			$prenom = $data_from_user ['prenom_p'];
-			$gender = $data_from_user ['gender_p'];
-			$email = $data_from_user ['email_p'];
-			$tel = $data_from_user ['tel_p'];
-			
 			//PHASE D INSERTION DE L client DANS LA TABLE 'client'
-			
-			$this->logger->info('*********************PHASE D INSERTION Du client************');
-			
+		
+			$this->logger->info('*********************PHASE D INSERTION D UNE ENTREPRISE************');
+		
 			//recupperation de la chaine de caractéres representant le gender
 			$gender_string = NULL;
-			if($data_from_user ['gender'] == 0)
+			if($gender == 0)
 			{
 				$gender_string = 'Homme';
 			}
@@ -102,20 +107,69 @@ class ClientController extends Zend_Controller_Action {
 			$client_to_save = array (
 					'nom' => $nom,
 					'prenom' => $prenom,
+					'tel' => $tel,
+					'tel_societe' => $tel_societe	,
+					'fax' => $fax,
+					'email' => $email,
+					'adresse' => $adresse,
+					'type' => 'Entreprise',
 					'gender' => $gender_string,
+					'societe' => $societe,
+					'email_societe' => $email_societe,
+			);
+			$this->logger->info('Client to save '.html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {
+				$this->db->insert ( 'client', $client_to_save );
+				$this->logger->info('inserer entreprise : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$id_client_enregistrer = $this->db->lastInsertId();
+				$this->logger->info('last inserted ID = '.$id_client_enregistrer);
+				$reponse = 'success';
+				$this->logger->info('insertion - entreprise - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
+			}
+		
+		}
+		
+		if($data_from_user['type'] == 'particulier'){
+			$nom = $data_from_user ['nom_p'];
+			$prenom = $data_from_user ['prenom_p'];
+			$gender = $data_from_user ['gender_p'];
+			$email = $data_from_user ['email_p'];
+			$tel = $data_from_user ['tel_p'];
+			
+			//PHASE D INSERTION DE L client DANS LA TABLE 'client'
+			
+			$this->logger->info('*********************PHASE D INSERTION D UN PARTICULIER************');
+			
+			//recupperation de la chaine de caractéres representant le gender
+			$gender_string = NULL;
+			if($gender == 0)
+			{
+				$gender_string = 'Homme';
+			}
+			else{
+				$gender_string = 'Femme';
+			}
+			//construire le tableau pour l'enregistrement de l'client
+			$client_to_save = array (
+					'nom' => $nom,
+					'prenom' => $prenom,
 					'tel' => $tel,
 					'tel_societe' => '',
 					'fax' => '',
 					'email' => $email,
 					'adresse' => '',
+					'type' => 'Particulier',
+					'gender' => $gender_string,
 					'societe' => '',
 					'email_societe' => '',		
-					'type' => 'Particulier',
 			);
-			$this->logger->info(html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			$this->logger->info('Client to save '.html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 			try {
 				$this->db->insert ( 'client', $client_to_save );
-				$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$this->logger->info('inserer particulier : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
 				$id_client_enregistrer = $this->db->lastInsertId();
 				$this->logger->info('last inserted ID = '.$id_client_enregistrer);
 				$reponse = 'success';
@@ -130,16 +184,55 @@ class ClientController extends Zend_Controller_Action {
 		
 		
 		
+		
 		//$json = Zend_Json::encode($table_reponse);
-		echo $reponse;
 		$this->db->getProfiler()->setEnabled(false);
+		echo $reponse;
+		
+	}
+	public function modifyformAction() {
+		$this->logger->info('Client modifyform()');
+		$this->view->general_icon = 'ico color brush';
+		$this->view->title = 'Modifier un client';
+	
+		//$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
+		$req_id = $this->getRequest ()->getParam ( 'id' );
+		$id = $this->db->quote ( $req_id );
+	
+		//recupperation des infos de l'client stocker dans la table client
+	
+		$sql = "SELECT * FROM client WHERE id_client = $id";
+		$client = $this->db->fetchRow ( $sql );
+		$this->logger->info(html_entity_decode(Zend_Debug::dump($client,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		//recupperation de la liste des poste pour la convertion id_poste => nom_poste
+		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
+		$this->view->client = $client;
+		//si c'est une entreprise
+		if($client['type'] == 'Entreprise'){
+			
+			$this->logger->info('client = entreprise');
+			$this->render('modifyformentreprise');
+		}
+		if($client['type'] == 'Particulier'){
+		
+			$this->logger->info('client = particulier');
+			$this->render('modifyformparticulier');
+		}
+		
+		//$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAssoc ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+	
+		//recupperation de la liste des occupations
+	
+		//recupperation des occupations de cette client
+		
+		
 	}
 	public function modifyAction() { // brush
-		$this->logger->info('modifyAction()');
+		$this->logger->info('client modifyAction()');
 		//stocker les messages d'erreur/succe pour les retourner à l'utilisateur
 		//$table_reponse = array ('message' => '');
 		$reponse = '';
-		$id_client_enregistrer = NULL;//on va l'utiliser pour se rappeller de l'id de l'client enregistrer dans la BD
+		
 		
 		$this->_helper->layout->disableLayout ();//on veut desactiver l'affichage par défault
 		$this->_helper->viewRenderer->setNoRender ( TRUE );
@@ -151,144 +244,133 @@ class ClientController extends Zend_Controller_Action {
 		$this->logger->info('Request body : '.$request_body);
 		$data_from_user = Zend_Json::decode($request_body);
 		//Activer cette ligne pour voir le resultat du decodage
-		//$this->logger->info(Zend_Debug::dump($data_from_user));
 		
-		$id = $data_from_user ['id'];
-		$nom = $data_from_user ['nom'];
-		$prenom = $data_from_user ['prenom'];
-		$gender = $data_from_user ['gender'];
-		$email = $data_from_user ['email'];
-		$adress = $data_from_user ['adresse'];
-		$tel = $data_from_user ['tel'];
-		$username = $data_from_user ['username'];
-		$password = $data_from_user ['password'];
-		$client_poste_string = $data_from_user ['poste'];
+		$this->logger->info('Decoded data from user : '.html_entity_decode(Zend_Debug::dump($data_from_user,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		$id  = NULL;
+		$nom  = NULL;
+		$prenom  = NULL;
+		$tel  = NULL;
+		$tel_societe  = NULL;
+		$fax  = NULL;
+		$email  = NULL;
+		$adresse  = NULL;
+		$gender  = NULL;
+		$societe  = NULL;
+		$email_societe  = NULL;
+		//si entreprise
+		if($data_from_user['type'] == 'entreprise'){
+			$id = $data_from_user ['id'];
+			$nom = $data_from_user ['nom_r'];
+			$prenom = $data_from_user ['prenom_r'];
+			$gender = $data_from_user ['gender_r'];//!!!!!!!!!!!!!!!!!!!
+			$email = $data_from_user ['email_r'];
+			$tel = $data_from_user ['tel_r'];
+			$societe = $data_from_user['nom_e'];
+			$email_societe = $data_from_user['email_e'];
+			$tel_societe = $data_from_user['tel_e'];
+			$fax = $data_from_user['fax_e'];
+			$adresse = $data_from_user['adresse_e'];
 		
+			//PHASE D INSERTION DE L client DANS LA TABLE 'client'
 		
-		//PHASE DE MISE A JOUR DE L client DANS LA TABLE 'client'
-		$this->logger->info('*********************PHASE DE MISE A JOUR DE L client************');
-		//recupperation de id_poste equivalent au nom du poste de l'client
+			$this->logger->info('*********************PHASE DE MODIFICATION D UNE ENTREPRISE************');
 		
-		$sql = 'SELECT * FROM poste';
-		$list_postes = $this->db->fetchAssoc ( $sql );
-		$poste_id = NULL;
-		foreach ($list_postes as $poste)
-		{
-			if($poste['nom_poste'] == $client_poste_string)
+			//recupperation de la chaine de caractéres representant le gender
+			$gender_string = NULL;
+			if($gender == 0)
 			{
-				$poste_id = $poste['id_poste'];
-				$this->logger->info('id poste trouvé = '.$poste_id);
+				$gender_string = 'Homme';
 			}
-		}
-		//recupperation de la chaine de caractéres representant le gender
-		$gender_string = NULL;
-		if($data_from_user ['gender'] == 0)
-		{
-			$gender_string = 'Homme';
-		}
-		else{
-			$gender_string = 'Femme';
-		}
-		//construire le tableau pour la mise a jour enregistrement de l'client 
-		$client_to_save = array (
-				'nom' => $nom,
-				'prenom' => $prenom,
-				'genre' => $gender_string,
-				'username' => $username,
-				'password' => $password,
-				'tel' => $tel,
-				'email' => $email,
-				'adresse' => $adress,
-				'id_poste' => $poste_id
-		);
-		$this->logger->info(html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-		try {
-			$condition = "id_client = $id";
-			$this->logger->info('client update condition : '.$condition);
-			$n = $this->db->update ( 'client', $client_to_save, $condition);
-			
-			$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
-			
-			
-			//$id_client_enregistrer = $this->db->lastInsertId();
-			$this->logger->info('nbr de lignes  = '.$n);
-			$reponse = 'success';
-			$this->logger->info('MISE A JOUR - client - OUI');
-		} catch ( Zend_Db_Adapter_Exception $e ) {
-			$reponse= 'Erreur';
-			$this->logger->info('Requete erreur : '.$e->getMessage());			
-		}
-		
-		//PHASE D INSERTION DES TUPLES id_employ | id_occupation DANS LA TABLE 'OCCUPER'
-		if(isset($data_from_user ['occupations'])){
-				$this->logger->info('*****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************');
+			else{
+				$gender_string = 'Femme';
+			}
+			//construire le tableau pour l'enregistrement de l'client
+			$client_to_save = array (
+					'nom' => $nom,
+					'prenom' => $prenom,
+					'tel' => $tel,
+					'tel_societe' => $tel_societe	,
+					'fax' => $fax,
+					'email' => $email,
+					'adresse' => $adresse,
+					'type' => 'Entreprise',
+					'gender' => $gender_string,
+					'societe' => $societe,
+					'email_societe' => $email_societe,
+			);
+			$this->logger->info('New client data '.html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {
 				$condition = "id_client = $id";
-				$this->logger->info('Occuper delete condition : '.$condition);
-				$this->db->delete('occuper', $condition);
-				$this->logger->info('update query : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$this->logger->info('client entreprise update condition : '.$condition);
+				$this->db->update ( 'client', $client_to_save, $condition );
+				$this->logger->info('mise à jour entreprise : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
 				
-				$this->logger->info('*****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************');
-				//recupperer la liste des occupation
-				$sql = 'SELECT * FROM occupation';
-				$list_occupations = $this->db->fetchAssoc ( $sql );
 				
-				foreach($data_from_user ['occupations'] as $table_occupation)// !!!!!!!!!!!!!!!!!! $data_from_user ['occupations'] : Tableau des tableaux des occupations
-				{//itterrer dans le champs des occupations de l'client
-				foreach ($table_occupation as $occupation){//$table_occupation : tableau des occupations
-					//itterer dans tous les occupations de l'client
-					foreach ($list_occupations as $occupation_from_db)
-					{//itterer dans les occupation de la BD
-						if($occupation_from_db['nom_occup'] == $occupation)// !!!!!!!!!!!!!!!!!!
-						{//l'client a cette occupation, on cherche id_occup equivalent et on insert dans la BD
-							$id_occup_courant = $occupation_from_db['id_occup'];
-							//construire le tableau pour l'enregistrement du tuple id_client | id_occup
-							$tuple_client_occup = array('id_client' => $id,
-									'id_occup' => $id_occup_courant);
-							try {
-								$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_client_occup,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-								$this->db->insert ( 'occuper', $tuple_client_occup );
-								$this->logger->info('MISE A JOUR - OCCUPER - OUI');
-								$reponse = 'success';
-							} catch ( Zend_Db_Adapter_Exception $e ) {
-								$this->logger->info($e->getMessage ());
-							}
-						}
-					}
-				}
+				$reponse = 'success';
+				$this->logger->info('mise à jour  - entreprise - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
+			}
+		
+		}
+		//si particulier
+		if($data_from_user['type'] == 'particulier'){
+			$id = $data_from_user ['id'];
+			$nom = $data_from_user ['nom_p'];
+			$prenom = $data_from_user ['prenom_p'];
+			$gender = $data_from_user ['gender_p'];
+			$email = $data_from_user ['email_p'];
+			$tel = $data_from_user ['tel_p'];
+			
+			//PHASE D INSERTION DE L client DANS LA TABLE 'client'
+			
+			$this->logger->info('*********************PHASE DE MODIFICATION D UN PARTICULIER************');
+			
+			//recupperation de la chaine de caractéres representant le gender
+			$gender_string = NULL;
+			if($gender == 0)
+			{
+				$gender_string = 'Homme';
+			}
+			else{
+				$gender_string = 'Femme';
+			}
+			//construire le tableau pour l'enregistrement de l'client
+			$client_to_save = array (
+					'nom' => $nom,
+					'prenom' => $prenom,
+					'tel' => $tel,
+					'tel_societe' => '',
+					'fax' => '',
+					'email' => $email,
+					'adresse' => '',
+					'type' => 'Particulier',
+					'gender' => $gender_string,
+					'societe' => '',
+					'email_societe' => '',		
+			);
+			$this->logger->info('Client to save '.html_entity_decode(Zend_Debug::dump($client_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {
+				
+				$condition = "id_client = $id";
+				$this->logger->info('client particulier update condition : '.$condition);
+				$this->db->update ( 'client', $client_to_save, $condition );
+				$this->logger->info('mise à jour entreprise : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				
+				$reponse = 'success';
+				$this->logger->info('mise à jour  - particulier - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
 			}
 			
-			
 		}
-		$this->db->getProfiler()->setEnabled(false);
 		//$json = Zend_Json::encode($table_reponse);
+		$this->db->getProfiler()->setEnabled(false);
 		echo $reponse;
 	}
-	public function modifyformAction() {
-		$this->view->general_icon = 'ico color brush';
-		$this->view->title = 'Modifier un client';
-		
-		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
-		$req_id = $this->getRequest ()->getParam ( 'id' );
-		$id = $this->db->quote ( $req_id );
-		
-		//recupperation des infos de l'client stocker dans la table client
-		
-		$sql = "SELECT * FROM client WHERE id_client = $id";
-		$this->view->client = $this->db->fetchRow ( $sql );
-		//recupperation de la liste des poste pour la convertion id_poste => nom_poste
-		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
-		$sql = 'SELECT * FROM poste';
-		$this->view->list_postes = $this->db->fetchAssoc ( $sql );
-		//$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAssoc ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-		
-		//recupperation de la liste des occupations
-		$sql = 'SELECT * FROM occupation';
-		$this->view->list_occupations = $this->db->fetchAssoc ( $sql );
-		//recupperation des occupations de cette client
-		$sql = "SELECT * FROM occuper WHERE id_client = $id";
-		$this->view->client_occupations = $this->db->fetchAll ( $sql );
-		$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAll ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-	}
+	
 	public function deleteAction() {
 		$n_lignes_supprime = NULL;
 		$table_reponse = array ('message' => '' );

@@ -1,80 +1,216 @@
-2012-04-26T06:47:15+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:47:15+02:00 INFO (6): submitAction()
-2012-04-26T06:47:15+02:00 INFO (6): Request body : {"nom_p" : "rmili","prenom_p" : "khalifa","gender_p" : "0","email_p" : "","tel_p" : "0632536245","type":"particulier"}
-2012-04-26T06:47:15+02:00 INFO (6): <pre>array(6) {
-  ["nom_p"] => string(5) "rmili"
-  ["prenom_p"] => string(7) "khalifa"
+2012-04-26T19:34:44+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:34:44+02:00 INFO (6): client modifyAction()
+2012-04-26T19:34:44+02:00 INFO (6): Request body : {"nom_p" : "newbenani","prenom_p" : "kamal","email_p" : "benani@gmail.com","tel_p" : "0662765745","id" : "14","gender_p" : "0","type":"particulier"}
+2012-04-26T19:34:44+02:00 INFO (6): Decoded data from user : <pre>array(7) {
+  ["nom_p"] => string(9) "newbenani"
+  ["prenom_p"] => string(5) "kamal"
+  ["email_p"] => string(16) "benani@gmail.com"
+  ["tel_p"] => string(10) "0662765745"
+  ["id"] => string(2) "14"
   ["gender_p"] => string(1) "0"
-  ["email_p"] => string(0) ""
-  ["tel_p"] => string(10) "0632536245"
   ["type"] => string(11) "particulier"
 }
 </pre>
-2012-04-26T06:47:15+02:00 INFO (6): *********************PHASE D INSERTION Du client************
-2012-04-26T06:47:15+02:00 INFO (6): <pre>array(6) {
-  ["nom"] => string(5) "rmili"
-  ["prenom"] => string(7) "khalifa"
-  ["genre"] => string(5) "Homme"
-  ["tel"] => string(10) "0632536245"
-  ["email"] => string(0) ""
-  ["type"] => string(11) "Particulier"
-}
-</pre>
-2012-04-26T06:55:03+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:03+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:04+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:04+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:09+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:09+02:00 INFO (6): submitAction()
-2012-04-26T06:55:09+02:00 INFO (6): Request body : {"nom_p" : "rmili","prenom_p" : "khalifa","gender_p" : "0","email_p" : "","tel_p" : "0632536245","type":"particulier"}
-2012-04-26T06:55:09+02:00 INFO (6): <pre>array(6) {
-  ["nom_p"] => string(5) "rmili"
-  ["prenom_p"] => string(7) "khalifa"
-  ["gender_p"] => string(1) "0"
-  ["email_p"] => string(0) ""
-  ["tel_p"] => string(10) "0632536245"
-  ["type"] => string(11) "particulier"
-}
-</pre>
-2012-04-26T06:55:09+02:00 INFO (6): *********************PHASE D INSERTION Du client************
-2012-04-26T06:55:09+02:00 INFO (6): <pre>array(11) {
-  ["nom"] => string(5) "rmili"
-  ["prenom"] => string(7) "khalifa"
-  ["gender"] => string(5) "Homme"
-  ["tel"] => string(10) "0632536245"
+2012-04-26T19:34:44+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-04-26T19:34:44+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(9) "newbenani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
   ["tel_societe"] => string(0) ""
   ["fax"] => string(0) ""
-  ["email"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
   ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
   ["societe"] => string(0) ""
   ["email_societe"] => string(0) ""
-  ["type"] => string(11) "Particulier"
 }
 </pre>
-2012-04-26T06:55:20+02:00 INFO (6): Fonction init() executée
-2012-04-26T06:55:20+02:00 INFO (6): submitAction()
-2012-04-26T06:55:20+02:00 INFO (6): Request body : {"nom_p" : "rmili","prenom_p" : "khalifa","gender_p" : "0","email_p" : "","tel_p" : "0632536245","type":"particulier"}
-2012-04-26T06:55:20+02:00 INFO (6): <pre>array(6) {
-  ["nom_p"] => string(5) "rmili"
-  ["prenom_p"] => string(7) "khalifa"
+2012-04-26T19:34:44+02:00 INFO (6): client particulier update condition : id_client = 
+2012-04-26T19:37:03+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:37:03+02:00 INFO (6): Client modifyform()
+2012-04-26T19:37:03+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(2) "14"
+  ["nom"] => string(6) "benani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-04-26T19:37:03+02:00 INFO (6): client = particulier
+2012-04-26T19:37:10+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:37:10+02:00 INFO (6): client modifyAction()
+2012-04-26T19:37:10+02:00 INFO (6): Request body : {"nom_p" : "newbenani","prenom_p" : "kamal","email_p" : "benani@gmail.com","tel_p" : "0662765745","id" : "14","gender_p" : "0","type":"particulier"}
+2012-04-26T19:37:10+02:00 INFO (6): Decoded data from user : <pre>array(7) {
+  ["nom_p"] => string(9) "newbenani"
+  ["prenom_p"] => string(5) "kamal"
+  ["email_p"] => string(16) "benani@gmail.com"
+  ["tel_p"] => string(10) "0662765745"
+  ["id"] => string(2) "14"
   ["gender_p"] => string(1) "0"
-  ["email_p"] => string(0) ""
-  ["tel_p"] => string(10) "0632536245"
   ["type"] => string(11) "particulier"
 }
 </pre>
-2012-04-26T06:55:20+02:00 INFO (6): *********************PHASE D INSERTION Du client************
-2012-04-26T06:55:20+02:00 INFO (6): <pre>array(11) {
-  ["nom"] => string(5) "rmili"
-  ["prenom"] => string(7) "khalifa"
-  ["gender"] => string(5) "Homme"
-  ["tel"] => string(10) "0632536245"
+2012-04-26T19:37:10+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-04-26T19:37:10+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(9) "newbenani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
   ["tel_societe"] => string(0) ""
   ["fax"] => string(0) ""
-  ["email"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
   ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
   ["societe"] => string(0) ""
   ["email_societe"] => string(0) ""
-  ["type"] => string(11) "Particulier"
 }
 </pre>
+2012-04-26T19:37:10+02:00 INFO (6): client particulier update condition : id_client = 14
+2012-04-26T19:37:10+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 14)
+2012-04-26T19:37:10+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-04-26T19:37:22+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:37:23+02:00 INFO (6): client modifyAction()
+2012-04-26T19:37:23+02:00 INFO (6): Request body : {"nom_p" : "newbenani","prenom_p" : "kamal","gender_p" : "1","email_p" : "benani@gmail.com","tel_p" : "0662765745","id" : "14","gender_p" : "1","type":"particulier"}
+2012-04-26T19:37:23+02:00 INFO (6): Decoded data from user : <pre>array(7) {
+  ["nom_p"] => string(9) "newbenani"
+  ["prenom_p"] => string(5) "kamal"
+  ["gender_p"] => string(1) "1"
+  ["email_p"] => string(16) "benani@gmail.com"
+  ["tel_p"] => string(10) "0662765745"
+  ["id"] => string(2) "14"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-04-26T19:37:23+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-04-26T19:37:23+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(9) "newbenani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Femme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-04-26T19:37:23+02:00 INFO (6): client particulier update condition : id_client = 14
+2012-04-26T19:37:23+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 14)
+2012-04-26T19:37:23+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-04-26T19:37:34+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:37:34+02:00 INFO (6): client modifyAction()
+2012-04-26T19:37:34+02:00 INFO (6): Request body : {"nom_p" : "newbenani","prenom_p" : "kamal","gender_p" : "0","email_p" : "benani@gmail.com","tel_p" : "0662765745","id" : "14","gender_p" : "0","type":"particulier"}
+2012-04-26T19:37:34+02:00 INFO (6): Decoded data from user : <pre>array(7) {
+  ["nom_p"] => string(9) "newbenani"
+  ["prenom_p"] => string(5) "kamal"
+  ["gender_p"] => string(1) "0"
+  ["email_p"] => string(16) "benani@gmail.com"
+  ["tel_p"] => string(10) "0662765745"
+  ["id"] => string(2) "14"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-04-26T19:37:34+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-04-26T19:37:34+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(9) "newbenani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-04-26T19:37:34+02:00 INFO (6): client particulier update condition : id_client = 14
+2012-04-26T19:37:34+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 14)
+2012-04-26T19:37:34+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-04-26T19:37:47+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:37:47+02:00 INFO (6): client modifyAction()
+2012-04-26T19:37:47+02:00 INFO (6): Request body : {"nom_p" : "benani","prenom_p" : "kamal","gender_p" : "0","email_p" : "benani@gmail.com","tel_p" : "0662765745","id" : "14","gender_p" : "0","type":"particulier"}
+2012-04-26T19:37:47+02:00 INFO (6): Decoded data from user : <pre>array(7) {
+  ["nom_p"] => string(6) "benani"
+  ["prenom_p"] => string(5) "kamal"
+  ["gender_p"] => string(1) "0"
+  ["email_p"] => string(16) "benani@gmail.com"
+  ["tel_p"] => string(10) "0662765745"
+  ["id"] => string(2) "14"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-04-26T19:37:47+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-04-26T19:37:47+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(6) "benani"
+  ["prenom"] => string(5) "kamal"
+  ["tel"] => string(10) "0662765745"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "benani@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-04-26T19:37:47+02:00 INFO (6): client particulier update condition : id_client = 14
+2012-04-26T19:37:47+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 14)
+2012-04-26T19:37:47+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-04-26T19:38:00+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:00+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-26T19:38:07+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:07+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:08+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:08+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:21+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:21+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-26T19:38:29+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:32+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:32+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-26T19:38:35+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:35+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:35+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:38:36+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:39:02+02:00 INFO (6): Fonction init() executée
+2012-04-26T19:39:02+02:00 INFO (6): client submitAction()
+2012-04-26T19:39:02+02:00 INFO (6): Request body : {"nom_p" : "hmad","prenom_p" : "mohmed","gender_p" : "0","email_p" : "chihaja@gmail.com","tel_p" : "0687675645","type":"particulier"}
+2012-04-26T19:39:02+02:00 INFO (6): Decoded data from user : <pre>array(6) {
+  ["nom_p"] => string(4) "hmad"
+  ["prenom_p"] => string(6) "mohmed"
+  ["gender_p"] => string(1) "0"
+  ["email_p"] => string(17) "chihaja@gmail.com"
+  ["tel_p"] => string(10) "0687675645"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-04-26T19:39:02+02:00 INFO (6): *********************PHASE D INSERTION D UN PARTICULIER************
+2012-04-26T19:39:02+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(4) "hmad"
+  ["prenom"] => string(6) "mohmed"
+  ["tel"] => string(10) "0687675645"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(17) "chihaja@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-04-26T19:39:02+02:00 INFO (6): inserer particulier : INSERT INTO `client` (`nom`, `prenom`, `tel`, `tel_societe`, `fax`, `email`, `adresse`, `type`, `gender`, `societe`, `email_societe`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-04-26T19:39:02+02:00 INFO (6): last inserted ID = 19
+2012-04-26T19:39:02+02:00 INFO (6): insertion - particulier - OUI
