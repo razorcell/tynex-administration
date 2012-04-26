@@ -1,22 +1,63 @@
-2012-04-26T19:56:24+02:00 INFO (6): Fonction init() executée
-2012-04-26T19:56:24+02:00 INFO (6): Client modifyform()
-2012-04-26T19:56:24+02:00 INFO (6): <pre>bool(false)
+2012-04-27T00:36:55+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:36:55+02:00 INFO (6): Client modifyform()
+2012-04-27T00:36:55+02:00 INFO (6): <pre>bool(false)
 </pre>
-2012-04-26T19:59:26+02:00 INFO (6): Fonction init() executée
-2012-04-26T19:59:26+02:00 INFO (6): Client modifyform()
-2012-04-26T19:59:26+02:00 INFO (6): <pre>bool(false)
+2012-04-27T00:37:41+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:37:41+02:00 INFO (6): Client modifyform()
+2012-04-27T00:37:41+02:00 INFO (6): <pre>bool(false)
 </pre>
-2012-04-26T22:00:27+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:00:27+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-26T22:00:30+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:00:31+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:00:31+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:00:31+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:08+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:09+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:09+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:09+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:12+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:12+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:13+02:00 INFO (6): Fonction init() executée
-2012-04-26T22:01:13+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:37:51+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:37:51+02:00 INFO (6): Client modifyform()
+2012-04-27T00:37:51+02:00 INFO (6): <pre>bool(false)
+</pre>
+2012-04-27T00:38:55+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:38:55+02:00 INFO (6): Client modifyform()
+2012-04-27T00:38:55+02:00 INFO (6): <pre>bool(false)
+</pre>
+2012-04-27T00:45:01+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:45:01+02:00 INFO (6): Client modifyform()
+2012-04-27T00:45:01+02:00 INFO (6): <pre>bool(false)
+</pre>
+2012-04-27T00:46:34+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:46:34+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T00:47:30+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:47:30+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T00:47:36+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:47:36+02:00 INFO (6): Client modifyform()
+2012-04-27T00:47:36+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(2) "20"
+  ["nom"] => string(4) "Alin"
+  ["prenom"] => string(6) "gerrad"
+  ["tel"] => string(0) ""
+  ["tel_societe"] => string(12) "212687676543"
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "alin@alcatel.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(7) "ALCATEL"
+  ["email_societe"] => string(19) "alcatel@alcatel.com"
+}
+</pre>
+2012-04-27T00:47:36+02:00 INFO (6): client = entreprise
+2012-04-27T00:47:42+02:00 INFO (6): Fonction init() executée
+2012-04-27T00:47:42+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T00:48:09+02:00 INFO (6): typeprojet modifyform()
+2012-04-27T00:48:09+02:00 INFO (6): id = '1'
+2012-04-27T00:48:09+02:00 INFO (6): $sql = SELECT * FROM type_projet WHERE id_type_projet = '1'
+2012-04-27T00:48:09+02:00 INFO (6): modifyform type projet : SELECT * FROM type_projet WHERE id_type_projet = '1'
+2012-04-27T00:48:21+02:00 INFO (6): type_projet : submitAction()
+2012-04-27T00:48:21+02:00 INFO (6): <pre>array(1) {
+  ["nom_type_projet"] => string(4) "test"
+}
+</pre>
+2012-04-27T00:48:21+02:00 INFO (6): update query : INSERT INTO `type_projet` (`nom_type_projet`) VALUES (?)
+2012-04-27T00:48:21+02:00 INFO (6): type de projet ajouter : OUI
+2012-04-27T00:48:27+02:00 INFO (6): typeprojet modifyform()
+2012-04-27T00:48:27+02:00 INFO (6): id = '6'
+2012-04-27T00:48:27+02:00 INFO (6): $sql = SELECT * FROM type_projet WHERE id_type_projet = '6'
+2012-04-27T00:48:27+02:00 INFO (6): modifyform type projet : SELECT * FROM type_projet WHERE id_type_projet = '6'
+2012-04-27T00:48:52+02:00 INFO (6): typeprojet modifyform()
+2012-04-27T00:48:52+02:00 INFO (6): id = '4'
+2012-04-27T00:48:52+02:00 INFO (6): $sql = SELECT * FROM type_projet WHERE id_type_projet = '4'
+2012-04-27T00:48:52+02:00 INFO (6): modifyform type projet : SELECT * FROM type_projet WHERE id_type_projet = '4'

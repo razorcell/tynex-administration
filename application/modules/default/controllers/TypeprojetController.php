@@ -98,11 +98,13 @@ class TypeprojetController extends Zend_Controller_Action {
 		$this->view->title = 'Modifier une type_projet';
 		
 		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
-		$req_id = $this->getRequest ()->getParam ( 'id' );
-		$id = $this->db->quote ( $req_id );
+		$req_id = $this->getRequest()->getParam('id');
+		$id = $this->db->quote($req_id);
+		$this->logger->info('id = '.$id);
 		$sql = "SELECT * FROM type_projet WHERE id_type_projet = $id";
+		$this->logger->info('$sql = '.$sql);
 		$this->view->type_projet = $this->db->fetchRow ( $sql );
-		$this->logger->info('SELECT type projet : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+		$this->logger->info('modifyform type projet : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
 		
 		$this->db->getProfiler()->setEnabled(false);
 	}
