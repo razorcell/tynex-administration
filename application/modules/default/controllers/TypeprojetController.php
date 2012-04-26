@@ -11,7 +11,6 @@ class TypeprojetController extends Zend_Controller_Action {
 		$this->writer = new Zend_Log_Writer_Stream(APPLICATION_PATH.'/../tests/logs');
 		$this->logger = new Zend_Log($this->writer);
 		
-		
 		$this->config = new Zend_Config_Ini ( APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV );
 		
 		try {
@@ -92,6 +91,7 @@ class TypeprojetController extends Zend_Controller_Action {
 		echo $json;
 	}
 	public function modifyformAction() {
+		$this->logger->info('typeprojet modifyform()');
 		$this->action = $this->_request->getActionName ();
 		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
@@ -100,11 +100,12 @@ class TypeprojetController extends Zend_Controller_Action {
 		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
 		$req_id = $this->getRequest ()->getParam ( 'id' );
 		$id = $this->db->quote ( $req_id );
-		$sql = "SELECT id_type_projet, nom_type_projet FROM type_projet WHERE id_type_projet = $id";
+		$sql = "SELECT * FROM type_projet WHERE id_type_projet = $id";
 		$this->view->type_projet = $this->db->fetchRow ( $sql );
-	
+		$this->logger->info('SELECT type projet : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+		
+		$this->db->getProfiler()->setEnabled(false);
 	}
-	
 	public function deleteAction() {
 		$this->logger->info('typeprojet/Delete');
 		$n_lignes_supprime = NULL;

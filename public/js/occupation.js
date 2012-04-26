@@ -122,7 +122,7 @@ $(document).ready(
 				// tableau
 				$.ajax({ // la fonction qui fait la magie
 					type : "POST",// définir le type de requete
-					url : "/occupation/submit",// definir la destination qui va
+					url : "/occupationsubmit",// definir la destination qui va
 					// intercepter les données(data)
 					data : data,// définir les données
 					success : function(data) {
@@ -167,7 +167,7 @@ $(document).ready(
 				
 				$.ajax({ // la fonction qui fait la magie
 					type : "POST",// définir le type de requete
-					url : "/occupation/modify",// definir la destination qui va
+					url : "/occupationupdate",// definir la destination qui va
 					// intercepter les données(data)
 					data : data,// définir les données
 					success : function(data) {
