@@ -1,463 +1,310 @@
-$(document)
-		.ready(
-				function() {
-					
-					var all_rows_selected = false;
-					$('form#entreprise').validationEngine();
-					$('form#particulier').validationEngine();
-
-					$(".status").iphoneStyle({ // Custom Label With onChange
-						// function
-						checkedLabel : "Actif",
-						uncheckedLabel : "Interrompu",
-						labelWidth : '85px',
-						onChange : function() {
-							if(this.elem.is(':checked'))
-								{//particulier
-								
-								}
-							else{//entreprise
-								
-							}
-							var chek = $(".status").attr('checked');
-							if (chek) {
-								$(".disabled_map").fadeOut();
-							} else {
-								$(".disabled_map").fadeIn();
-							}
-							// $("#show_service").click(function () {
-							//$(".formEl_b").slideToggle("slow");
-							// });
+$(document).ready(
+		function() {
+			var all_rows_selected = false;
+			var status = $(".status").iphoneStyle({ // Custom Label With onChange
+				// function
+				checkedLabel : "Actif",
+				uncheckedLabel : "Interrompu",
+				labelWidth : '85px',
+				onChange : function() {
+					if(this.elem.is(':checked'))
+						{//checked
+							$('.status_hidden').attr('value','actif');
 						}
-					});
-
-					$('.f_c_e_add').submit(function(e) {
-
-						e.preventDefault();
-					});
-					$('.f_c_p_add').submit(function(e) {
-
-						e.preventDefault();
-					});
-					$('.f_c_e_modify').submit(function(e) {
-
-						e.preventDefault();
-					});
-					$('.f_c_p_modify').submit(function(e) {
-
-						e.preventDefault();
-					});
-
-
-					$('.edit').click(function() {
-						$('.projet tbody tr').each(function(i, row) {
-							$(this).removeClass('row_selected');
+					else{//not checked
+						$('.status_hidden').attr('value','interrompu');
+					}
+					var chek = $(".status").attr('checked');
+					if (chek) {
+						$(".disabled_map").fadeOut();
+					} else {
+						$(".disabled_map").fadeIn();
+					}
+				}
+			});
+			$('.f_e_add').submit(function(e) {
+				e.preventDefault();
+			});
+			$('.f_e_modify').submit(function(e) {
+				e.preventDefault();
+			});
+			$('.edit').click(function(){
+				$('.projet tbody tr').each(
+						function(i, row) {				
+								$(this).removeClass('row_selected');
 						});
-					});
-
-					$('.selectall')
-							.click(
-									function() {
-										if (all_rows_selected == false) {
-											$('.projet tbody tr')
-													.each(
-															function(i, row) {
-																if ($(this)
-																		.hasClass(
-																				'row_selected')
-																		.toString() == 'false') {
-																	$(this)
-																			.addClass(
-																					'row_selected');
-																}
-																all_rows_selected = true;
-															});
-										} else {
-											$('.projet tbody tr')
-													.each(
-															function(i, row) {
-																if ($(this)
-																		.hasClass(
-																				'row_selected')
-																		.toString() == 'true') {
-																	$(this)
-																			.removeClass(
-																					'row_selected');
-																}
-																all_rows_selected = false;
-															});
-										}
-									});
-
-					$('.projet tr').live('click', function() {
-						$(this).toggleClass('row_selected');
-					});
-
-					$('#reset_p').click(function() {
-						$('input:not(.id_projet_p)').val('');//ne pas supprimer id_projet
-
-						// $('input').val('');
-						showError('formulaire vidé', 3000);
-					});
-					$('#reset_e').click(function() {
-						$('input:not(.id_projet_e)').val('');
-
-						// $('input').val('');
-						showError('formulaire vidé', 3000);
-					});
-
-					
-					$('.delete_b')
-							.click(
-									function() {
-
-										$('.test').html('');
-										var lines_to_delete = [];
-										$('.projet tbody tr')
-												.each(
-														function(i, row) {
-
-															if ($(this)
-																	.hasClass(
-																			'row_selected')
-																	.toString() == 'true') {
-																var id_projet_courant = $(
-																		this)
-																		.find(
-																				'.id_projet')
-																		.html();
-																lines_to_delete
-																		.push(id_projet_courant);
-															}
-
-														});
-
-										if (lines_to_delete.length > 0) {
-											DeleteAll(lines_to_delete, 'projet');
-										} else {
-											showWarning(
-													'Vous n\'avez rien selectionner',
-													5000);
-										}
-
-									});
-					$('.display tr').click(function() {
-
-					});
-					$('.add_projet_entreprise').click(function() {
-						
-										var form_data;
-										var json_to_send = '{';
-										var i = 0;
-										var valide = true;
-
-										//$('.test').html('entreprise');
-										// projet est une entreprise
-										
-										form_data = $('.f_c_e_add')
-												.serializeArray();
-										if ($('.nom_e').val().length == 0) {
-											valide = false;
-										} else if ($('.email_e').val().length == 0) {
-											valide = false;
-										} else if ($('.tel_e').val().length == 0) {
-											valide = false;
-										} else if ($('.nom_r').val().length == 0) {
-											valide = false;
-										}
-										if (valide) {
-											for (i = 0; i < form_data.length; i++) {
-												if (i == 0) {
-													json_to_send = json_to_send
-															+ '"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												} else {
-													json_to_send = json_to_send
-															+ ',"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												}
-											}
-											json_to_send = json_to_send
-													+ ',"type":"entreprise"';
-											json_to_send = json_to_send + '}';
-											$
-													.ajax({
-														type : "POST",
-														url : "/projet/submit",
-														data : json_to_send,
-														success : function(data) {
-															// var json =
-															// $.parseJSON(data);
-
-															if (data == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'Entreprise projete ajoutée',
-																		3000);
-															} else {
-																showError(data,
-																		3000);
-															}
-														}
-													});
-										} else {
-											showError(
-													'Veuillez revoir le formulaire de l\'entreprise',
-													3000);
-										}
-
-									});
-
-					$('.add_projet_particulier')
-							.click(
-									function() {
-										var form_data;
-										var json_to_send = '{';
-										var i = 0;
-										var valide = true;
-										//$('.test').html('particulier');
-										form_data = $('.f_c_p_add')
-												.serializeArray();
-
-										if ($('.nom_p').val().length == 0) {
-											valide = false;
-										}
-										if ($('.email_p').val().length == 0) {
-												if ($('.tel_p').val().length == 0) {
-													valide = false;
-											} 
-										} 
-										if (valide) {
-											for (i = 0; i < form_data.length; i++) {
-												if (i == 0) {
-													json_to_send = json_to_send
-															+ '"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												} else {
-													json_to_send = json_to_send
-															+ ',"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												}
-											}
-											json_to_send = json_to_send
-													+ ',"type":"particulier"';
-											json_to_send = json_to_send + '}';
-											$
-													.ajax({
-														type : "POST",
-														url : "/projet/submit",
-														data : json_to_send,
-														success : function(data) {
-															// var json =
-															// $.parseJSON(data);
-
-															if (data == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'projet particulier ajouté',
-																		3000);
-															} else {
-																showError(data,
-																		3000);
-															}
-														}
-													});
-										} else {
-											showError(
-													'Veuillez revoir le formulaire de particulier',
-													3000);
-										}
-
-									});
-
-					$(".Delete").live(
-							'click',
-							function() {
-								$('.projet tbody tr').each(function(i, row) {
-									$(this).removeClass('row_selected');
-								});
-								$('.test').html('');
-								var row = $(this).parents('tr');
-
-								var action_destination = '/projet/delete';
-
-								var description = row.find('.nom').html();
-
-								var id_projet = row.find('.id_projet').html();
-
-								Delete(id_projet, description, row, 0,
-										action_destination);
+			});
+			$('.selectall').click(function(){
+				if(all_rows_selected == false)
+					{
+						$('.projet tbody tr').each(
+							function(i, row) {
+								if($(this).hasClass('row_selected').toString() == 'false'){
+									$(this).addClass('row_selected');
+								}
+								all_rows_selected = true;
 							});
-					$('.modify_projet_entreprise').click(function() {
-						var form_data;
-						var json_to_send = '{';
-						var i = 0;
-						var valide = true;
-
-						//$('.test').html('entreprise');
-						// projet est une entreprise
+					}
+				else{
+					$('.projet tbody tr').each(
+							function(i, row) {
+								if($(this).hasClass('row_selected').toString() == 'true'){
+									$(this).removeClass('row_selected');
+								}
+								all_rows_selected = false;
+							});
+				}
+			});
+			$('.projet tr').live('click',function(){
+				$(this).toggleClass('row_selected');
+			});
+		
+			$('#reset').click(function() {
+				$('input:not(.id_projet)').val('');
+			//	$('input').val('');
+				showError('formulaire vidé', 3000);
+			});
+			$('.delete_b').click(
+					function() {
 						
-						form_data = $('.f_c_e_modify')
-								.serializeArray();
-						if ($('.nom_e').val().length == 0) {
-							valide = false;
-						} else if ($('.email_e').val().length == 0) {
-							valide = false;
-						} else if ($('.tel_e').val().length == 0) {
-							valide = false;
-						} else if ($('.nom_r').val().length == 0) {
-							valide = false;
-						}
-						if (valide) {
-							for (i = 0; i < form_data.length; i++) {
-								if (i == 0) {
-									json_to_send = json_to_send
-											+ '"'
-											+ form_data[i].name
-											+ '" : "'
-											+ form_data[i].value
-											+ '"';
-								} else {
-									json_to_send = json_to_send
-											+ ',"'
-											+ form_data[i].name
-											+ '" : "'
-											+ form_data[i].value
-											+ '"';
-								}
-							}
-							//add id value
-							var id = $('.id_projet').attr('value');
-							 json_to_send = json_to_send + ',"id" : "'+id+'"';
-							 //gender
-							 if($('label[for="radio-1"]').hasClass('checked')) {
-								 json_to_send = json_to_send + ',"gender_r" : "0"';
-								 }
-							 else{
-								 json_to_send = json_to_send + ',"gender_r" : "1"';
-							 }
-							 
-							json_to_send = json_to_send
-									+ ',"type":"entreprise"';
-							json_to_send = json_to_send + '}';
-							$
-									.ajax({
-										type : "POST",
-										url : "/projet/modify",
-										data : json_to_send,
-										success : function(data) {
-											// var json =
-											// $.parseJSON(data);
-
-											if (data == 'success') {// maintenant
-												// on
-												// peut
-												showSuccess(
-														'Modification de l\'entreprise réussie',
-														3000);
-											} else {
-												showError(data,
-														3000);
-											}
-										}
-									});
-						} else {
-							showError(
-									'Veuillez revoir le formulaire de l\'entreprise',
-									3000);
-						}
-
-					});// end modify_projet_entreprise.click()
-					$('.modify_projet_particulier')
-					.click(
-							function() {
-								var form_data;
-								var json_to_send = '{';
-								var i = 0;
-								var valide = true;
-								//$('.test').html('particulier');
-								form_data = $('.f_c_p_modify')
-										.serializeArray();
-
-								if ($('.nom_p').val().length == 0) {
-									valide = false;
-								}
-								if ($('.email_p').val().length == 0) {
-										if ($('.tel_p').val().length == 0) {
-											valide = false;
-									} 
-								} 
-								if (valide) {
-									for (i = 0; i < form_data.length; i++) {
-										if (i == 0) {
-											json_to_send = json_to_send
-													+ '"'
-													+ form_data[i].name
-													+ '" : "'
-													+ form_data[i].value
-													+ '"';
-										} else {
-											json_to_send = json_to_send
-													+ ',"'
-													+ form_data[i].name
-													+ '" : "'
-													+ form_data[i].value
-													+ '"';
-										}
+						$('.test').html('');
+						var lines_to_delete = [];
+						$('.projet tbody tr').each(
+								function(i, row) {
+									
+									if($(this).hasClass('row_selected').toString() == 'true'){
+										var id_projet_courant = $(this).find('.id_projet').html();
+										lines_to_delete.push(id_projet_courant);
 									}
-									//add id value
-									var id = $('.id_projet').attr('value');
-									 json_to_send = json_to_send + ',"id" : "'+id+'"';
-									 //gender
-									 if($('label[for="radio-1"]').hasClass('checked')) {
-										 json_to_send = json_to_send + ',"gender_p" : "0"';
-										 }
-									 else{
-										 json_to_send = json_to_send + ',"gender_p" : "1"';
-									 }
-									 
-									json_to_send = json_to_send
-											+ ',"type":"particulier"';
-									json_to_send = json_to_send + '}';
-									$
-											.ajax({
-												type : "POST",
-												url : "/projet/modify",
-												data : json_to_send,
-												success : function(data) {
-													// var json =
-													// $.parseJSON(data);
-
-													if (data == 'success') {// maintenant
-														// on
-														// peut
-														showSuccess(
-																'Modification réussie',
-																3000);
-													} else {
-														showError(data,
-																3000);
-													}
-												}
-											});
-								} else {
-									showError(
-											'Veuillez revoir le formulaire de particulier',
-											3000);
+								});
+						
+						 if(lines_to_delete.length > 0)
+							 {
+							 DeleteAll(lines_to_delete,'projet');
+							 }
+						 else
+							 {
+							 showWarning('Vous n\'avez rien selectionner',5000);
+							 }
+					});
+			$('.display tr').click(function() {
+			});
+			$('.add_projet').click(function() {
+				var form_data = $('.f_p_add').serializeArray();
+				var i=0;
+				//form validation
+				var valide = true;
+				if($('.prix').value < 0)
+					{
+						valide = false;
+					}
+				else if($('.date_debut').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('.date_fin').val().length == 0)
+				{
+					valide = false;
+				}
+				var commande = $('.chzn-single').find('span').html();
+				if(commande == 'Veuillez choisir un poste...')
+					{
+						valide =false;
+					}
+				if(valide)
+					{
+					var json_to_send = '{';
+					
+					for(i=0;i<form_data.length;i++)
+						{
+							if(i==0){
+									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
 								}
-							});//end modify projet particulier
+							else{
+								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+							}
+						}
+					//add commande
+					 json_to_send = json_to_send + ',"commande" : "'+commande+'"';
+					
+					// add price
+					var prix = $('.prix').attr('value');
+				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';
+				i=0;
+				json_to_send = json_to_send + ',"employes" : [';//open employes json
+				$('ul.chzn-choices').find('li').each(function(){
+						if($(this).find('span').length > 0){
+								if(i==0){
+										var employe = $(this).find('span').html();
+										json_to_send = json_to_send + '{"name " : "'+employe+'"}';
+									}
+								else{
+										var employe = $(this).find('span').html();
+										json_to_send = json_to_send + ',{"name " : "'+employe+'"}';
+									}
+								i++;
+							}
+					});
+					json_to_send = json_to_send + ']';//close occupations json
+					json_to_send = json_to_send + '}';
+					//$('.test').html(json_to_send);
+					//json_to_send = $.parseJSON(json_to_send);
+					$.ajax({ 
+						type : "POST",
+						url : "/project/submit",
+						data : json_to_send,
+						success : function(data) {
+							//alert('success');
+							//var json = $.parseJSON(data);
+						
+							if (data == 'success') {// maintenant on peut
+								showSuccess('Employé ajouté', 3000);
+								
+							} else {
+								showError(data, 3000);
+							}
+						}
+					});
+					}else{
+						showError('Veuillez revoir le formulaire', 3000);
+					}
+			});
+			$(".Delete").live('click',function() { 
+				$('.projet tbody tr').each(
+						function(i, row) {				
+								$(this).removeClass('row_selected');
 				});
+				$('.test').html('');
+				  var row=$(this).parents('tr');
+				
+				  var action_destination = '/project/delete';
+				
+				  var description = row.find('.nom').html();
+				
+				  var id_projet = row.find('.id_projet').html();
+				
+				  Delete(id_projet,description,row,0,action_destination);
+			});
+			$('.modify_projet').click(function() {
+				var form_data = $('.f_e_modify').serializeArray();
+				var poste = $('a.chzn-single').find('span').html();
+				var i=0;
+				//form validation
+				var valide = true;
+				if($('#lastname').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('#firstname').val().length == 0)
+					{
+						valide = false;
+					}
+				else if($('.email').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#tel').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#username').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#password').val().length == 0)
+				{
+					valide = false;
+				}
+				else if($('#passwordCon').val().length == 0)
+				{
+					valide = false;
+				}
+				var pass = $('#password').attr("value");
+				var passCon = $('#passwordCon').attr("value");
+				if(pass != passCon || pass == '' || passCon == '')
+					{
+						valide = false;
+					}
+				var poste = $('.chzn-single').find('span').html();
+				if(poste == 'Veuillez choisir un poste...')
+					{
+						valide =false;
+						
+					}
+				if(valide)
+					{
+					var json_to_send = '{';
+					
+					for(i=0;i<form_data.length;i++)
+						{
+							if(i==0){
+									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
+							else{
+								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+							}
+						}
+					//add id value
+					var id = $('.id_projet').attr('value');
+					 json_to_send = json_to_send + ',"id" : "'+id+'"';
+					 //add 'poste' value
+				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
+				 //add gender !!!! i don't know why it doesn't get added automaticly it does for add projet
+				 if($('label[for="radio-1"]').hasClass('checked')) {
+					 json_to_send = json_to_send + ',"gender" : "0"';
+					 }
+				 else{
+					 json_to_send = json_to_send + ',"gender" : "1"';
+				 }
+				 if($('ul.chzn-choices').find('li').length > 1){
+					 	i=0;
+						json_to_send = json_to_send + ',"occupations" : [';//open occupations json
+						$('ul.chzn-choices').find('li').each(function(){
+								if($(this).find('span').length > 0)//if span exists
+									{
+										if(i==0)
+											{
+												var occupation = $(this).find('span').html();
+												json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
+											}
+										else
+											{
+												var occupation = $(this).find('span').html();
+												json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
+											}
+										i++;
+									}
+								
+							});//la fin de l'ajout des occupations à la chaine de caractére qui va etre envoyer au serveur
+							json_to_send = json_to_send + ']';//close occupations json
+				 }
+					json_to_send = json_to_send + '}';
+					$('.test').html(json_to_send);
+					//json_to_send = $.parseJSON(json_to_send);
+					
+					
+					$.ajax({ 
+						type : "POST",
+						url : "/project/modify",
+						data : json_to_send,
+						success : function(data) {
+							//var json = $.parseJSON(data);
+						
+							if (data == 'success') {// maintenant on peut
+								showSuccess('Mise à jour avec succée', 3000);
+								setTimeout("Refresh()", 500);
+								
+							} else {
+								showError(data, 100000);
+							}
+						}
+					
+					});
+					}else{
+						showError('Veuillez revoir le formulaire', 3000);
+					}
+				
+			});//end modify.click()
+	
+		});
+
