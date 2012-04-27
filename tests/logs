@@ -1,1 +1,45 @@
-2012-04-27T16:42:19+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:08:10+02:00 INFO (6): Request body : {"nom_pack" : "Static website","type_service" : "Web Design"}
+2012-04-27T18:08:10+02:00 INFO (6): id type service trouvé = 3
+2012-04-27T18:08:23+02:00 INFO (6): Request body : {"nom_pack" : "Dynamic website","type_service" : "Web Design"}
+2012-04-27T18:08:23+02:00 INFO (6): id type service trouvé = 3
+2012-04-27T18:08:28+02:00 INFO (6): Request body : {"nom_pack" : "CMS website","type_service" : "Web Design"}
+2012-04-27T18:08:28+02:00 INFO (6): id type service trouvé = 3
+2012-04-27T18:14:06+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:15+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:15+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T18:14:17+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:25+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:25+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:26+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:26+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:32+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:32+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:33+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:14:33+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:15:32+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:15:32+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T18:15:37+02:00 INFO (6): Fonction init() executée
+2012-04-27T18:15:38+02:00 INFO (6): Client modifyform()
+2012-04-27T18:15:38+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(2) "20"
+  ["nom"] => string(4) "Alin"
+  ["prenom"] => string(6) "gerrad"
+  ["tel"] => string(0) ""
+  ["tel_societe"] => string(12) "212687676543"
+  ["fax"] => string(0) ""
+  ["email"] => string(16) "alin@alcatel.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(7) "ALCATEL"
+  ["email_societe"] => string(19) "alcatel@alcatel.com"
+}
+</pre>
+2012-04-27T18:15:38+02:00 INFO (6): client = entreprise

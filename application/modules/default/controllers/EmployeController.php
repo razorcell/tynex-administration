@@ -18,11 +18,7 @@ class EmployeController extends Zend_Controller_Action {
 			$this->db = Zend_Db::factory ( $this->config->database );
 			$this->db->getConnection ();
 			$this->db->getProfiler()->setEnabled(true);
-			
-			
-			
-			
-				
+
 		} catch ( Zend_Db_Adapter_Exception $e ) {
 			echo $e->getMessage ();
 		} catch ( Zend_Exception $e ) {

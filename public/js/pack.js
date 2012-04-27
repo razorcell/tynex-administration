@@ -65,25 +65,51 @@ $(document).ready(function() {
 
 	});
 	$('.add_pack').click(function() {
-		var data = $('.f_p_add').serializeArray();// convertir les
-
-		$.ajax({
-			type : "POST",
-			url : "/pack/submit",
-
-			data : data,
-			success : function(data) {
-				var json = $.parseJSON(data);
-
-				if (json.message == 'erreur') {// maintenant on peut
-
-					showError(json.message, 3000);
-				} else {
-					showSuccess(json.message, 3000);
+		var form_data = $('.f_p_add').serializeArray();// convertir les
+		var type_service = $('a.chzn-single').find('span').html();
+		var valide = true;
+		if($('.nom_pack').val().length == 0)
+		{
+			valide = false;
+		}
+		if(type_service == 'Veuillez choisir un type de service...')
+		{
+			valide =false;
+		}
+		if(valide){
+			var json_to_send = '{';
+			
+			for(i=0;i<form_data.length;i++)
+				{
+					if(i==0){
+							json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+						}
+					else{
+						json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+					}
 				}
-				;
-			}
-		});
+			 json_to_send = json_to_send + ',"type_service" : "'+type_service+'"';
+			 json_to_send = json_to_send + '}';
+			$.ajax({
+				type : "POST",
+				url : "/pack/submit",
+
+				data : json_to_send,
+				success : function(data) {
+					var json = $.parseJSON(data);
+
+					if (json.message == 'erreur') {// maintenant on peut
+
+						showError(json.message, 3000);
+					} else {
+						showSuccess(json.message, 3000);
+					}
+					;
+				}
+			});
+		}else{
+			showError('Veuillez revoir le formulaire', 3000);
+		}
 	});
 
 	$(".Delete").live('click', function() {

@@ -27,6 +27,7 @@ echo '
 
 <th align="left">Id</th>
 <th>Description</th>
+<th>Type de service</th>
 <th>Management</th>
 </tr>
 </thead>
@@ -35,7 +36,18 @@ echo '
 foreach ( $this->list_packs as $pack ) {
 	echo '<tr>
 <td  class="id_pack" align ="left">' . $pack ['id_pack'] . '</td>
-<td class="libelle_pack">' . $pack ['libelle_pack'] . '</td>
+<td class="nom_pack">' . $pack ['libelle_pack'] . '</td>';
+
+//get the service type name
+foreach($this->list_types_services as $type_service){
+	if($type_service['id_type_service'] == $pack ['id_type_service'])
+	{
+		$libelle_type_service = $type_service['libelle_type_service'];
+	}
+}
+echo '
+<td>' . $libelle_type_service . '</td>
+
 <td>
 <span class="tip" >
 <a  title="Edit" class="edit" href="';
