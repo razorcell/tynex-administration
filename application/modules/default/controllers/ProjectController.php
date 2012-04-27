@@ -39,15 +39,18 @@ class ProjectController extends Zend_Controller_Action {
 		$this->db->getProfiler()->setEnabled(false);
 	}
 	public function addAction() {
+		$this->logger->info(' projet addAction() ');
 		$this->action = $this->_request->getActionName ();
 		$this->view->action = $this->action;
 		
 		$this->view->general_icon = 'ico color add';
 		$this->view->title = 'Ajouter un projet';
-		$sql = 'SELECT * FROM poste';
-		$this->view->list_postes = $this->db->fetchAssoc ( $sql );
-		$sql = 'SELECT * FROM occupation';
-		$this->view->list_occupations = $this->db->fetchAssoc ( $sql );
+		$sql = 'SELECT * FROM client';
+		$this->view->list_clients = $this->db->fetchAssoc ( $sql );
+		$sql = 'SELECT * FROM employe';
+		$this->view->list_employes = $this->db->fetchAssoc ( $sql );
+		$this->logger->info('get all clients : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+		$this->db->getProfiler()->setEnabled(false);
 	
 	}
 	public function submitAction() {

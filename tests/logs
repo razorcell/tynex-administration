@@ -1,45 +1,130 @@
-2012-04-27T18:08:10+02:00 INFO (6): Request body : {"nom_pack" : "Static website","type_service" : "Web Design"}
-2012-04-27T18:08:10+02:00 INFO (6): id type service trouvé = 3
-2012-04-27T18:08:23+02:00 INFO (6): Request body : {"nom_pack" : "Dynamic website","type_service" : "Web Design"}
-2012-04-27T18:08:23+02:00 INFO (6): id type service trouvé = 3
-2012-04-27T18:08:28+02:00 INFO (6): Request body : {"nom_pack" : "CMS website","type_service" : "Web Design"}
-2012-04-27T18:08:28+02:00 INFO (6): id type service trouvé = 3
-2012-04-27T18:14:06+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:09+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:15+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:15+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T18:14:17+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:18+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:25+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:25+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:26+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:26+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:32+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:32+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:33+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:14:33+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:15:32+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:15:32+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T18:15:37+02:00 INFO (6): Fonction init() executée
-2012-04-27T18:15:38+02:00 INFO (6): Client modifyform()
-2012-04-27T18:15:38+02:00 INFO (6): <pre>array(12) {
-  ["id_client"] => string(2) "20"
-  ["nom"] => string(4) "Alin"
-  ["prenom"] => string(6) "gerrad"
-  ["tel"] => string(0) ""
-  ["tel_societe"] => string(12) "212687676543"
-  ["fax"] => string(0) ""
-  ["email"] => string(16) "alin@alcatel.com"
-  ["adresse"] => string(0) ""
-  ["type"] => string(10) "Entreprise"
-  ["gender"] => string(5) "Homme"
-  ["societe"] => string(7) "ALCATEL"
-  ["email_societe"] => string(19) "alcatel@alcatel.com"
+2012-04-27T19:04:37+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:04:37+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:07:12+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:07:12+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:08:07+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:08:07+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:22:19+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:22:19+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:22:19+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:22:20+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:22:23+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:22:23+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:31:11+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:31:11+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:31:12+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:32:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:32:53+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:32:53+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:32:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:32:54+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:32:54+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:42:01+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:42:52+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:42:52+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:42:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:42:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:02+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:02+02:00 INFO (6): get all projets : SELECT * FROM projet
+2012-04-27T19:43:03+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:03+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:43:03+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-04-27T19:43:03+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:04+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:04+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:52+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:52+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:43:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:43:59+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:01+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:54+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:54+02:00 INFO (6): submitAction()
+2012-04-27T19:44:54+02:00 INFO (6): Request body : {"nom" : "hassan","prenom" : "hassan","gender" : "0","email" : "hassan@gmail.com","adresse" : "Bloc 8 Agadir","tel" : "0698786756","username" : "hassan","password" : "pass","passwordCon" : "pass","poste" : "Personnel","occupations" : [{"name " : "Developpeur Web"}]}
+2012-04-27T19:44:54+02:00 INFO (6): Developpeur Web
+2012-04-27T19:44:54+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-04-27T19:44:54+02:00 INFO (6): id poste trouvé = 1
+2012-04-27T19:44:54+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(6) "hassan"
+  ["prenom"] => string(6) "hassan"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(6) "hassan"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0698786756"
+  ["email"] => string(16) "hassan@gmail.com"
+  ["adresse"] => string(13) "Bloc 8 Agadir"
+  ["id_poste"] => string(1) "1"
 }
 </pre>
-2012-04-27T18:15:38+02:00 INFO (6): client = entreprise
+2012-04-27T19:44:54+02:00 INFO (6): add an employe : INSERT INTO `employe` (`nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-04-27T19:44:54+02:00 INFO (6): last inserted ID = 16
+2012-04-27T19:44:54+02:00 INFO (6): insertion - EMPLOYE - OUI
+2012-04-27T19:44:54+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-04-27T19:44:54+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(2) "16"
+  ["id_occup"] => string(1) "5"
+}
+</pre>
+2012-04-27T19:44:54+02:00 INFO (6): add occupation : INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES (?, ?)
+2012-04-27T19:44:54+02:00 INFO (6): insertion - OCCUPER - OUI
+2012-04-27T19:44:57+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:57+02:00 INFO (6): get all projets : SELECT * FROM projet
+2012-04-27T19:44:58+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:58+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:44:58+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:49:03+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:49:03+02:00 INFO (6): get all projets : SELECT * FROM projet
+2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:49:06+02:00 INFO (6):  projet addAction() 
+2012-04-27T19:49:06+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
+2012-04-27T19:49:07+02:00 INFO (6): Fonction init() executée
+2012-04-27T22:01:50+02:00 INFO (6): Request body : {"nom_pack" : "Startup","type_service" : "Nom de Domaine"}
+2012-04-27T22:01:50+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:35:10+02:00 INFO (6): Request body : {"nom_pack" : "Ultra","type_service" : "Hebergement"}
+2012-04-27T22:35:10+02:00 INFO (6): id type service trouvé = 1
+2012-04-27T22:36:26+02:00 INFO (6): Request body : {,"type_service" : "Nom de Domaine"}
+2012-04-27T22:37:02+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","type_service" : "Nom de Domaine"}
+2012-04-27T22:37:02+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:38:21+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
+2012-04-27T22:38:21+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:40:56+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
+2012-04-27T22:40:56+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:43:04+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
+2012-04-27T22:43:04+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:49:10+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
+2012-04-27T22:49:10+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:50:44+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Nom de Domaine"}
+2012-04-27T22:50:44+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:51:05+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","id" : "2","type_service" : "Nom de Domaine"}
+2012-04-27T22:51:05+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:51:19+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","id" : "2","type_service" : "Hebergement"}
+2012-04-27T22:51:19+02:00 INFO (6): id type service trouvé = 1
+2012-04-27T22:51:29+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Nom de Domaine"}
+2012-04-27T22:51:29+02:00 INFO (6): id type service trouvé = 4
+2012-04-27T22:51:56+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Hebergement"}
+2012-04-27T22:51:56+02:00 INFO (6): id type service trouvé = 1
+2012-04-27T22:52:02+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Hebergement"}
+2012-04-27T22:52:02+02:00 INFO (6): id type service trouvé = 1

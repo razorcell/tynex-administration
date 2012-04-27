@@ -81,23 +81,37 @@ class PackController extends Zend_Controller_Action {
 	}
 	public function modifyAction() { // brush
 		$table_reponse = array ('message' => '' );
+		
 		$this->_helper->layout->disableLayout ();
 		$this->_helper->viewRenderer->setNoRender ( TRUE );
 		
-		$data_from_user = $this->_getAllParams ();
+		// recupperation des valeurs entrer par l'utilisateur
+		$request_body = $this->getRequest ()->getRawBody ();
+		$this->logger->info ( 'Request body : ' . $request_body );
+		$data_from_user = Zend_Json::decode ( $request_body );
+		//chercher id_type_service
+		$nom_pack = $data_from_user ['nom_pack'];
+		$id_pack = $data_from_user['id'];
+		$type_service_string = $data_from_user ['type_service'];
 		
-		if (! empty ( $data_from_user ['nom_pack'] )) {
-			$new_data = array ('nom_pack' => $data_from_user ['nom_pack'] );
-			$id_pack = $data_from_user ['id_pack'];
-			$condition = "id_pack = $id_pack";
-			try {
-				$this->db->update ( 'pack', $new_data, $condition );
-				$table_reponse ['message'] = 'Le pack a été bien modifier';
-			} catch ( Zend_Db_Adapter_Exception $e ) {
-				echo $e->getMessage ();
+		$sql = 'SELECT * FROM type_service';
+		$list_types_services = $this->db->fetchAssoc ( $sql );
+		$type_service_id = NULL;
+		foreach ($list_types_services as $type_service)
+		{
+			if($type_service['libelle_type_service'] == $type_service_string)
+			{
+				$type_service_id = $type_service['id_type_service'];
+				$this->logger->info('id type service trouvé = '.$type_service_id);
 			}
-		} else {
-			$table_reponse ['message'] = 'erreur';
+		}
+		$data_to_save = array ('libelle_pack' => $nom_pack, 'id_type_service' => $type_service_id);
+		try {
+			$condition = "id_pack = $id_pack";
+			$this->db->update ( 'pack', $data_to_save, $condition );
+			$table_reponse ['message'] = 'Le pack a été bien modifier ';
+		} catch ( Zend_Db_Adapter_Exception $e ) {
+			echo $e->getMessage ();
 		}
 		$json = Zend_Json::encode ( $table_reponse );
 		echo $json;
@@ -111,8 +125,10 @@ class PackController extends Zend_Controller_Action {
 		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
 		$req_id = $this->getRequest ()->getParam ( 'id' );
 		$id = $this->db->quote ( $req_id );
-		$sql = "SELECT id_pack, nom_pack FROM pack WHERE id_pack = $id";
+		$sql = "SELECT * FROM pack WHERE id_pack = $id";
 		$this->view->pack = $this->db->fetchRow ( $sql );
+		$sql = "SELECT * FROM type_service";
+		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
 	
 	}
 	
