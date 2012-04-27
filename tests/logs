@@ -203,3 +203,104 @@
 2012-04-28T00:26:44+02:00 INFO (6): Fonction init() executée
 2012-04-28T00:26:45+02:00 INFO (6): Fonction init() executée
 2012-04-28T00:27:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:09:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:09:48+02:00 INFO (6):  projet addAction() 
+2012-04-28T01:09:48+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T01:09:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:09:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:09:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:10:11+02:00 INFO (6): typeprojet/Delete
+2012-04-28T01:10:11+02:00 INFO (6): la condition de suppression : id_type_projet = 1
+2012-04-28T01:10:11+02:00 INFO (6): update query : DELETE FROM `type_projet` WHERE (id_type_projet = 1)
+2012-04-28T01:10:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:10:15+02:00 INFO (6): get all projets : SELECT * FROM projet
+2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:10:18+02:00 INFO (6):  projet addAction() 
+2012-04-28T01:10:18+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:10:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:11:19+02:00 INFO (6): projet submitAction()
+2012-04-28T01:11:19+02:00 INFO (6): Request body : {"description" : "sdfsdfsdf","prix" : "1,000.00","date_debut" : "01-04-2012","date_fin" : "31-05-2012","status" : "1","status_hidden" : "actif","commande" : "null","type_projet" : "null","prix" : "1,000.00","employes" : [{"name " : "baghazi"},{"name " : "hassan"}]}
+2012-04-28T01:11:19+02:00 INFO (6): Decoded data from user : <pre>array(9) {
+  ["description"] => string(9) "sdfsdfsdf"
+  ["prix"] => string(8) "1,000.00"
+  ["date_debut"] => string(10) "01-04-2012"
+  ["date_fin"] => string(10) "31-05-2012"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "actif"
+  ["commande"] => string(4) "null"
+  ["type_projet"] => string(4) "null"
+  ["employes"] => array(2) {
+    [0] => array(1) {
+      ["name "] => string(7) "baghazi"
+    }
+    [1] => array(1) {
+      ["name "] => string(6) "hassan"
+    }
+  }
+}
+</pre>
+2012-04-28T01:11:19+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-04-28T01:11:19+02:00 INFO (6): projet to save <pre>array(11) {
+  ["nom"] => NULL
+  ["prenom"] => NULL
+  ["tel"] => NULL
+  ["tel_societe"] => NULL
+  ["fax"] => NULL
+  ["email"] => NULL
+  ["adresse"] => NULL
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => NULL
+  ["email_societe"] => NULL
+}
+</pre>
+2012-04-28T01:14:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:14:36+02:00 INFO (6):  projet addAction() 
+2012-04-28T01:14:36+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T01:14:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:14:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:14:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:15:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T01:15:03+02:00 INFO (6): projet submitAction()
+2012-04-28T01:15:03+02:00 INFO (6): Request body : {"description" : "sdfsdf","prix" : "1,000.00","date_debut" : "01-04-2012","date_fin" : "30-04-2012","status" : "1","status_hidden" : "actif","commande" : "1","type_projet" : "Application Web","prix" : "1,000.00","employes" : [{"name " : "baghazi"},{"name " : "ali"}]}
+2012-04-28T01:15:03+02:00 INFO (6): Decoded data from user : <pre>array(9) {
+  ["description"] => string(6) "sdfsdf"
+  ["prix"] => string(8) "1,000.00"
+  ["date_debut"] => string(10) "01-04-2012"
+  ["date_fin"] => string(10) "30-04-2012"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "actif"
+  ["commande"] => string(1) "1"
+  ["type_projet"] => string(15) "Application Web"
+  ["employes"] => array(2) {
+    [0] => array(1) {
+      ["name "] => string(7) "baghazi"
+    }
+    [1] => array(1) {
+      ["name "] => string(3) "ali"
+    }
+  }
+}
+</pre>
+2012-04-28T01:15:03+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-04-28T01:15:03+02:00 INFO (6): projet to save <pre>array(11) {
+  ["nom"] => NULL
+  ["prenom"] => NULL
+  ["tel"] => NULL
+  ["tel_societe"] => NULL
+  ["fax"] => NULL
+  ["email"] => NULL
+  ["adresse"] => NULL
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => NULL
+  ["email_societe"] => NULL
+}
+</pre>

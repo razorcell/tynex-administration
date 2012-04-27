@@ -106,11 +106,16 @@ $(document).ready(
 				{
 					valide = false;
 				}
-				var commande = $('.chzn-single').find('span').html();
-				if(commande == 'Veuillez choisir un poste...')
+				var commande = $('.commande').find('span').html();
+				if(commande == 'Veuillez choisir une commande...')
 					{
 						valide =false;
 					}
+				var type_projet = $('.type_projet').find('span').html();
+				if(type_projet == 'Veuillez choisir un type de projet...')
+				{
+					valide =false;
+				}
 				if(valide)
 					{
 					var json_to_send = '{';
@@ -126,7 +131,9 @@ $(document).ready(
 						}
 					//add commande
 					 json_to_send = json_to_send + ',"commande" : "'+commande+'"';
-					
+					 //add type projet
+					//add commande
+					 json_to_send = json_to_send + ',"type_projet" : "'+type_projet+'"';
 					// add price
 					var prix = $('.prix').attr('value');
 				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';

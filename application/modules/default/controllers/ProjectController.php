@@ -45,6 +45,8 @@ class ProjectController extends Zend_Controller_Action {
 		
 		$this->view->general_icon = 'ico color add';
 		$this->view->title = 'Ajouter un projet';
+		$sql = 'SELECT * FROM type_projet';
+		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
 		$sql = 'SELECT * FROM commande';
 		$this->view->list_commandes = $this->db->fetchAssoc ( $sql );
 		$sql = 'SELECT * FROM employe';
