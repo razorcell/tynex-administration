@@ -7,14 +7,12 @@ $(document).ready(
 			$('.f_p_modify').submit(function(e) {
 				e.preventDefault();
 			});
-			
 			$('.edit').click(function(){
 				$('.typeservice tbody tr').each(
 						function(i, row) {				
 								$(this).removeClass('row_selected');
 						});
 			});
-
 			$('.selectall').click(function(){
 				if(all_rows_selected == false)
 					{
@@ -115,7 +113,7 @@ $(document).ready(
 				  Delete(id_typeservice,description,row,0,action_destination);
 			});
 			$('.modify_typeservice').click(function() {
-				var data = $('.f_p_modify').serializeArray();	
+				var data = $('.f_t_s_modify').serializeArray();	
 				$.ajax({ 
 					type : "POST",
 					url : "/typeservice/modify",

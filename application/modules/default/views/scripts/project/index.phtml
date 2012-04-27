@@ -1,74 +1,109 @@
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/projet.js');?>"></script>
 
-<div>
-	<a class="uibutton icon add "
-		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'add' ),'default',true);?>">Ajouter</a>
-	<a class="uibutton  icon edit  special"
-		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'modify' ),'default',true);?>">Modifier</a>
-	<a class="uibutton special"
-		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
-	<a class="uibutton confirm"
-		href="<?php echo $this->url(array('controller' => 'project', 'action' => 'profil' ),'default',true);?>">Plus de details</a>
+<h5 class="test"></h5>
 
-</div>
-
-
+<a class="button green back"
+		href="<?php echo $this->url(array('controller' => 'projet', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
+	
+	<a class="delete_b button pink glossy glass">- Supprimer</a>
+ <a class="selectall button blue morph">De/Selectionner tous</a>
 
 <?php
+$i = 0;
+echo '
+<div id="UITab">
 
-echo '<div class="tableName">
-							<h3>Liste des projets</h3>
+<div class="tab_container">
 
-<table class="display data_table2 dataTable" >
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">Id</div></th>
-			<th><div class="th_wrapp">Nom</div></th>
-			<th><div class="th_wrapp">Prenom</div></th>
-			<th><div class="th_wrapp">Sex</div></th>
-			<th><div class="th_wrapp">Adresse</div></th>
-			<th><div class="th_wrapp">Tel</div></th>
-			<th><div class="th_wrapp">Email</div></th>
+<div id="tab1" class="tab_content">
+<div class="load_page">
+
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 projet"  id="data_table3">
+<thead>
+<tr>
+
+<th align="left">Id</th>
+<th>Type</th>
+<th>Nom</th>
+<th>Email</th>
+<th>Tel</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+
+foreach ( $this->list_projets as $projet ) {
+	
+	echo '<tr>
+	<td  class="id_projet" align ="left">' . $projet ['id_projet'] . '</td>';
+	
+	if($projet['type'] == 'Entreprise')
+	{
 		
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td>Homme</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">0612352499</td>
-			<td class="center">khalid.amrani@gmail.com</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>Majda</td>
-			<td>Kadiri</td>
-			<td>Femme</td>
-			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
-			<td class="center">0642518264</td>
-			<td class="center">majda.kadiri@gmail.com</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td>Homme</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">0612352499</td>
-			<td class="center">khalid.amrani@gmail.com</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>Majda</td>
-			<td>Kadiri</td>
-			<td>Femme</td>
-			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
-			<td class="center">0642518264</td>
-			<td class="center">majda.kadiri@gmail.com</td>
-		</tr>
-	</tbody>
+		
+		echo '<td class="type">' . $projet ['type'] . '</td>
+		<td class="nom">' . $projet ['societe'] . '</td>
+		<td>' . $projet ['email_societe'] . '</td>
+		<td>' . $projet ['tel_societe'] . '</td>';
+		//get the poste name
+		echo '
+		<td>
+		<span class="tip" >
+		<a  title="Edit" class="edit" href="';
+		echo $this->url(array('id' => $projet ['id_projet']),'projetmodify');
+		echo '">
+		<img src="images/icon/icon_edit.png" >
+		</a>
+		</span>
+		<span class="tip" >
+		<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+		<img src="images/icon/icon_delete.png">
+		</a>
+		</span>
+		</td>
+		</tr>';
+		$i ++;
+		}else if($projet['type'] == 'Particulier'){
+			echo '<td class="type">' . $projet ['type'] . '</td>
+			<td class="nom">' . $projet ['nom'] . '</td>
+			<td>' . $projet ['email'] . '</td>
+			<td>' . $projet ['tel'] . '</td>';
+			//get the poste name
+			echo '
+			<td>
+			<span class="tip" >
+			<a  title="Edit" class="edit" href="';
+			echo $this->url(array('id' => $projet ['id_projet']),'projetmodify');
+			echo '">
+			<img src="images/icon/icon_edit.png" >
+			</a>
+			</span>
+			<span class="tip" >
+			<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+			<img src="images/icon/icon_delete.png">
+			</a>
+			</span>
+			</td>
+			</tr>';
+			$i ++;
+	}
+	
+}
+	
+echo '</tbody>
 </table>
-</div>'?>
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
+</div>
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
+?>
