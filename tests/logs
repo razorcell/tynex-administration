@@ -1,306 +1,3700 @@
-2012-04-27T19:04:37+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:04:37+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:07:12+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:07:12+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:07:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:08:07+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:08:07+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:08:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:22:19+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:22:19+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:22:19+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:22:20+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:22:23+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:22:23+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:31:11+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:31:11+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:31:11+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:31:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:32:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:32:53+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:32:53+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:32:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:32:54+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:32:54+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:42:01+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:42:52+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:42:52+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:42:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:42:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:02+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:02+02:00 INFO (6): get all projets : SELECT * FROM projet
-2012-04-27T19:43:03+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:03+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:43:03+02:00 INFO (6): get all clients : SELECT * FROM client
-2012-04-27T19:43:03+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:04+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:04+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:52+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:52+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:43:52+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:53+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:43:59+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:01+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:02+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:54+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:54+02:00 INFO (6): submitAction()
-2012-04-27T19:44:54+02:00 INFO (6): Request body : {"nom" : "hassan","prenom" : "hassan","gender" : "0","email" : "hassan@gmail.com","adresse" : "Bloc 8 Agadir","tel" : "0698786756","username" : "hassan","password" : "pass","passwordCon" : "pass","poste" : "Personnel","occupations" : [{"name " : "Developpeur Web"}]}
-2012-04-27T19:44:54+02:00 INFO (6): Developpeur Web
-2012-04-27T19:44:54+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
-2012-04-27T19:44:54+02:00 INFO (6): id poste trouvé = 1
-2012-04-27T19:44:54+02:00 INFO (6): <pre>array(9) {
-  ["nom"] => string(6) "hassan"
-  ["prenom"] => string(6) "hassan"
-  ["genre"] => string(5) "Homme"
-  ["username"] => string(6) "hassan"
-  ["password"] => string(4) "pass"
-  ["tel"] => string(10) "0698786756"
-  ["email"] => string(16) "hassan@gmail.com"
-  ["adresse"] => string(13) "Bloc 8 Agadir"
-  ["id_poste"] => string(1) "1"
-}
-</pre>
-2012-04-27T19:44:54+02:00 INFO (6): add an employe : INSERT INTO `employe` (`nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2012-04-27T19:44:54+02:00 INFO (6): last inserted ID = 16
-2012-04-27T19:44:54+02:00 INFO (6): insertion - EMPLOYE - OUI
-2012-04-27T19:44:54+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
-2012-04-27T19:44:54+02:00 INFO (6): <pre>array(2) {
-  ["id_employe"] => string(2) "16"
-  ["id_occup"] => string(1) "5"
-}
-</pre>
-2012-04-27T19:44:54+02:00 INFO (6): add occupation : INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES (?, ?)
-2012-04-27T19:44:54+02:00 INFO (6): insertion - OCCUPER - OUI
-2012-04-27T19:44:57+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:57+02:00 INFO (6): get all projets : SELECT * FROM projet
-2012-04-27T19:44:58+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:58+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:44:58+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:44:59+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:49:03+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:49:03+02:00 INFO (6): get all projets : SELECT * FROM projet
-2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:49:06+02:00 INFO (6):  projet addAction() 
-2012-04-27T19:49:06+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:49:06+02:00 INFO (6): Fonction init() executée
-2012-04-27T19:49:07+02:00 INFO (6): Fonction init() executée
-2012-04-27T22:01:50+02:00 INFO (6): Request body : {"nom_pack" : "Startup","type_service" : "Nom de Domaine"}
-2012-04-27T22:01:50+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:35:10+02:00 INFO (6): Request body : {"nom_pack" : "Ultra","type_service" : "Hebergement"}
-2012-04-27T22:35:10+02:00 INFO (6): id type service trouvé = 1
-2012-04-27T22:36:26+02:00 INFO (6): Request body : {,"type_service" : "Nom de Domaine"}
-2012-04-27T22:37:02+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","type_service" : "Nom de Domaine"}
-2012-04-27T22:37:02+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:38:21+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
-2012-04-27T22:38:21+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:40:56+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
-2012-04-27T22:40:56+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:43:04+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
-2012-04-27T22:43:04+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:49:10+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","type_service" : "Nom de Domaine"}
-2012-04-27T22:49:10+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:50:44+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Nom de Domaine"}
-2012-04-27T22:50:44+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:51:05+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","id" : "2","type_service" : "Nom de Domaine"}
-2012-04-27T22:51:05+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:51:19+02:00 INFO (6): Request body : {"nom_pack" : "newEntreprise","id" : "2","type_service" : "Hebergement"}
-2012-04-27T22:51:19+02:00 INFO (6): id type service trouvé = 1
-2012-04-27T22:51:29+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Nom de Domaine"}
-2012-04-27T22:51:29+02:00 INFO (6): id type service trouvé = 4
-2012-04-27T22:51:56+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Hebergement"}
-2012-04-27T22:51:56+02:00 INFO (6): id type service trouvé = 1
-2012-04-27T22:52:02+02:00 INFO (6): Request body : {"nom_pack" : "Entreprise","id" : "2","type_service" : "Hebergement"}
-2012-04-27T22:52:02+02:00 INFO (6): id type service trouvé = 1
-2012-04-27T23:06:57+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:06:57+02:00 INFO (6): get all projets : SELECT * FROM projet
-2012-04-27T23:07:00+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:07:00+02:00 INFO (6):  projet addAction() 
-2012-04-27T23:07:00+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T23:07:00+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:07:00+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:07:01+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:27:15+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:27:15+02:00 INFO (6):  projet addAction() 
-2012-04-27T23:27:15+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T23:27:15+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:27:16+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:27:16+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:30:56+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:30:56+02:00 INFO (6):  projet addAction() 
-2012-04-27T23:30:56+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T23:30:56+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:30:57+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:30:57+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:43:24+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:43:24+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:43:25+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:43:26+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:58:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:58:12+02:00 INFO (6):  projet addAction() 
-2012-04-27T23:58:12+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-27T23:58:12+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:58:13+02:00 INFO (6): Fonction init() executée
-2012-04-27T23:58:13+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:05:25+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:05:25+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:05:27+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:05:27+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:07:57+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:07:57+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:07:57+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:07:57+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:07:59+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:08:00+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:19:23+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:19:23+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:19:23+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:19:23+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:19:25+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:19:26+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:19:56+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:21:23+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:21:23+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:21:23+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:21:24+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:21:26+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:21:26+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:21:42+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:23:30+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:23:30+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:23:30+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:23:30+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:23:32+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:23:33+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:23:52+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:24:25+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:24:25+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:24:25+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:24:25+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:24:27+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:24:28+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:24:48+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:26:42+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:26:42+02:00 INFO (6):  projet addAction() 
-2012-04-28T00:26:42+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T00:26:42+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:26:44+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:26:45+02:00 INFO (6): Fonction init() executée
-2012-04-28T00:27:12+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:09:48+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:09:48+02:00 INFO (6):  projet addAction() 
-2012-04-28T01:09:48+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T01:09:48+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:09:49+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:09:49+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:10:11+02:00 INFO (6): typeprojet/Delete
-2012-04-28T01:10:11+02:00 INFO (6): la condition de suppression : id_type_projet = 1
-2012-04-28T01:10:11+02:00 INFO (6): update query : DELETE FROM `type_projet` WHERE (id_type_projet = 1)
-2012-04-28T01:10:15+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:10:15+02:00 INFO (6): get all projets : SELECT * FROM projet
-2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:10:18+02:00 INFO (6):  projet addAction() 
-2012-04-28T01:10:18+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:10:18+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:10:19+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:16+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:16+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:17+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:18+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:19+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:11:19+02:00 INFO (6): projet submitAction()
-2012-04-28T01:11:19+02:00 INFO (6): Request body : {"description" : "sdfsdfsdf","prix" : "1,000.00","date_debut" : "01-04-2012","date_fin" : "31-05-2012","status" : "1","status_hidden" : "actif","commande" : "null","type_projet" : "null","prix" : "1,000.00","employes" : [{"name " : "baghazi"},{"name " : "hassan"}]}
-2012-04-28T01:11:19+02:00 INFO (6): Decoded data from user : <pre>array(9) {
-  ["description"] => string(9) "sdfsdfsdf"
-  ["prix"] => string(8) "1,000.00"
-  ["date_debut"] => string(10) "01-04-2012"
-  ["date_fin"] => string(10) "31-05-2012"
-  ["status"] => string(1) "1"
-  ["status_hidden"] => string(5) "actif"
-  ["commande"] => string(4) "null"
-  ["type_projet"] => string(4) "null"
-  ["employes"] => array(2) {
-    [0] => array(1) {
-      ["name "] => string(7) "baghazi"
-    }
-    [1] => array(1) {
-      ["name "] => string(6) "hassan"
-    }
+2012-04-28T11:22:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:17+02:00 INFO (6):  service addAction() 
+2012-04-28T11:22:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:22:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:22:27+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:22:27+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:22:27+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
   }
 }
 </pre>
-2012-04-28T01:11:19+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
-2012-04-28T01:11:19+02:00 INFO (6): projet to save <pre>array(11) {
-  ["nom"] => NULL
-  ["prenom"] => NULL
-  ["tel"] => NULL
-  ["tel_societe"] => NULL
-  ["fax"] => NULL
-  ["email"] => NULL
-  ["adresse"] => NULL
-  ["type"] => string(10) "Entreprise"
-  ["gender"] => string(5) "Homme"
-  ["societe"] => NULL
-  ["email_societe"] => NULL
-}
-</pre>
-2012-04-28T01:14:36+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:14:36+02:00 INFO (6):  projet addAction() 
-2012-04-28T01:14:36+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-28T01:14:36+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:14:38+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:14:39+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:15:03+02:00 INFO (6): Fonction init() executée
-2012-04-28T01:15:03+02:00 INFO (6): projet submitAction()
-2012-04-28T01:15:03+02:00 INFO (6): Request body : {"description" : "sdfsdf","prix" : "1,000.00","date_debut" : "01-04-2012","date_fin" : "30-04-2012","status" : "1","status_hidden" : "actif","commande" : "1","type_projet" : "Application Web","prix" : "1,000.00","employes" : [{"name " : "baghazi"},{"name " : "ali"}]}
-2012-04-28T01:15:03+02:00 INFO (6): Decoded data from user : <pre>array(9) {
-  ["description"] => string(6) "sdfsdf"
-  ["prix"] => string(8) "1,000.00"
-  ["date_debut"] => string(10) "01-04-2012"
-  ["date_fin"] => string(10) "30-04-2012"
-  ["status"] => string(1) "1"
-  ["status_hidden"] => string(5) "actif"
-  ["commande"] => string(1) "1"
-  ["type_projet"] => string(15) "Application Web"
-  ["employes"] => array(2) {
-    [0] => array(1) {
-      ["name "] => string(7) "baghazi"
-    }
-    [1] => array(1) {
-      ["name "] => string(3) "ali"
-    }
+2012-04-28T11:22:27+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:27:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:25+02:00 INFO (6):  service addAction() 
+2012-04-28T11:27:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:27:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:31+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:27:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:27:31+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:27:31+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
   }
 }
 </pre>
-2012-04-28T01:15:03+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
-2012-04-28T01:15:03+02:00 INFO (6): projet to save <pre>array(11) {
-  ["nom"] => NULL
-  ["prenom"] => NULL
-  ["tel"] => NULL
-  ["tel_societe"] => NULL
-  ["fax"] => NULL
-  ["email"] => NULL
-  ["adresse"] => NULL
-  ["type"] => string(10) "Entreprise"
-  ["gender"] => string(5) "Homme"
-  ["societe"] => NULL
-  ["email_societe"] => NULL
+2012-04-28T11:27:31+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:41:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:41:54+02:00 INFO (6):  service addAction() 
+2012-04-28T11:41:54+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:41:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:41:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:41:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:42:09+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:42:09+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:42:09+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:42:09+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:42:09+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
 }
 </pre>
+2012-04-28T11:42:09+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:45:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:45:58+02:00 INFO (6):  service addAction() 
+2012-04-28T11:45:58+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:45:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:46:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:46:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:46:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:46:05+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:46:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:46:05+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:46:05+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T11:46:05+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:47:32+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:32+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:38+02:00 INFO (6):  service addAction() 
+2012-04-28T11:47:38+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:47:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:45+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:47:45+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:47:45+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T11:47:45+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:47:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:47:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:55:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:55:59+02:00 INFO (6):  service addAction() 
+2012-04-28T11:55:59+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T11:55:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:08+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:08+02:00 INFO (6): Request body : {"type_service":"null"}
+2012-04-28T11:56:08+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:08+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T11:56:08+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T11:56:08+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T11:56:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T11:56:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:03:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:03:58+02:00 INFO (6):  service addAction() 
+2012-04-28T12:03:58+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:03:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:04:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:04:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:04:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:04:22+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:04:22+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:04:22+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:13:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:18+02:00 INFO (6):  service addAction() 
+2012-04-28T12:13:18+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:13:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:21+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:51+02:00 INFO (6):  service addAction() 
+2012-04-28T12:13:51+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:13:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:53+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:13:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:16:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:16:33+02:00 INFO (6):  service addAction() 
+2012-04-28T12:16:33+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:16:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:16:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:16:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:18:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:18:07+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:18:07+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:18:07+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:19:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:19:03+02:00 INFO (6):  service addAction() 
+2012-04-28T12:19:03+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:19:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:19:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:19:06+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:16+02:00 INFO (6):  service addAction() 
+2012-04-28T12:21:16+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:21:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:53+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:21:53+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:21:53+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:21:53+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:26:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:26:25+02:00 INFO (6):  service addAction() 
+2012-04-28T12:26:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:26:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:26:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:26:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:27:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:27:05+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:27:05+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:27:05+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:27:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:27:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:27:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:27:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:29:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:29:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:29:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:29:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:25+02:00 INFO (6):  service addAction() 
+2012-04-28T12:30:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:30:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:30:30+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:30:30+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:30:30+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:37:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:37:56+02:00 INFO (6):  service addAction() 
+2012-04-28T12:37:56+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:37:57+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:37:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:37:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:38:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:38:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:38:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:38:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:40:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:40:36+02:00 INFO (6):  service addAction() 
+2012-04-28T12:40:36+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:40:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:40:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:40:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:40:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:40:43+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:40:43+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:40:43+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:41:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:41:17+02:00 INFO (6):  service addAction() 
+2012-04-28T12:41:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:41:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:41:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:41:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:41:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:41:23+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:41:23+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:41:23+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:42:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:42:10+02:00 INFO (6):  service addAction() 
+2012-04-28T12:42:10+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:42:11+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:42:13+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:42:13+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:42:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:42:15+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:42:15+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:42:15+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T12:43:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:43:28+02:00 INFO (6):  service addAction() 
+2012-04-28T12:43:28+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:43:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:43:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:43:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:58:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:58:52+02:00 INFO (6):  service addAction() 
+2012-04-28T12:58:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T12:58:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:58:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:58:55+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:59:06+02:00 INFO (6): Fonction init() executée
+2012-04-28T12:59:06+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T12:59:06+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T12:59:06+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:08:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:08:44+02:00 INFO (6):  service addAction() 
+2012-04-28T13:08:44+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:08:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:08:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:08:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:08:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:08:50+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:08:50+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:08:50+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:12:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:20+02:00 INFO (6):  service addAction() 
+2012-04-28T13:12:20+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:12:21+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:25+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:12:25+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:12:25+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:12:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:12:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:07+02:00 INFO (6):  service addAction() 
+2012-04-28T13:14:07+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:14:08+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:09+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:14:12+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:14:12+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:14:12+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:19:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:19:15+02:00 INFO (6):  service addAction() 
+2012-04-28T13:19:15+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:19:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:19:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:19:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:19:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:19:22+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:19:22+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:19:22+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:22:11+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:11+02:00 INFO (6):  service addAction() 
+2012-04-28T13:22:11+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:22:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:17+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:22:17+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:22:17+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:22:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:26+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:22:27+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:22:27+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:22:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:22:28+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:22:28+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:22:28+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:34:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:34:37+02:00 INFO (6):  service addAction() 
+2012-04-28T13:34:37+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:34:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:34:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:34:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:34:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:34:44+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:34:44+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:34:44+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:35:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:35:15+02:00 INFO (6):  service addAction() 
+2012-04-28T13:35:15+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:35:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:35:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:35:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:35:21+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:35:21+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:35:21+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:35:21+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:37:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:37:50+02:00 INFO (6):  service addAction() 
+2012-04-28T13:37:50+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:37:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:37:53+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:37:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:37:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:37:56+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:37:56+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:37:56+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:38:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:01+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:38:01+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:38:01+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:38:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:20+02:00 INFO (6):  service addAction() 
+2012-04-28T13:38:20+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:38:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:38:25+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:38:25+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:38:25+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:39:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:15+02:00 INFO (6):  service addAction() 
+2012-04-28T13:39:15+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:39:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:20+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:39:20+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:39:20+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:39:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:26+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:39:26+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:39:26+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:39:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:39:31+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T13:39:31+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T13:39:31+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T13:42:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:15+02:00 INFO (6):  service addAction() 
+2012-04-28T13:42:15+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:42:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:28+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:42:28+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:42:28+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:42:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:42:37+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:42:37+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:42:37+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:43:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:27+02:00 INFO (6):  service addAction() 
+2012-04-28T13:43:27+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:43:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:29+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:33+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:43:33+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:43:33+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:43:55+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:55+02:00 INFO (6):  service addAction() 
+2012-04-28T13:43:55+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:43:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:43:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:44:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:44:07+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:44:07+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:44:07+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:44:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:44:16+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:44:16+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:44:16+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:44:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:44:20+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T13:44:20+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T13:44:20+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T13:45:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:45:31+02:00 INFO (6):  service addAction() 
+2012-04-28T13:45:31+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:45:32+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:45:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:45:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:45:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:45:45+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:45:45+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:45:45+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:50:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:50:56+02:00 INFO (6):  service addAction() 
+2012-04-28T13:50:56+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:50:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:50:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:50:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:51:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:51:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:51:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:51:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:51:06+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:51:06+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:51:06+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:51:06+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:54:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:22+02:00 INFO (6):  service addAction() 
+2012-04-28T13:54:22+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:54:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:31+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:54:31+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:54:31+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:54:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:54:52+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:54:52+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:54:52+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:56:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:26+02:00 INFO (6):  service addAction() 
+2012-04-28T13:56:26+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:56:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:29+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:31+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:56:31+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:56:31+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:56:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:34+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:56:34+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:56:34+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:56:53+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:53+02:00 INFO (6):  service addAction() 
+2012-04-28T13:56:53+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:56:54+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:55+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:56:58+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:56:58+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:56:58+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:57:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:04+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:57:04+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:57:04+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:57:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:49+02:00 INFO (6):  service addAction() 
+2012-04-28T13:57:49+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:57:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:57+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:57:57+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T13:57:57+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T13:57:57+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T13:58:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:58:23+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T13:58:23+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T13:58:23+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T13:59:57+02:00 INFO (6): Fonction init() executée
+2012-04-28T13:59:57+02:00 INFO (6):  service addAction() 
+2012-04-28T13:59:57+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T13:59:57+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:00:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:00:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:00:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:00:03+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:00:03+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:00:03+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:00:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:00:12+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T14:00:12+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T14:00:12+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T14:09:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:35+02:00 INFO (6):  service addAction() 
+2012-04-28T14:09:35+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:09:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:41+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T14:09:41+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T14:09:41+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T14:09:55+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:09:55+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:09:55+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:09:55+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:18:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:37+02:00 INFO (6):  service addAction() 
+2012-04-28T14:18:37+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:18:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:46+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T14:18:46+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T14:18:46+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T14:18:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:18:50+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:18:50+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:18:50+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:21:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:21:10+02:00 INFO (6):  service addAction() 
+2012-04-28T14:21:10+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:21:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:21:13+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:21:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:21:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:21:27+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T14:21:27+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T14:21:27+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T14:22:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:22:35+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:22:35+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:22:35+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:23:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:23:49+02:00 INFO (6):  service addAction() 
+2012-04-28T14:23:49+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:23:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:23:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:23:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:23:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:23:56+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T14:23:56+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T14:23:56+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T14:24:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:24:17+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:24:17+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:24:17+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:35:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:10+02:00 INFO (6):  service addAction() 
+2012-04-28T14:35:10+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:35:11+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:13+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:16+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-28T14:35:16+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-28T14:35:16+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-28T14:35:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:18+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T14:35:18+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T14:35:18+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T14:35:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:22+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T14:35:22+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T14:35:22+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T14:35:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:35:25+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-28T14:35:25+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-28T14:35:25+02:00 INFO (6): []
+2012-04-28T14:37:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:02+02:00 INFO (6):  service addAction() 
+2012-04-28T14:37:02+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:37:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:07+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-28T14:37:07+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-28T14:37:07+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-28T14:37:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:12+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-28T14:37:12+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-28T14:37:12+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-28T14:37:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:37:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:22+02:00 INFO (6):  service addAction() 
+2012-04-28T14:55:22+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:55:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:46+02:00 INFO (6):  service addAction() 
+2012-04-28T14:55:46+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:55:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:55:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:57:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:57:59+02:00 INFO (6):  service addAction() 
+2012-04-28T14:57:59+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:57:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:58:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T14:58:40+02:00 INFO (6):  service addAction() 
+2012-04-28T14:58:40+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T14:58:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:02:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:02:05+02:00 INFO (6):  service addAction() 
+2012-04-28T15:02:05+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T15:02:06+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:02:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:02:52+02:00 INFO (6):  service addAction() 
+2012-04-28T15:02:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T15:02:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:04:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:04:22+02:00 INFO (6):  service addAction() 
+2012-04-28T15:04:22+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T15:04:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:04:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:04:48+02:00 INFO (6):  service addAction() 
+2012-04-28T15:04:48+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T15:04:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:05:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T15:05:33+02:00 INFO (6):  service addAction() 
+2012-04-28T15:05:33+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T15:05:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:20:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:23:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:23:37+02:00 INFO (6):  service addAction() 
+2012-04-28T17:23:37+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T17:23:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:23:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:23:42+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:38:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:38:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:44:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:44:31+02:00 INFO (6):  service addAction() 
+2012-04-28T17:44:31+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T17:44:31+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:44:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:44:33+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:46:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:46:02+02:00 INFO (6):  service addAction() 
+2012-04-28T17:46:02+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T17:46:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:46:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T17:46:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:28+02:00 INFO (6):  service addAction() 
+2012-04-28T23:11:28+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:11:28+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:30+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:49+02:00 INFO (6):  service addAction() 
+2012-04-28T23:11:49+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:11:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:11:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:12:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:12:41+02:00 INFO (6):  service addAction() 
+2012-04-28T23:12:41+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:12:42+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:12:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:12:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:17+02:00 INFO (6):  service addAction() 
+2012-04-28T23:14:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:14:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:38+02:00 INFO (6):  service addAction() 
+2012-04-28T23:14:38+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:14:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:14:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:15:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:15:39+02:00 INFO (6):  service addAction() 
+2012-04-28T23:15:39+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:15:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:15:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:15:42+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:10+02:00 INFO (6):  service addAction() 
+2012-04-28T23:16:10+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:16:10+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:13+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:43+02:00 INFO (6):  service addAction() 
+2012-04-28T23:16:43+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:16:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:16:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:22+02:00 INFO (6):  service addAction() 
+2012-04-28T23:17:22+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:17:22+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:32+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:32+02:00 INFO (6):  service addAction() 
+2012-04-28T23:17:32+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:17:32+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:49+02:00 INFO (6):  service addAction() 
+2012-04-28T23:17:49+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:17:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:17:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:23+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:23+02:00 INFO (6):  service addAction() 
+2012-04-28T23:19:23+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:19:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:46+02:00 INFO (6):  service addAction() 
+2012-04-28T23:19:46+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:19:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:19:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:20:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:20:02+02:00 INFO (6):  service addAction() 
+2012-04-28T23:20:02+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:20:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:20:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:20:05+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:22:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:22:24+02:00 INFO (6):  service addAction() 
+2012-04-28T23:22:24+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:22:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:22:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:22:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:23:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:23:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:23:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:23:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:26:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:26:49+02:00 INFO (6):  service addAction() 
+2012-04-28T23:26:49+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:26:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:26:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:26:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:27:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:27:43+02:00 INFO (6):  service addAction() 
+2012-04-28T23:27:43+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:27:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:27:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:27:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:28:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:28:59+02:00 INFO (6):  service addAction() 
+2012-04-28T23:28:59+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:28:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:24+02:00 INFO (6):  service addAction() 
+2012-04-28T23:29:24+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:29:24+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:29:27+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:30:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:30:48+02:00 INFO (6):  service addAction() 
+2012-04-28T23:30:48+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:30:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:30:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:30:51+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:31:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:31:01+02:00 INFO (6):  service addAction() 
+2012-04-28T23:31:01+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:31:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:31:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:31:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:33:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:33:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:34:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:34:43+02:00 INFO (6):  service addAction() 
+2012-04-28T23:34:43+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:34:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:34:46+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:34:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:35:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:35:52+02:00 INFO (6):  service addAction() 
+2012-04-28T23:35:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:35:52+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:35:55+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:35:56+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:36:57+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:36:57+02:00 INFO (6):  service addAction() 
+2012-04-28T23:36:57+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:36:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:36:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:00+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:17+02:00 INFO (6):  service addAction() 
+2012-04-28T23:37:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:37:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:21+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:34+02:00 INFO (6):  service addAction() 
+2012-04-28T23:37:34+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:37:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:47+02:00 INFO (6):  service addAction() 
+2012-04-28T23:37:47+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:37:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:37:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:18+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:42+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:42+02:00 INFO (6):  service addAction() 
+2012-04-28T23:38:42+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:38:43+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:45+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:48+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:38:49+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:39:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:39:38+02:00 INFO (6):  service addAction() 
+2012-04-28T23:39:38+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:39:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:39:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:39:42+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:34+02:00 INFO (6):  service addAction() 
+2012-04-28T23:40:34+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:40:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:40:41+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:42:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:42:17+02:00 INFO (6):  service addAction() 
+2012-04-28T23:42:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:42:17+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:42:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:42:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:43:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:44:11+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:44:11+02:00 INFO (6):  service addAction() 
+2012-04-28T23:44:11+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:44:12+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:44:14+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:44:15+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:44:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:45:03+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:45:03+02:00 INFO (6):  service addAction() 
+2012-04-28T23:45:03+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:45:04+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:45:06+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:45:07+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:16+02:00 INFO (6):  service addAction() 
+2012-04-28T23:49:16+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:49:16+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:19+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:36+02:00 INFO (6):  service addAction() 
+2012-04-28T23:49:36+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:49:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:39+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:40+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:49:44+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:51:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:51:20+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:53:58+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:53:58+02:00 INFO (6):  service addAction() 
+2012-04-28T23:53:58+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:53:59+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:01+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:02+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:34+02:00 INFO (6):  service addAction() 
+2012-04-28T23:54:34+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:54:34+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:54:38+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:56:35+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:56:36+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:56:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:56:37+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:25+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:25+02:00 INFO (6):  service addAction() 
+2012-04-28T23:57:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:57:26+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:29+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:29+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:47+02:00 INFO (6):  service addAction() 
+2012-04-28T23:57:47+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-28T23:57:47+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:50+02:00 INFO (6): Fonction init() executée
+2012-04-28T23:57:50+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:23+02:00 INFO (6):  service addAction() 
+2012-04-29T00:10:23+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:10:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:40+02:00 INFO (6):  service addAction() 
+2012-04-29T00:10:40+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:10:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:10:56+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:10:56+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:10:56+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:11:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:11:06+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:11:06+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:11:06+02:00 INFO (6): []
+2012-04-29T00:12:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:12:23+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:12:23+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:12:23+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:12:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:12:27+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:12:27+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:12:27+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:12:39+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:12:39+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:12:39+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:12:39+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:13:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:55+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:13:55+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:13:55+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:13:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:13:58+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:13:58+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:13:58+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:14:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:14:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:14:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:14:46+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:46+02:00 INFO (6):  service addAction() 
+2012-04-29T00:14:46+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:14:46+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:49+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:50+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:53+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:14:53+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:14:53+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:14:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:14:56+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:14:56+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:14:56+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:15:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:19+02:00 INFO (6):  service addAction() 
+2012-04-29T00:15:19+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:15:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:22+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:26+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:15:26+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:15:26+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:15:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:28+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:15:28+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:15:28+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:15:30+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:30+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:15:30+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:15:30+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:15:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:35+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:15:35+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:15:35+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:15:37+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:15:37+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:15:37+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:15:37+02:00 INFO (6): []
+2012-04-29T00:17:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:13+02:00 INFO (6):  service addAction() 
+2012-04-29T00:17:13+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:17:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:18+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:17:18+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:17:18+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:17:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:20+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:17:20+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:17:20+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:17:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:17:25+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:17:25+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:17:25+02:00 INFO (6): []
+2012-04-29T00:18:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:25+02:00 INFO (6):  service addAction() 
+2012-04-29T00:18:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:18:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:33+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:18:33+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:18:33+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:18:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:35+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:18:35+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:18:35+02:00 INFO (6): []
+2012-04-29T00:18:38+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:38+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:18:38+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:18:38+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:18:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:41+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:18:41+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:18:41+02:00 INFO (6): []
+2012-04-29T00:18:46+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:46+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:18:46+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:18:46+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:18:48+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:48+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:18:48+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:18:48+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:18:51+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:51+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:18:51+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:18:51+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:18:52+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:52+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:18:52+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:18:52+02:00 INFO (6): []
+2012-04-29T00:18:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:55+02:00 INFO (6):  service addAction() 
+2012-04-29T00:18:55+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:18:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:18:59+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:19:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:19:03+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:19:03+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:19:03+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:20:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:20:20+02:00 INFO (6):  service addAction() 
+2012-04-29T00:20:20+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:20:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:20:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:20:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:15+02:00 INFO (6):  service addAction() 
+2012-04-29T00:23:15+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:23:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:24+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:24+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:23:24+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:23:24+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:23:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:27+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:23:27+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:23:27+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:23:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:23:29+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:23:29+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:23:29+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:25:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:25:44+02:00 INFO (6):  service addAction() 
+2012-04-29T00:25:44+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:25:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:25:47+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:25:48+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:29+02:00 INFO (6):  service addAction() 
+2012-04-29T00:27:29+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:27:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:27:56+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:27:56+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:27:56+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:28:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:28:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:29:10+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:29:10+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:29:10+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:29:10+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:31:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:31+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:31+02:00 INFO (6):  service addAction() 
+2012-04-29T00:31:31+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:31:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:34+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:37+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:31:37+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:31:37+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:31:37+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:32:05+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:05+02:00 INFO (6):  service addAction() 
+2012-04-29T00:32:05+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:32:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:08+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:11+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:11+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:32:11+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:32:11+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:32:39+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:39+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:32:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:36:57+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:36:57+02:00 INFO (6):  service addAction() 
+2012-04-29T00:36:57+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:36:57+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:37:00+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:37:00+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:37:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:37:02+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:37:02+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:37:02+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:37:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:37:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:18+02:00 INFO (6):  service addAction() 
+2012-04-29T00:38:18+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:38:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:21+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:21+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:23+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:38:23+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:38:23+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:38:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:38:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:09+02:00 INFO (6):  service addAction() 
+2012-04-29T00:43:09+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:43:10+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:12+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:12+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:22+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:43:22+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:43:22+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:43:22+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:46:12+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:12+02:00 INFO (6):  service addAction() 
+2012-04-29T00:46:12+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:46:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:18+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:46:18+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:46:18+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:46:34+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:46:34+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:46:34+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:46:34+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:48:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:05+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:34+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:48:37+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:14+02:00 INFO (6):  service addAction() 
+2012-04-29T00:50:14+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:50:15+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:17+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:20+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:50:20+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:50:20+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:50:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:32+02:00 INFO (6):  service addAction() 
+2012-04-29T00:50:32+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:50:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:36+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:38+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:50:38+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:50:38+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:50:38+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:51:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:52+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:52+02:00 INFO (6):  service addAction() 
+2012-04-29T00:51:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:51:52+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:57+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:51:57+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:51:57+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:51:57+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:52:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:52:40+02:00 INFO (6):  service addAction() 
+2012-04-29T00:52:40+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:52:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:52:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:52:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:52:46+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:52:46+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:52:46+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:52:46+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:53:11+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:53:11+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:53:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:53:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:03+02:00 INFO (6):  service addAction() 
+2012-04-29T00:54:03+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T00:54:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:07+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:13+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T00:54:13+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T00:54:13+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T00:54:37+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:37+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T00:54:37+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T00:54:37+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T00:54:39+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:54:39+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T00:54:39+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T00:54:39+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T00:55:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T00:55:03+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T00:55:03+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T00:55:03+02:00 INFO (6): []
+2012-04-29T01:00:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:00:55+02:00 INFO (6):  service addAction() 
+2012-04-29T01:00:55+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:00:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:00:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:00:59+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:01:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:01:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:01:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:06+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:01:06+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:01:06+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:01:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:25+02:00 INFO (6):  service addAction() 
+2012-04-29T01:01:25+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:01:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:41+02:00 INFO (6):  service addAction() 
+2012-04-29T01:01:41+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:01:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:45+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:47+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:47+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:01:47+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:01:47+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:01:50+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:50+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:01:50+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:01:50+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:01:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:01:53+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:01:53+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:01:53+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:02:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:35+02:00 INFO (6):  service addAction() 
+2012-04-29T01:02:35+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:02:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:38+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:38+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:41+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:02:41+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:02:41+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:02:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:02:44+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:02:44+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:02:44+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:03:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:19+02:00 INFO (6):  service addAction() 
+2012-04-29T01:03:19+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:03:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:22+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:24+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:24+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:03:24+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:03:24+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:03:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:26+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:03:26+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:03:26+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:03:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:29+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:03:29+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:03:29+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:03:31+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:31+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:03:31+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:03:31+02:00 INFO (6): []
+2012-04-29T01:03:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:03:33+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:03:33+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:03:33+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:05:52+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:05:52+02:00 INFO (6):  service addAction() 
+2012-04-29T01:05:52+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:05:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:05:55+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:05:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:05:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:05:58+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:05:58+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:05:58+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:06:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:06:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:09+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:06:09+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:06:09+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:12+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:12+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:06:12+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:06:12+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:21+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:21+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:06:21+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:06:21+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:26+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:26+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:06:26+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:06:26+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:06:30+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:30+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:06:30+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:06:30+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:06:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:33+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:06:33+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:06:33+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:06:36+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:06:36+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:06:36+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:06:36+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:07:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:13+02:00 INFO (6):  service addAction() 
+2012-04-29T01:07:13+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:07:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:17+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:20+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:07:20+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:07:20+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:07:22+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:22+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:07:22+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:07:22+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:07:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:07:25+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:07:25+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:07:25+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:08:28+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:28+02:00 INFO (6):  service addAction() 
+2012-04-29T01:08:28+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:08:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:31+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:34+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:34+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:08:34+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:08:34+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:08:37+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:37+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:08:37+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:08:37+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:08:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:40+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:08:40+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:08:40+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:08:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:53+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:08:53+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:08:53+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:08:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:08:58+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:08:58+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:08:58+02:00 INFO (6): []
+2012-04-29T01:09:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:09:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:09:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:09:01+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:09:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:09:04+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:09:04+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:09:04+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:09:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:09:06+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:09:06+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:09:06+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:13:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:13:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:13:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:13:58+02:00 INFO (6):  service addAction() 
+2012-04-29T01:13:58+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:13:59+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:14:00+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:14:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:14:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:14:03+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:14:03+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:14:03+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:14:33+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:14:33+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:14:33+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:14:33+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:15:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:15:14+02:00 INFO (6): get all projets : SELECT * FROM projet
+2012-04-29T01:15:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:15:18+02:00 INFO (6):  projet addAction() 
+2012-04-29T01:15:18+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:15:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:15:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:15:20+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:25+02:00 INFO (6): get all services : SELECT * FROM service
+2012-04-29T01:16:30+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:30+02:00 INFO (6):  service addAction() 
+2012-04-29T01:16:30+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:16:30+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:32+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:40+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:16:40+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:16:40+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:16:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:43+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:16:43+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:16:43+02:00 INFO (6): []
+2012-04-29T01:16:45+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:45+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:16:45+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:16:45+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:16:48+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:16:48+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:16:48+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:16:48+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:17:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:40+02:00 INFO (6):  service addAction() 
+2012-04-29T01:17:40+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:17:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:45+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:45+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:17:45+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:17:45+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:17:50+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:17:50+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:17:50+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:17:50+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:23:17+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:23:17+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:23:17+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:23:17+02:00 INFO (6): []
+2012-04-29T01:23:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:23:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:25:04+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:25:04+02:00 INFO (6):  service addAction() 
+2012-04-29T01:25:04+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:25:05+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:25:07+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:25:07+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:06+02:00 INFO (6):  service addAction() 
+2012-04-29T01:26:06+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:26:06+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:08+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:31+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:31+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:26:31+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:26:31+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:26:34+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:34+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:26:34+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:26:34+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:26:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:56+02:00 INFO (6):  service addAction() 
+2012-04-29T01:26:56+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:26:57+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:26:59+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:27:01+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:27:01+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:27:01+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:27:01+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:27:03+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:27:03+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:27:03+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:27:03+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:30:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:41+02:00 INFO (6):  service addAction() 
+2012-04-29T01:30:41+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:30:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:49+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:49+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:30:49+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:30:49+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:30:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:30:53+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:30:53+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:30:53+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:31:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:09+02:00 INFO (6):  service addAction() 
+2012-04-29T01:31:09+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:31:09+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:11+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:12+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:14+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:31:14+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:31:14+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:31:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:16+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:31:16+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:31:16+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:31:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:19+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:31:19+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:31:19+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:31:21+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:21+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:31:21+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:31:21+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:31:23+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:23+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:31:23+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:31:23+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:31:25+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:25+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:31:25+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:31:25+02:00 INFO (6): []
+2012-04-29T01:31:27+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:27+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:31:27+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:31:27+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:31:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:29+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:31:29+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:31:29+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:31:35+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:35+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:31:35+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:31:35+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:31:41+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:41+02:00 INFO (6):  service addAction() 
+2012-04-29T01:31:41+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:31:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:51+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:31:51+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:31:51+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:31:51+02:00 INFO (6): []
+2012-04-29T01:32:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:32:17+02:00 INFO (6):  service addAction() 
+2012-04-29T01:32:17+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:32:17+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:32:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:32:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:00+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:00+02:00 INFO (6):  service addAction() 
+2012-04-29T01:33:00+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:33:00+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:05+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:05+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:33:05+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:33:05+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:33:11+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:11+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:33:11+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:33:11+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:33:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:14+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:33:14+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:33:14+02:00 INFO (6): []
+2012-04-29T01:33:16+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:16+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:33:16+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:33:16+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:33:18+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:18+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:33:18+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:33:18+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:33:19+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:19+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:33:19+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:33:19+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:33:21+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:21+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:33:21+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:33:21+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:33:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:42+02:00 INFO (6):  service addAction() 
+2012-04-29T01:33:42+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:33:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:49+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:49+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:33:49+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:33:49+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:33:52+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:52+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:33:52+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:33:52+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:33:54+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:54+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:33:54+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:33:54+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:33:57+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:33:57+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:33:57+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:33:57+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:34:02+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:02+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:34:02+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:34:02+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:34:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:40+02:00 INFO (6):  service addAction() 
+2012-04-29T01:34:40+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:34:40+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:42+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:43+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:44+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:45+02:00 INFO (6): Request body : {"type_service":"Audit"}
+2012-04-29T01:34:45+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-04-29T01:34:45+02:00 INFO (6): []
+2012-04-29T01:34:47+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:47+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:34:47+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:34:47+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:34:49+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:49+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:34:49+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:34:49+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:34:51+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:51+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:34:51+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:34:51+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:34:53+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:53+02:00 INFO (6): Request body : {"type_service":"Web Design"}
+2012-04-29T01:34:53+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [4] => array(3) {
+    ["id_pack"] => string(1) "4"
+    ["libelle_pack"] => string(14) "Static website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [5] => array(3) {
+    ["id_pack"] => string(1) "5"
+    ["libelle_pack"] => string(15) "Dynamic website"
+    ["id_type_service"] => string(1) "3"
+  }
+  [6] => array(3) {
+    ["id_pack"] => string(1) "6"
+    ["libelle_pack"] => string(11) "CMS website"
+    ["id_type_service"] => string(1) "3"
+  }
+}
+</pre>
+2012-04-29T01:34:53+02:00 INFO (6): {"4":{"id_pack":"4","libelle_pack":"Static website","id_type_service":"3"},"5":{"id_pack":"5","libelle_pack":"Dynamic website","id_type_service":"3"},"6":{"id_pack":"6","libelle_pack":"CMS website","id_type_service":"3"}}
+2012-04-29T01:34:56+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:56+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-04-29T01:34:56+02:00 INFO (6): packs Assoc <pre>array(1) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(7) "Startup"
+    ["id_type_service"] => string(1) "4"
+  }
+}
+</pre>
+2012-04-29T01:34:56+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Startup","id_type_service":"4"}}
+2012-04-29T01:34:58+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:34:58+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-04-29T01:34:58+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [2] => array(3) {
+    ["id_pack"] => string(1) "2"
+    ["libelle_pack"] => string(10) "Entreprise"
+    ["id_type_service"] => string(1) "1"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(5) "Ultra"
+    ["id_type_service"] => string(1) "1"
+  }
+}
+</pre>
+2012-04-29T01:34:58+02:00 INFO (6): {"2":{"id_pack":"2","libelle_pack":"Entreprise","id_type_service":"1"},"8":{"id_pack":"8","libelle_pack":"Ultra","id_type_service":"1"}}
+2012-04-29T01:35:13+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:35:14+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:50:29+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:50:29+02:00 INFO (6):  service addAction() 
+2012-04-29T01:50:29+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-29T01:50:30+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:50:31+02:00 INFO (6): Fonction init() executée
+2012-04-29T01:50:32+02:00 INFO (6): Fonction init() executée
