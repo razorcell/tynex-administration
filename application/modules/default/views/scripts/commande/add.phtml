@@ -1,201 +1,229 @@
-<form action="#">
-	<div class="section">
-		<label>Client<small>Le client qui a commander ce projet</small></label>
-		<div>
-			<select data-placeholder="Veuillez choisir un client..."
-				class="chzn-select" tabindex="2">
-				<option value=""></option>
-				<option value="United States">Ahmed</option>
-				<option value="United Kingdom">Ali</option>
-				<option value="Afghanistan">Meryam</option>
-			</select>
-		</div>
-	</div>
-	<div class="section">
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/commande.js');?>"></script>
+	<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/service.js');?>"></script>
+	<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/projet.js');?>"></script>
+<style>
+	#feedback { font-size: 0.1em; }
+	#selectable{column-count: 2;}
+	#selectable .ui-selecting { background: #1F92FF; }
+	#selectable .ui-selected { background: #1F92FF; color: white; }
+	.list_packs {width:345px;}
+	.pack_item { margin: 8px; padding: 0.4em; font-size: 1.4em; height: 18px;}
+</style>
 
+<?php 
 
-		<label>Formulaire d'ajout<small>Text custom</small></label>
-		<div>
-			<input type="checkbox" id="show_service" name="show_conmap"
-				class="show_conmap" value="1" /><span class="f_help">Service</span>
-		</div>
-		
-
-
-	</div>
-
-	<div id="f_service" class="formEl_b">
-
-		<form action="#">
-			<fieldset>
-				<legend>
-					Ajouter d'un service <span class="small s_color"></span>
-				</legend>
-				<form action="#">
-					<div class="section alphaonly">
-						<label>Description<small>Donner un petit mot sur le service</small></label>
-						<div>
-							<textarea name=""></textarea>
-						</div>
-					</div>
-					<div class="section">
-						<label>Type de Service<small>Veuillez choisir le type de service
-								demande</small></label>
-						<div>
-							<select data-placeholder="Veuillez choisir un type de service..."
-								class="chzn-select" tabindex="2">
-								<option value=""></option>
-								<option value="United States">Hebergement</option>
-								<option value="United Kingdom">Nom de Domaine</option>
-								<option value="Afghanistan">Audit</option>
-							</select>
-						</div>
-					</div>
-					<div class="section">
-						<label>Type de Pack<small>Veuillez choisir le pack demande</small></label>
-						<div>
-							<select data-placeholder="Veuillez choisir un type de pack..."
-								class="chzn-select" tabindex="2">
-								<option value=""></option>
-								<option value="United States">Tm Etudiant</option>
-								<option value="United Kingdom">Tm Start</option>
-								<option value="Afghanistan">Tm VIP</option>
-							</select>
-						</div>
-					</div>
-					<div class="section">
-						<label>Prix<small>Donner un prix en fonction du pack</small></label>
-						<div>
-							<input type="text" id="sStep" value="100" />
-						</div>
-					</div>
-
-
-
-					<div class="section">
-						<label>Date debut<small>Veuillez choisir la date de la demande du
-								service</small></label>
-						<div>
-							<input type="text" id="datepick" class="datepicker"
-								readonly="readonly" name="datepicker" />
-						</div>
-					</div>
-
-					<div class="section">
-						<label>Date fin<small>Veuillez choisir la date prevu pour la fin
-								du service</small></label>
-						<div>
-							<input type="text" id="datepick2" class="datepicker"
-								readonly="readonly" name="datepicker2" />
-						</div>
-					</div>
-
-					<div class="section">
-						<label>Date d'Activation<small>Veuillez choisir la date a la
-								quelle, le service doit etre active</small></label>
-						<div>
-							<input type="text" id="datepick3" class="datepicker"
-								readonly="readonly" name="datepicker3" />
-						</div>
-					</div>
-
-					<div class="section">
-						<label>Date de Desactivation<small>Veuillez choisir la date a la
-								quelle, le service doit etre desactive</small></label>
-						<div>
-							<input type="text" id="datepick42" class="datepicker"
-								readonly="readonly" name="datepicker4" />
-						</div>
-					</div>
-
-					<div class="section">
-						<label>Status<small>Veuillez definir un status initial pour ce
-								projet</small></label>
-						<div>
-							<input type="checkbox" id="preOrder" name="preOrder"
-								class="preOrder" value="1" /> <span class="f_help"></span>
-						</div>
-					</div>
-					<div class="section last">
-						<div>
-							<a class="uibutton submit_form">Enregistrer</a> <a
-								class="uibutton icon special answer ">Annuler</a>
-						</div>
-					</div>
-
-				</form>
+echo '
+<div class="widget" style="border:0px">
+<form style="margin:20px">
 	
+		<h5 class="test"></h5>
+	<div class="section numericonly" style="display:none">
+					<label> Id <small>Text custom</small></label>
+					<div>
+						<input id="tel" name="tel_e" type="text"
+							class="validate[required] small tel_e" maxlength="20" disabled>
+					</div>
+				</div>';
+
+echo '<div class="section type_projet">
+<label>Client<small>Veuillez choisir le client qui a fait cette commande</small></label>
+<div>
+<select data-placeholder="Veuillez choisir un client..."
+class="chzn-select " tabindex="2">
+<option value=""></option>';
+foreach($this->list_clients as $client){
+	if($client['type'] == 'Entreprise'){
+		echo "<option value=".$client['societe'].">".$client['societe']."</option>";
+	}else{
+		echo "<option value=".$client['nom'].">".$client['nom']."</option>";
+	}
+}
+echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
+</div>
+</div>
+<div class="section alphaonly">
+		<label>Description<small>Description de la commande</small></label>
+		<div>
+			<textarea name="description_commande"></textarea>
+		</div>
+	</div>';
+	
+	
+	echo '<div class="section">
+		<label>Type d\'article<small>Veuillez definir le contenu de cette commande</small></label>
+		<div>
+			<input type="checkbox" id="show_service" name="type" class="type"
+				value="1" /><span class="f_help"></span>
+		</div>
 	</div>
-	</fieldset>
-</form>
-
+	</form>
 </div>
-<div class="formEl_b" style="display: none">
 
-	<form action="#">
-		<fieldset>
-			<legend>
-				Ajouter d'un Projet <span class="small s_color"></span>
-			</legend>
+<div class="widget" style="padding:20px ;border:0px">';
+	
+echo  '<form id="add_projet" class="formEl_b f_p_add">
+<fieldset>
+				<legend>
+					Projet <span class="small s_color"></span>
+				</legend>';
 
-			<form action="#">
-
-				<div class="section alphaonly">
-					<label>Description<small>Un petit mot sur le projet</small></label>
-					<div>
-						<textarea name=""></textarea>
-					</div>
-				</div>
-				<div class="section">
-					<label>Prix<small>Donner un prix</small></label>
-					<div>
-						<input type="text" id="sStep" value="1000.25" />
-					</div>
-				</div>
-				<div class="section">
-					<label>Date debut</label>
-					<div>
-						<input type="text" id="datepick" class="datepicker"
-							readonly="readonly" name="datepicker" />
-					</div>
-				</div>
-
-				<div class="section">
-					<label>Date fin</label>
-					<div>
-						<input type="text" id="datepick2" class="datepicker"
-							readonly="readonly" name="datepicker2" />
-					</div>
-				</div>
-
-				<div class="section">
-					<label>Status<small>Veuillez definir un status initial pour ce
-							projet</small></label>
-					<div>
-						<input type="checkbox" id="preOrder" name="preOrder"
-							class="preOrder" value="1" /> <span class="f_help"></span>
-					</div>
-				</div>
-				<div class="section ">
-					<label> Cahier de charge <small>Telecharger</small></label>
-					<div>
-						<input type="file" class="fileupload" />
-					</div>
-				</div>
-				<div class="section last">
-					<div>
-						<a class="uibutton submit_form">Enregistrer</a> <a
-							class="uibutton icon special answer ">Annuler</a>
-					</div>
-				</div>
-
-			</form>
-
+echo '<div class="section type_projet">
+<label>Type de projet<small>Définir le type de ce projet</small></label>
+<div>
+<select data-placeholder="Veuillez choisir un type de projet..."
+class="chzn-select " tabindex="2">
+<option value=""></option>';
+foreach($this->list_types_projets as $type_projet){
+	echo "<option value=".$type_projet['nom_type_projet'].">".$type_projet['nom_type_projet']."</option>";
+}
+echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
 </div>
+</div>';
+
+
+echo '
+	<div class="section alphaonly">
+		<label>Description<small>Un petit mot sur le projet</small></label>
+		<div>
+			<textarea name="description_projet"></textarea>
+		</div>
+	</div>
+	<div class="section">
+     <label>Prix<small>Donner un prix</small></label>
+         <div>
+             <input type="text" id="sStep" value="1000.00" name="prix_projet" class="prix_projet"/>
+           </div>
+     </div>
+	<div class="section">
+		<label>Date debut</label>
+		<div>
+			<input type="text" id="datepick" class="datepicker date_debut"
+				readonly="readonly" name="date_debut" />
+		</div>
+	</div>
+
+	<div class="section">
+		<label>Date fin</label>
+		<div>
+			<input type="text" id="datepick2" class="datepicker date_fin"
+				readonly="readonly" name="date_fin" />
+		</div>
+	</div>
+
+	<div class="section">
+		<label>Status<small>Veuillez definir un status initial pour ce projet</small></label>
+		<div>
+			<input type="checkbox" id="status" name="status" class="status"
+				value="1" /> <span class="f_help"></span>
+				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"
+				value="" />
+		</div>
+	</div>';
+	echo '	
+	<div class="section">
+		<label> Employe <small>Définir la liste des employés qui travaillent dans ce projet</small></label>
+		<div>
+			<select class="chzn-select emplyes" multiple tabindex="4">
+				<option value=""></option>';
+foreach($this->list_employes as $employe)
+{
+	echo "<option value=".$employe['nom'].">".$employe['nom']."</option>";
+}
+					
+echo'	</select>
+		</div>
+	</div>
+	
+	<div class="section last">
+		<div>
+			<a class="button green back add_projet">Ajouter</a> 
+			<a id="reset" class="button pink glossy glass">Reset</a>
+		</div>
+	</div>
 </fieldset>
-</form>
+</form>';
 
+	
+	echo  '<form id="add_service" class="formEl_b f_s_add" style="display:none">
+	<fieldset>
+				<legend>
+					Service <span class="small s_color"></span>
+				</legend>';
+
+//type de service
+echo '<div class="section type_service">
+<label>Type de service<small>Définir le type de ce service</small></label>
+<div>
+<select data-placeholder="Veuillez choisir un type de service..."
+class="chzn-select type_service" tabindex="2">
+<option value=""></option>';
+foreach($this->list_types_services as $type_service){
+	echo "<option value=\"".$type_service['libelle_type_service']."\">".$type_service['libelle_type_service']."</option>";
+}
+echo '</select><span class="f_help">Veuillez choisir un type de service</span>
 </div>
+</div>';
+//packs
+echo '<div class="section pack" style="display:none">
+<input type="hidden" class="pack" value="" name="pack"></input>
+</div>';
+
+echo '
 
 
-</form>
+     <div class="section">
+		<label>Status<small>Veuillez definir un status initial pour ce service</small></label>
+		<div>
+			<input type="checkbox" id="status" name="status" class="status"
+				value="1" /> <span class="f_help"></span>
+				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"
+				value="" />
+		</div>
+	</div>
+	<div class="section alphaonly">
+		<label>Description<small>Un petit mot sur le service</small></label>
+		<div>
+			<textarea name="description_service"></textarea>
+		</div>
+	</div>
+	
+	<div class="section">
+		<label>Date debut</label>
+		<div>
+			<input type="text" id="datepick" class="datepicker date_debut"
+				readonly="readonly" name="date_debut" />
+		</div>
+	</div>
+
+	<div class="section">
+		<label>Date fin</label>
+		<div>
+			<input type="text" id="datepick2" class="datepicker date_fin"
+				readonly="readonly" name="date_fin" />
+		</div>
+	</div>
+	<div class="section">
+     <label>Prix<small>Donner un prix</small></label>
+         <div>
+             <input type="text" id="sStep" value="1000.00" name="prix_service" class="prix_service"/>
+           </div>
+     </div>
+
+	';
+	echo '	
+	
+	
+	<div class="section last">
+		<div>
+			<a class="button green back add_service">Ajouter</a> 
+			<a id="reset" class="button pink glossy glass">Reset</a>
+		</div>
+	</div>
+</fieldset>
+</form>';
+
+echo '</div>';
+?>

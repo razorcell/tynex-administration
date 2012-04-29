@@ -1,6 +1,7 @@
 $(document).ready(
 		function() {
-			
+			$('.prix_service').spinner({ min: 0, max: 1000000, stepping: 50, decimals:2});
+
 			var all_rows_selected = false;
 			$('.type_service').change(function(){
 				var type_service = $(this).find('span').html();

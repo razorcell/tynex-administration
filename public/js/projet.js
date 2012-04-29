@@ -1,5 +1,6 @@
 $(document).ready(
 		function() {
+			$('.prix_projet').spinner({ min: 0, max: 1000000, stepping: 100, decimals:2});
 			var all_rows_selected = false;
 			var status = $(".status").iphoneStyle({ // Custom Label With onChange
 				// function

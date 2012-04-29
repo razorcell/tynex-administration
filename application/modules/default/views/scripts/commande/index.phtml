@@ -1,48 +1,87 @@
-<!--  <script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				oTable = $('#table_id').dataTable({
-					"bJQueryUI": true,
-					"sPaginationType": "full_numbers"
-				});
-			} );
-</script>
-<h2>Clients list : </h2>-->
-<div>
-	<a class="uibutton icon add" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'add' ),'default',true);?>"
-	>Ajouter</a>
-	<a class="uibutton  icon edit  special" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'modify' ),'default',true);?>"
-	>Modifier</a>
-	<a class="uibutton special" href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'delete' ),'default',true);?>"
-	>Supprimer</a>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/commande.js');?>"></script>
+
+<h5 class="test"></h5>
+
+<a class="button green back"
+		href="<?php echo $this->url(array('controller' => 'commande', 'action' => 'add' ),'default',true);?>">+ Ajouter</a>
 	
-	</div>
+	<a class="delete_b button pink glossy glass">- Supprimer</a>
+ <a class="selectall button blue morph">De/Selectionner tous</a>
+<?php
+$i = 0;
+$nom_client = NULL;
+echo '
+<div id="UITab">
 
-<?php 
-echo '<div class="tableName">
-							<h3>Liste des clients</h3>
+<div class="tab_container">
 
-<table class="display data_table2 dataTable" >
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">Numero de Commande </div></th>
-			<th><div class="th_wrapp">Nom du client</div></th>
-			<th><div class="th_wrapp">Libelle</div></th>	
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
+<div id="tab1" class="tab_content">
+<div class="load_page">
 
-		</tr>
-		<tr class="odd gradeX">
-			<td>2</td>
-			<td>Karima</td>
-			<td>Hamaz</td>
-		</tr>
-	</tbody>
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 commande"  id="data_table3">
+<thead>
+<tr>
+
+<th align="left">Id</th>
+<th>Description</th>
+<th>Client</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+
+foreach ( $this->list_commandes as $commande ) {
+	echo '<tr>
+<td  class="id_commande" align ="left">' . $commande ['id_commande'] . '</td>
+<td class="nom_commande">' . $commande ['libelle_commande'] . '</td>';
+
+//get the client name
+foreach($this->list_clients as $client){
+	if($client['id_client'] == $commande ['id_client'])
+	{
+		if($client['type'] == 'Entreprise'){
+			$nom_client = $client['societe'];
+		}else{
+			$nom_client = $client['nom'];
+		}
+	}
+}
+echo '
+<td>' . $nom_client . '</td>
+
+<td>
+<span class="tip" >
+<a  title="Edit" class="edit" href="';
+echo $this->url(array('id' => $commande ['id_commande']),'commandemodify');
+echo '">
+<img src="images/icon/icon_edit.png" >
+</a>
+</span>
+<span class="tip" >
+<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+<img src="images/icon/icon_delete.png">
+</a>
+</span>
+</td>
+</tr>';
+	$i ++;
+};
+echo '</tbody>
 </table>
-						</div>'
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
+</div>
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
 ?>
+
+

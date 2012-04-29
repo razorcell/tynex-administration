@@ -464,7 +464,7 @@ $(function() {
 		{url: "http://www.codylindley.com/", title: "Cody Lindley"},
 		{url: "http://malsup.com/jquery/", title: "Mike Alsup"}
 	];
-	
+	/*
 	var optionspinner = {
 		'sDec': {decimals:2},
 		'sMinMax':{min: -100, max: 100 },
@@ -484,7 +484,7 @@ $(function() {
 	for (var n in optionspinner){
 		$("#"+n).spinner(optionspinner[n]);
 	}
-
+*/
 	
 	
 	});//function end		
