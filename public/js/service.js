@@ -161,11 +161,11 @@ $(document).ready(
 						
 						 if(lines_to_delete.length > 0)
 							 {
-							 DeleteAll(lines_to_delete,'service');
+							 	DeleteAll(lines_to_delete,'service');
 							 }
 						 else
 							 {
-							 showWarning('Vous n\'avez rien selectionner',5000);
+								showWarning('Vous n\'avez rien selectionner',5000);
 							 }
 					});
 			$('.display tr').click(function() {
@@ -259,7 +259,7 @@ $(document).ready(
 				
 				  var action_destination = '/service/delete';
 				
-				  var description = row.find('.nom').html();
+				  var description = row.find('.id_service').html();
 				
 				  var id_service = row.find('.id_service').html();
 				

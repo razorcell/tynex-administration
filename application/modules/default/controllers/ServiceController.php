@@ -32,6 +32,8 @@ class ServiceController extends Zend_Controller_Action {
 		$this->view->action = $this->action;
 		$this->view->title = 'service';
 		
+		$sql = 'SELECT * FROM type_service';
+		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
 		$sql = 'SELECT * FROM service';
 		$this->view->list_services = $this->db->fetchAssoc ( $sql );
 		$this->logger->info ( 'get all services : ' . $this->db->getProfiler ()->getLastQueryProfile ()->getQuery () );
@@ -56,35 +58,34 @@ class ServiceController extends Zend_Controller_Action {
 		$this->db->getProfiler ()->setEnabled ( false );
 	
 	}
-	public function updatepackAction(){
-		//afficher les packs equivalent au type de service
-		$this->_helper->layout->disableLayout (); 
+	public function updatepackAction() {
+		// afficher les packs equivalent au type de service
+		$this->_helper->layout->disableLayout ();
 		$this->_helper->viewRenderer->setNoRender ( TRUE );
 		
 		$request_body = $this->getRequest ()->getRawBody ();
 		$this->logger->info ( 'Request body : ' . $request_body );
 		$data_from_user = Zend_Json::decode ( $request_body );
-		$type_service_string = $data_from_user['type_service'];
-		//get id_type_service
-		if(!empty($type_service_string)){
+		$type_service_string = $data_from_user ['type_service'];
+		// get id_type_service
+		if (! empty ( $type_service_string )) {
 			$sql = 'SELECT * FROM type_service';
 			$list_types_services = $this->db->fetchAssoc ( $sql );
 			$type_service_id = NULL;
-			foreach($list_types_services as $type_service){
-				if($type_service['libelle_type_service'] == $type_service_string){
-					$type_service_id = $type_service['id_type_service'];
+			foreach ( $list_types_services as $type_service ) {
+				if ($type_service ['libelle_type_service'] == $type_service_string) {
+					$type_service_id = $type_service ['id_type_service'];
 				}
 			}
 			$sql = "SELECT * FROM pack WHERE id_type_service = $type_service_id";
 			$packs = $this->db->fetchAssoc ( $sql );
 			$this->logger->info ( 'packs Assoc ' . html_entity_decode ( Zend_Debug::dump ( $packs, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 			
-			$json = Zend_Json::encode($packs);
-			$this->logger->info ($json);
+			$json = Zend_Json::encode ( $packs );
+			$this->logger->info ( $json );
 			$this->db->getProfiler ()->setEnabled ( false );
 			echo $json;
 		}
-		
 	}
 	public function submitAction() {
 		$this->logger->info ( 'service submitAction()' );
@@ -111,37 +112,57 @@ class ServiceController extends Zend_Controller_Action {
 		$date_fin = $data_from_user ['date_fin'];
 		$description = $data_from_user ['description'];
 		$pack_string = $data_from_user ['pack'];
-		$paye = $data_from_user['paye_hidden'];
+		$paye = $data_from_user ['paye_hidden'];
 		$prix = $data_from_user ['prix'];
 		$status = $data_from_user ['status_hidden'];
-		$type_service = $data_from_user['type_service'];
+		$type_service_string = $data_from_user ['type_service'];
 		
 		// PHASE D INSERTION DE L service DANS LA TABLE 'service'
 		
 		$this->logger->info ( '*********************PHASE D INSERTION D UNE ENTREPRISE************' );
-		
-		// recupperation de la chaine de caractéres representant le gender
-		$sql = 'SELECT * FROM pack';
-		$list_packs = $this->db->fetchAssoc ( $sql );
+		$type_service_id = NULL;
 		$pack_id = NULL;
-		foreach ($list_packs as $pack)
-		{
-			if($pack['nom_poste'] == $pack_string)
-			{
-				$pack_id = $pack['id_pack'];
-				$this->logger->info('id poste trouvé = '.$pack_id);
+		if ($pack_string == 'aucun') { // si pack n'existe pas
+			$this->logger->info ( 'pack = aucun');
+			$sql = 'SELECT * FROM type_service';
+			$list_types_services = $this->db->fetchAssoc ( $sql );
+			foreach ( $list_types_services as $type_service ) {
+				if ($type_service ['libelle_type_service'] == $type_service_string) {
+					$type_service_id = $type_service ['id_type_service'];
+					$this->logger->info ( 'id type service trouvé = ' . $type_service_id );
+				}
 			}
+			$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_type_service' => $type_service_id, 'paye' => $paye, 'id_commande' => $commande );
+			$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
+		
+		} else {//si pack existe
+			$sql = 'SELECT * FROM type_service';
+			$list_types_services = $this->db->fetchAssoc ( $sql );
+			foreach ( $list_types_services as $type_service ) {
+				if ($type_service ['libelle_type_service'] == $type_service_string) {
+					$type_service_id = $type_service ['id_type_service'];
+					$this->logger->info ( 'id type_service trouvé = ' . $type_service_id );
+				}
+			}
+			$sql = 'SELECT * FROM pack';
+			$list_packs = $this->db->fetchAssoc ( $sql );
+			foreach ( $list_packs as $pack ) {
+				if ($pack ['libelle_pack'] == $pack_string) {
+					$pack_id = $pack ['id_pack'];
+					$this->logger->info ( 'id pack trouvé = ' . $pack_id );
+				}
+			}
+			$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_type_service' => $type_service_id, 'id_pack' => $pack_id, 'paye' => $paye, 'id_commande' => $commande );
+			$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 		}
-		// construire le tableau pour l'enregistrement de l'service
-		$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_pack' => $pack_id, 'paye' => $paye, 'id_commande' => $commande );
-		$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
+		// construire le tableau pour l'enregistrement de service
 		try {
 			$this->db->insert ( 'service', $service_to_save );
-			$this->logger->info ( 'inserer entreprise : ' . $this->db->getProfiler ()->getLastQueryProfile ()->getQuery () );
+			$this->logger->info ( 'inserer service : ' . $this->db->getProfiler ()->getLastQueryProfile ()->getQuery () );
 			$id_service_enregistrer = $this->db->lastInsertId ();
 			$this->logger->info ( 'last inserted ID = ' . $id_service_enregistrer );
 			$reponse = 'success';
-			$this->logger->info ( 'insertion - entreprise - OUI' );
+			$this->logger->info ( 'insertion - service - OUI' );
 		} catch ( Zend_Db_Adapter_Exception $e ) {
 			$reponse = 'Erreur';
 			$this->logger->info ( 'Requete erreur : ' . $e->getMessage () );
@@ -182,7 +203,7 @@ class ServiceController extends Zend_Controller_Action {
 		}
 		
 		// $this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAssoc
-	// ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+		// ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 		
 		// recupperation de la liste des occupations
 		

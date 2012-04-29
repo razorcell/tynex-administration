@@ -144,14 +144,11 @@ $(function() {
 			  }
 			  e.preventDefault();
 	  });
-	  
-	
-	  
   	//datepicker
 	$("input.datepicker").datepicker({ 
 		autoSize: true,
-		appendText: '(dd-mm-yyyy)',
-		dateFormat: 'dd-mm-yy'
+		appendText: '(dd.mm.yyyy)',
+		dateFormat: 'dd.mm.yy'
 	});
 	$( "div.datepickerInline" ).datepicker({ 
 		dateFormat: 'dd-mm-yy',
@@ -162,8 +159,6 @@ $(function() {
 		changeYear: true,
 		dateFormat:'yy-mm-dd'
     });
-	
-
 	
 	//Button Click  Ajax Loading
 	$('.loading').live('click',function() { 
