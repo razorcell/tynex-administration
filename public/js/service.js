@@ -82,6 +82,27 @@ $(document).ready(
 					}
 				}
 			});
+			var status = $(".paye").iphoneStyle({ // Custom Label With onChange
+				// function
+				checkedLabel : "Oui",
+				uncheckedLabel : "Non",
+				labelWidth : '85px',
+				onChange : function() {
+					if(this.elem.is(':checked'))
+						{//checked
+							$('.paye_hidden').attr('value','Oui');
+						}
+					else{//not checked
+						$('.paye_hidden').attr('value','Non');
+					}
+					var chek = $(".paye").attr('checked');
+					if (chek) {
+						$(".disabled_map").fadeOut();
+					} else {
+						$(".disabled_map").fadeIn();
+					}
+				}
+			});
 			$('.f_e_add').submit(function(e) {
 				e.preventDefault();
 			});
@@ -150,31 +171,39 @@ $(document).ready(
 			$('.display tr').click(function() {
 			});
 			$('.add_service').click(function() {
-				var form_data = $('.f_p_add').serializeArray();
+				var form_data = $('.f_s_add').serializeArray();
 				var i=0;
+				var pack = null;
+				//get pack
+				
 				//form validation
 				var valide = true;
-				if($('.prix').value < 0)
-					{
+				if($('.prix').value == 0){
 						valide = false;
 					}
-				else if($('.date_debut').val().length == 0)
-					{
+				else if($('.date_debut').val().length == 0){
 						valide = false;
 					}
-				else if($('.date_fin').val().length == 0)
-				{
+				else if($('.date_fin').val().length == 0){
 					valide = false;
 				}
 				var commande = $('.commande').find('span').html();
-				if(commande == 'Veuillez choisir une commande...')
-					{
+				if(commande == 'Veuillez choisir une commande...'){
 						valide =false;
 					}
 				var type_service = $('.type_service').find('span').html();
-				if(type_service == 'Veuillez choisir un type de service...')
-				{
+				if(type_service == 'Veuillez choisir un type de service...'){
 					valide =false;
+				}else{// si type de service choisi
+					if($('div.pack').hasClass('visible')){
+						if($('.list_packs').find('li.ui-selected').length > 0){
+							pack = $('.list_packs').find('li.ui-selected').html();
+						}else{//il y a des pack mais auccun choisi
+							valide = false;
+						}
+					}else{//ca marche il n'existe aucun pack
+						pack = 'aucun';
+					}
 				}
 				if(valide)
 					{
@@ -195,24 +224,8 @@ $(document).ready(
 					//add commande
 					 json_to_send = json_to_send + ',"type_service" : "'+type_service+'"';
 					// add price
-					var prix = $('.prix').attr('value');
-				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';
+				 json_to_send = json_to_send + ',"pack" : "'+pack+'"';
 				i=0;
-				json_to_send = json_to_send + ',"employes" : [';//open employes json
-				$('ul.chzn-choices').find('li').each(function(){
-						if($(this).find('span').length > 0){
-								if(i==0){
-										var employe = $(this).find('span').html();
-										json_to_send = json_to_send + '{"name " : "'+employe+'"}';
-									}
-								else{
-										var employe = $(this).find('span').html();
-										json_to_send = json_to_send + ',{"name " : "'+employe+'"}';
-									}
-								i++;
-							}
-					});
-					json_to_send = json_to_send + ']';//close occupations json
 					json_to_send = json_to_send + '}';
 					//$('.test').html(json_to_send);
 					//json_to_send = $.parseJSON(json_to_send);
@@ -225,7 +238,7 @@ $(document).ready(
 							//var json = $.parseJSON(data);
 						
 							if (data == 'success') {// maintenant on peut
-								showSuccess('Employé ajouté', 3000);
+								showSuccess('Service ajouté', 3000);
 								
 							} else {
 								showError(data, 3000);

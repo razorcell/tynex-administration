@@ -57,6 +57,7 @@ class ServiceController extends Zend_Controller_Action {
 	
 	}
 	public function updatepackAction(){
+		//afficher les packs equivalent au type de service
 		$this->_helper->layout->disableLayout (); 
 		$this->_helper->viewRenderer->setNoRender ( TRUE );
 		
@@ -106,25 +107,33 @@ class ServiceController extends Zend_Controller_Action {
 		
 		$this->logger->info ( 'Decoded data from user : ' . html_entity_decode ( Zend_Debug::dump ( $data_from_user, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 		$commande = $data_from_user ['commande'];
-		$description = $data_from_user ['description'];
-		$prix = $data_from_user ['prix'];
 		$date_debut = $data_from_user ['date_debut'];
 		$date_fin = $data_from_user ['date_fin'];
-		$status = $data_from_user ['status'];
+		$description = $data_from_user ['description'];
+		$pack_string = $data_from_user ['pack'];
+		$paye = $data_from_user['paye_hidden'];
+		$prix = $data_from_user ['prix'];
+		$status = $data_from_user ['status_hidden'];
+		$type_service = $data_from_user['type_service'];
 		
 		// PHASE D INSERTION DE L service DANS LA TABLE 'service'
 		
 		$this->logger->info ( '*********************PHASE D INSERTION D UNE ENTREPRISE************' );
 		
 		// recupperation de la chaine de caractéres representant le gender
-		$gender_string = NULL;
-		if ($gender == 0) {
-			$gender_string = 'Homme';
-		} else {
-			$gender_string = 'Femme';
+		$sql = 'SELECT * FROM pack';
+		$list_packs = $this->db->fetchAssoc ( $sql );
+		$pack_id = NULL;
+		foreach ($list_packs as $pack)
+		{
+			if($pack['nom_poste'] == $pack_string)
+			{
+				$pack_id = $pack['id_pack'];
+				$this->logger->info('id poste trouvé = '.$pack_id);
+			}
 		}
 		// construire le tableau pour l'enregistrement de l'service
-		$service_to_save = array ('nom' => $nom, 'prenom' => $prenom, 'tel' => $tel, 'tel_societe' => $tel_societe, 'fax' => $fax, 'email' => $email, 'adresse' => $adresse, 'type' => 'Entreprise', 'gender' => $gender_string, 'societe' => $societe, 'email_societe' => $email_societe );
+		$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_pack' => $pack_id, 'paye' => $paye, 'id_commande' => $commande );
 		$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 		try {
 			$this->db->insert ( 'service', $service_to_save );
