@@ -1,59 +1,108 @@
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl('js/service.js');?>"></script>
 
-<div>
-	<a class="uibutton icon add "
-		href="<?php echo $this->url(array('controller' => 'service', 'action' => 'add' ),'default',true);?>">Ajouter</a>
-	<a class="uibutton  icon edit  special"
-		href="<?php echo $this->url(array('controller' => 'service', 'action' => 'modify' ),'default',true);?>">Modifier</a>
-	<a class="uibutton special"
-		href="<?php echo $this->url(array('controller' => 'service', 'action' => 'delete' ),'default',true);?>">Supprimer</a>
-	<a class="uibutton confirm"
-		href="<?php echo $this->url(array('controller' => 'service', 'action' => 'profil' ),'default',true);?>">Plus de details</a>
+<h5 class="test"></h5>
 
-</div>
+<a class="button green back"
+	href="<?php echo $this->url(array('controller' => 'service', 'action' => 'add' ),'default',true);?>">+
+	Ajouter</a>
 
-
+<a class="delete_b button pink glossy glass">- Supprimer</a>
+<a class="selectall button blue morph">De/Selectionner tous</a>
 
 <?php
-echo '<div class="tableName">
-							<h3>Liste des Services</h3>
+$i = 0;
+echo '
+<div id="UITab">
 
-<table class="display data_table2 dataTable" >
-	<thead>
-		<tr>
-			<th><div class="th_wrapp">ID</div></th>
-			<th><div class="th_wrapp">Description</div></th>
-			<th><div class="th_wrapp">Type du Service</div></th>
-			<th><div class="th_wrapp">Type du Pack</div></th>
-			<th><div class="th_wrapp">Status</div></th>
-			<th><div class="th_wrapp">Date de Desactivation</div></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td>Homme</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">0612352499</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>1</td>
-			<td>Majda</td>
-			<td>Kadiri</td>
-			<td>Femme</td>
-			<td class="center">Bloc A N 12 CITE HOUDA AGADIR</td>
-			<td class="center">0642518264</td>
-		</tr>
-		<tr class="odd gradeX">
-			<td>0</td>
-			<td>Ali</td>
-			<td>Safrioui</td>
-			<td>Homme</td>
-			<td class="center">Bloc C N 3 CITE DAKHLA AGADIR</td>
-			<td class="center">0612352499</td>
-		</tr>
-	</tbody>
+<div class="tab_container">
+
+<div id="tab1" class="tab_content">
+<div class="load_page">
+
+<form>
+<div class="tableName inTab">
+<h3 id="test"></h3>
+<table class="display data_table2 service"  id="data_table3">
+<thead>
+<tr>
+
+<th align="left">Id</th>
+<th>Type</th>
+<th>Nom</th>
+<th>Email</th>
+<th>Tel</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>';
+
+foreach ( $this->list_services as $service ) {
+	
+	echo '<tr>
+	<td  class="id_service" align ="left">' . $service ['id_service'] . '</td>';
+	
+	if ($service ['type'] == 'Entreprise') {
+		
+		echo '<td class="type">' . $service ['type'] . '</td>
+		<td class="nom">' . $service ['societe'] . '</td>
+		<td>' . $service ['email_societe'] . '</td>
+		<td>' . $service ['tel_societe'] . '</td>';
+		// get the poste name
+		echo '
+		<td>
+		<span class="tip" >
+		<a  title="Edit" class="edit" href="';
+		echo $this->url ( array ('id' => $service ['id_service'] ), 'servicemodify' );
+		echo '">
+		<img src="images/icon/icon_edit.png" >
+		</a>
+		</span>
+		<span class="tip" >
+		<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+		<img src="images/icon/icon_delete.png">
+		</a>
+		</span>
+		</td>
+		</tr>';
+		$i ++;
+	} else if ($service ['type'] == 'Particulier') {
+		echo '<td class="type">' . $service ['type'] . '</td>
+			<td class="nom">' . $service ['nom'] . '</td>
+			<td>' . $service ['email'] . '</td>
+			<td>' . $service ['tel'] . '</td>';
+		// get the poste name
+		echo '
+			<td>
+			<span class="tip" >
+			<a  title="Edit" class="edit" href="';
+		echo $this->url ( array ('id' => $service ['id_service'] ), 'servicemodify' );
+		echo '">
+			<img src="images/icon/icon_edit.png" >
+			</a>
+			</span>
+			<span class="tip" >
+			<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
+			<img src="images/icon/icon_delete.png">
+			</a>
+			</span>
+			</td>
+			</tr>';
+		$i ++;
+	}
+
+}
+
+echo '</tbody>
 </table>
-</div>'?>
+</div>
+</form>
+</div>
+</div><!--tab1-->
 
+</div>
+</div><!-- End UITab -->
+<!-- clear fix -->
+<div class="clear"></div>
+';
+?>

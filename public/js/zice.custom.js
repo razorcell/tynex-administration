@@ -2,7 +2,7 @@ function Refresh() {
 location.reload();
 };
 
-$.fn.imgdata = function(key){
+$.fn.imgdata = function(key){//affiche image de avatar
 	return this.find('.dataImg li:eq('+key+')').text();
 }
 $.fn.hdata = function(key){
@@ -17,15 +17,7 @@ var buttonActions = {
 
 $(document).ready(function(){	
 
-	// NewsUpdate
-	$('#news_update').vTicker({ 
-		speed: 500,
-		pause: 3000,
-		animation: 'fade',
-		mousePause: true,
-		showItems: 2
-	});
-	  
+	
 	// Tabs
 	$("ul.tabs li").fadeIn(400); 
 	$("ul.tabs li:first").addClass("active").fadeIn(400); 
@@ -129,19 +121,13 @@ $(document).ready(function(){
 	
 		
 	
-	// WYSIWYG Editor
-	$("#editor,#editor2").cleditor();	
+	
 	
 	// Form validationEngine
 	$('form#validation').validationEngine();		
 	$('form#validation_demo').validationEngine();	
 	
-	// Input filter
-	$('.numericonly input').autotab_magic().autotab_filter('numeric');
-	$('.textonly input').autotab_magic().autotab_filter('text');
-	$('.alphaonly input').autotab_magic().autotab_filter('alpha');
-	$('.regexonly input').autotab_magic().autotab_filter({ format: 'custom', pattern: '[^0-9\.]' });
-	$('.alluppercase input').autotab_magic().autotab_filter({ format: 'alphanumeric', uppercase: true });
+	
 	
 });	
 
@@ -149,7 +135,7 @@ $(document).ready(function(){
 $(function() {		
 	LResize();
 	$(window).resize(function(){LResize(); });
-    $(window).scroll(function (){ scrollmenu(); });
+    $(window).scroll(function (){ scrollmenu(); });//show the image behind the logo in every page DON'T DELETE
 		
 	  //Close_windows
 	  $('.butAcc').live('click',function(e){				   
@@ -159,61 +145,7 @@ $(function() {
 			  e.preventDefault();
 	  });
 	  
-	 //exam ui slider element
-	  $( "#slider-range-min" ).slider({
-			range: "min",
-			value: 212,
-			min: 1,
-			max: 700,
-			slide: function( event, ui ) {
-				$( "#amount" ).text( "$" + ui.value );
-			}
-		});
-		$( "#amount" ).text( "$" + $( "#slider-range-min" ).slider( "value" ) );
-		
-		$( "#slider-range" ).slider({
-			range: true,
-			min: 0,
-			max: 500,
-			values: [ 75, 300 ],
-			slide: function( event, ui ) {
-				$( "#amount2" ).text( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-			}
-		});
-		$( "#amount2" ).text( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-		
-		$( "#slider" ).slider({
-			value:100,
-			min: 0,
-			max: 500,
-			step: 50,
-			slide: function( event, ui ) {
-				$( "#amount3" ).text( "$" + ui.value );
-			}
-		});
-	$( "#amount3" ).text( "$" + $( "#slider" ).slider( "value" ) );
-	$( "#eq > span" ).each(function() {
-		// read initial values from markup and remove that
-		var value = parseInt( $( this ).text(), 10 );
-		$( this ).empty().slider({
-			value: value,
-			range: "min",
-			animate: true,
-			orientation: "vertical"
-		});
-	});
-	$( "#red, #green, #blue" ).slider({
-		orientation: "horizontal",
-		range: "min",
-		max: 255,
-		value: 127,
-		slide: refreshSwatch,
-		change: refreshSwatch
-	});
-	$( "#red" ).slider( "value", 190 );
-	$( "#green" ).slider( "value", 221 );
-	$( "#blue" ).slider( "value", 23 );
-	  
+	
 	  
   	//datepicker
 	$("input.datepicker").datepicker({ 
@@ -232,48 +164,7 @@ $(function() {
     });
 	
 
-	//datetimepicker
-   $("#datetimepicker").datetimepicker();
-   $('#timepicker').timepicker({});
-   
-   	//Color picker 
-	$('#colorPicker').ColorPicker({
-		color: '#a4d143',
-		onShow: function (colpkr) {
-			$(colpkr).fadeIn(500);
-			return false;
-		},
-		onHide: function (colpkr) {
-			$(colpkr).fadeOut(500);
-			return false;
-		},
-		onChange: function (hsb, hex, rgb) {
-			$('#colorPicker div').css('backgroundColor', '#' + hex);
-		}
-	});
-	$('#colorPickerFlat').ColorPicker({flat: true,color: '#a4d143'});
-	$('#colorpickerField').ColorPicker({
-		onSubmit: function(hsb, hex, rgb, el) {
-			$(el).val('#'+hex);
-			$(el).ColorPickerHide();
-			$('#colorpickerField').css('backgroundColor', '#' + hex);
-		},
-		onHide: function (colpkr) {
-				$(colpkr).fadeOut(500);
-				return false;
-			},
-			onChange: function (hsb, hex, rgb,el) {
-				$('#colorpickerField').val('#'+hex);
-				$('#colorpickerField').css('backgroundColor', '#' + hex);
-			},
-		onBeforeShow: function () {
-			$(this).ColorPickerSetColor(this.value);
-		}
-	}).bind('keyup', function(){
-		$(this).ColorPickerSetColor(this.value);
-	});
-
-
+	
 	//Button Click  Ajax Loading
 	$('.loading').live('click',function() { 
 		  var str=$(this).attr('title'); 
@@ -300,8 +191,7 @@ $(function() {
 		  setTimeout( "window.location.href='index.html'", 2000 );
 	  });
 		
-	// Wizard Steps 
-	 $('#wizard').smartWizard();
+	
 	 
 	// Tipsy Tootip
 	$('.tip a ').tipsy({gravity: 's',live: true});	
@@ -316,201 +206,6 @@ $(function() {
 	$('.etip input').tipsy({ trigger: 'focus', gravity: 'e',live: true });
 	$('.iconBox, div.logout').tipsy({gravity: 'ne',live: true });	
 
-	// Fancybox 
-	$(".pop_box").fancybox({ 'showCloseButton': false, 'hideOnOverlayClick'	:	false });	
-	$('.albumImage').dblclick(function(){
-		  $("a[rel=glr]").fancybox({  'showCloseButton': true,'centerOnScroll' : true, 'overlayOpacity' : 0.8,'padding' : 0 });
-		  $(this).find('a').trigger('click');
-	})
-		function test(value){
-                alert("This rating's value is "+value);
-     }
-	
-	// rating_star
-	$("#rating_star").rating_star({
-						rating_star_length: '10',
-						rating_initial_value: '3'
-	 });
-
-	  // Profile webcam 
-	  var camera = $('#camera'),screen =  $('#screen');	
-	  webcam.set_api_url('upload.php');	
-	  screen.html(
-		  webcam.get_html(screen.width(), screen.height())
-	  );
-	  var shootEnabled = false;
-	  $(".takeWebcam").click(function(){
-		  $(".webcam").show('blind');
-		  return false;
-	  });
-	  $("#closeButton").click(function(){
-		  $(".webcam").hide('blind');
-		  return false;
-	  });
-	  $('#takeButton').click(function(){
-		  if(!shootEnabled){
-			  return false;
-		  }
-		  webcam.freeze();
-		  togglePane()
-		  return false;
-	  });
-	  $('#retakeButton').click(function(){
-		  webcam.reset();
-		  togglePane()
-		  return false;
-	  });	
-	  $('#uploadAvatar').click(function(){
-		  webcam.upload();
-		  togglePane()
-		  webcam.reset();
-		  return false;
-	  });
-	  webcam.set_hook('onLoad',function(){
-		  shootEnabled = true;
-	  });
-	  webcam.set_hook('onError',function(e){
-		  screen.html(e);
-	  });
-	  function togglePane(){
-		  var visible = $(' .buttonPane:visible:first');
-		  var hidden = $(' .buttonPane:hidden:first');	
-		  visible.fadeOut('fast',function(){
-			  hidden.show();
-		  });
-	  }
-	  
-	  	// images  editor tranfer
-		$('#reflect').click(function() {
-						$('.animate').animate({"reflect": true});	 
-		});
-		$('#reflectX').click(function() {
-						$('.animate').animate({"reflectX": true});	 
-		});
-		$('#reflectY').click(function() {
-						$('.animate').animate({"reflectY": true});	 
-		});
-		$('#reflectXY').click(function() {
-						$('.animate').animate({"reflectXY": true});	 
-		});
-		$('#reflectYX').click(function() {
-						$('.animate').animate({"reflectYX": true});	 
-		});
-	    ///////////////////////////////////////////////////////////////////////////		
-		
-		// images  editor crop			
-	  $('#target').Jcrop({
-			bgFade:     true,
-			bgOpacity: .7,
-			onChange: updateCoords,
-			onSelect: updateCoords,
-			aspectRatio: 4/3		   
-					},function(){
-        var bounds = this.getBounds();
-        boundx = bounds[0];
-        boundy = bounds[1];
-        jcrop_api = this;
-			var  x1=(boundx -240)/2;
-			var  y1=(boundy -180)/2;
-			var  x2=(x1 +240);
-			var  y2=(y1 +180);
-		jcrop_api.animateTo([x1,y1,x2,y2]);
-      });
-	  function updateCoords(c)
-	  {
-		  $('#x').val(c.x);
-		  $('#y').val(c.y);
-		  $('#w').val(c.w);
-		  $('#h').val(c.h);
-	  };
-	 ///////////////////////////////////////////////////////////////////////////
-	
-	// spinner options 
-	var itemListspinner = [
-		{url: "http://ejohn.org", title: "John Resig"},
-		{url: "http://bassistance.de/", title: "J&ouml;rn Zaefferer"},
-		{url: "http://snook.ca/jonathan/", title: "Jonathan Snook"},
-		{url: "http://rdworth.org/", title: "Richard Worth"},
-		{url: "http://www.paulbakaus.com/", title: "Paul Bakaus"},
-		{url: "http://www.yehudakatz.com/", title: "Yehuda Katz"},
-		{url: "http://www.azarask.in/", title: "Aza Raskin"},
-		{url: "http://www.karlswedberg.com/", title: "Karl Swedberg"},
-		{url: "http://scottjehl.com/", title: "Scott Jehl"},
-		{url: "http://jdsharp.us/", title: "Jonathan Sharp"},
-		{url: "http://www.kevinhoyt.org/", title: "Kevin Hoyt"},
-		{url: "http://www.codylindley.com/", title: "Cody Lindley"},
-		{url: "http://malsup.com/jquery/", title: "Mike Alsup"}
-	];
-	
-	var optionspinner = {
-		'sDec': {decimals:2},
-		'sMinMax':{min: -100, max: 100 },
-		'sStep': {stepping: 0.25},
-		'sCur': {currency: '$'},
-		'sInline': {},
-		'sLink': {
-			init: function(e, ui) {
-				for (var i=0; i<itemListspinner.length; i++) {
-					ui.add('<a href="'+ itemListspinner[i].url +'" target="_blank">'+ itemListspinner[i].title +'</a>');
-				}
-			},
-			format: '<a href="%(url)" target="_blank">%(title)</a>',
-			items: itemListspinner
-		}
-	};	
-	for (var n in optionspinner){
-		$("#"+n).spinner(optionspinner[n]);
-	}
-
-	// uploadButton  ( Add file )
-		$('#uploadButton').hover(function(){
-			$('#upload_b').addClass('hover');
-		},function(){
-			$('#upload_b').removeClass('hover');
-		});		
-	
-	// upload
-	   $("input.fileupload").filestyle();
-	// mutiupload
-	  $('.uploadFile').live('click',function(){
-		  $('#uploadify').uploadifyUpload(); 	
-		   showSuccess('Uploading...');
-	  })		
-	  $('#uploadify').uploadify({
-	  'uploader'  : 'components/uploadify/uploadify.swf',
-	  'script'    : 'components/uploadify/uploadify.php',
-	  'cancelImg' : 'components/uploadify/cancel.png',
-	  'folder'    : 'uploads',
-	  'method'	: 'GET',
-	  'multi': true, 'auto': false,'fileExt': '*.jpg;*.gif;*.png','fileDesc': 'Image Files (.JPG, .GIF, .PNG)',
-	  'queueID'        : 'custom-queue',
-	  'wmode'		: 'transparent',
-	  'hideButton': true,
-	  'width': 92,'height': 26,
-	  'sizeLimit'	: parseInt($('#maxUploadFileSize').text()),
-		  'onClearQueue' : function(event) {
-			  $('#upload_c').removeClass('special').addClass('disable');
-			  $('#uploadFile').removeClass('uploadFile confirm ').addClass('disable');	 
-			  $('#status-message').html(' ');
-			},
-		'onSelectOnce'   : function(event,data) {
-			  $('#upload_c').removeClass('disable').addClass('special');
-			  $('#uploadButtondisable').css({'display':'none'});
-			  $('#uploadFile').removeClass('disable').addClass('uploadFile confirm ');	 
-			  $('#status-message').html('Ready');
-			},
-		  'onAllComplete'  : function(event,data) {
-		  if(data.errors){
-						$('#status-message').html('Complete '+ data.filesUploaded + ' file , <font color=red>and ' + data.errors + ' file donot Complete </font>.');
-						showError('uploadComplete'+ data.filesUploaded + 'file , <font color=red>and ' + data.errors + ' file donot Complete </font>.',7000);
-						
-				  }else{
-						  $('#status-message').html('Complete '+ data.filesUploaded + ' file');
-						  showSuccess('uploadComplete '+ data.filesUploaded  +' File',7000);
-						  setTimeout('$.fancybox.close()',1500);  // uploadmodal with close  ;
-				 }
-			}
-		});	
 	
 	
 	// Sortable
@@ -525,84 +220,7 @@ $(function() {
 	});
 	
 
-    // Effect 
-	$('.SEclick, .SEmousedown, .SEclicktime,.SEremote,.SEremote2,.SEremote3,.SEremote4').jrumble();
-	$('.SE').jrumble({
-		x: 2,
-		y: 2,
-		rotation: 1
-	});
-	
-	$('.alertMessage.error ').jrumble({
-		x: 10,
-		y: 10,
-		rotation: 4
-	});
-	
-	$('.alertMessage.success').jrumble({
-		x: 4,
-		y: 0,
-		rotation: 0
-	});
-	
-	$('.alertMessage.warning').jrumble({
-		x: 0,
-		y: 0,
-		rotation: 5
-	});
-
-	$('.SE').hover(function(){
-		$(this).trigger('startRumble');
-	}, function(){
-		$(this).trigger('stopRumble');
-	});
-
-	$('.SEclick').toggle(function(){
-		$(this).trigger('startRumble');
-	}, function(){
-		$(this).trigger('stopRumble');
-	});
-	
-	$('.SEmousedown').bind({
-		'mousedown': function(){
-			$(this).trigger('startRumble');
-		},
-		'mouseup': function(){
-			$(this).trigger('stopRumble');
-		}
-	});
-	
-	$('.SEclicktime').click(function(){
-		var demoTimeout;
-		$this = $(this);
-		clearTimeout(demoTimeout);
-		$this.trigger('startRumble');
-		demoTimeout = setTimeout(function(){$this.trigger('stopRumble');}, 1500)
-	});
-	$('.SEremote').hover(function(){
-		$('.SEremote2').trigger('startRumble');
-	}, function(){
-		$('.SEremote2').trigger('stopRumble');
-	});
-	
-	$('.SEremote2').hover(function(){
-		$('.SEremote').trigger('startRumble');
-	}, function(){
-		$('.SEremote').trigger('stopRumble');
-	})
-
-	$('.SEremote3').hover(function(){
-		$('.alertMessage').trigger('startRumble');
-	}, function(){
-		$('.alertMessage').trigger('stopRumble');
-	})
-
-	$('.SEremote4').hover(function(){
-		$('.alertMessage.error').trigger('startRumble');
-	}, function(){
-		$('.alertMessage.error').trigger('stopRumble');
-	})
-
+    
 
 	// Dual select boxes
 	$.configureBoxes();
@@ -644,16 +262,7 @@ $(function() {
 			//$(".formEl_b").slideToggle("slow");
 		}
 	}); 
-	$(".preOrder").iphoneStyle({  //  Custom Label 
-		  checkedLabel: "Actif",
-		  uncheckedLabel: "Non actif",
-		  labelWidth:'76px'
-	}); 
-	$(".online").iphoneStyle({  //  Custom Label 
-		  checkedLabel: "online",
-		  uncheckedLabel: "offline ",
-		  labelWidth:'55px'
-	}); 
+	
 	//khalifa controlle formulaire des services
 	$(".show_conmap").iphoneStyle({ //  Custom Label  With  onChange function
 		  checkedLabel: "Service",
@@ -690,14 +299,6 @@ $(function() {
 					}
 		});	 
 	});		
-	
-	
-	// ShowCode 
-	$('.showCode').sourcerer('js html css php'); 
-	$('.showCodeJS').sourcerer('js'); 
-	$('.showCodeHTML').sourcerer('html'); 
-	$('.showCodePHP').sourcerer('php'); 
-	$('.showCodeCSS').sourcerer('css'); 
 	
 	// icon  gray Hover
 	$('.iconBox.gray').hover(function(){
@@ -757,142 +358,10 @@ $(function() {
 	  $(this).stop(true,true).animate({ opacity: 0,right: '-20'}, 500,function(){ $(this).hide(); });						 
 	});
 	
-	// jScrollPane  Overflow
-	$('#albumsList,.albumpics,.overflow,.todate').jScrollPane({ autoReinitialise: true });
-
-	// images hover
-	$('.picHolder,.SEdemo').hover(
-		  function() {
-			  $(this).find('.picTitle').fadeTo(200, 1);
-		  },function() {
-			  $(this).find('.picTitle').fadeTo(200, 0);
-		  }
-	  )	
-		  
+	
+	
 				  
-	//droppable 			   	
-	// move images  to  news album
-	$('.album').droppable({
-		hoverClass: 'over',
-		activeClass: 'dragging',
-		drop:function(event,ui){
-			
-			 if($(this).hasClass('selected')) return false;
-			loading('Moving');
-			
-			ui.helper.fadeOut(400);
-			setTimeout("unloading()",1500); 		
-
-		},
-		tolerance:'pointer'
-	});
-	  $('.picPreview').droppable({
-		  hoverClass: 'picPreview-hover',
-		  activeClass: 'picPreview-hover',
-		   drop: function( event, ui ) { 
-			   $('#image-albumPreview').attr('src',ui.draggable.find('img').attr('src'));
-		   }
-	});	
-  	$('.deletezone').droppable({
-		hoverClass: 'deletezoneover',
-		activeClass: 'deletezonedragging',
-		drop:function(event,ui){	
-
-		   var data ='id='+ ui.draggable.imgdata(0); 
-		   var name =ui.draggable.imgdata(1); 
-
-		$.confirm({
-		'title': 'DELETE DIALOG BOX','message': "<strong>YOU WANT TO DELETE </strong><br /><font color=red>' "+ name +" ' </font> ",'buttons': {'Yes': {'class': 'special',
-		'action': function(){
-					loading('Deleting',1);
-						   ui.helper.fadeOut(function(){ ui.helper.remove(); 
-						  setTimeout("unloading()",1500); 	
-					});
-			}},'No'	: {'class'	: ''}}});
-		},
-		tolerance:'pointer'
-	});
-	$('.album.load').live('click',function(e){
-		  $('.album').removeClass('selected');
-		  var albumid=$(this).attr('id');
-		  $(this).addClass('selected');
-		  loadalbum(albumid);
-	})	
-	$(".albumDelete").live('click',function() { 
-		   var dataSet=$(this).parents('form');
-		   var name = $(this).attr("name");
-		   var data ='id='+ $(this).attr("id");   
-		   albumDelete(data,name,dataSet);
-	});
-	$('#editAlbum.editOn').live('click',function(){
-												   
-	$('.album_edit').fadeIn(400);
-	$('.boxtitle').css({'margin-left':'207px'});
-	$('.boxtitle .texttip').hide();
-		$(this).html('close edit').attr('title','Click here to Close edit  ').removeClass('editOn').addClass('editOff');
-		imgRow();
-	})
-	$('#editAlbum.editOff').live('click',function(){			
-												   
-		$('.album_edit').fadeOut(400,function(){
-		$('.boxtitle .texttip').show();
-				 $('.boxtitle').css({'margin-left':'0'});
-				 imgRow();
-		});
-		$(this).html('edit album').attr('title','Click here to edit  Album ').removeClass('editOff').addClass('editOn');
-		 
-	})
 	
-	// mouseenter Over album with  CSS3
-	$(".preview").delegate('img', 'mouseenter', function() {
-		  if ($(this).hasClass('stackphotos')) {
-		  var $parent = $(this).parent();
-		  $parent.find('img#photo1').addClass('rotate1');
-		  $parent.find('img#photo2').addClass('rotate2');
-		  $parent.find('img#photo3').addClass('rotate3');
-		  }
-	  }).delegate('img', 'mouseleave', function() {
-		  $('img#photo1').removeClass('rotate1');
-		  $('img#photo2').removeClass('rotate2');
-		  $('img#photo3').removeClass('rotate3');
-	});
-	
-	// Conversation box tool
-	$('.msg').live({
-        mouseenter: function(){
-			$(this).find('.toolMsg').show();
-           },mouseleave: function(){
-			$(this).find('.toolMsg').hide();
-           }
-       }
-    );
-	
-
-	// filemanager. 
-	// onload
-	$('#finder').elfinder({
-		url : 'components/elfinder/connectors/php/connector-fileimport.php',
-		docked : true,dialog : { title : 'File manager',modal : true,width : 700 }
-	})
-	// on click
-	$('#filemanager').click(function(){	
-		  var callback=$(this).attr('id');
-		  var type=$(this).attr('title');
-		  fileDialog(callback,type);					   
-	});
-	// on click callback
-	$('#open_icon,#open_icon2,#open_icon3').click(function(){	
-		  var callback=$(this).attr('id');
-		  var type=$(this).attr('title');
-		   var input=$(this).attr('rel');
-		  fileDialogCallback(callback,type,input);					   
-	});
-	// on focus  callback
-	$('.fileDialog').live('focus',function(){
-		  var callback,input =$(this).attr('id');
-		  var type=$(this).attr('title');
-		  fileDialogCallback(callback,type,input);										
-	})
 
 
 	
@@ -945,175 +414,7 @@ $(function() {
 		  ResetForm();
 		 });	
 	
-	// Calendar 
-		var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();		
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'title',
-				center: 'prev,next  ',
-				right: 'today month,basicWeek,agendaDay'
-			},
-		  buttonText: {
-				prev: 'Previous',
-				next: 'Next '
-			},
-			editable: true,
-			refetchEvents :'refetchEvents',
-			selectable: true,
-			selectHelper: true,
-			dayClick: function(date, allDay, jsEvent, view) {
-			var nDate=$.fullCalendar.formatDate( date, 'd' );
-			var dDate=$.fullCalendar.formatDate( date, 'dddd ' );
-			var fullDate=$.fullCalendar.formatDate( date, ' MMMM , yyyy' );
-			$('#calendar .fc-header-title h2').html('<div class="dateBox"><div class="nD">'+nDate+'</div><div class="dD">'+dDate+'<div class="fullD">'+fullDate+'</div><div></div><div class="clear"></div>');
-			},
-			events: [
-				{
-					title: 'All Day Event',
-					start: new Date(y, m, 12),
-					end: new Date(y, m, 14)
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d-3, 16, 0),
-					allDay: false
-				}
-			]
-		});
-              
-         
 	
-	// CHARTS        
-    $("table.chart").each(function() {
-        var colors = [];
-		var height=$(this).height();
-        $("table.chart thead th:not(:first)").each(function() {
-            colors.push($(this).css("color"));
-        });
-		
-        $(this).graphTable({
-            series: 'columns',
-            position: 'replace',
-			width: '96%',
-            height: '423px',
-            colors: colors
-        }, { xaxis: {   tickSize: 1 },
-			yaxis: {
-				 max: 1000,
-				min:0,
-            },	series: {
-				points: {show: true },
-                lines: { show: true, fill: true, steps: false },
-			}
-        });
-    });
-    $("table.chart2").each(function() {
-        var colors = [];
-        $("table.chart thead th:not(:first)").each(function() {
-            colors.push($(this).css("color"));
-        });
-        $(this).graphTable({
-            series: 'columns',  position: 'replace',width: '100%', height: '300px', colors: colors
-        }, {  xaxis: {  tickSize: 1,  },
-			yaxis: {
-				 max: 1000,
-				min:200,
-            }	,	series: {
-				points: {show: true },
-                lines: { show: true, fill: true, steps: false },
-			}
-        });
-    });
-	$("table.chart-pie").each(function() {
-        var colors = [];
-        $("table.chart-pie thead th:not(:first)").each(function() {
-            colors.push($(this).css("color"));
-        });
-        $(this).graphTable({
-            series: 'columns',
-            position: 'replace',
-			width : '100%',
-            height: '325px',
-            colors: colors
-        }, {
-		series: {
-            pie: { 
-                show: true,
-				innerRadius: 0.5,
-                radius: 1,
-				tilt: 1,
-                label: {
-                    show: true,
-                    radius: 1,
-                    formatter: function(label, series){
-                        return '<div id="tooltipPie"><b>'+label+'</b> : '+Math.round(series.percent)+'%</div>';
-                    },
-                    background: { opacity: 0 }
-                }
-            }
-        },
-        legend: {
-            show: false
-        },
-			grid: {
-				hoverable: false,
-				autoHighlight: true
-			}
-        });
-    });
-	
-
-	$("table.chart-line").each(function() {
-        var colors = [];
-        $("table.chart-line thead th:not(:first)").each(function() {
-            colors.push($(this).css("color"));
-        });
-        $(this).graphTable({
-            series: 'columns', position: 'replace',width : '99%',height: '350px', colors: colors
-        }, { xaxis: {  tickSize: 3 },
-		series: {
-				points: {show: true },
-                lines: { show: true, fill: false, steps: false },
-                bars: { show: false, barWidth: 0.6 },
-			},
-			yaxis: {
-				 max: 1000,
-				min:0,
-            }
-        });
-    });
-	$("table.chart-bar").each(function() {
-        var colors = [];
-        $("table.chart-bar thead th:not(:first)").each(function() {
-            colors.push($(this).css("color"));
-        });
-        $(this).graphTable({
-            series: 'columns', position: 'replace',width : '99%', height: '350px', colors: colors
-        }, { xaxis: { tickSize: 1 },
-		series: {
-                lines: { show: false},
-                bars: { 	show: true,
-					lineWidth: 1,
-					barWidth: 0.4,
-					fill: true,
-					align: "center",
-					horizontal: false,
-					multiplebars:true },
-				points: {
-					show: false
-				}
-			}
-			,
-			yaxis: {
-				 max: 1000,
-				min:0,
-            }
-        });
-    });
 
     function showTooltip(x, y, contents) {
         $('<div id="tooltip" >' + contents + '</div>').css({
@@ -1147,9 +448,46 @@ $(function() {
             previousPoint = null;
         }
     });
+ // spinner options 
+	var itemListspinner = [
+		{url: "http://ejohn.org", title: "John Resig"},
+		{url: "http://bassistance.de/", title: "J&ouml;rn Zaefferer"},
+		{url: "http://snook.ca/jonathan/", title: "Jonathan Snook"},
+		{url: "http://rdworth.org/", title: "Richard Worth"},
+		{url: "http://www.paulbakaus.com/", title: "Paul Bakaus"},
+		{url: "http://www.yehudakatz.com/", title: "Yehuda Katz"},
+		{url: "http://www.azarask.in/", title: "Aza Raskin"},
+		{url: "http://www.karlswedberg.com/", title: "Karl Swedberg"},
+		{url: "http://scottjehl.com/", title: "Scott Jehl"},
+		{url: "http://jdsharp.us/", title: "Jonathan Sharp"},
+		{url: "http://www.kevinhoyt.org/", title: "Kevin Hoyt"},
+		{url: "http://www.codylindley.com/", title: "Cody Lindley"},
+		{url: "http://malsup.com/jquery/", title: "Mike Alsup"}
+	];
+	
+	var optionspinner = {
+		'sDec': {decimals:2},
+		'sMinMax':{min: -100, max: 100 },
+		'sStep': {stepping: 0.25},
+		'sCur': {currency: '$'},
+		'sInline': {},
+		'sLink': {
+			init: function(e, ui) {
+				for (var i=0; i<itemListspinner.length; i++) {
+					ui.add('<a href="'+ itemListspinner[i].url +'" target="_blank">'+ itemListspinner[i].title +'</a>');
+				}
+			},
+			format: '<a href="%(url)" target="_blank">%(title)</a>',
+			items: itemListspinner
+		}
+	};	
+	for (var n in optionspinner){
+		$("#"+n).spinner(optionspinner[n]);
+	}
+
 	
 	
-	});		
+	});//function end		
 
 
 	// Check browser fixbug
@@ -1182,17 +520,7 @@ $(function() {
 	if(mybrowser.indexOf('Safari')>0){}		
 
 	  
-	  function fileDialogCallback(callback,type,input){
-			$('<div id="finder_'+callback+'"/>').elfinder({
-				 url : 'components/elfinder/connectors/php/connector-'+type+'.php', editorCallback : function(url) { $('#'+input).val(url);
-				},closeOnEditorCallback : true, dialog : { title : 'File manager',modal : true,width : 700 }
-			});							   
-	  }
-	  function fileDialog(callback,type){
-			$('<div id="finder_'+callback+'"/>').elfinder({
-				  url : 'components/elfinder/connectors/php/connector-'+type+'.php',dialog : { title : 'File manager',modal : true,width : 700 }
-			});							   
-	  }
+	 
 		  
 	  //Delete(id_occup,name,row,0,action_destination);
 	  function Delete(id,description,row,type,action_destination){//row = selected row //id = identifiant de l'element //
@@ -1329,30 +657,10 @@ $(function() {
 				});
 		}*/
 
-	  function albumDelete(data,name,dataSet){
-			  var loadpage = dataSet.hdata(0);
-			  var row = dataSet.hdata(2);
-			  $.confirm({
-			  'title': '_DELETE DIALOG BOX','message': "<strong>YOU WANT TO DELETE </strong><br /><font color=red>' "+ name +" ' </font> ",'buttons': {'Yes': {'class': 'special',
-			  'action': function(){
-						  loading('Checking',1);
-						  setTimeout("unloading()",1500); 	  
-				}},'No'	: {'class'	: ''}}});
-	  }
+	 
 	  
 	  
-	  function loadalbum(albumid){
-			  loading('Loading');
-			  $(' .albumImagePreview').show();
-			 imgRow();
-			  $(' .albumImagePreview').fadeOut(function(){ 										
-					  $("#uploadAlbum").attr('href','modalupload.html'); 		
-					  $('#uploadAlbum').removeClass('disable secure ').addClass('special add ');
-					  $('#uploadButtondisable').css({'display':'none'});
-					  $('.screen-msg').hide();  setTimeout("unloading()",500); 	 																	
-			  }).delay(400).fadeIn();			
-			   
-		  }
+	  
 
 
 	  function ResetForm(){
@@ -1368,30 +676,6 @@ $(function() {
 				  } 
 		  });	
 	  }
-
-
-	function hexFromRGB(r, g, b) {
-		var hex = [
-			r.toString( 16 ),
-			g.toString( 16 ),
-			b.toString( 16 )
-		];
-		$.each( hex, function( nr, val ) {
-			if ( val.length === 1 ) {
-				hex[ nr ] = "0" + val;
-			}
-		});
-		return hex.join( "" ).toUpperCase();
-	}
-	function refreshSwatch() {
-		var red = $( "#red" ).slider( "value" ),
-			green = $( "#green" ).slider( "value" ),
-			blue = $( "#blue" ).slider( "value" ),
-			hex = hexFromRGB( red, green, blue );
-		$( "#swatch" ).css( "background-color", "#" + hex );
-	}
-	  
-
 	  
 	  function showError(str,delay){	
 		  if(delay){

@@ -181,9 +181,6 @@ $(document).ready(
 						}
 					
 					});
-					
-					
-					
 					}else{
 						showError('Veuillez revoir le formulaire', 3000);
 					}

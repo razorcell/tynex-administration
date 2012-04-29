@@ -1,6 +1,65 @@
 $(document).ready(
 		function() {
+			
 			var all_rows_selected = false;
+			$('.type_service').change(function(){
+				var type_service = $(this).find('span').html();
+				if(type_service){//it's equal to null for the first time so we add this conditin to avoid error
+					var json_to_send = '{"type_service":"'+type_service+'"}';
+					$.ajax({ 
+						type : "POST",
+						url : "/service/updatepack",
+						data : json_to_send,
+						success : function(data) {
+							if($('div.pack').hasClass('visible')){
+								//$('div.pack').fadeOut('fast');
+								$( "#selectable" ).selectable("destroy");
+								var select_content = null;
+								select_content = '<label>Packs<small>Définir le type de pack</small></label><div class="list_packs"><ul id="selectable">';
+								var json = $.parseJSON(data);
+								if(json.length == 0){
+									$('div.pack').fadeOut();
+								}else{
+								$.each(json,function(i,item){
+									var libelle_pack = item.libelle_pack;
+									select_content = select_content + '<li class="ui-widget-content pack_item">'+libelle_pack+'<li>';
+								});
+								select_content = select_content + ' </ul></div>';
+								$('div.pack').html(select_content);
+								$('div.pack').fadeIn('fast');
+								$( "#selectable" ).selectable();
+								
+								//$('div.pack').addClass('visible');
+								}
+							}else{
+								//$('div.pack').fadeOut();
+								//$( "#selectable" ).selectable("destroy");
+								var select_content = null;
+								select_content = '<label>Packs<small>Définir le type de pack</small></label><div class="list_packs"><ul id="selectable">';
+								var json = $.parseJSON(data);
+								if(json.length == 0){//si aucun pack alors cacher la div
+									$('div.pack').fadeOut('fast');
+								}else{
+								$.each(json,function(i,item){
+									var libelle_pack = item.libelle_pack;
+									select_content = select_content + '<li class="ui-widget-content pack_item">'+libelle_pack+'<li>';
+								});
+								select_content = select_content + ' </ul></div>';
+								$('div.pack').html(select_content);
+								
+								$( "#selectable" ).selectable();
+								$('div.pack').fadeIn('fast');
+								$('div.pack').addClass('visible');
+								}
+							}//end else
+							//$('div.pack').html('');
+							
+							//select.chosen();
+							
+						}//end success
+					});//end ajax
+				}//end type service validation
+			});
 			var status = $(".status").iphoneStyle({ // Custom Label With onChange
 				// function
 				checkedLabel : "Actif",
@@ -29,7 +88,7 @@ $(document).ready(
 				e.preventDefault();
 			});
 			$('.edit').click(function(){
-				$('.projet tbody tr').each(
+				$('.service tbody tr').each(
 						function(i, row) {				
 								$(this).removeClass('row_selected');
 						});
@@ -37,7 +96,7 @@ $(document).ready(
 			$('.selectall').click(function(){
 				if(all_rows_selected == false)
 					{
-						$('.projet tbody tr').each(
+						$('.service tbody tr').each(
 							function(i, row) {
 								if($(this).hasClass('row_selected').toString() == 'false'){
 									$(this).addClass('row_selected');
@@ -46,7 +105,7 @@ $(document).ready(
 							});
 					}
 				else{
-					$('.projet tbody tr').each(
+					$('.service tbody tr').each(
 							function(i, row) {
 								if($(this).hasClass('row_selected').toString() == 'true'){
 									$(this).removeClass('row_selected');
@@ -55,12 +114,12 @@ $(document).ready(
 							});
 				}
 			});
-			$('.projet tr').live('click',function(){
+			$('.service tr').live('click',function(){
 				$(this).toggleClass('row_selected');
 			});
 		
 			$('#reset').click(function() {
-				$('input:not(.id_projet)').val('');
+				$('input:not(.id_service)').val('');
 			//	$('input').val('');
 				showError('formulaire vidé', 3000);
 			});
@@ -69,18 +128,18 @@ $(document).ready(
 						
 						$('.test').html('');
 						var lines_to_delete = [];
-						$('.projet tbody tr').each(
+						$('.service tbody tr').each(
 								function(i, row) {
 									
 									if($(this).hasClass('row_selected').toString() == 'true'){
-										var id_projet_courant = $(this).find('.id_projet').html();
-										lines_to_delete.push(id_projet_courant);
+										var id_service_courant = $(this).find('.id_service').html();
+										lines_to_delete.push(id_service_courant);
 									}
 								});
 						
 						 if(lines_to_delete.length > 0)
 							 {
-							 DeleteAll(lines_to_delete,'projet');
+							 DeleteAll(lines_to_delete,'service');
 							 }
 						 else
 							 {
@@ -89,7 +148,7 @@ $(document).ready(
 					});
 			$('.display tr').click(function() {
 			});
-			$('.add_projet').click(function() {
+			$('.add_service').click(function() {
 				var form_data = $('.f_p_add').serializeArray();
 				var i=0;
 				//form validation
@@ -111,8 +170,8 @@ $(document).ready(
 					{
 						valide =false;
 					}
-				var type_projet = $('.type_projet').find('span').html();
-				if(type_projet == 'Veuillez choisir un type de projet...')
+				var type_service = $('.type_service').find('span').html();
+				if(type_service == 'Veuillez choisir un type de service...')
 				{
 					valide =false;
 				}
@@ -131,9 +190,9 @@ $(document).ready(
 						}
 					//add commande
 					 json_to_send = json_to_send + ',"commande" : "'+commande+'"';
-					 //add type projet
+					 //add type service
 					//add commande
-					 json_to_send = json_to_send + ',"type_projet" : "'+type_projet+'"';
+					 json_to_send = json_to_send + ',"type_service" : "'+type_service+'"';
 					// add price
 					var prix = $('.prix').attr('value');
 				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';
@@ -158,7 +217,7 @@ $(document).ready(
 					//json_to_send = $.parseJSON(json_to_send);
 					$.ajax({ 
 						type : "POST",
-						url : "/project/submit",
+						url : "/service/submit",
 						data : json_to_send,
 						success : function(data) {
 							//alert('success');
@@ -177,22 +236,22 @@ $(document).ready(
 					}
 			});
 			$(".Delete").live('click',function() { 
-				$('.projet tbody tr').each(
+				$('.service tbody tr').each(
 						function(i, row) {				
 								$(this).removeClass('row_selected');
 				});
 				$('.test').html('');
 				  var row=$(this).parents('tr');
 				
-				  var action_destination = '/project/delete';
+				  var action_destination = '/service/delete';
 				
 				  var description = row.find('.nom').html();
 				
-				  var id_projet = row.find('.id_projet').html();
+				  var id_service = row.find('.id_service').html();
 				
-				  Delete(id_projet,description,row,0,action_destination);
+				  Delete(id_service,description,row,0,action_destination);
 			});
-			$('.modify_projet').click(function() {
+			$('.modify_service').click(function() {
 				var form_data = $('.f_e_modify').serializeArray();
 				var poste = $('a.chzn-single').find('span').html();
 				var i=0;
@@ -252,11 +311,11 @@ $(document).ready(
 							}
 						}
 					//add id value
-					var id = $('.id_projet').attr('value');
+					var id = $('.id_service').attr('value');
 					 json_to_send = json_to_send + ',"id" : "'+id+'"';
 					 //add 'poste' value
 				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
-				 //add gender !!!! i don't know why it doesn't get added automaticly it does for add projet
+				 //add gender !!!! i don't know why it doesn't get added automaticly it does for add service
 				 if($('label[for="radio-1"]').hasClass('checked')) {
 					 json_to_send = json_to_send + ',"gender" : "0"';
 					 }
@@ -292,7 +351,7 @@ $(document).ready(
 					
 					$.ajax({ 
 						type : "POST",
-						url : "/project/modify",
+						url : "/service/modify",
 						data : json_to_send,
 						success : function(data) {
 							//var json = $.parseJSON(data);
