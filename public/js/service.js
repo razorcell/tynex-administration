@@ -20,6 +20,7 @@ $(document).ready(
 								var json = $.parseJSON(data);
 								if(json.length == 0){
 									$('div.pack').fadeOut();
+									$('div.pack').removeClass('visible')
 								}else{
 								$.each(json,function(i,item){
 									var libelle_pack = item.libelle_pack;
@@ -61,7 +62,7 @@ $(document).ready(
 					});//end ajax
 				}//end type service validation
 			});
-			var status = $(".status").iphoneStyle({ // Custom Label With onChange
+			var status = $(".status").iphoneStyle({ // the status option
 				// function
 				checkedLabel : "Actif",
 				uncheckedLabel : "Interrompu",
@@ -69,10 +70,10 @@ $(document).ready(
 				onChange : function() {
 					if(this.elem.is(':checked'))
 						{//checked
-							$('.status_hidden').attr('value','actif');
+							$('.status_hidden').attr('value','Actif');
 						}
 					else{//not checked
-						$('.status_hidden').attr('value','interrompu');
+						$('.status_hidden').attr('value','Interrompu');
 					}
 					var chek = $(".status").attr('checked');
 					if (chek) {
@@ -82,7 +83,8 @@ $(document).ready(
 					}
 				}
 			});
-			var status = $(".paye").iphoneStyle({ // Custom Label With onChange
+			
+			var paye = $(".paye").iphoneStyle({ // Custom Label With onChange
 				// function
 				checkedLabel : "Oui",
 				uncheckedLabel : "Non",
@@ -152,7 +154,6 @@ $(document).ready(
 						var lines_to_delete = [];
 						$('.service tbody tr').each(
 								function(i, row) {
-									
 									if($(this).hasClass('row_selected').toString() == 'true'){
 										var id_service_courant = $(this).find('.id_service').html();
 										lines_to_delete.push(id_service_courant);
@@ -215,7 +216,12 @@ $(document).ready(
 									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
 								}
 							else{
+								if(form_data[i].name == 'prix'){
+									var price = form_data[i].value.replace(',','');
+									json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+price+'"';
+								}else{
 								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
 							}
 						}
 					//add commande
@@ -266,51 +272,40 @@ $(document).ready(
 				  Delete(id_service,description,row,0,action_destination);
 			});
 			$('.modify_service').click(function() {
-				var form_data = $('.f_e_modify').serializeArray();
-				var poste = $('a.chzn-single').find('span').html();
+				var form_data = $('.f_s_modify').serializeArray();
 				var i=0;
+				var pack = null;
+				//get pack
+				
 				//form validation
 				var valide = true;
-				if($('#lastname').val().length == 0)
-					{
+				if($('.prix').value == 0){
 						valide = false;
 					}
-				else if($('#firstname').val().length == 0)
-					{
+				else if($('.date_debut').val().length == 0){
 						valide = false;
 					}
-				else if($('.email').val().length == 0)
-				{
+				else if($('.date_fin').val().length == 0){
 					valide = false;
 				}
-				else if($('#tel').val().length == 0)
-				{
-					valide = false;
-				}
-				else if($('#username').val().length == 0)
-				{
-					valide = false;
-				}
-				else if($('#password').val().length == 0)
-				{
-					valide = false;
-				}
-				else if($('#passwordCon').val().length == 0)
-				{
-					valide = false;
-				}
-				var pass = $('#password').attr("value");
-				var passCon = $('#passwordCon').attr("value");
-				if(pass != passCon || pass == '' || passCon == '')
-					{
-						valide = false;
-					}
-				var poste = $('.chzn-single').find('span').html();
-				if(poste == 'Veuillez choisir un poste...')
-					{
+				var commande = $('.commande').find('span').html();
+				if(commande == 'Veuillez choisir une commande...'){
 						valide =false;
-						
 					}
+				var type_service = $('.type_service').find('span').html();
+				if(type_service == 'Veuillez choisir un type de service...'){
+					valide =false;
+				}else{// si type de service choisi
+					if($('div.pack').hasClass('visible')){
+						if($('.list_packs').find('li.ui-selected').length > 0){
+							pack = $('.list_packs').find('li.ui-selected').html();
+						}else{//il y a des pack mais auccun choisi
+							valide = false;
+						}
+					}else{//ca marche il n'existe aucun pack
+						pack = 'aucun';
+					}
+				}
 				if(valide)
 					{
 					var json_to_send = '{';
@@ -321,69 +316,46 @@ $(document).ready(
 									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
 								}
 							else{
+								if(form_data[i].name == 'prix'){
+									var price = form_data[i].value.replace(',','');
+									json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+price+'"';
+								}else{
 								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
 							}
 						}
-					//add id value
-					var id = $('.id_service').attr('value');
-					 json_to_send = json_to_send + ',"id" : "'+id+'"';
-					 //add 'poste' value
-				 json_to_send = json_to_send + ',"poste" : "'+poste+'"';
-				 //add gender !!!! i don't know why it doesn't get added automaticly it does for add service
-				 if($('label[for="radio-1"]').hasClass('checked')) {
-					 json_to_send = json_to_send + ',"gender" : "0"';
-					 }
-				 else{
-					 json_to_send = json_to_send + ',"gender" : "1"';
-				 }
-				 if($('ul.chzn-choices').find('li').length > 1){
-					 	i=0;
-						json_to_send = json_to_send + ',"occupations" : [';//open occupations json
-						$('ul.chzn-choices').find('li').each(function(){
-								if($(this).find('span').length > 0)//if span exists
-									{
-										if(i==0)
-											{
-												var occupation = $(this).find('span').html();
-												json_to_send = json_to_send + '{"name " : "'+occupation+'"}';
-											}
-										else
-											{
-												var occupation = $(this).find('span').html();
-												json_to_send = json_to_send + ',{"name " : "'+occupation+'"}';
-											}
-										i++;
-									}
-								
-							});//la fin de l'ajout des occupations à la chaine de caractére qui va etre envoyer au serveur
-							json_to_send = json_to_send + ']';//close occupations json
-				 }
+					//add commande
+					 json_to_send = json_to_send + ',"commande" : "'+commande+'"';
+					 //add type service
+					//add commande
+					 json_to_send = json_to_send + ',"type_service" : "'+type_service+'"';
+					// add price
+				 json_to_send = json_to_send + ',"pack" : "'+pack+'"';
+				var id = $('#id').attr('value');
+				 json_to_send = json_to_send + ',"id" : "'+id+'"';
+				i=0;
 					json_to_send = json_to_send + '}';
-					$('.test').html(json_to_send);
+					//$('.test').html(json_to_send);
 					//json_to_send = $.parseJSON(json_to_send);
-					
-					
 					$.ajax({ 
 						type : "POST",
 						url : "/service/modify",
 						data : json_to_send,
 						success : function(data) {
+							//alert('success');
 							//var json = $.parseJSON(data);
 						
 							if (data == 'success') {// maintenant on peut
-								showSuccess('Mise à jour avec succée', 3000);
-								setTimeout("Refresh()", 500);
+								showSuccess('Service modifié', 3000);
 								
 							} else {
-								showError(data, 100000);
+								showError(data, 3000);
 							}
 						}
-					
 					});
 					}else{
 						showError('Veuillez revoir le formulaire', 3000);
 					}
-				
 			});//end modify.click()
 	
 		});

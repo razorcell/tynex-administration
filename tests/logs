@@ -1,14 +1,71 @@
-2012-04-30T01:51:59+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:51:59+02:00 INFO (6): get all services : SELECT * FROM service
-2012-04-30T01:52:12+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:52:12+02:00 INFO (6): get all services : SELECT * FROM service
-2012-04-30T01:52:57+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:52:57+02:00 INFO (6):  service addAction() 
-2012-04-30T01:52:57+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-30T01:52:59+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:53:03+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:53:03+02:00 INFO (6): get all services : SELECT * FROM service
-2012-04-30T01:53:06+02:00 INFO (6): Fonction init() executée
-2012-04-30T01:53:06+02:00 INFO (6):  service addAction() 
-2012-04-30T01:53:06+02:00 INFO (6): get all clients : SELECT * FROM employe
-2012-04-30T01:53:07+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:32:01+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:32:06+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:32:06+02:00 INFO (6): get all services : SELECT * FROM service
+2012-04-30T08:33:26+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:27+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:27+02:00 INFO (6): get all services : SELECT * FROM service
+2012-04-30T08:33:31+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:31+02:00 INFO (6):  service addAction() 
+2012-04-30T08:33:31+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-04-30T08:33:32+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:36+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:36+02:00 INFO (6): Request body : {"type_service":"Referencement"}
+2012-04-30T08:33:36+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [12] => array(3) {
+    ["id_pack"] => string(2) "12"
+    ["libelle_pack"] => string(14) "Pack Débutant"
+    ["id_type_service"] => string(2) "15"
+  }
+  [13] => array(3) {
+    ["id_pack"] => string(2) "13"
+    ["libelle_pack"] => string(12) "Pack Amateur"
+    ["id_type_service"] => string(2) "15"
+  }
+  [14] => array(3) {
+    ["id_pack"] => string(2) "14"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "15"
+  }
+}
+</pre>
+2012-04-30T08:33:36+02:00 INFO (6): {"12":{"id_pack":"12","libelle_pack":"Pack D\u00e9butant","id_type_service":"15"},"13":{"id_pack":"13","libelle_pack":"Pack Amateur","id_type_service":"15"},"14":{"id_pack":"14","libelle_pack":"Pack Professionnel","id_type_service":"15"}}
+2012-04-30T08:33:47+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:47+02:00 INFO (6): service submitAction()
+2012-04-30T08:33:47+02:00 INFO (6): Request body : {"prix" : "1,000.00","status" : "1","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","description" : "sdfsdfsdf","date_debut" : "01.04.2012","date_fin" : "30.04.2012","commande" : "2","type_service" : "Referencement","pack" : "Pack Débutant"}
+2012-04-30T08:33:47+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["prix"] => string(8) "1,000.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(9) "sdfsdfsdf"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "30.04.2012"
+  ["commande"] => string(1) "2"
+  ["type_service"] => string(13) "Referencement"
+  ["pack"] => string(14) "Pack Débutant"
+}
+</pre>
+2012-04-30T08:33:47+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-04-30T08:33:47+02:00 INFO (6): id type_service trouvé = 15
+2012-04-30T08:33:47+02:00 INFO (6): id pack trouvé = 12
+2012-04-30T08:33:47+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(9) "sdfsdfsdf"
+  ["prix"] => string(8) "1,000.00"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "30.04.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "15"
+  ["id_pack"] => string(2) "12"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "2"
+}
+</pre>
+2012-04-30T08:33:47+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-04-30T08:33:47+02:00 INFO (6): last inserted ID = 8
+2012-04-30T08:33:47+02:00 INFO (6): insertion - service - OUI
+2012-04-30T08:33:49+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:33:49+02:00 INFO (6): get all services : SELECT * FROM service
+2012-04-30T08:34:08+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:34:09+02:00 INFO (6): Fonction init() executée
+2012-04-30T08:34:09+02:00 INFO (6): get all services : SELECT * FROM service
