@@ -30,6 +30,8 @@ echo '
 <th align="left">Id</th>
 <th>Date debut</th>
 <th>Date fin</th>
+<th>Status</th>
+<th>Paiement</th>
 <th>Type de service</th>
 <th>Management</th>
 </tr>
@@ -42,7 +44,9 @@ foreach ( $this->list_services as $service ) {
 	<td  class="id_service" align ="left">' . $service ['id_service'] . '</td>';
 	
 		echo '<td class="date_debut">' . $service ['date_debut'] . '</td>
-		<td class="date_fin">' . $service ['date_fin'] . '</td>';
+		<td class="date_fin">' . $service ['date_fin'] . '</td>
+		<td class="status">' . $service ['status'] . '</td>
+		<td class="paiement">' . $service ['paye'] . '</td>';
 		$type_service_string = NULL;
 		foreach ($this->list_types_services as $type_service){
 			if($type_service['id_type_service'] == $service['id_type_service']){

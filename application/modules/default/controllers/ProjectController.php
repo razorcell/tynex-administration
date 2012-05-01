@@ -35,6 +35,8 @@ class ProjectController extends Zend_Controller_Action {
 		
 		$sql = 'SELECT * FROM projet';
 		$this->view->list_projets = $this->db->fetchAssoc ( $sql );
+		$sql = 'SELECT * FROM type_projet';
+		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
 		$this->logger->info ( 'get all projets : ' . $this->db->getProfiler ()->getLastQueryProfile ()->getQuery () );
 		$this->db->getProfiler ()->setEnabled ( false );
 	}
@@ -126,7 +128,6 @@ class ProjectController extends Zend_Controller_Action {
 			$reponse= 'Erreur';
 			$this->logger->info('Requete erreur : '.$e->getMessage());			
 		}
-		
 		//PHASE D INSERTION DES TUPLES id_projet | id_employe DANS LA TABLE 'INTERVENIR'
 		$this->logger->info('*****************HASE D INSERTION DES TUPLES id_projet | id_employe************');
 		//recupperer la liste des employe 
