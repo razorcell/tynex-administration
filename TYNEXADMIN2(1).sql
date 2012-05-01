@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Lun 30 Avril 2012 à 02:31
+-- Généré le : Mar 01 Mai 2012 à 18:54
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
 
 INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
 (1, 1, 'Economic forum, from M.ALAMI'),
-(2, 2, 'Festivale Mawazin: a remplir l');
+(2, 2, 'Festivale Mawazin: a remplir le plus tot possible');
 
 -- --------------------------------------------------------
 
@@ -123,15 +123,43 @@ INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `pass
 -- --------------------------------------------------------
 
 --
--- Structure de la table `intervenir`
+-- Structure de la table `intervention`
 --
 
-CREATE TABLE IF NOT EXISTS `intervenir` (
+CREATE TABLE IF NOT EXISTS `intervention` (
   `id_employe` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
   KEY `id_employe` (`id_employe`),
   KEY `id_projet` (`id_projet`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `intervention`
+--
+
+INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
+(1, 6),
+(1, 6),
+(1, 6),
+(1, 6),
+(1, 6),
+(3, 6),
+(1, 7),
+(1, 7),
+(1, 7),
+(1, 7),
+(1, 7),
+(3, 7),
+(1, 8),
+(1, 8),
+(1, 8),
+(1, 8),
+(1, 8),
+(3, 8),
+(1, 9),
+(3, 9),
+(3, 10),
+(1, 10);
 
 -- --------------------------------------------------------
 
@@ -144,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `occupation` (
   `nom_occup` varchar(25) NOT NULL,
   PRIMARY KEY (`id_occup`),
   UNIQUE KEY `nom_occup` (`nom_occup`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `occupation`
@@ -155,7 +183,8 @@ INSERT INTO `occupation` (`id_occup`, `nom_occup`) VALUES
 (15, 'Manager'),
 (14, 'Network security expert'),
 (11, 'Programmer'),
-(13, 'SEO expert');
+(13, 'SEO expert'),
+(16, 'testooo');
 
 -- --------------------------------------------------------
 
@@ -218,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `poste` (
   `id_poste` int(11) NOT NULL AUTO_INCREMENT,
   `nom_poste` varchar(15) NOT NULL,
   PRIMARY KEY (`id_poste`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `poste`
@@ -237,19 +266,35 @@ INSERT INTO `poste` (`id_poste`, `nom_poste`) VALUES
 
 CREATE TABLE IF NOT EXISTS `projet` (
   `id_projet` int(11) NOT NULL AUTO_INCREMENT,
-  `description` varchar(30) NOT NULL,
+  `description` text NOT NULL,
   `prix` float NOT NULL,
-  `progresseion` int(11) NOT NULL,
-  `status_projet` enum('Actif','Non-Actif') NOT NULL,
+  `progression` int(11) NOT NULL,
+  `status` enum('Actif','Interrompu') NOT NULL,
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
   `id_type_projet` int(11) NOT NULL,
-  `payer` enum('Non','Oui') NOT NULL,
+  `paye` enum('Non','Oui') NOT NULL,
   `id_commande` int(11) NOT NULL,
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Contenu de la table `projet`
+--
+
+INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
+(1, 'this is a description', 1300, 23, 'Actif', '2001-05-20', '2031-05-20', 3, 'Oui', 2),
+(2, 'description', 1400, 76, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 2),
+(3, '', 1400, 61, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(4, '', 1400, 61, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(5, 'this is a description', 1500, 35, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(6, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(7, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(8, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(9, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(10, 'this is a description', 1700, 34, 'Actif', '2001-05-20', '2031-05-20', 4, 'Non', 1);
 
 -- --------------------------------------------------------
 
@@ -272,16 +317,15 @@ CREATE TABLE IF NOT EXISTS `service` (
   KEY `id_pack` (`id_pack`),
   KEY `id_commande` (`id_commande`),
   KEY `id_type_service` (`id_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `service`
 --
 
 INSERT INTO `service` (`id_service`, `description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES
-(3, 'le classement sur Yahoo.com est vivement conseille', 1, '29.04.2012', '30.04.2012', 'Actif', 15, 13, 'Non', 1),
-(4, 'cette hebergement ne doit en aucun cas s''arreter(e', 2, '29.04.2012', '30.04.2012', 'Actif', 13, 9, 'Oui', 1),
-(5, 'ce nom de domaine est provisoir le client veut le ', 2, '29.04.2012', '25.12.2012', 'Actif', 14, 11, 'Oui', 1);
+(3, 'le classement sur Yahoo.com est vivement conseille', 1101, '29.04.2012', '30.04.2012', 'Actif', 16, 10, 'Oui', 2),
+(4, 'test service', 1250, '01.05.2012', '31.05.2012', 'Interrompu', 16, NULL, 'Oui', 1);
 
 -- --------------------------------------------------------
 
@@ -294,7 +338,16 @@ CREATE TABLE IF NOT EXISTS `type_projet` (
   `nom_type_projet` varchar(30) NOT NULL,
   PRIMARY KEY (`id_type_projet`),
   UNIQUE KEY `nom_type_projet` (`nom_type_projet`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `type_projet`
+--
+
+INSERT INTO `type_projet` (`id_type_projet`, `nom_type_projet`) VALUES
+(3, 'Desktop application'),
+(2, 'Mobile application'),
+(4, 'Web application');
 
 -- --------------------------------------------------------
 
@@ -336,11 +389,11 @@ ALTER TABLE `employe`
   ADD CONSTRAINT `employe_ibfk_1` FOREIGN KEY (`id_poste`) REFERENCES `poste` (`id_poste`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `intervenir`
+-- Contraintes pour la table `intervention`
 --
-ALTER TABLE `intervenir`
-  ADD CONSTRAINT `intervenir_ibfk_2` FOREIGN KEY (`id_projet`) REFERENCES `projet` (`id_projet`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `intervenir_ibfk_1` FOREIGN KEY (`id_employe`) REFERENCES `employe` (`id_employe`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `intervention`
+  ADD CONSTRAINT `intervention_ibfk_1` FOREIGN KEY (`id_employe`) REFERENCES `employe` (`id_employe`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `intervention_ibfk_2` FOREIGN KEY (`id_projet`) REFERENCES `projet` (`id_projet`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `occuper`
