@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mar 01 Mai 2012 à 18:54
+-- Généré le : Mar 01 Mai 2012 à 21:40
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -138,28 +138,14 @@ CREATE TABLE IF NOT EXISTS `intervention` (
 --
 
 INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
-(1, 6),
-(1, 6),
-(1, 6),
-(1, 6),
-(1, 6),
-(3, 6),
-(1, 7),
-(1, 7),
-(1, 7),
-(1, 7),
-(1, 7),
-(3, 7),
-(1, 8),
-(1, 8),
-(1, 8),
-(1, 8),
-(1, 8),
-(3, 8),
-(1, 9),
-(3, 9),
-(3, 10),
-(1, 10);
+(1, 14),
+(2, 14),
+(1, 15),
+(2, 15),
+(3, 15),
+(1, 16),
+(2, 16),
+(3, 16);
 
 -- --------------------------------------------------------
 
@@ -278,23 +264,16 @@ CREATE TABLE IF NOT EXISTS `projet` (
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `projet`
 --
 
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
-(1, 'this is a description', 1300, 23, 'Actif', '2001-05-20', '2031-05-20', 3, 'Oui', 2),
-(2, 'description', 1400, 76, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 2),
-(3, '', 1400, 61, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(4, '', 1400, 61, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(5, 'this is a description', 1500, 35, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(6, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(7, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(8, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(9, 'this is a description', 1300, 35, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(10, 'this is a description', 1700, 34, 'Actif', '2001-05-20', '2031-05-20', 4, 'Non', 1);
+(14, 'Festival Mawazin', 10100, 21, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(15, 'Hotel farah demander pas M.Skali Haut prioritÃ©', 12000, 35, 'Actif', '2002-05-20', '2021-05-20', 3, 'Oui', 1),
+(16, 'Laboratoire Xom le plus tot possible, possibilitÃ© d''augmentation de paiement si avant delai', 12000, 53, 'Actif', '2002-05-20', '2021-05-20', 2, 'Non', 2);
 
 -- --------------------------------------------------------
 
