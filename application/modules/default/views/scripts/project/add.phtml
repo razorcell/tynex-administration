@@ -4,8 +4,17 @@
 	src="<?php echo $this->baseUrl('js/sliders.js');?>"></script>
 <link rel="stylesheet" type="text/css"
 	href="<?php echo $this->baseUrl('css/styles.css');?>" />
-	
+	<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$('a.progression').html('0');
+	$('a.progression').attr('value','0');
+	$('div.slider-handle').css({'top':'188px'});
+	$('div.cu-mid').css({'height':'0px'});
 
+});
+//-->
+</script>
 <?php 
 
 echo  '<form id="add_projet" class="f_p_add">';

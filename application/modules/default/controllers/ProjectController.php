@@ -165,41 +165,30 @@ class ProjectController extends Zend_Controller_Action {
 	
 	}
 	public function modifyformAction() {
-		$this->logger->info ( 'projet modifyform()' );
+		$this->action = $this->_request->getActionName ();
+		$this->view->action = $this->action;
 		$this->view->general_icon = 'ico color brush';
 		$this->view->title = 'Modifier un projet';
 		
-		// $this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
+		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
 		$req_id = $this->getRequest ()->getParam ( 'id' );
 		$id = $this->db->quote ( $req_id );
 		
-		// recupperation des infos de l'projet stocker dans la table projet
+		//recupperation des infos de l'employe stocker dans la table EMPLOYE
 		
 		$sql = "SELECT * FROM projet WHERE id_projet = $id";
-		$projet = $this->db->fetchRow ( $sql );
-		$this->logger->info ( html_entity_decode ( Zend_Debug::dump ( $projet, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
-		// recupperation de la liste des poste pour la convertion id_poste =>
-		// nom_poste
+		$this->view->projet = $this->db->fetchRow ( $sql );
 		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
-		$this->view->projet = $projet;
-		// si c'est une entreprise
-		if ($projet ['type'] == 'Entreprise') {
-			
-			$this->logger->info ( 'projet = entreprise' );
-			$this->render ( 'modifyformentreprise' );
-		}
-		if ($projet ['type'] == 'Particulier') {
-			
-			$this->logger->info ( 'projet = particulier' );
-			$this->render ( 'modifyformparticulier' );
-		}
-		
-		// $this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAssoc
-	// ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
-		
-		// recupperation de la liste des employes
-		
-		// recupperation des employes de cette projet
+		$sql = 'SELECT * FROM type_projet';
+		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
+		$sql = 'SELECT * FROM commande';
+		$this->view->list_commandes = $this->db->fetchAssoc ( $sql );
+		$sql = 'SELECT * FROM employe';
+		$this->view->list_employes = $this->db->fetchAssoc ( $sql );
+		//recupperation des occupations de cette employe
+		$sql = "SELECT * FROM intervention WHERE id_projet = $id";
+		$this->view->projet_employes = $this->db->fetchAll ( $sql );
+		$this->logger->info(html_entity_decode(Zend_Debug::dump($this->db->fetchAll ( $sql ),$label = null,$echo = false), ENT_COMPAT, "utf-8"));
 	
 	}
 	public function modifyAction() { // brush

@@ -4,7 +4,18 @@
 	src="<?php echo $this->baseUrl('js/sliders.js');?>"></script>
 <link rel="stylesheet" type="text/css"
 	href="<?php echo $this->baseUrl('css/styles.css');?>" />
-	
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	var progression = $('a.progression').attr('value');
+	var slider_level = 188-(188*progression/100)+'px'; 
+	var chart_level = (188*progression/100)+'px';
+	$('a.progression').attr('value','0');
+	$('div.slider-handle').css({'top':slider_level});
+	$('div.cu-mid').css({'height':chart_level});
+
+});
+</script>
 
 <?php 
 echo  '<form id="add_projet" class="f_p_modify">';
@@ -72,7 +83,7 @@ echo '
 		<label>Status<small>Veuillez definir un status initial pour ce projet</small></label>
 		<div>
 			<input type="checkbox" id="status" name="status" class="status"
-				value="1"';
+				value="1" ';
 if($this->projet->status == 'Actif'){
 	echo 'checked="checked"';
 }
@@ -85,11 +96,11 @@ if($this->projet->status == 'Actif'){
 		<label>Paiement<small>Si le client à payer ou non pour ce projet</small></label>
 		<div>
 			<input type="checkbox" id="paye" name="paye" class="paye"
-				value="1"';
-if($this->projet->status == 'Actif'){
+				value="1" ';
+if($this->projet->status == 'Oui'){
 	echo 'checked="checked"';
 }
-			echo'> <span class="f_help"></span>
+			echo' > <span class="f_help"></span>
 				<input value="'.$this->projet->paye.'" type="hidden" id="paye_hidden" name="paye_hidden" class="paye_hidden" />
 		</div>
 	</div>';
@@ -102,14 +113,14 @@ if(count(($this->projet_employes))>0)//compter le nombre d'occupation de cette e
 {
 	foreach ( $this->projet_employes as $projet_employe ) {
 		foreach ( $this->list_employes as $employe ) {
-			if ($projet_employe ['id_employe'] == $employe ['id_occup']) {
-				echo '<li ><em><strong>' . $employe ['nom_occup'] . '</strong></em></li>';
+			if ($projet_employe ['id_employe'] == $employe ['id_employe']) {
+				echo '<li ><em><strong>' . $employe ['nom'] . '</strong></em></li>';
 			}
 		}
 	
 	}
 }else{
-	echo '<li ><em><strong>Cette employé n\'a aucune occupation </strong></em></li>';
+	echo '<li ><em><strong>Aucun employe ne travail sur ce projet </strong></em></li>';
 }
 echo '<br/>';
 
@@ -119,12 +130,12 @@ echo '</ul>
 
 echo '	
 	<div class="section">
-		<label> Nouvelles occupation <small>utilisez cette solution pour définir de nouvelles occupations pour cette employé </small></label>
+		<label> Nouvelle liste d\'employe <small>utilisez cette solution pour définir de nouveau employés pour ce projet </small></label>
 		<div>
 			<select class="chzn-select" multiple tabindex="4">
 				<option value=""></option>';
-foreach ( $this->list_occupations as $occupation ) {
-	echo "<option value=" . $occupation ['nom_occup'] . ">" . $occupation ['nom_occup'] . "</option>";
+foreach ( $this->list_employes as $employe ) {
+	echo "<option value=" . $employe ['nom'] . ">" . $employe ['nom']. "</option>";
 }
 
 echo '	</select>
@@ -134,12 +145,12 @@ echo '	</select>
 echo '	<div class="section">
      <label>Prix<small>Donner un prix</small></label>
          <div>
-             <input type="text" id="sStep" value="1000.00" name="prix" class="prix_projet"/>
+             <input type="text" id="sStep" value="'.$this->projet->prix.'" name="prix" class="prix_projet"/>
            </div>
      </div>
 	<div class="section">
 		<label>Progression<small>Vous pouvez définir une progression pour votre projet</small></label>
-		<div style="font-size:2em ; margin :10 10 20 10"><a class="uibutton normal progression">23%</a></div>
+		<div style="font-size:2em ; margin :10 10 20 10" ><a class="uibutton normal progression" value="'.$this->projet->progression.'">'.$this->projet->progression.'%</a></div>
 		<div>
 	<div class="main">
 

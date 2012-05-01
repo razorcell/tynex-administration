@@ -27,10 +27,7 @@ $(document).ready(function(){
 			resizeBar(this.color,ratio);
 		}
 	});
-	$('a.progression').html('0');
-	$('a.progression').attr('value','0');
-	$('div.slider-handle').css({'top':'188px'});
-	$('div.cu-mid').css({'height':'0px'});
+	
 });
 
 function resizeBar(color,ratio)
