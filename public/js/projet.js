@@ -23,10 +23,10 @@ $(document).ready(
 					}
 				}
 			});
-			$('.f_e_add').submit(function(e) {
+			$('.f_p_add').submit(function(e) {
 				e.preventDefault();
 			});
-			$('.f_e_modify').submit(function(e) {
+			$('.f_p_modify').submit(function(e) {
 				e.preventDefault();
 			});
 			$('.edit').click(function(){
@@ -139,16 +139,16 @@ $(document).ready(
 					var prix = $('.prix').attr('value');
 				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';
 				i=0;
-				json_to_send = json_to_send + ',"employes" : [';//open employes json
+				json_to_send = json_to_send + ',"projets" : [';//open projets json
 				$('ul.chzn-choices').find('li').each(function(){
 						if($(this).find('span').length > 0){
 								if(i==0){
-										var employe = $(this).find('span').html();
-										json_to_send = json_to_send + '{"name " : "'+employe+'"}';
+										var projet = $(this).find('span').html();
+										json_to_send = json_to_send + '{"name " : "'+projet+'"}';
 									}
 								else{
-										var employe = $(this).find('span').html();
-										json_to_send = json_to_send + ',{"name " : "'+employe+'"}';
+										var projet = $(this).find('span').html();
+										json_to_send = json_to_send + ',{"name " : "'+projet+'"}';
 									}
 								i++;
 							}
@@ -194,7 +194,7 @@ $(document).ready(
 				  Delete(id_projet,description,row,0,action_destination);
 			});
 			$('.modify_projet').click(function() {
-				var form_data = $('.f_e_modify').serializeArray();
+				var form_data = $('.f_p_modify').serializeArray();
 				var poste = $('a.chzn-single').find('span').html();
 				var i=0;
 				//form validation
