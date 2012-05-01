@@ -35,19 +35,7 @@ echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
 </div>';
 
 echo '
-	<div class="section alphaonly">
-		<label>Description<small>Un petit mot sur le projet</small></label>
-		<div>
-			<textarea name="description"></textarea>
-		</div>
-	</div>
-	<div class="section">
-     <label>Prix<small>Donner un prix</small></label>
-         <div>
-             <input type="text" id="sStep" value="1000.00" name="prix" class="prix_projet"/>
-           </div>
-     </div>
-	<div class="section">
+<div class="section">
 		<label>Date debut</label>
 		<div>
 			<input type="text" id="datepick" class="datepicker date_debut"
@@ -62,7 +50,12 @@ echo '
 				readonly="readonly" name="date_fin" />
 		</div>
 	</div>
-
+	<div class="section alphaonly">
+		<label>Description<small>Un petit mot sur le projet</small></label>
+		<div>
+			<textarea name="description"></textarea>
+		</div>
+	</div>
 	<div class="section">
 		<label>Status<small>Veuillez definir un status initial pour ce projet</small></label>
 		<div>
@@ -70,6 +63,14 @@ echo '
 				value="1" /> <span class="f_help"></span>
 				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"
 				value="" />
+		</div>
+	</div>
+	<div class="section">
+		<label>Paiement<small>Si le client à payer ou non pour ce projet</small></label>
+		<div>
+			<input type="checkbox" id="paye" name="paye" class="paye"
+				value="1" /> <span class="f_help"></span>
+				<input value="Non" type="hidden" id="paye_hidden" name="paye_hidden" class="paye_hidden" />
 		</div>
 	</div>';
 	echo '	
@@ -86,7 +87,12 @@ foreach($this->list_employes as $employe)
 echo'	</select>
 		</div>
 	</div>
-	
+	<div class="section">
+     <label>Prix<small>Donner un prix</small></label>
+         <div>
+             <input type="text" id="sStep" value="1000.00" name="prix" class="prix_projet"/>
+           </div>
+     </div>
 	<div class="section">
 		<label>Progression<small>Vous pouvez définir une progression pour votre projet</small></label>
 		<div style="font-size:2em ; margin :10 10 20 10"><a class="uibutton normal progression">23%</a></div>

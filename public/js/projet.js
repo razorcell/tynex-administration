@@ -23,6 +23,27 @@ $(document).ready(
 					}
 				}
 			});
+			var paye = $(".paye").iphoneStyle({ // Custom Label With onChange
+				// function
+				checkedLabel : "Oui",
+				uncheckedLabel : "Non",
+				labelWidth : '85px',
+				onChange : function() {
+					if(this.elem.is(':checked'))
+						{//checked
+							$('.paye_hidden').attr('value','Oui');
+						}
+					else{//not checked
+						$('.paye_hidden').attr('value','Non');
+					}
+					var chek = $(".paye").attr('checked');
+					if (chek) {
+						$(".disabled_map").fadeOut();
+					} else {
+						$(".disabled_map").fadeIn();
+					}
+				}
+			});
 			$('.f_p_add').submit(function(e) {
 				e.preventDefault();
 			});
@@ -95,39 +116,37 @@ $(document).ready(
 				var i=0;
 				//form validation
 				var valide = true;
-				if($('.prix').value < 0)
-					{
+				if($('.prix').value < 0){
 						valide = false;
 					}
-				else if($('.date_debut').val().length == 0)
-					{
+				else if($('.date_debut').val().length == 0){
 						valide = false;
 					}
-				else if($('.date_fin').val().length == 0)
-				{
+				else if($('.date_fin').val().length == 0){
 					valide = false;
 				}
 				var commande = $('.commande').find('span').html();
-				if(commande == 'Veuillez choisir une commande...')
-					{
+				if(commande == 'Veuillez choisir une commande...'){
 						valide =false;
 					}
 				var type_projet = $('.type_projet').find('span').html();
-				if(type_projet == 'Veuillez choisir un type de projet...')
-				{
+				if(type_projet == 'Veuillez choisir un type de projet...'){
 					valide =false;
 				}
-				if(valide)
-					{
+				if(valide){
 					var json_to_send = '{';
 					
-					for(i=0;i<form_data.length;i++)
-						{
+					for(i=0;i<form_data.length;i++){
 							if(i==0){
 									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
 								}
 							else{
+								if(form_data[i].name == 'prix'){
+									var price = form_data[i].value.replace(',','');
+									json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+price+'"';
+								}else{
 								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
+								}
 							}
 						}
 					//add commande
@@ -135,11 +154,11 @@ $(document).ready(
 					 //add type projet
 					//add commande
 					 json_to_send = json_to_send + ',"type_projet" : "'+type_projet+'"';
-					// add price
-					var prix = $('.prix').attr('value');
-				 json_to_send = json_to_send + ',"prix" : "'+prix+'"';
+					
+				 var progression = $('.progression').attr('value');
+				 json_to_send = json_to_send + ',"progression" : "'+progression+'"';
 				i=0;
-				json_to_send = json_to_send + ',"projets" : [';//open projets json
+				json_to_send = json_to_send + ',"employes" : [';//open employe json
 				$('ul.chzn-choices').find('li').each(function(){
 						if($(this).find('span').length > 0){
 								if(i==0){
@@ -153,7 +172,7 @@ $(document).ready(
 								i++;
 							}
 					});
-					json_to_send = json_to_send + ']';//close occupations json
+					json_to_send = json_to_send + ']';//close employe json
 					json_to_send = json_to_send + '}';
 					//$('.test').html(json_to_send);
 					//json_to_send = $.parseJSON(json_to_send);
@@ -163,13 +182,13 @@ $(document).ready(
 						data : json_to_send,
 						success : function(data) {
 							//alert('success');
-							//var json = $.parseJSON(data);
+							var json = $.parseJSON(data);
 						
-							if (data == 'success') {// maintenant on peut
-								showSuccess('Employé ajouté', 3000);
+							if (json.reponse == 'success') {// maintenant on peut
+								showSuccess('Projet ajouté', 3000);
 								
 							} else {
-								showError(data, 3000);
+								showError(json.reponse, 3000);
 							}
 						}
 					});

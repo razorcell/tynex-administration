@@ -1,5 +1,7 @@
 var progression = 100;
 $(document).ready(function(){
+	//initialize the progress
+	
 	/* The code here is executed on page load */
 	
 	/* Converting the slide handles to draggables, constrained by their parent slider divs: */
@@ -22,19 +24,21 @@ $(document).ready(function(){
 			}
 			
 			var ratio = 1-(ui.position.top+this.height)/this.parHeight;
-			
-			
 			resizeBar(this.color,ratio);
-		},
-	start: function(e,ui){
-		ui.position.top
-	}
+		}
 	});
+	$('a.progression').html('0');
+	$('a.progression').attr('value','0');
+	$('div.slider-handle').css({'top':'188px'});
+	$('div.cu-mid').css({'height':'0px'});
 });
 
 function resizeBar(color,ratio)
 {
 	$('.cu-mid','.cuboid.'+color).height(200*ratio);
-	var prog = $('.colorful-slider').height();
-	$('a.progression').html(((progression*ratio)+6)+'%');
+	var prog = (($('.cu-mid').height() * 100)/188);
+	//$('a.progression').html(((progression*ratio)+6)+'%');
+	$('a.progression').html(prog.toFixed(0)+'%');
+	$('a.progression').attr('value',prog.toFixed(0));
+	
 }
