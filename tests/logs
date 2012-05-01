@@ -376,3 +376,250 @@
   }
 }
 </pre>
+2012-05-01T21:12:39+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:12:39+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:13:42+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:13:42+02:00 INFO (6):  projet addAction() 
+2012-05-01T21:13:42+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-01T21:13:45+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:15:10+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:15:10+02:00 INFO (6): Projet submitAction()
+2012-05-01T21:15:10+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description" : "AM5 de solidarité","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix" : "9300.00","commande" : "2","type_projet" : "Web application","progression" : "10","employes" : [{"name " : "mendili"}]}
+2012-05-01T21:15:10+02:00 INFO (6): mendili
+2012-05-01T21:15:10+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-01T21:15:10+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-01T21:15:10+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(18) "AM5 de solidarité"
+  ["prix"] => string(7) "9300.00"
+  ["progression"] => string(2) "10"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:15:10+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-01T21:15:10+02:00 INFO (6): last inserted ID = 12
+2012-05-01T21:15:10+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-01T21:15:10+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-01T21:15:10+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-01T21:15:10+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "12"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:15:10+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:15:10+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:16:10+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:16:10+02:00 INFO (6): Projet submitAction()
+2012-05-01T21:16:10+02:00 INFO (6): Request body : {"date_debut" : "01.06.2012","date_fin" : "30.06.2012","description" : "DJ Hassan","status_hidden" : "interrompu","paye_hidden" : "Non","prix" : "4200.00","commande" : "1","type_projet" : "Mobile application","progression" : "46","employes" : [{"name " : "sefrioui"}]}
+2012-05-01T21:16:10+02:00 INFO (6): sefrioui
+2012-05-01T21:16:10+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-01T21:16:10+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-01T21:16:10+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(9) "DJ Hassan"
+  ["prix"] => string(7) "4200.00"
+  ["progression"] => string(2) "46"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "01.06.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:16:10+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-01T21:16:10+02:00 INFO (6): last inserted ID = 13
+2012-05-01T21:16:10+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-01T21:16:10+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-01T21:16:10+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-01T21:16:10+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "13"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-01T21:16:10+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:16:10+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:16:13+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:16:13+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:16:21+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:16:21+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-01T21:16:27+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:16:27+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:17:45+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:17:45+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:18:39+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:18:42+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:18:42+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:21:58+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:21:58+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:24:26+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:24:26+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:24:32+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:24:33+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:24:33+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:24:36+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:24:36+02:00 INFO (6):  projet addAction() 
+2012-05-01T21:24:36+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-01T21:24:38+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:25:05+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:25:05+02:00 INFO (6): Projet submitAction()
+2012-05-01T21:25:05+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description" : "Festival Mawazin","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix" : "10100.00","commande" : "1","type_projet" : "Mobile application","progression" : "21","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-01T21:25:05+02:00 INFO (6): alami
+2012-05-01T21:25:05+02:00 INFO (6): mendili
+2012-05-01T21:25:05+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-01T21:25:05+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-01T21:25:05+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "21"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:25:05+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-01T21:25:05+02:00 INFO (6): last inserted ID = 14
+2012-05-01T21:25:05+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-01T21:25:05+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-01T21:25:05+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-01T21:25:05+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "14"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:25:05+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:25:05+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:25:05+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-01T21:25:05+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "14"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:25:05+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:25:05+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:25:53+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:25:53+02:00 INFO (6): Projet submitAction()
+2012-05-01T21:25:53+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "21.05.2012","description" : "Hotel farah demander pas M.Skali Haut priorité","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix" : "12000.00","commande" : "1","type_projet" : "Desktop application","progression" : "35","employes" : [{"name " : "alami"},{"name " : "mendili"},{"name " : "sefrioui"}]}
+2012-05-01T21:25:53+02:00 INFO (6): alami
+2012-05-01T21:25:53+02:00 INFO (6): mendili
+2012-05-01T21:25:53+02:00 INFO (6): sefrioui
+2012-05-01T21:25:53+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-01T21:25:53+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-01T21:25:53+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(47) "Hotel farah demander pas M.Skali Haut priorité"
+  ["prix"] => string(8) "12000.00"
+  ["progression"] => string(2) "35"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "21.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:25:53+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-01T21:25:53+02:00 INFO (6): last inserted ID = 15
+2012-05-01T21:25:53+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-01T21:25:53+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-01T21:25:53+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-01T21:25:53+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "15"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:25:53+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:25:53+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:25:53+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-01T21:25:53+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "15"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:25:53+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:25:53+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:25:53+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-01T21:25:53+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "15"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-01T21:25:53+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:25:53+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:27:03+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:27:03+02:00 INFO (6): Projet submitAction()
+2012-05-01T21:27:03+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "21.05.2012","description" : "Laboratoire Xom le plus tot possible, possibilité d'augmentation de paiement si avant delai","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix" : "12000.00","commande" : "2","type_projet" : "Mobile application","progression" : "53","employes" : [{"name " : "alami"},{"name " : "mendili"},{"name " : "sefrioui"}]}
+2012-05-01T21:27:03+02:00 INFO (6): alami
+2012-05-01T21:27:03+02:00 INFO (6): mendili
+2012-05-01T21:27:03+02:00 INFO (6): sefrioui
+2012-05-01T21:27:03+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-01T21:27:03+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-01T21:27:03+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(92) "Laboratoire Xom le plus tot possible, possibilité d&#039;augmentation de paiement si avant delai"
+  ["prix"] => string(8) "12000.00"
+  ["progression"] => string(2) "53"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "21.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:27:03+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-01T21:27:03+02:00 INFO (6): last inserted ID = 16
+2012-05-01T21:27:03+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-01T21:27:03+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-01T21:27:03+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-01T21:27:03+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "16"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-01T21:27:03+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:27:03+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:27:03+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-01T21:27:03+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "16"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-01T21:27:03+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:27:03+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:27:03+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-01T21:27:03+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "16"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-01T21:27:03+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-01T21:27:03+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-01T21:27:08+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:27:08+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-01T21:27:14+02:00 INFO (6): Fonction init() executée
+2012-05-01T21:27:14+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "16"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "16"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "16"
+  }
+}
+</pre>

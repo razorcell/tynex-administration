@@ -107,7 +107,7 @@ $(document)
 							.click(
 									function() {
 
-										$('.test').html('');
+										//$('.test').html('');
 										var lines_to_delete = [];
 										$('.projet tbody tr')
 												.each(
@@ -128,7 +128,7 @@ $(document)
 														});
 
 										if (lines_to_delete.length > 0) {
-											DeleteAll(lines_to_delete, 'projet');
+											DeleteAll(lines_to_delete, 'project');
 										} else {
 											showWarning(
 													'Vous n\'avez rien selectionner',
@@ -292,7 +292,7 @@ $(document)
 
 								var action_destination = '/project/delete';
 
-								var description = row.find('.nom').html();
+								var description = row.find('.id_projet').html();
 
 								var id_projet = row.find('.id_projet').html();
 
