@@ -1,7 +1,9 @@
 $(document)
 		.ready(
 				function() {
-
+					// initialize
+					// id_commande input
+					// value
 					var all_rows_selected = false;
 					$('form#add_projet').validationEngine();
 					$('form#add_service').validationEngine();
@@ -12,18 +14,20 @@ $(document)
 						uncheckedLabel : "Projet",
 						labelWidth : '85px',
 						onChange : function() {
-							if (this.elem.is(':checked')) {// particulier
+							if (this.elem.is(':checked')) {// add service
 								$('#add_projet').removeClass('visible');
 								$('#add_service').addClass('visible');
 								$('#add_projet').validationEngine('hideAll');
 								$('#add_service').fadeIn();
 								$('#add_projet').fadeOut();
-							} else {// entreprise
+								// $('.request_type').attr('value', 'service');
+							} else {// add project
 								$('#add_service').removeClass('visible');
 								$('#add_projet').addClass('visible');
 								$('#add_service').validationEngine('hideAll');
 								$('#add_service').fadeOut();
 								$('#add_projet').fadeIn();
+								// $('.request_type').attr('value', 'projet');
 							}
 							$('#validation').validationEngine('hideAll');
 
@@ -102,8 +106,8 @@ $(document)
 
 					$('#reset_p').click(function() {
 						$('input:not(.id_commande_p)').val('');// ne pas
-																// supprimer
-																// id_commande
+						// supprimer
+						// id_commande
 
 						// $('input').val('');
 						showError('formulaire vidé', 3000);
@@ -153,10 +157,13 @@ $(document)
 					$('.display tr').click(function() {
 
 					});
+					$('.test_alert').click(function(){
+						alert($('.id_commande').find('input#id_commande').attr('value'));
+					});
 					$('.add_commande_projet')
 							.click(
 									function() {
-
+										var id_commande = null;
 										var form_data = $('.f_p_add')
 												.serializeArray();
 										var i = 0;
@@ -169,13 +176,14 @@ $(document)
 										} else if ($('.date_fin').val().length == 0) {
 											valide = false;
 										}
-										var commande = $('.commande').find(
-												'span').html();
-										if (commande == 'Veuillez choisir une commande...') {
-											valide = false;
-										}
 										var type_projet = $('.type_projet')
 												.find('span').html();
+										if (type_projet == 'Veuillez choisir un type de projet...') {
+											valide = false;
+										}
+										var client = $('.client')// add
+										// client
+										.find('span').html();
 										if (type_projet == 'Veuillez choisir un type de projet...') {
 											valide = false;
 										}
@@ -210,21 +218,43 @@ $(document)
 													}
 												}
 											}
-											// add commande
+											// add request_type
+
 											json_to_send = json_to_send
-													+ ',"commande" : "'
-													+ commande + '"';
-											// add type projet
+													+ ',"request_type" : "'
+													+ 'projet' + '"';
+											// add client
+											json_to_send = json_to_send
+													+ ',"client" : "' + client
+													+ '"';
 											// add commande
+											if ($('.id_commande').find('input#id_commande').attr('value') > 0) {
+												id_commande = $('.id_commande').find('input#id_commande')
+												.attr('value');
+												json_to_send = json_to_send
+														+ ',"id_commande" : "'
+														+ id_commande
+														+ '"';
+											}
+
+											// add type projet
+
 											json_to_send = json_to_send
 													+ ',"type_projet" : "'
 													+ type_projet + '"';
-
+											// add progression
 											var progression = $('.progression')
 													.attr('value');
 											json_to_send = json_to_send
 													+ ',"progression" : "'
 													+ progression + '"';
+											var description_commande = $(
+													'.description_commande')
+													.val();
+											json_to_send = json_to_send
+													+ ',"description_commande" : "'
+													+ description_commande
+													+ '"';
 											i = 0;
 											json_to_send = json_to_send
 													+ ',"employes" : [';// open
@@ -238,24 +268,24 @@ $(document)
 																		.find(
 																				'span').length > 0) {
 																	if (i == 0) {
-																		var projet = $(
+																		var employe = $(
 																				this)
 																				.find(
 																						'span')
 																				.html();
 																		json_to_send = json_to_send
 																				+ '{"name " : "'
-																				+ projet
+																				+ employe
 																				+ '"}';
 																	} else {
-																		var projet = $(
+																		var employe = $(
 																				this)
 																				.find(
 																						'span')
 																				.html();
 																		json_to_send = json_to_send
 																				+ ',{"name " : "'
-																				+ projet
+																				+ employe
 																				+ '"}';
 																	}
 																	i++;
@@ -278,14 +308,47 @@ $(document)
 															var json = $
 																	.parseJSON(data);
 
-															if (json.reponse == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'Projet ajouté',
-																		3000);
-
-															} else {
+															if (json.message == 'success') {// COMMANDE
+																// PROJET
+																// SI
+																// id_commande
+																// exists
+																if(json.commande_exists == 'non'){
+																	$(
+																			'.id_commande')
+																			.find(
+																					'input#id_commande')
+																			.attr(
+																					'value',
+																					json.id_commande);
+																	$(
+																			'.id_commande')
+																			.css(
+																					{
+																						'display' : ''
+																					});
+																	showSuccess(
+																			'Commande et Projet ajoutés',
+																			3000);
+															}else{//si commande nouvelle
+																$(
+																'.id_commande')
+																.find(
+																		'input#id_commande')
+																.attr(
+																		'value',
+																		json.id_commande);
+														$(
+																'.id_commande')
+																.css(
+																		{
+																			'display' : ''
+																		});
+														showSuccess(
+																'Projet ajoutés',
+																3000);
+															}
+															} else {// SI ERROR
 																showError(
 																		json.reponse,
 																		3000);
@@ -303,23 +366,47 @@ $(document)
 					$('.add_commande_service')
 							.click(
 									function() {
-										var form_data;
-										var json_to_send = '{';
-										var i = 0;
-										var valide = true;
-										// $('.test').html('particulier');
-										form_data = $('.f_c_p_add')
+										var form_data = $('.f_s_add')
 												.serializeArray();
+										var i = 0;
+										var pack = null;
+										// get pack
 
-										if ($('.nom_p').val().length == 0) {
+										// form validation
+										var valide = true;
+										if ($('.prix').value == 0) {
+											valide = false;
+										} else if ($('.date_debut').val().length == 0) {
+											valide = false;
+										} else if ($('.date_fin').val().length == 0) {
 											valide = false;
 										}
-										if ($('.email_p').val().length == 0) {
-											if ($('.tel_p').val().length == 0) {
-												valide = false;
+
+										var type_service = $('.type_service')
+												.find('span').html();
+										if (type_service == 'Veuillez choisir un type de service...') {
+											valide = false;
+										} else {// si type de service choisi
+											if ($('div.pack').hasClass(
+													'visible')) {
+												if ($('.list_packs').find(
+														'li.ui-selected').length > 0) {
+													pack = $('.list_packs')
+															.find(
+																	'li.ui-selected')
+															.html();
+												} else {// il y a des pack mais
+													// auccun choisi
+													valide = false;
+												}
+											} else {// ca marche il n'existe
+												// aucun pack
+												pack = 'aucun';
 											}
 										}
 										if (valide) {
+											var json_to_send = '{';
+
 											for (i = 0; i < form_data.length; i++) {
 												if (i == 0) {
 													json_to_send = json_to_send
@@ -329,41 +416,113 @@ $(document)
 															+ form_data[i].value
 															+ '"';
 												} else {
-													json_to_send = json_to_send
-															+ ',"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
+													if (form_data[i].name == 'prix') {
+														var price = form_data[i].value
+																.replace(',',
+																		'');
+														json_to_send = json_to_send
+																+ ',"'
+																+ form_data[i].name
+																+ '" : "'
+																+ price + '"';
+													} else {
+														json_to_send = json_to_send
+																+ ',"'
+																+ form_data[i].name
+																+ '" : "'
+																+ form_data[i].value
+																+ '"';
+													}
 												}
 											}
+											// add request_type
+
 											json_to_send = json_to_send
-													+ ',"type":"particulier"';
+													+ ',"request_type" : "'
+													+ 'service' + '"';
+											// add client
+											json_to_send = json_to_send
+													+ ',"client" : "' + client
+													+ '"';
+											// add commande
+											if ($('.id_commande').find('input#id_commande').attr('value').length > 0) {
+												json_to_send = json_to_send
+														+ ',"id_commande" : "'
+														+ $('.id_commande')
+																.attr('value')
+														+ '"';
+											}// add description_commande
+											var description_commande = $(
+													'.description_commande')
+													.val();
+											json_to_send = json_to_send
+													+ ',"description_commande" : "'
+													+ description_commande
+													+ '"';
+											// add type service
+											json_to_send = json_to_send
+													+ ',"type_service" : "'
+													+ type_service + '"';
+											// add price
+											json_to_send = json_to_send
+													+ ',"pack" : "' + pack
+													+ '"';
+											i = 0;
 											json_to_send = json_to_send + '}';
+											// $('.test').html(json_to_send);
+											// json_to_send =
+											// $.parseJSON(json_to_send);
 											$
 													.ajax({
 														type : "POST",
-														url : "/commande/submit",
+														url : "/service/submit",
 														data : json_to_send,
 														success : function(data) {
-															// var json =
-															// $.parseJSON(data);
-
-															if (data == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'commande particulier ajouté',
-																		3000);
-															} else {
-																showError(data,
+															// alert('success');
+															var json = $
+																	.parseJSON(data);
+															if (json.message == 'success') {// COMMANDE
+																// PROJET
+																// SI
+																// id_commande
+																// exists
+																if (json.id_commande.length > 0) {// SI
+																	// NOUVELLE
+																	// COMMANDE
+																	$(
+																			'.id_commande')
+																			.find(
+																					'input#id_commande')
+																			.attr(
+																					'value',
+																					json.id_commande);
+																	$(
+																			'.id_commande')
+																			.css(
+																					{
+																						'display' : ''
+																					});
+																	showSuccess(
+																			'Commande et Service ajoutés',
+																			3000);
+																} else {// SI
+																	// COMMANDE
+																	// EXISTSTE
+																	// DEJA
+																	showSuccess(
+																			'Service ajouté',
+																			3000);
+																}
+															} else {// SI ERROR
+																showError(
+																		json.reponse,
 																		3000);
 															}
 														}
 													});
 										} else {
 											showError(
-													'Veuillez revoir le formulaire de particulier',
+													'Veuillez revoir le formulaire',
 													3000);
 										}
 
@@ -474,7 +633,7 @@ $(document)
 										}
 
 									});// end
-										// modify_commande_entreprise.click()
+					// modify_commande_entreprise.click()
 					$('.modify_commande_particulier')
 							.click(
 									function() {
@@ -513,7 +672,7 @@ $(document)
 												}
 											}
 											// add id value
-											var id = $('.id_commande').attr(
+											var id = $('.id_commande').find('input#id_commande').attr(
 													'value');
 											json_to_send = json_to_send
 													+ ',"id" : "' + id + '"';
@@ -557,4 +716,5 @@ $(document)
 													3000);
 										}
 									});// end modify commande particulier
+					$('.id_commande').find('input#id_commande').attr('value', '');
 				});

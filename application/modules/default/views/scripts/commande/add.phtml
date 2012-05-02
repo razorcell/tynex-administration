@@ -20,6 +20,9 @@ $(document).ready(function(){
 //-->
 </script>
 <style>
+.hidden_class{
+	display:none;
+}
 #feedback {
 	font-size: 0.1em;
 }
@@ -55,16 +58,23 @@ echo '
 <div class="widget" style="border:0px">
 <form style="margin:20px">
 	
-		<h5 class="test"></h5>
-	<div class="section numericonly" style="display:none">
+		
+	<div class="section numericonly id_commande" style="display:none">
 					<label> Id <small>Text custom</small></label>
 					<div>
-						<input id="tel" name="tel_e" type="text"
-							class="validate[required] small tel_e" maxlength="20" disabled>
+						<input id="id_commande" name="id_commande" type="text"
+							class="validate[required] small" maxlength="20" readonly>
+					</div>
+				</div>
+<div class="section numericonly hidden_class">
+					<label>Request_type<small>Text custom</small></label>
+					<div>
+						<input  id="request_type" name="request_type" type="hidden"
+							class="validate[required] small request_type" maxlength="20" value="projet">
 					</div>
 				</div>';
 
-echo '<div class="section type_projet">
+echo '<div class="section client">
 <label>Client<small>Veuillez choisir le client qui a fait cette commande</small></label>
 <div>
 <select data-placeholder="Veuillez choisir un client..."
@@ -83,7 +93,7 @@ echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
 <div class="section alphaonly">
 		<label>Description de la commande<small>Description de la commande</small></label>
 		<div>
-			<textarea name="description_commande"></textarea>
+			<textarea class="description_commande" name="description_commande"></textarea>
 		</div>
 	</div>';
 

@@ -77,11 +77,7 @@ class ProjectController extends Zend_Controller_Action {
 		$data_from_user = Zend_Json::decode($request_body);
 		//Activer cette ligne pour voir le resultat du decodage
 		//$this->logger->info(Zend_Debug::dump($data_from_user));
-		foreach ($data_from_user['employes'] as $employe){
-			foreach ($employe as $nom_employe){
-				$this->logger->info($nom_employe);
-			}
-		}
+
 		$commande = $data_from_user ['commande'];
 		$date_debut = $data_from_user ['date_debut'];
 		$date_fin = $data_from_user ['date_fin'];

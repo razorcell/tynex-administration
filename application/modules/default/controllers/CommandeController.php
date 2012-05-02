@@ -51,7 +51,9 @@ class CommandeController extends Zend_Controller_Action {
 	
 	}
 	public function submitAction() {
-		$table_reponse = array ('message' => '' );
+		$reponse = array ('message' => '',
+													'id_commande'=> '',
+													'commande_exists' => 'non' );
 		
 		$this->_helper->layout->disableLayout ();
 		$this->_helper->viewRenderer->setNoRender ( TRUE );
@@ -60,29 +62,210 @@ class CommandeController extends Zend_Controller_Action {
 		$request_body = $this->getRequest ()->getRawBody ();
 		$this->logger->info ( 'Request body : ' . $request_body );
 		$data_from_user = Zend_Json::decode ( $request_body );
+		
+		$client_id = NULL;
+		$id_commande = NULL;
 		//chercher id_type_service
-		$type_service_string = $data_from_user ['type_service'];
-		$nom_commande = $data_from_user ['nom_commande'];
-		$sql = 'SELECT * FROM type_service';
-		$list_types_services = $this->db->fetchAssoc ( $sql );
-		$type_service_id = NULL;
-		foreach ($list_types_services as $type_service)
-		{
-			if($type_service['libelle_type_service'] == $type_service_string)
-			{
-				$type_service_id = $type_service['id_type_service'];
-				$this->logger->info('id type service trouvé = '.$type_service_id);
+		$this->logger->info ( 'PART 1 SOLVE COMMANDE');
+		if(isset($data_from_user['id_commande'])){//si commande existe
+			$this->logger->info ('COMMANDE EXIST');
+			$reponse['commande_exists'] = 'oui';
+			$id_commande = $data_from_user['id_commande'];
+			$reponse['id_commande'] = $id_commande;
+		}else{//inserer nouvelle commande
+			
+			$this->logger->info ( 'NEW COMMANDE');
+			$client_string = $data_from_user ['client'];
+			//get the client id
+			$sql = 'SELECT * FROM client';
+			$list_clients = $this->db->fetchAssoc ( $sql );
+			
+			foreach ($list_clients as $client){
+				if($client['type'] == 'Entreprise'){
+					//client est entreprise comparer la colone societe
+					if($client['societe'] == $client_string){
+						$client_id = $client['id_client'];
+						$this->logger->info('client_id trouvé = '.$client_id);
+					}				
+				}else if($client['type'] == 'Particulier'){
+					//client est entreprise comparer la colone societe
+					if($client['nom'] == $client_string){
+						$client_id = $client['id_client'];
+						$this->logger->info('client_id trouvé = '.$client_id);
+					}				
+				
+				}
+			}//client id found
+			$description = $data_from_user['description_commande'];
+			$commande_to_save = array('id_client' => $client_id,
+					'libelle_commande' => $description
+					);
+			$this->logger->info(html_entity_decode('Commande to save : '.Zend_Debug::dump($commande_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {//insertion de commande
+				$this->db->insert ( 'commande', $commande_to_save );
+				$id_commande = $this->db->lastInsertId();
+				$this->logger->info('add commande : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$this->logger->info('last inserted ID = '.$id_commande);
+				$reponse['message'] = 'success';
+				$reponse['id_commande'] = $id_commande;
+				$this->logger->info('insertion - COMMANDE - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse['message']= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
 			}
+			
 		}
-		$data_to_save = array ('libelle_commande' => $nom_commande, 'id_type_service' => $type_service_id);
-		try {
-			$this->db->insert ( 'commande', $data_to_save );
-			$table_reponse ['message'] = 'Le commande a été bien ajouter ';
-		} catch ( Zend_Db_Adapter_Exception $e ) {
-			echo $e->getMessage ();
-		}
-		$json = Zend_Json::encode ( $table_reponse );
+		//getting out of here we must return id_commande NEW or FORM GIVEN
+		//insert the right data Service or project
+		if($data_from_user['request_type'] == 'projet'){//INSERT A PROJECT
+			$this->logger->info ('INSERT PROJET');
+			$id_projet_enregistrer = NULL;//on va l'utiliser pour se rappeller de l'id de l'employe enregistrer dans la BD
+			$commande = $id_commande;
+			$date_debut = $data_from_user ['date_debut'];
+			$date_fin = $data_from_user ['date_fin'];
+			$description = $data_from_user ['description_projet'];
+			$progression = $data_from_user ['progression'];
+			$paye = $data_from_user ['paye_hidden'];
+			$prix = $data_from_user ['prix_projet'];
+			$status = $data_from_user ['status_hidden'];
+			$type_projet_string = $data_from_user ['type_projet'];//jusqu'ici il ne reste que les employes
+			
+			
+			//PHASE D INSERTION DE DU PROJET DANS LA TABLE 'projet'
+			//recupperation de id_type_projet equivalent au type_projet_string
+			$this->logger->info('*********************PHASE D INSERTION DU PROJET************');
+			$sql = 'SELECT * FROM type_projet';
+			$list_types_projets = $this->db->fetchAssoc ( $sql );
+			$type_projet_id = NULL;
+			foreach ($list_types_projets as $type_projet){
+				//$this->logger->info('current nom_type_projet = '.$type_projet['nom_type_projet'].' <--> current_type_projet =  '.$type_projet_string);
+				if($type_projet['nom_type_projet'] == $type_projet_string){
+					$type_projet_id = $type_projet['id_type_projet'];
+					$this->logger->info('type_projet_id trouvé = '.$type_projet_id);
+				}
+			}
+			//construire le tableau pour l'enregistrement du projet
+			$project_to_save = array ('description' => $description,
+					'prix' => $prix,
+					'progression' => $progression,
+					'status' => $status,
+					'date_debut' => $date_debut,
+					'date_fin' => $date_fin,
+					'id_type_projet' => $type_projet_id,
+					'paye' => $paye,
+					'id_commande' => $commande );
+			$this->logger->info(html_entity_decode(Zend_Debug::dump($project_to_save,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+			try {
+				$this->db->insert ( 'projet', $project_to_save );
+				$id_projet_enregistrer = $this->db->lastInsertId();
+				$this->logger->info('add a project : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+				$this->logger->info('last inserted ID = '.$id_projet_enregistrer);
+				$reponse['message'] = 'success';
+				$this->logger->info('insertion - PROJET - OUI');
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse['message']= 'Erreur';
+				$this->logger->info('Requete erreur : '.$e->getMessage());
+			}
+			//PHASE D INSERTION DES TUPLES id_projet | id_employe DANS LA TABLE 'INTERVENIR'
+			$this->logger->info('*****************HASE D INSERTION DES TUPLES id_projet | id_employe************');
+			//recupperer la liste des employe
+			$sql = 'SELECT * FROM employe';
+			$list_employes = $this->db->fetchAssoc ( $sql );
+			
+			foreach($data_from_user ['employes'] as $table_employe)// !!!!!!!!!!!!!!!!!! $data_from_user ['employes'] : Tableau des tableaux des employes
+			{//itterrer dans le champs des employes de l'employe
+			foreach ($table_employe as $employe){//$table_employe : tableau des employes
+				//itterer dans tous les employes de l'employe
+				foreach ($list_employes as $employe_from_db)
+				{//itterer dans les employe de la BD
+					if($employe_from_db['nom'] == $employe){// !!!!!!!!!!!!!!!!!!						{//l'employe a cette employe, on cherche id_occup equivalent et on insert dans la BD
+						$id_employe_courant = $employe_from_db['id_employe'];
+						$this->logger->info('MATCH FOUND : nom employe trouvé '.$employe_from_db['nom'] .'<-------> nom employe from user '.$employe);
+						//construire le tableau pour l'enregistrement du tuple id_employe | id_occup
+						$tuple_employe_projet = array('id_projet' => $id_projet_enregistrer,
+								'id_employe' => $id_employe_courant);
+						try {
+							$this->logger->info(html_entity_decode(Zend_Debug::dump($tuple_employe_projet,$label = null,$echo = false), ENT_COMPAT, "utf-8"));
+							$this->db->insert ( 'intervention', $tuple_employe_projet );
+							$this->logger->info('add intervention : '.$this->db->getProfiler()->getLastQueryProfile()->getQuery());
+							$this->logger->info('insertion - INTERVENTION - OUI                FIN');
+							$reponse['message'] = 'success';
+						} catch ( Zend_Db_Adapter_Exception $e ) {
+							$this->logger->info($e->getMessage ());
+						}
+					}
+				}
+			}	//foreach employe in data_from_user
+			}
+		}//end COMMANDE PROJET INSERT 
+		else if($data_from_user['request_type'] == 'service'){//INSERT A SERVICE
+			$this->logger->info ( 'INSERT SERVICE');
+			$commande = $id_commande;
+			$date_debut = $data_from_user ['date_debut'];
+			$date_fin = $data_from_user ['date_fin'];
+			$description = $data_from_user ['description_service'];
+			$pack_string = $data_from_user ['pack'];
+			$paye = $data_from_user ['paye_hidden'];
+			$prix = $data_from_user ['prix_service'];
+			$status = $data_from_user ['status_hidden'];
+			$type_service_string = $data_from_user ['type_service'];
+			
+			// PHASE D INSERTION DE L service DANS LA TABLE 'service'
+			
+			$this->logger->info ( '*********************PHASE D INSERTION SERVICE************' );
+			$type_service_id = NULL;
+			$pack_id = NULL;
+			if ($pack_string == 'aucun') { // si pack n'existe pas
+				$this->logger->info ( 'pack = aucun');
+				$sql = 'SELECT * FROM type_service';
+				$list_types_services = $this->db->fetchAssoc ( $sql );
+				foreach ( $list_types_services as $type_service ) {
+					if ($type_service ['libelle_type_service'] == $type_service_string) {
+						$type_service_id = $type_service ['id_type_service'];
+						$this->logger->info ( 'id type service trouvé = ' . $type_service_id );
+					}
+				}
+				$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_type_service' => $type_service_id, 'paye' => $paye, 'id_commande' => $commande );
+				$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
+			
+			} else {//si pack existe
+				$sql = 'SELECT * FROM type_service';
+				$list_types_services = $this->db->fetchAssoc ( $sql );
+				foreach ( $list_types_services as $type_service ) {
+					if ($type_service ['libelle_type_service'] == $type_service_string) {
+						$type_service_id = $type_service ['id_type_service'];
+						$this->logger->info ( 'id type_service trouvé = ' . $type_service_id );
+					}
+				}
+				$sql = 'SELECT * FROM pack';
+				$list_packs = $this->db->fetchAssoc ( $sql );
+				foreach ( $list_packs as $pack ) {
+					if ($pack ['libelle_pack'] == $pack_string) {
+						$pack_id = $pack ['id_pack'];
+						$this->logger->info ( 'id pack trouvé = ' . $pack_id );
+					}
+				}
+				$service_to_save = array ('description' => $description, 'prix' => $prix, 'date_debut' => $date_debut, 'date_fin' => $date_fin, 'status' => $status, 'id_type_service' => $type_service_id, 'id_pack' => $pack_id, 'paye' => $paye, 'id_commande' => $commande );
+				$this->logger->info ( 'service to save ' . html_entity_decode ( Zend_Debug::dump ( $service_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
+			}
+			// construire le tableau pour l'enregistrement de service
+			try {
+				$this->db->insert ( 'service', $service_to_save );
+				$this->logger->info ( 'inserer service : ' . $this->db->getProfiler ()->getLastQueryProfile ()->getQuery () );
+				$id_service_enregistrer = $this->db->lastInsertId ();
+				$this->logger->info ( 'last inserted ID = ' . $id_service_enregistrer );
+				$reponse['message'] = 'success';
+				$reponse['id_commande'] = $id_commande;
+				$this->logger->info ( 'insertion - service - OUI' );
+			} catch ( Zend_Db_Adapter_Exception $e ) {
+				$reponse['message'] = 'Erreur';
+				$this->logger->info ( 'Requete erreur : ' . $e->getMessage () );
+			}
+		}//end COMMANDE SERVICE INSERT
+		$json = Zend_Json::encode($reponse);
+		$this->db->getProfiler()->setEnabled(false);
 		echo $json;
+		
 	}
 	public function modifyAction() { // brush
 		$table_reponse = array ('message' => '' );
