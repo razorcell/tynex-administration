@@ -144,14 +144,11 @@ $(function() {
 			  }
 			  e.preventDefault();
 	  });
-	  
-	
-	  
   	//datepicker
 	$("input.datepicker").datepicker({ 
 		autoSize: true,
-		appendText: '(dd-mm-yyyy)',
-		dateFormat: 'dd-mm-yy'
+		appendText: '(dd.mm.yyyy)',
+		dateFormat: 'dd.mm.yy'
 	});
 	$( "div.datepickerInline" ).datepicker({ 
 		dateFormat: 'dd-mm-yy',
@@ -162,8 +159,6 @@ $(function() {
 		changeYear: true,
 		dateFormat:'yy-mm-dd'
     });
-	
-
 	
 	//Button Click  Ajax Loading
 	$('.loading').live('click',function() { 
@@ -464,7 +459,7 @@ $(function() {
 		{url: "http://www.codylindley.com/", title: "Cody Lindley"},
 		{url: "http://malsup.com/jquery/", title: "Mike Alsup"}
 	];
-	
+	/*
 	var optionspinner = {
 		'sDec': {decimals:2},
 		'sMinMax':{min: -100, max: 100 },
@@ -484,7 +479,7 @@ $(function() {
 	for (var n in optionspinner){
 		$("#"+n).spinner(optionspinner[n]);
 	}
-
+*/
 	
 	
 	});//function end		

@@ -11,7 +11,6 @@
 </style>
 
 <?php 
-
 echo  '<form id="add_service" class="f_s_add">';
 //commande
 echo '<div class="section commande">
@@ -45,18 +44,37 @@ echo '<div class="section pack" style="display:none">
 </div>';
 
 echo '
+
+<div class="section">
+     <label>Prix<small>Donner un prix</small></label>
+         <div>
+             <input type="text" id="sStep" value="1000.00" name="prix" class="prix_service"/>
+           </div>
+     </div>
+     <div class="section">
+		<label>Status<small>Veuillez definir un status initial pour ce service</small></label>
+		<div>
+			<input type="checkbox" id="status" name="status" class="status" value="1" checked="checked"> 
+			<span class="f_help"></span>
+				
+		</div>
+	</div>
+	<input value="Interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"/>
+	<div class="section">
+		<label>Paiement<small>Si le client à payer ou non pour ce service</small></label>
+		<div>
+			<input type="checkbox" id="paye" name="paye" class="paye"
+				value="1" /> <span class="f_help"></span>
+				<input value="Non" type="hidden" id="paye_hidden" name="paye_hidden" class="paye_hidden" />
+		</div>
+	</div>
 	<div class="section alphaonly">
 		<label>Description<small>Un petit mot sur le service</small></label>
 		<div>
 			<textarea name="description"></textarea>
 		</div>
 	</div>
-	<div class="section">
-     <label>Prix<small>Donner un prix</small></label>
-         <div>
-             <input type="text" id="sStep" value="1000.00" name="prix" class="prix"/>
-           </div>
-     </div>
+	
 	<div class="section">
 		<label>Date debut</label>
 		<div>
@@ -72,30 +90,11 @@ echo '
 				readonly="readonly" name="date_fin" />
 		</div>
 	</div>
+	
 
-	<div class="section">
-		<label>Status<small>Veuillez definir un status initial pour ce service</small></label>
-		<div>
-			<input type="checkbox" id="status" name="status" class="status"
-				value="1" /> <span class="f_help"></span>
-				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"
-				value="" />
-		</div>
-	</div>';
+	';
 	echo '	
-	<div class="section">
-		<label> Employe <small>Définir la liste des employés qui travaillent dans ce service</small></label>
-		<div>
-			<select class="chzn-select emplyes" multiple tabindex="4">
-				<option value=""></option>';
-foreach($this->list_employes as $employe)
-{
-	echo "<option value=".$employe['nom'].">".$employe['nom']."</option>";
-}
-					
-echo'	</select>
-		</div>
-	</div>
+	
 	
 	<div class="section last">
 		<div>

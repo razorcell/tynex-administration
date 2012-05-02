@@ -28,10 +28,11 @@ echo '
 <tr>
 
 <th align="left">Id</th>
-<th>Type</th>
-<th>Nom</th>
-<th>Email</th>
-<th>Tel</th>
+<th>Date debut</th>
+<th>Date fin</th>
+<th>Status</th>
+<th>Paiement</th>
+<th>Type de service</th>
 <th>Management</th>
 </tr>
 </thead>
@@ -42,12 +43,17 @@ foreach ( $this->list_services as $service ) {
 	echo '<tr>
 	<td  class="id_service" align ="left">' . $service ['id_service'] . '</td>';
 	
-	if ($service ['type'] == 'Entreprise') {
-		
-		echo '<td class="type">' . $service ['type'] . '</td>
-		<td class="nom">' . $service ['societe'] . '</td>
-		<td>' . $service ['email_societe'] . '</td>
-		<td>' . $service ['tel_societe'] . '</td>';
+		echo '<td class="date_debut">' . $service ['date_debut'] . '</td>
+		<td class="date_fin">' . $service ['date_fin'] . '</td>
+		<td class="status">' . $service ['status'] . '</td>
+		<td class="paiement">' . $service ['paye'] . '</td>';
+		$type_service_string = NULL;
+		foreach ($this->list_types_services as $type_service){
+			if($type_service['id_type_service'] == $service['id_type_service']){
+				$type_service_string = $type_service['libelle_type_service'];
+			}
+		}
+		echo '<td>' . $type_service_string. '</td>';
 		// get the poste name
 		echo '
 		<td>
@@ -66,30 +72,6 @@ foreach ( $this->list_services as $service ) {
 		</td>
 		</tr>';
 		$i ++;
-	} else if ($service ['type'] == 'Particulier') {
-		echo '<td class="type">' . $service ['type'] . '</td>
-			<td class="nom">' . $service ['nom'] . '</td>
-			<td>' . $service ['email'] . '</td>
-			<td>' . $service ['tel'] . '</td>';
-		// get the poste name
-		echo '
-			<td>
-			<span class="tip" >
-			<a  title="Edit" class="edit" href="';
-		echo $this->url ( array ('id' => $service ['id_service'] ), 'servicemodify' );
-		echo '">
-			<img src="images/icon/icon_edit.png" >
-			</a>
-			</span>
-			<span class="tip" >
-			<a id="' . $i . '" class="Delete"  name="Band ring" title="Delete">
-			<img src="images/icon/icon_delete.png">
-			</a>
-			</span>
-			</td>
-			</tr>';
-		$i ++;
-	}
 
 }
 
