@@ -1,7 +1,7 @@
 <script type="text/javascript"
 	src="<?php echo $this->baseUrl('js/commande.js');?>"></script>
 <script type="text/javascript"
-	src="<?php echo $this->baseUrl('js/service.js');?>"></script>
+	src="<?php echo $this->baseUrl('js/commande_service.js');?>"></script>
 <script type="text/javascript"
 	src="<?php echo $this->baseUrl('js/projet.js');?>"></script>
 	<script type="text/javascript"
@@ -232,13 +232,13 @@ echo '	</select>
 </fieldset>
 </form>';
 
+// SERVICE
 echo '<form id="add_service" class="formEl_b f_s_add" style="display:none">
 	<fieldset>
 				<legend>
 					Service <span class="small s_color"></span>
 				</legend>';
 
-// type de service
 echo '<div class="section type_service">
 <label>Type de service<small>Définir le type de ce service</small></label>
 <div>
@@ -257,37 +257,36 @@ echo '<div class="section pack" style="display:none">
 </div>';
 
 echo '
-
 	<div class="section">
 		<label>Date debut</label>
 		<div>
-			<input type="text" id="datepick" class="datepicker date_debut"
-				readonly="readonly" name="date_debut" />
+			<input type="text" id="datepick3" class="datepicker date_debut_service"
+				readonly="readonly" name="date_debut_service" />
 		</div>
 	</div>
 
 	<div class="section">
 		<label>Date fin</label>
 		<div>
-			<input type="text" id="datepick2" class="datepicker date_fin"
-				readonly="readonly" name="date_fin" />
+			<input type="text" id="datepick4" class="datepicker date_fin_service"
+				readonly="readonly" name="date_fin_service" />
 		</div>
 	</div>
      <div class="section">
 		<label>Status<small>Veuillez definir un status initial pour ce service</small></label>
 		<div>
-			<input type="checkbox" id="status" name="status" class="status"
+			<input type="checkbox" id="status_service" name="status_service" class="status_service"
 				value="1" /> <span class="f_help"></span>
-				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"
+				<input value="interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden_service"
 				value="" />
 		</div>
 	</div>
 	<div class="section">
 		<label>Paiement<small>Si le client à payer ou non pour ce service</small></label>
 		<div>
-			<input type="checkbox" id="paye" name="paye" class="paye"
+			<input type="checkbox" id="paye" name="paye" class="paye_service"
 				value="1" /> <span class="f_help"></span>
-				<input value="Non" type="hidden" id="paye_hidden" name="paye_hidden" class="paye_hidden" />
+				<input value="Non" type="hidden" id="paye_hidden" name="paye_hidden" class="paye_hidden_service" />
 		</div>
 	</div>
 	<div class="section alphaonly">
@@ -296,16 +295,13 @@ echo '
 			<textarea name="description_service"></textarea>
 		</div>
 	</div>
-	
-	
+
 	<div class="section">
      <label>Prix<small>Donner un prix</small></label>
          <div>
-             <input type="text" id="sStep" value="1000.00" name="prix" class="prix_service"/>
+             <input type="text" id="sStep" value="1000.00" name="prix_service" class="prix_service"/>
            </div>
      </div>
-	
-
 	';
 echo '	
 	

@@ -356,6 +356,7 @@ $(document)
 					$('.add_commande_service')
 							.click(
 									function() {
+										var id_commande = null;
 										var form_data = $('.f_s_add')
 												.serializeArray();
 										var i = 0;
@@ -364,19 +365,21 @@ $(document)
 
 										// form validation
 										var valide = true;
-										if ($('.prix').value == 0) {
+										if ($('.prix_service').value == 0) {
 											valide = false;
-										} else if ($('.date_debut').val().length == 0) {
+										} else if ($('.date_debut_service').val().length == 0) {
 											valide = false;
-										} else if ($('.date_fin').val().length == 0) {
+										} else if ($('.date_fin_service').val().length == 0) {
 											valide = false;
 										}
-
+										var client = $('.client')// add
+										// client
+										.find('span').html();
 										var type_service = $('.type_service')
 												.find('span').html();
 										if (type_service == 'Veuillez choisir un type de service...') {
 											valide = false;
-										} else {// si type de service choisi
+										} else {// si type de service choisie
 											if ($('div.pack').hasClass(
 													'visible')) {
 												if ($('.list_packs').find(
@@ -406,7 +409,7 @@ $(document)
 															+ form_data[i].value
 															+ '"';
 												} else {
-													if (form_data[i].name == 'prix') {
+													if (form_data[i].name == 'prix_service') {
 														var price = form_data[i].value
 																.replace(',',
 																		'');
@@ -435,13 +438,15 @@ $(document)
 													+ ',"client" : "' + client
 													+ '"';
 											// add commande
-											if ($('.id_commande').find('input#id_commande').attr('value').length > 0) {
+											if ($('.id_commande').find('input#id_commande').attr('value') > 0) {
+												id_commande = $('.id_commande').find('input#id_commande')
+												.attr('value');
 												json_to_send = json_to_send
 														+ ',"id_commande" : "'
-														+ $('.id_commande')
-																.attr('value')
+														+ id_commande
 														+ '"';
-											}// add description_commande
+											}
+											// add description_commande
 											var description_commande = $(
 													'.description_commande')
 													.val();
@@ -465,7 +470,7 @@ $(document)
 											$
 													.ajax({
 														type : "POST",
-														url : "/service/submit",
+														url : "/commande/submit",
 														data : json_to_send,
 														success : function(data) {
 															// alert('success');
@@ -476,7 +481,9 @@ $(document)
 																// SI
 																// id_commande
 																// exists
-																if (json.id_commande.length > 0) {// SI
+																$('div.client').hide();
+																$('.commande_description').hide();
+																if (json.commande_exists == 'non') {// SI
 																	// NOUVELLE
 																	// COMMANDE
 																	$(

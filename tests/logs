@@ -429,3 +429,475 @@
 2012-05-03T13:22:56+02:00 INFO (6): last inserted ID = 42
 2012-05-03T13:22:56+02:00 INFO (6): insertion - PROJET - OUI
 2012-05-03T13:22:56+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:34:01+02:00 INFO (6): Fonction init() executée
+2012-05-03T13:34:01+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-03T13:34:01+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-03T13:34:01+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-03T13:41:24+02:00 INFO (6): Fonction init() executée
+2012-05-03T13:41:24+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-03T13:41:24+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-03T13:41:24+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-03T13:50:33+02:00 INFO (6): Fonction init() executée
+2012-05-03T13:50:33+02:00 INFO (6): Request body : {"type_service":"Referencement"}
+2012-05-03T13:50:33+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [12] => array(3) {
+    ["id_pack"] => string(2) "12"
+    ["libelle_pack"] => string(14) "Pack Débutant"
+    ["id_type_service"] => string(2) "15"
+  }
+  [13] => array(3) {
+    ["id_pack"] => string(2) "13"
+    ["libelle_pack"] => string(12) "Pack Amateur"
+    ["id_type_service"] => string(2) "15"
+  }
+  [14] => array(3) {
+    ["id_pack"] => string(2) "14"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-03T13:50:33+02:00 INFO (6): {"12":{"id_pack":"12","libelle_pack":"Pack D\u00e9butant","id_type_service":"15"},"13":{"id_pack":"13","libelle_pack":"Pack Amateur","id_type_service":"15"},"14":{"id_pack":"14","libelle_pack":"Pack Professionnel","id_type_service":"15"}}
+2012-05-03T13:50:35+02:00 INFO (6): Fonction init() executée
+2012-05-03T13:50:35+02:00 INFO (6): Request body : {"type_service":"Vectors"}
+2012-05-03T13:50:35+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-05-03T13:50:35+02:00 INFO (6): []
+2012-05-03T13:53:27+02:00 INFO (6): Fonction init() executée
+2012-05-03T13:53:27+02:00 INFO (6): service submitAction()
+2012-05-03T13:53:27+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "05.05.2012","status_service" : "1","status_hidden" : "interrompu","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "1000.00","request_type" : "service","client" : "Koutobia","description_commande" : "commande desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T13:53:27+02:00 INFO (6): Decoded data from user : <pre>array(13) {
+  ["pack"] => string(5) "aucun"
+  ["date_debut_service"] => string(10) "01.05.2012"
+  ["date_fin_service"] => string(10) "05.05.2012"
+  ["status_service"] => string(1) "1"
+  ["status_hidden"] => string(10) "interrompu"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description_service"] => string(12) "service desc"
+  ["prix_service"] => string(7) "1000.00"
+  ["request_type"] => string(7) "service"
+  ["client"] => string(8) "Koutobia"
+  ["description_commande"] => string(13) "commande desc"
+  ["type_service"] => string(7) "Vectors"
+}
+</pre>
+2012-05-03T13:53:27+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-03T13:53:27+02:00 INFO (6): pack = aucun
+2012-05-03T13:53:27+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T13:53:27+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => NULL
+  ["prix"] => NULL
+  ["date_debut"] => NULL
+  ["date_fin"] => NULL
+  ["status"] => string(10) "interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => NULL
+}
+</pre>
+2012-05-03T14:01:27+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:01:27+02:00 INFO (6): service submitAction()
+2012-05-03T14:01:27+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "03.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Non","description_service" : "service desc","prix_service" : "750.00","request_type" : "service","client" : "Koutobia","description_commande" : "commande desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:01:27+02:00 INFO (6): Decoded data from user : <pre>array(13) {
+  ["pack"] => string(5) "aucun"
+  ["date_debut_service"] => string(10) "01.05.2012"
+  ["date_fin_service"] => string(10) "03.05.2012"
+  ["status_service"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Non"
+  ["description_service"] => string(12) "service desc"
+  ["prix_service"] => string(6) "750.00"
+  ["request_type"] => string(7) "service"
+  ["client"] => string(8) "Koutobia"
+  ["description_commande"] => string(13) "commande desc"
+  ["type_service"] => string(7) "Vectors"
+}
+</pre>
+2012-05-03T14:01:27+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-03T14:01:27+02:00 INFO (6): pack = aucun
+2012-05-03T14:01:27+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:01:27+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => NULL
+  ["prix"] => NULL
+  ["date_debut"] => NULL
+  ["date_fin"] => NULL
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => NULL
+}
+</pre>
+2012-05-03T14:01:50+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:01:50+02:00 INFO (6): service submitAction()
+2012-05-03T14:01:50+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "03.05.2012","status_hidden" : "Interrompu","paye_hidden" : "Non","description_service" : "service desc","prix_service" : "750.00","request_type" : "service","client" : "Koutobia","description_commande" : "commande desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:01:50+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["pack"] => string(5) "aucun"
+  ["date_debut_service"] => string(10) "01.05.2012"
+  ["date_fin_service"] => string(10) "03.05.2012"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description_service"] => string(12) "service desc"
+  ["prix_service"] => string(6) "750.00"
+  ["request_type"] => string(7) "service"
+  ["client"] => string(8) "Koutobia"
+  ["description_commande"] => string(13) "commande desc"
+  ["type_service"] => string(7) "Vectors"
+}
+</pre>
+2012-05-03T14:01:50+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-03T14:01:50+02:00 INFO (6): pack = aucun
+2012-05-03T14:01:50+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:01:50+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => NULL
+  ["prix"] => NULL
+  ["date_debut"] => NULL
+  ["date_fin"] => NULL
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => NULL
+}
+</pre>
+2012-05-03T14:08:59+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:08:59+02:00 INFO (6): service submitAction()
+2012-05-03T14:08:59+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "17.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "650.00","request_type" : "service","client" : "Koutobia","description_commande" : "commande desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:08:59+02:00 INFO (6): Decoded data from user : <pre>array(13) {
+  ["pack"] => string(5) "aucun"
+  ["date_debut_service"] => string(10) "01.05.2012"
+  ["date_fin_service"] => string(10) "17.05.2012"
+  ["status_service"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description_service"] => string(12) "service desc"
+  ["prix_service"] => string(6) "650.00"
+  ["request_type"] => string(7) "service"
+  ["client"] => string(8) "Koutobia"
+  ["description_commande"] => string(13) "commande desc"
+  ["type_service"] => string(7) "Vectors"
+}
+</pre>
+2012-05-03T14:08:59+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-03T14:08:59+02:00 INFO (6): pack = aucun
+2012-05-03T14:08:59+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:08:59+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => NULL
+  ["prix"] => NULL
+  ["date_debut"] => NULL
+  ["date_fin"] => NULL
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => NULL
+}
+</pre>
+2012-05-03T14:09:33+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:09:33+02:00 INFO (6): service submitAction()
+2012-05-03T14:09:33+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "17.05.2012","status_hidden" : "Interrompu","paye_hidden" : "Non","description_service" : "service desc","prix_service" : "650.00","request_type" : "service","client" : "Koutobia","description_commande" : "commande desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:09:33+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["pack"] => string(5) "aucun"
+  ["date_debut_service"] => string(10) "01.05.2012"
+  ["date_fin_service"] => string(10) "17.05.2012"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description_service"] => string(12) "service desc"
+  ["prix_service"] => string(6) "650.00"
+  ["request_type"] => string(7) "service"
+  ["client"] => string(8) "Koutobia"
+  ["description_commande"] => string(13) "commande desc"
+  ["type_service"] => string(7) "Vectors"
+}
+</pre>
+2012-05-03T14:09:33+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-03T14:09:33+02:00 INFO (6): pack = aucun
+2012-05-03T14:09:33+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:09:33+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => NULL
+  ["prix"] => NULL
+  ["date_debut"] => NULL
+  ["date_fin"] => NULL
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => NULL
+}
+</pre>
+2012-05-03T14:11:39+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "02.05.2012","date_fin_service" : "17.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "700.00","request_type" : "service","client" : "Koutobia","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:11:39+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:11:39+02:00 INFO (6): NEW COMMANDE
+2012-05-03T14:11:39+02:00 INFO (6): client_id trouvé = 3
+2012-05-03T14:11:39+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "3"
+  ["libelle_commande"] => string(8) "com desc"
+}
+</pre>
+2012-05-03T14:11:39+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T14:11:39+02:00 INFO (6): last inserted ID = 15
+2012-05-03T14:11:39+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T14:11:39+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:11:39+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:11:39+02:00 INFO (6): pack = aucun
+2012-05-03T14:11:39+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:11:39+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "700.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "17.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "15"
+}
+</pre>
+2012-05-03T14:11:39+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:11:39+02:00 INFO (6): last inserted ID = 5
+2012-05-03T14:11:39+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:12:20+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "02.05.2012","date_fin_service" : "17.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "700.00","request_type" : "service","client" : "Koutobia","id_commande" : "undefined","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:12:20+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:12:20+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T14:12:20+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:12:20+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:12:20+02:00 INFO (6): pack = aucun
+2012-05-03T14:12:20+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:12:20+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "700.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "17.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(9) "undefined"
+}
+</pre>
+2012-05-03T14:16:05+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "11.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "750.00","request_type" : "service","client" : "AKWA","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:16:05+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:16:05+02:00 INFO (6): NEW COMMANDE
+2012-05-03T14:16:05+02:00 INFO (6): client_id trouvé = 2
+2012-05-03T14:16:05+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "2"
+  ["libelle_commande"] => string(8) "com desc"
+}
+</pre>
+2012-05-03T14:16:05+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T14:16:05+02:00 INFO (6): last inserted ID = 16
+2012-05-03T14:16:05+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T14:16:05+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:16:05+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:16:05+02:00 INFO (6): pack = aucun
+2012-05-03T14:16:05+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:16:05+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "750.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "11.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "16"
+}
+</pre>
+2012-05-03T14:16:05+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:16:05+02:00 INFO (6): last inserted ID = 7
+2012-05-03T14:16:05+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:16:33+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "02.05.2012","date_fin_service" : "12.05.2012","status_hidden" : "Interrompu","paye_hidden" : "Non","description_service" : "service2 desc","prix_service" : "600.00","request_type" : "service","client" : "AKWA","id_commande" : "16","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:16:33+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:16:33+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T14:16:33+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:16:33+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:16:33+02:00 INFO (6): pack = aucun
+2012-05-03T14:16:33+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:16:33+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(13) "service2 desc"
+  ["prix"] => string(6) "600.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "12.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "16"
+}
+</pre>
+2012-05-03T14:16:33+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:16:33+02:00 INFO (6): last inserted ID = 8
+2012-05-03T14:16:33+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:19:07+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "09.05.2012","date_fin_service" : "30.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "800.00","request_type" : "service","client" : "AKWA","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:19:07+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:19:07+02:00 INFO (6): NEW COMMANDE
+2012-05-03T14:19:07+02:00 INFO (6): client_id trouvé = 2
+2012-05-03T14:19:07+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "2"
+  ["libelle_commande"] => string(8) "com desc"
+}
+</pre>
+2012-05-03T14:19:07+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T14:19:07+02:00 INFO (6): last inserted ID = 17
+2012-05-03T14:19:07+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T14:19:07+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:19:07+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:19:07+02:00 INFO (6): pack = aucun
+2012-05-03T14:19:07+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:19:07+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "800.00"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "17"
+}
+</pre>
+2012-05-03T14:19:07+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:19:07+02:00 INFO (6): last inserted ID = 9
+2012-05-03T14:19:07+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:19:24+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "09.05.2012","date_fin_service" : "30.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "800.00","request_type" : "service","client" : "AKWA","id_commande" : "17","description_commande" : "com desc","type_service" : "Vectors","pack" : "aucun"}
+2012-05-03T14:19:24+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:19:24+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T14:19:24+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:19:24+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:19:24+02:00 INFO (6): pack = aucun
+2012-05-03T14:19:24+02:00 INFO (6): id type service trouvé = 16
+2012-05-03T14:19:24+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "800.00"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "17"
+}
+</pre>
+2012-05-03T14:19:24+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:19:24+02:00 INFO (6): last inserted ID = 10
+2012-05-03T14:19:24+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:20:09+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:20:09+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-03T14:20:09+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-03T14:20:09+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-03T14:20:15+02:00 INFO (6): Request body : {"date_debut_service" : "09.05.2012","date_fin_service" : "30.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "800.00","request_type" : "service","client" : "AKWA","id_commande" : "17","description_commande" : "com desc","type_service" : "Nom de Domaine","pack" : "Pack Gold"}
+2012-05-03T14:20:15+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:20:15+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T14:20:15+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:20:15+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:20:15+02:00 INFO (6): id type_service trouvé = 14
+2012-05-03T14:20:15+02:00 INFO (6): id pack trouvé = 11
+2012-05-03T14:20:15+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "800.00"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "14"
+  ["id_pack"] => string(2) "11"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "17"
+}
+</pre>
+2012-05-03T14:20:15+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:20:15+02:00 INFO (6): last inserted ID = 11
+2012-05-03T14:20:15+02:00 INFO (6): insertion - service - OUI
+2012-05-03T14:20:50+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:20:50+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-03T14:20:50+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-03T14:20:50+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-03T14:20:52+02:00 INFO (6): Fonction init() executée
+2012-05-03T14:20:52+02:00 INFO (6): Request body : {"type_service":"Referencement"}
+2012-05-03T14:20:52+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [12] => array(3) {
+    ["id_pack"] => string(2) "12"
+    ["libelle_pack"] => string(14) "Pack Débutant"
+    ["id_type_service"] => string(2) "15"
+  }
+  [13] => array(3) {
+    ["id_pack"] => string(2) "13"
+    ["libelle_pack"] => string(12) "Pack Amateur"
+    ["id_type_service"] => string(2) "15"
+  }
+  [14] => array(3) {
+    ["id_pack"] => string(2) "14"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-03T14:20:52+02:00 INFO (6): {"12":{"id_pack":"12","libelle_pack":"Pack D\u00e9butant","id_type_service":"15"},"13":{"id_pack":"13","libelle_pack":"Pack Amateur","id_type_service":"15"},"14":{"id_pack":"14","libelle_pack":"Pack Professionnel","id_type_service":"15"}}
+2012-05-03T14:20:56+02:00 INFO (6): Request body : {"date_debut_service" : "09.05.2012","date_fin_service" : "30.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "800.00","request_type" : "service","client" : "AKWA","id_commande" : "17","description_commande" : "com desc","type_service" : "Referencement","pack" : "Pack Débutant"}
+2012-05-03T14:20:56+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T14:20:56+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T14:20:56+02:00 INFO (6): INSERT SERVICE
+2012-05-03T14:20:56+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-03T14:20:56+02:00 INFO (6): id type_service trouvé = 15
+2012-05-03T14:20:56+02:00 INFO (6): id pack trouvé = 12
+2012-05-03T14:20:56+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "800.00"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "15"
+  ["id_pack"] => string(2) "12"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "17"
+}
+</pre>
+2012-05-03T14:20:56+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T14:20:56+02:00 INFO (6): last inserted ID = 12
+2012-05-03T14:20:56+02:00 INFO (6): insertion - service - OUI

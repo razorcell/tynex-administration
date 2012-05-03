@@ -201,8 +201,8 @@ class CommandeController extends Zend_Controller_Action {
 		else if($data_from_user['request_type'] == 'service'){//INSERT A SERVICE
 			$this->logger->info ( 'INSERT SERVICE');
 			$commande = $id_commande;
-			$date_debut = $data_from_user ['date_debut'];
-			$date_fin = $data_from_user ['date_fin'];
+			$date_debut = $data_from_user ['date_debut_service'];
+			$date_fin = $data_from_user ['date_fin_service'];
 			$description = $data_from_user ['description_service'];
 			$pack_string = $data_from_user ['pack'];
 			$paye = $data_from_user ['paye_hidden'];
