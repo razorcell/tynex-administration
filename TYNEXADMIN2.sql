@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mar 01 Mai 2012 à 21:40
+-- Généré le : Jeu 03 Mai 2012 à 23:07
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -40,15 +40,19 @@ CREATE TABLE IF NOT EXISTS `client` (
   `societe` varchar(35) DEFAULT NULL,
   `email_societe` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `client`
 --
 
 INSERT INTO `client` (`id_client`, `nom`, `prenom`, `tel`, `tel_societe`, `fax`, `email`, `adresse`, `type`, `gender`, `societe`, `email_societe`) VALUES
-(1, 'Kevin', 'nixon', '0600548565', NULL, NULL, NULL, NULL, 'Particulier', 'Homme', NULL, NULL),
-(2, 'Fadili', 'Ahmed', NULL, '0521625342', NULL, NULL, NULL, 'Entreprise', NULL, 'AKWA', 'akwa@akwa.com');
+(1, 'Kevin', 'nixon', '0600548565', '', '', 'kevin@gmail.com', '', 'Particulier', 'Homme', '', ''),
+(2, 'Fadili', 'Ahmed', NULL, '0521625342', NULL, NULL, NULL, 'Entreprise', NULL, 'AKWA', 'akwa@akwa.com'),
+(3, 'Slimani', 'ahmed', '0621458595', '0562125242', '', 'slimani@kotobia.com', 'Bloc N marrakech', 'Entreprise', 'Homme', 'Koutobia', 'koutobia@kotobia.com'),
+(4, 'Omar', 'mahmoud', '', '0534543465', '', 'omar@clubmoving.com', '', 'Entreprise', 'Homme', 'Club Moving', 'moving@clubmoving.com'),
+(5, 'ahmadi', 'toriya', '0667564532', '', '', 'touriya.ahmadi@gmail.com', '', 'Particulier', 'Femme', '', ''),
+(6, 'Fouad', 'tanjaoui', '0665453426', '', '', 'fouad.tanjaoui@gmail.com', '', 'Particulier', 'Homme', '', '');
 
 -- --------------------------------------------------------
 
@@ -61,8 +65,9 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `id_client` int(11) NOT NULL,
   `libelle_commande` text NOT NULL,
   PRIMARY KEY (`id_commande`),
+  UNIQUE KEY `id_commande` (`id_commande`,`id_client`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Contenu de la table `commande`
@@ -70,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
 
 INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
 (1, 1, 'Economic forum, from M.ALAMI'),
-(2, 2, 'Festivale Mawazin: a remplir le plus tot possible');
+(18, 4, 'Organization d''un evenement pour rassembler les experts et professionnel du sport');
 
 -- --------------------------------------------------------
 
@@ -143,9 +148,10 @@ INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
 (1, 15),
 (2, 15),
 (3, 15),
-(1, 16),
-(2, 16),
-(3, 16);
+(3, 43),
+(1, 43),
+(3, 44),
+(1, 44);
 
 -- --------------------------------------------------------
 
@@ -191,8 +197,8 @@ CREATE TABLE IF NOT EXISTS `occuper` (
 
 INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES
 (1, 11),
-(3, 12),
-(2, 15);
+(2, 15),
+(3, 15);
 
 -- --------------------------------------------------------
 
@@ -264,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Contenu de la table `projet`
@@ -273,7 +279,8 @@ CREATE TABLE IF NOT EXISTS `projet` (
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
 (14, 'Festival Mawazin', 10100, 21, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
 (15, 'Hotel farah demander pas M.Skali Haut prioritÃ©', 12000, 35, 'Actif', '2002-05-20', '2021-05-20', 3, 'Oui', 1),
-(16, 'Laboratoire Xom le plus tot possible, possibilitÃ© d''augmentation de paiement si avant delai', 12000, 53, 'Actif', '2002-05-20', '2021-05-20', 2, 'Non', 2);
+(43, 'Fort recommendation sur le style(couleur, banniÃ©re...), contrainte de couleur : bleu', 5000, 30, 'Actif', '2001-05-20', '2031-05-20', 4, 'Oui', 18),
+(44, 'application mobile pour le partage de photo et de video PUB, au cour de l''evenement', 6000, 0, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 18);
 
 -- --------------------------------------------------------
 
@@ -296,15 +303,17 @@ CREATE TABLE IF NOT EXISTS `service` (
   KEY `id_pack` (`id_pack`),
   KEY `id_commande` (`id_commande`),
   KEY `id_type_service` (`id_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Contenu de la table `service`
 --
 
 INSERT INTO `service` (`id_service`, `description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES
-(3, 'le classement sur Yahoo.com est vivement conseille', 1101, '29.04.2012', '30.04.2012', 'Actif', 16, 10, 'Oui', 2),
-(4, 'test service', 1250, '01.05.2012', '31.05.2012', 'Interrompu', 16, NULL, 'Oui', 1);
+(4, 'test service', 1250, '01.05.2012', '31.05.2012', 'Interrompu', 16, NULL, 'Oui', 1),
+(13, '', 1200, '01.04.2012', '31.07.2012', 'Interrompu', 13, 9, 'Oui', 18),
+(14, '', 700, '01.04.2012', '31.07.2012', 'Interrompu', 15, 14, 'Oui', 18),
+(15, '', 700, '01.04.2012', '31.07.2012', 'Actif', 16, NULL, 'Oui', 18);
 
 -- --------------------------------------------------------
 

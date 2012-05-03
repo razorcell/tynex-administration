@@ -42,7 +42,32 @@ $(document)
 							// });
 						}
 					});
-
+					//modify form
+					$(".liste_type").iphoneStyle({ // Custom Label With onChange
+						// function
+						checkedLabel : "Services",
+						uncheckedLabel : "Projets",
+						labelWidth : '85px',
+						onChange : function() {
+							if(this.elem.is(':checked')){//services
+								$('div#services').show();
+								$('div#projets').hide();
+								}
+							else{//projets
+								$('div#services').hide();
+								$('div#projets').show();
+							}
+							var chek = $(".list_type").attr('checked');
+							if (chek) {
+								$(".disabled_map").fadeOut();
+							} else {
+								$(".disabled_map").fadeIn();
+							}
+							// $("#show_service").click(function () {
+							//$(".formEl_b").slideToggle("slow");
+							// });
+						}
+					});
 					$('.f_c_e_add').submit(function(e) {
 
 						e.preventDefault();
@@ -60,11 +85,78 @@ $(document)
 						e.preventDefault();
 					});
 
-					$('.edit').click(function() {
+					$('.edit').live('click',function() {
 						$('.commande tbody tr').each(function(i, row) {
 							$(this).removeClass('row_selected');
 						});
 					});
+					$('.edit_projets').live('click',function() {
+						$('.projet tbody tr').each(function(i, row) {
+							$(this).removeClass('row_selected');
+						});
+					});
+					$('.edit_services').live('click',function() {
+						$('.service tbody tr').each(function(i, row) {
+							$(this).removeClass('row_selected');
+						});
+					});
+					$(".Delete").live(
+							'click',
+							function() {
+								$('.commande tbody tr').each(function(i, row) {
+									$(this).removeClass('row_selected');
+								});
+							
+								var row = $(this).parents('tr');
+
+								var action_destination = '/commande/delete';
+
+								var description = row.find('.nom').html();
+
+								var id_commande = row.find('.id_commande')
+										.html();
+
+								Delete(id_commande, description, row, 0,
+										action_destination);
+							});
+					$(".Delete_projet").live(
+							'click',
+							function() {
+								$('.projet tbody tr').each(function(i, row) {
+									$(this).removeClass('row_selected');
+								});
+							
+								var row = $(this).parents('tr');
+
+								var action_destination = '/projet/delete';
+
+								var description = row.find('.nom').html();
+
+								var id_projet = row.find('.id_projet')
+										.html();
+
+								Delete(id_projet, description, row, 0,
+										action_destination);
+							});
+					$(".Delete_service").live(
+							'click',
+							function() {
+								$('.service tbody tr').each(function(i, row) {
+									$(this).removeClass('row_selected');
+								});
+							
+								var row = $(this).parents('tr');
+
+								var action_destination = '/service/delete';
+
+								var description = row.find('.nom').html();
+
+								var id_service = row.find('.id_service')
+										.html();
+
+								Delete(id_service, description, row, 0,
+										action_destination);
+							});
 
 					$('.selectall')
 							.click(
@@ -525,25 +617,7 @@ $(document)
 
 									});
 
-					$(".Delete").live(
-							'click',
-							function() {
-								$('.commande tbody tr').each(function(i, row) {
-									$(this).removeClass('row_selected');
-								});
-								$('.test').html('');
-								var row = $(this).parents('tr');
-
-								var action_destination = '/commande/delete';
-
-								var description = row.find('.nom').html();
-
-								var id_commande = row.find('.id_commande')
-										.html();
-
-								Delete(id_commande, description, row, 0,
-										action_destination);
-							});
+					
 					$('.modify_commande_entreprise')
 							.click(
 									function() {

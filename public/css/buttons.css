@@ -159,7 +159,7 @@ button.button:hover {
 							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
 							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
 }
-.button.green:hover { 	background-color: hsl(88, 70%, 75%); }
+.button.green:hover { 	 background-color: hsl(88, 70%, 75%);}
 
 .button.pink {
 	color: 				hsl(340, 100%, 30%) !important;
@@ -189,15 +189,11 @@ button.button:hover {
 	opacity: .9;
 }
 
-
-
 /* -------------- States -------------- */
 
 .button:hover {
 	background-color: 	hsl(0, 0%, 83%);
 }
-
-
 
 .button:active {
 	background-image: 	-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url(noise.png);

@@ -520,7 +520,7 @@ $(function() {
 	  //Delete(id_occup,name,row,0,action_destination);
 	  function Delete(id,description,row,type,action_destination){//row = selected row //id = identifiant de l'element //
 	$.confirm({
-			'title': 'CONFIRMATION DE LA SUPPRESSION','message': " <strong>VOUS VOULLEZ VRAIMMANT SUPPRIMER</strong><br /><font color=red>' "+ description +" ' </font> ",
+			'title': 'CONFIRMATION DE LA SUPPRESSION','message': " <strong>VOUS VOULLEZ VRAIMMANT SUPPRIMER</strong><br /><font color=red>' "+ id +" ' </font> ",
 			'buttons': 
 							{'Yes': 
 								{//'class': 'special',
