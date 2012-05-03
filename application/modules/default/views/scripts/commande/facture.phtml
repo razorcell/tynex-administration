@@ -5,7 +5,7 @@
 <link rel='stylesheet' type='text/css'
 	href='<?php echo $this->baseUrl('css/print.css')?>' media="print" />
 <script type='text/javascript'
-	src='<?php echo $this->baseUrl('js/jquery-1.3.2.min.js')?>'></script>
+	src='<?php echo $this->baseUrl('js/jquery.min.js')?>'></script>
 <script type='text/javascript'
 	src='<?php echo $this->baseUrl('js/example.js')?>'></script>
 
@@ -32,8 +32,7 @@ echo '
 		<table id="meta">
 			<tr>
 				<td class="meta-head"><a
-					href="'.$this->url(array('controller' => 'commande', 'action' => 'index' ),'default',true).'">Commande
-						N�</a></td>
+					href="'.$this->url(array('controller' => 'commande', 'action' => 'index' ),'default',true).'">Commande N&deg;</a></td>
 				<td><textarea>'.$this->commande->id_commande.'</textarea></td>
 			</tr>
 			<tr>
@@ -73,7 +72,7 @@ echo '
 				<th>Type</th>
 				<th>Description</th>
 				<th>Prix Unitaire</th>
-				<th>Quantit�</th>
+				<th>Quantit&eacute;</th>
 				<th>Prix</th>
 
 			</tr>
@@ -201,3 +200,9 @@ Agadir - Maroc</textarea>
 
 	</div>';
 	?>
+	
+<script type='text/javascript'>
+
+
+</script>
+	
