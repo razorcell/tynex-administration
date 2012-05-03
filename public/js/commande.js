@@ -169,7 +169,7 @@ $(document)
 										var i = 0;
 										// form validation
 										var valide = true;
-										if ($('.prix').value == 0) {
+										if ($('.prix_projet').value == 0) {
 											valide = false;
 										} else if ($('.date_debut').val().length == 0) {
 											valide = false;
@@ -199,7 +199,7 @@ $(document)
 															+ form_data[i].value
 															+ '"';
 												} else {
-													if (form_data[i].name == 'prix') {
+													if (form_data[i].name == 'prix_projet') {
 														var price = form_data[i].value
 																.replace(',',
 																		'');
@@ -313,7 +313,9 @@ $(document)
 																// SI
 																// id_commande
 																// exists
-																if(json.commande_exists == 'non'){
+																$('div.client').hide();
+																$('.commande_description').hide();
+																if(json.commande_exists == 'non'){//si commande nouvelle
 																	$(
 																			'.id_commande')
 																			.find(
@@ -330,20 +332,8 @@ $(document)
 																	showSuccess(
 																			'Commande et Projet ajoutés',
 																			3000);
-															}else{//si commande nouvelle
-																$(
-																'.id_commande')
-																.find(
-																		'input#id_commande')
-																.attr(
-																		'value',
-																		json.id_commande);
-														$(
-																'.id_commande')
-																.css(
-																		{
-																			'display' : ''
-																		});
+															}else{
+																//si commande existe deja
 														showSuccess(
 																'Projet ajoutés',
 																3000);
@@ -716,5 +706,5 @@ $(document)
 													3000);
 										}
 									});// end modify commande particulier
-					$('.id_commande').find('input#id_commande').attr('value', '');
+					$('#id_commande').attr('value','');//clear id after page refresh
 				});

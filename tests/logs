@@ -124,3 +124,308 @@
 2012-05-02T07:26:27+02:00 INFO (6): Fonction init() executée
 2012-05-02T07:26:29+02:00 INFO (6): Fonction init() executée
 2012-05-02T07:26:29+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-02T11:58:20+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "17.05.2012","description_projet" : "qsdqsd","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "1,000.00","request_type" : "projet","client" : "AKWA","type_projet" : "Mobile application","progression" : "54","description_commande" : "qsdaze","employes" : []}
+2012-05-02T11:58:20+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-02T11:58:20+02:00 INFO (6): NEW COMMANDE
+2012-05-02T11:58:20+02:00 INFO (6): client_id trouvé = 2
+2012-05-02T11:58:20+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "2"
+  ["libelle_commande"] => string(6) "qsdaze"
+}
+</pre>
+2012-05-02T11:58:20+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-02T11:58:20+02:00 INFO (6): last inserted ID = 10
+2012-05-02T11:58:20+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-02T11:58:20+02:00 INFO (6): INSERT PROJET
+2012-05-02T11:58:20+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-02T11:58:20+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-02T11:58:20+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(6) "qsdqsd"
+  ["prix"] => string(8) "1,000.00"
+  ["progression"] => string(2) "54"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "17.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "10"
+}
+</pre>
+2012-05-02T11:58:20+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-02T11:58:20+02:00 INFO (6): last inserted ID = 33
+2012-05-02T11:58:20+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-02T11:58:20+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T12:58:11+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description_projet" : "commande desc","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "1,500.00","request_type" : "projet","client" : "AKWA","type_projet" : "Mobile application","progression" : "54","description_commande" : "commande desc","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-03T12:58:11+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T12:58:11+02:00 INFO (6): NEW COMMANDE
+2012-05-03T12:58:11+02:00 INFO (6): client_id trouvé = 2
+2012-05-03T12:58:11+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "2"
+  ["libelle_commande"] => string(13) "commande desc"
+}
+</pre>
+2012-05-03T12:58:11+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T12:58:11+02:00 INFO (6): last inserted ID = 11
+2012-05-03T12:58:11+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T12:58:11+02:00 INFO (6): INSERT PROJET
+2012-05-03T12:58:11+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T12:58:11+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-03T12:58:11+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "commande desc"
+  ["prix"] => string(8) "1,500.00"
+  ["progression"] => string(2) "54"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "11"
+}
+</pre>
+2012-05-03T12:58:11+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T12:58:11+02:00 INFO (6): last inserted ID = 34
+2012-05-03T12:58:11+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T12:58:11+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T12:58:11+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-03T12:58:11+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "34"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-03T12:58:11+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-03T12:58:11+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-03T12:58:11+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-03T12:58:11+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "34"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-03T12:58:11+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-03T12:58:11+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-03T13:06:34+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description_projet" : "project desc","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "300.00","request_type" : "projet","client" : "AKWA","type_projet" : "Desktop application","progression" : "51","description_commande" : "commande desc","employes" : [{"name " : "alami"}]}
+2012-05-03T13:06:34+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:06:34+02:00 INFO (6): NEW COMMANDE
+2012-05-03T13:06:34+02:00 INFO (6): client_id trouvé = 2
+2012-05-03T13:06:34+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "2"
+  ["libelle_commande"] => string(13) "commande desc"
+}
+</pre>
+2012-05-03T13:06:34+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T13:06:34+02:00 INFO (6): last inserted ID = 12
+2012-05-03T13:06:34+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T13:06:34+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:06:34+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:06:34+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-03T13:06:34+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(6) "300.00"
+  ["progression"] => string(2) "51"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "12"
+}
+</pre>
+2012-05-03T13:06:34+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:06:34+02:00 INFO (6): last inserted ID = 35
+2012-05-03T13:06:34+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:06:34+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:06:34+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-03T13:06:34+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "35"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-03T13:06:34+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-03T13:06:34+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-03T13:09:50+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "31.05.2012","description_projet" : "project desc","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "1,500.00","request_type" : "projet","client" : "Koutobia","type_projet" : "Desktop application","progression" : "44","description_commande" : "commande desc","employes" : [{"name " : "mendili"}]}
+2012-05-03T13:09:50+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:09:50+02:00 INFO (6): NEW COMMANDE
+2012-05-03T13:09:50+02:00 INFO (6): client_id trouvé = 3
+2012-05-03T13:09:50+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "3"
+  ["libelle_commande"] => string(13) "commande desc"
+}
+</pre>
+2012-05-03T13:09:50+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T13:09:50+02:00 INFO (6): last inserted ID = 13
+2012-05-03T13:09:50+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T13:09:50+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:09:50+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:09:50+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-03T13:09:50+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(8) "1,500.00"
+  ["progression"] => string(2) "44"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "13"
+}
+</pre>
+2012-05-03T13:09:50+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:09:50+02:00 INFO (6): last inserted ID = 36
+2012-05-03T13:09:50+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:09:50+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:09:50+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-03T13:09:50+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "36"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-03T13:09:50+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-03T13:09:50+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-03T13:11:09+02:00 INFO (6): Request body : {"date_debut" : "04.05.2012","date_fin" : "22.05.2012","description_projet" : "project2 desc","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "2,000.00","request_type" : "projet","client" : "Koutobia","id_commande" : "13","type_projet" : "Mobile application","progression" : "0","description_commande" : "commande desc","employes" : [{"name " : "sefrioui"}]}
+2012-05-03T13:11:09+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:11:09+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T13:11:09+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:11:09+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:11:09+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-03T13:11:09+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "project2 desc"
+  ["prix"] => string(8) "2,000.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "04.05.2012"
+  ["date_fin"] => string(10) "22.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "13"
+}
+</pre>
+2012-05-03T13:11:09+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:11:09+02:00 INFO (6): last inserted ID = 37
+2012-05-03T13:11:09+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:11:09+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:11:09+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-03T13:11:09+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "37"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-03T13:11:09+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-03T13:11:09+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-03T13:12:08+02:00 INFO (6): Request body : {"date_debut" : "08.05.2012","date_fin" : "13.05.2012","description_projet" : "project3 desc","status_hidden" : "Interrompu","paye_hidden" : "Non","prix_projet" : "3,000.00","request_type" : "projet","client" : "Koutobia","id_commande" : "13","type_projet" : "Web application","progression" : "8","description_commande" : "commande desc","employes" : []}
+2012-05-03T13:12:08+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:12:08+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T13:12:08+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:12:08+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:12:08+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-03T13:12:08+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "project3 desc"
+  ["prix"] => string(8) "3,000.00"
+  ["progression"] => string(1) "8"
+  ["status"] => string(10) "Interrompu"
+  ["date_debut"] => string(10) "08.05.2012"
+  ["date_fin"] => string(10) "13.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "13"
+}
+</pre>
+2012-05-03T13:12:08+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:12:08+02:00 INFO (6): last inserted ID = 38
+2012-05-03T13:12:08+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:12:08+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:15:37+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "04.05.2012","description_projet" : "project1 desc","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "400.00","request_type" : "projet","client" : "Koutobia","id_commande" : "13","type_projet" : "Mobile application","progression" : "0","description_commande" : "commande desc","employes" : []}
+2012-05-03T13:15:37+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:15:37+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T13:15:37+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:15:37+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:15:37+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-03T13:15:37+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "project1 desc"
+  ["prix"] => string(6) "400.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "04.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "13"
+}
+</pre>
+2012-05-03T13:15:37+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:15:37+02:00 INFO (6): last inserted ID = 39
+2012-05-03T13:15:37+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:15:37+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:19:08+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "02.05.2012","description_projet" : "project 1 description","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix_projet" : "1500.00","request_type" : "projet","client" : "Koutobia","type_projet" : "Mobile application","progression" : "0","description_commande" : "desc commande1","employes" : []}
+2012-05-03T13:19:08+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:19:08+02:00 INFO (6): NEW COMMANDE
+2012-05-03T13:19:08+02:00 INFO (6): client_id trouvé = 3
+2012-05-03T13:19:08+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "3"
+  ["libelle_commande"] => string(14) "desc commande1"
+}
+</pre>
+2012-05-03T13:19:08+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-03T13:19:08+02:00 INFO (6): last inserted ID = 14
+2012-05-03T13:19:08+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-03T13:19:08+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:19:08+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:19:08+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-03T13:19:08+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(21) "project 1 description"
+  ["prix"] => string(7) "1500.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "02.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "14"
+}
+</pre>
+2012-05-03T13:19:08+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:19:08+02:00 INFO (6): last inserted ID = 40
+2012-05-03T13:19:08+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:19:08+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:21:02+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "04.05.2012","description_projet" : "project 2 description","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","prix_projet" : "23122.21","request_type" : "projet","client" : "Koutobia","id_commande" : "14","type_projet" : "Web application","progression" : "9","description_commande" : "desc commande1","employes" : []}
+2012-05-03T13:21:02+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:21:02+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T13:21:02+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:21:02+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:21:02+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-03T13:21:02+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(21) "project 2 description"
+  ["prix"] => string(8) "23122.21"
+  ["progression"] => string(1) "9"
+  ["status"] => string(10) "Interrompu"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "04.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "14"
+}
+</pre>
+2012-05-03T13:21:03+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:21:03+02:00 INFO (6): last inserted ID = 41
+2012-05-03T13:21:03+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:21:03+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-03T13:22:56+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "04.05.2012","description_projet" : "project 2 description","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","prix_projet" : "23122.21","request_type" : "projet","client" : "Koutobia","id_commande" : "14","type_projet" : "Web application","progression" : "9","description_commande" : "desc commande1","employes" : []}
+2012-05-03T13:22:56+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-03T13:22:56+02:00 INFO (6): COMMANDE EXIST
+2012-05-03T13:22:56+02:00 INFO (6): INSERT PROJET
+2012-05-03T13:22:56+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-03T13:22:56+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-03T13:22:56+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(21) "project 2 description"
+  ["prix"] => string(8) "23122.21"
+  ["progression"] => string(1) "9"
+  ["status"] => string(10) "Interrompu"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "04.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "14"
+}
+</pre>
+2012-05-03T13:22:56+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-03T13:22:56+02:00 INFO (6): last inserted ID = 42
+2012-05-03T13:22:56+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-03T13:22:56+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
