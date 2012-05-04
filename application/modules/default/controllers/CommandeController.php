@@ -326,6 +326,12 @@ class CommandeController extends Zend_Controller_Action {
 		$this->view->list_services = $this->db->fetchAssoc ( $sql );
 		$sql = "SELECT * FROM type_service";
 		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
+		//get clients list
+		$sql = "SELECT * FROM client";
+		$this->view->list_clients = $this->db->fetchAssoc ( $sql );
+		//get employes list
+		$sql = "SELECT * FROM employe";
+		$this->view->list_employes = $this->db->fetchAssoc ( $sql );
 		
 	
 	}
@@ -387,21 +393,56 @@ class CommandeController extends Zend_Controller_Action {
 		$client = $this->db->fetchRow ( $sql );
 		$this->view->client = $client;
 		//get projects list
+		$condition = $this->db->quote ( 'Non' );
 		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
-		$sql = "SELECT * FROM projet WHERE id_commande = $id";
+		$sql = "SELECT * FROM projet WHERE id_commande = $id AND paye = $condition";
 		$this->view->list_projets = $this->db->fetchAssoc ( $sql );
 		$sql = "SELECT * FROM type_projet";
 		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
 		
 		
 		//get services list
-		$sql = "SELECT * FROM service WHERE id_commande = $id";
+		$sql = "SELECT * FROM service WHERE id_commande = $id AND paye = $condition";
 		$this->view->list_services = $this->db->fetchAssoc ( $sql );
 		$sql = "SELECT * FROM type_service";
 		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
 		$sql = "SELECT * FROM pack";
 		$this->view->list_packs = $this->db->fetchAssoc ( $sql );
 		
+	}
+	public function reglementAction(){
+		$this->_helper->layout->disableLayout();
+		//get the equivalent id_commande
+	
+		$req_id = $this->getRequest ()->getParam ( 'id' );
+		$id = $this->db->quote ( $req_id );
+		$sql = "SELECT * FROM commande WHERE id_commande = $id";
+		$this->db->setFetchMode ( Zend_Db::FETCH_OBJ );
+		$commande = $this->db->fetchRow ( $sql );
+		$this->view->commande = $commande;
+	
+		//get the client data
+		$id_client = $commande->id_client;
+		$sql = "SELECT * FROM client WHERE id_client = $id_client";
+		$client = $this->db->fetchRow ( $sql );
+		$this->view->client = $client;
+		//get projects list
+		$condition = $this->db->quote ( 'Non' );
+		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
+		$sql = "SELECT * FROM projet WHERE id_commande = $id AND paye = $condition";
+		$this->view->list_projets = $this->db->fetchAssoc ( $sql );
+		$sql = "SELECT * FROM type_projet";
+		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
+	
+	
+		//get services list
+		$sql = "SELECT * FROM service WHERE id_commande = $id AND paye = $condition";
+		$this->view->list_services = $this->db->fetchAssoc ( $sql );
+		$sql = "SELECT * FROM type_service";
+		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
+		$sql = "SELECT * FROM pack";
+		$this->view->list_packs = $this->db->fetchAssoc ( $sql );
+	
 	}
 
 }

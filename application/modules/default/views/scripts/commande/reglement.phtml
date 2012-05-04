@@ -62,7 +62,6 @@ echo '
 				echo ' </br> 
 				Adresse : '.$this->client->adresse.' 
 				</br> 
-				Sujet : '.$this->commande->libelle_commande.'
 			</h3>
 		</div>
 
@@ -96,8 +95,7 @@ echo '
 						echo '<textarea>'.$type_projet_string.'</textarea>
 						<a class="delete" href="javascript:;" title="Remove row">X</a>
 					</div></td>
-				<td class="description"><textarea>'.$projet['description'].'
-				Periode : '.$projet['date_debut'].' / '.$projet['date_fin'].'</textarea></td>
+				<td class="description"><textarea>Periode : '.$projet['date_debut'].' / '.$projet['date_fin'].'</textarea></td>
 				<td><textarea class="cost">'.$projet['prix'].'</textarea></td>
 				<td><textarea class="qty">1</textarea></td>
 				<td><span class="price"></span></td>
@@ -139,7 +137,7 @@ echo '
 						echo '<textarea>'.$type_service_string.' ( '.$pack_string.' )'.'</textarea>
 						<a class="delete" href="javascript:;" title="Remove row">X</a>
 					</div></td>
-				<td class="description"><textarea>'.$service['description'].'<br />Periode : '.$service['date_debut'].' / '.$service['date_fin'].'</textarea></td>
+				<td class="description"><textarea>Periode : '.$service['date_debut'].' / '.$service['date_fin'].'</textarea></td>
 				<td><textarea class="cost">'.$service['prix'].'</textarea></td>
 				<td><textarea class="qty">1</textarea></td>
 				<td><span class="price"></span></td>
@@ -173,10 +171,6 @@ echo '
 			<div id=" direction">
 				<br>
 
-				<h4>
-					<u>Arr�te la presente facture � la somme de :</u></br>
-					<textarea rows=1 cols=100></textarea>
-				</h4>
 			</div>
 			<div id="direction">
 				<br>
