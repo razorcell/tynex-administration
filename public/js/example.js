@@ -127,8 +127,6 @@ $(document)
 		.ready(
 				function() {
 					//khalifa
-					
-					
 					$('.pdf').click(function(){
 							
 					});

@@ -7,7 +7,32 @@ $(document)
 					var all_rows_selected = false;
 					$('form#add_projet').validationEngine();
 					$('form#add_service').validationEngine();
+					
+					$("input.commande_add").iphoneStyle({ // Custom Label With onChange
+						// function
+						checkedLabel : "montrer",
+						uncheckedLabel : "Cacher",
+						labelWidth : '85px',
+						onChange : function() {
+							if(this.elem.is(':checked')){//services
+								$('div.commande_add').show();
 
+								}
+							else{//projets
+								$('div.commande_add').hide();
+				
+							}
+							var chek = $(".input.commande_add").attr('checked');
+							if (chek) {
+								$(".disabled_map").fadeOut();
+							} else {
+								$(".disabled_map").fadeIn();
+							}
+							// $("#show_service").click(function () {
+							//$(".formEl_b").slideToggle("slow");
+							// });
+						}
+					});
 					$(".type").iphoneStyle({ // Custom Label With onChange
 						// function
 						checkedLabel : "Service",
@@ -191,7 +216,81 @@ $(document)
 															});
 										}
 									});
-
+					$('.selectall_projet')
+					.click(
+							function() {
+								if (all_rows_selected == false) {
+									$('.projet tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'false') {
+															$(this)
+																	.addClass(
+																			'row_selected');
+														}
+														all_rows_selected = true;
+													});
+								} else {
+									$('.projet tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'true') {
+															$(this)
+																	.removeClass(
+																			'row_selected');
+														}
+														all_rows_selected = false;
+													});
+								}
+							});
+					$('.selectall_service')
+					.click(
+							function() {
+								if (all_rows_selected == false) {
+									$('.service tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'false') {
+															$(this)
+																	.addClass(
+																			'row_selected');
+														}
+														all_rows_selected = true;
+													});
+								} else {
+									$('.service tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'true') {
+															$(this)
+																	.removeClass(
+																			'row_selected');
+														}
+														all_rows_selected = false;
+													});
+								}
+							});
+					$('.commande tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('.projet tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('.service tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
 					$('.commande tr').live('click', function() {
 						$(this).toggleClass('row_selected');
 					});
@@ -616,176 +715,5 @@ $(document)
 										}
 
 									});
-
-					
-					$('.modify_commande_entreprise')
-							.click(
-									function() {
-										var form_data;
-										var json_to_send = '{';
-										var i = 0;
-										var valide = true;
-
-										// $('.test').html('entreprise');
-										// commande est une entreprise
-
-										form_data = $('.f_c_e_modify')
-												.serializeArray();
-										if ($('.nom_e').val().length == 0) {
-											valide = false;
-										} else if ($('.email_e').val().length == 0) {
-											valide = false;
-										} else if ($('.tel_e').val().length == 0) {
-											valide = false;
-										} else if ($('.nom_r').val().length == 0) {
-											valide = false;
-										}
-										if (valide) {
-											for (i = 0; i < form_data.length; i++) {
-												if (i == 0) {
-													json_to_send = json_to_send
-															+ '"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												} else {
-													json_to_send = json_to_send
-															+ ',"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												}
-											}
-											// add id value
-											var id = $('.id_commande').attr(
-													'value');
-											json_to_send = json_to_send
-													+ ',"id" : "' + id + '"';
-											// gender
-											if ($('label[for="radio-1"]')
-													.hasClass('checked')) {
-												json_to_send = json_to_send
-														+ ',"gender_r" : "0"';
-											} else {
-												json_to_send = json_to_send
-														+ ',"gender_r" : "1"';
-											}
-
-											json_to_send = json_to_send
-													+ ',"type":"entreprise"';
-											json_to_send = json_to_send + '}';
-											$
-													.ajax({
-														type : "POST",
-														url : "/commande/modify",
-														data : json_to_send,
-														success : function(data) {
-															// var json =
-															// $.parseJSON(data);
-
-															if (data == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'Modification de l\'entreprise réussie',
-																		3000);
-															} else {
-																showError(data,
-																		3000);
-															}
-														}
-													});
-										} else {
-											showError(
-													'Veuillez revoir le formulaire de l\'entreprise',
-													3000);
-										}
-
-									});// end
-					// modify_commande_entreprise.click()
-					$('.modify_commande_particulier')
-							.click(
-									function() {
-										var form_data;
-										var json_to_send = '{';
-										var i = 0;
-										var valide = true;
-										// $('.test').html('particulier');
-										form_data = $('.f_c_p_modify')
-												.serializeArray();
-
-										if ($('.nom_p').val().length == 0) {
-											valide = false;
-										}
-										if ($('.email_p').val().length == 0) {
-											if ($('.tel_p').val().length == 0) {
-												valide = false;
-											}
-										}
-										if (valide) {
-											for (i = 0; i < form_data.length; i++) {
-												if (i == 0) {
-													json_to_send = json_to_send
-															+ '"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												} else {
-													json_to_send = json_to_send
-															+ ',"'
-															+ form_data[i].name
-															+ '" : "'
-															+ form_data[i].value
-															+ '"';
-												}
-											}
-											// add id value
-											var id = $('.id_commande').find('input#id_commande').attr(
-													'value');
-											json_to_send = json_to_send
-													+ ',"id" : "' + id + '"';
-											// gender
-											if ($('label[for="radio-1"]')
-													.hasClass('checked')) {
-												json_to_send = json_to_send
-														+ ',"gender_p" : "0"';
-											} else {
-												json_to_send = json_to_send
-														+ ',"gender_p" : "1"';
-											}
-
-											json_to_send = json_to_send
-													+ ',"type":"particulier"';
-											json_to_send = json_to_send + '}';
-											$
-													.ajax({
-														type : "POST",
-														url : "/commande/modify",
-														data : json_to_send,
-														success : function(data) {
-															// var json =
-															// $.parseJSON(data);
-
-															if (data == 'success') {// maintenant
-																// on
-																// peut
-																showSuccess(
-																		'Modification réussie',
-																		3000);
-															} else {
-																showError(data,
-																		3000);
-															}
-														}
-													});
-										} else {
-											showError(
-													'Veuillez revoir le formulaire de particulier',
-													3000);
-										}
-									});// end modify commande particulier
 					$('#id_commande').attr('value','');//clear id after page refresh
 				});

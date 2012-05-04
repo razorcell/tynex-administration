@@ -1,0 +1,102 @@
+2012-05-04T00:27:09+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:27:09+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T00:27:14+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:27:16+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:31:50+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:31:50+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T00:40:18+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:18+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "43"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "43"
+  }
+}
+</pre>
+2012-05-04T00:40:25+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:25+02:00 INFO (6): Projet modifyAction()
+2012-05-04T00:40:25+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Fort recommendation sur le style(couleur, banniére...), contrainte de couleur : bleu","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","prix" : "5000.00","id" : "43","commande" : "18","type_projet" : "Web application","progression" : "61"}
+2012-05-04T00:40:25+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T00:40:25+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-04T00:40:25+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(85) "Fort recommendation sur le style(couleur, banniére...), contrainte de couleur : bleu"
+  ["prix"] => string(7) "5000.00"
+  ["progression"] => string(2) "61"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T00:40:25+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 43)
+2012-05-04T00:40:25+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T00:40:25+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-04T00:40:36+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:36+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "43"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "43"
+  }
+}
+</pre>
+2012-05-04T00:40:40+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:40+02:00 INFO (6): Projet modifyAction()
+2012-05-04T00:40:40+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Fort recommendation sur le style(couleur, banniére...), contrainte de couleur : bleu","status_hidden" : "interrompu","paye" : "1","paye_hidden" : "Oui","prix" : "5000.00","id" : "43","commande" : "18","type_projet" : "Web application","progression" : "61"}
+2012-05-04T00:40:40+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T00:40:40+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-04T00:40:40+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(85) "Fort recommendation sur le style(couleur, banniére...), contrainte de couleur : bleu"
+  ["prix"] => string(7) "5000.00"
+  ["progression"] => string(2) "61"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T00:40:40+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 43)
+2012-05-04T00:40:40+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T00:40:40+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-04T00:40:52+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:52+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "44"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "44"
+  }
+}
+</pre>
+2012-05-04T00:40:59+02:00 INFO (6): Fonction init() executée
+2012-05-04T00:40:59+02:00 INFO (6): Projet modifyAction()
+2012-05-04T00:40:59+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "application mobile pour le partage de photo et de video PUB, au cour de l'evenement","status_hidden" : "interrompu","paye" : "1","paye_hidden" : "Oui","prix" : "6000.00","id" : "44","commande" : "18","type_projet" : "Mobile application","progression" : "0"}
+2012-05-04T00:40:59+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T00:40:59+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-04T00:40:59+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(83) "application mobile pour le partage de photo et de video PUB, au cour de l&#039;evenement"
+  ["prix"] => string(7) "6000.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T00:40:59+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 44)
+2012-05-04T00:40:59+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T00:40:59+02:00 INFO (6): Aucun employe definie pour ce projet
