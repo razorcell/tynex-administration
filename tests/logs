@@ -2273,3 +2273,532 @@
 }
 </pre>
 2012-05-05T15:26:41+02:00 INFO (6): client = entreprise
+2012-05-05T16:12:44+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:12:44+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:12:47+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:12:47+02:00 INFO (6): Client modifyform()
+2012-05-05T16:12:47+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T16:12:47+02:00 INFO (6): client = particulier
+2012-05-05T16:13:34+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:13:34+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:13:39+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:13:39+02:00 INFO (6): Client modifyform()
+2012-05-05T16:13:39+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "2"
+  ["nom"] => string(6) "Fadili"
+  ["prenom"] => string(5) "Ahmed"
+  ["tel"] => NULL
+  ["tel_societe"] => string(10) "0521625342"
+  ["fax"] => NULL
+  ["email"] => NULL
+  ["adresse"] => NULL
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => NULL
+  ["societe"] => string(4) "AKWA"
+  ["email_societe"] => string(13) "akwa@akwa.com"
+}
+</pre>
+2012-05-05T16:13:39+02:00 INFO (6): client = entreprise
+2012-05-05T16:13:43+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:13:43+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:13:49+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:13:49+02:00 INFO (6): Client modifyform()
+2012-05-05T16:13:49+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "5"
+  ["nom"] => string(6) "ahmadi"
+  ["prenom"] => string(6) "toriya"
+  ["tel"] => string(10) "0667564532"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(24) "touriya.ahmadi@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Femme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T16:13:49+02:00 INFO (6): client = particulier
+2012-05-05T16:14:02+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:14:02+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:14:38+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:14:38+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:14:45+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:14:45+02:00 INFO (6): Client modifyform()
+2012-05-05T16:14:45+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "2"
+  ["nom"] => string(6) "Fadili"
+  ["prenom"] => string(5) "Ahmed"
+  ["tel"] => NULL
+  ["tel_societe"] => string(10) "0521625342"
+  ["fax"] => NULL
+  ["email"] => NULL
+  ["adresse"] => NULL
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => NULL
+  ["societe"] => string(4) "AKWA"
+  ["email_societe"] => string(13) "akwa@akwa.com"
+}
+</pre>
+2012-05-05T16:14:45+02:00 INFO (6): client = entreprise
+2012-05-05T16:14:56+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:14:56+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:15:32+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:15:32+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T16:48:55+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:48:55+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-05T16:49:01+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:01+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "15"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "15"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-05T16:49:05+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:05+02:00 INFO (6): Projet modifyAction()
+2012-05-05T16:49:05+02:00 INFO (6): Request body : {"date_debut" : "2002-05-20","date_fin" : "2021-05-20","description" : "Hotel farah demander pas M.Skali Haut priorité","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "12000.00","id" : "15","commande" : "1","type_projet" : "Desktop application","progression" : "35"}
+2012-05-05T16:49:05+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-05T16:49:05+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T16:49:05+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(47) "Hotel farah demander pas M.Skali Haut priorité"
+  ["prix"] => string(8) "12000.00"
+  ["progression"] => string(2) "35"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2002-05-20"
+  ["date_fin"] => string(10) "2021-05-20"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T16:49:06+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 15)
+2012-05-05T16:49:06+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-05T16:49:06+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-05T16:49:09+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:09+02:00 INFO (6): Projet modifyAction()
+2012-05-05T16:49:09+02:00 INFO (6): Request body : {"date_debut" : "2002-05-20","date_fin" : "2021-05-20","description" : "Hotel farah demander pas M.Skali Haut priorité","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "12000.00","id" : "15","commande" : "1","type_projet" : "Desktop application","progression" : "0"}
+2012-05-05T16:49:09+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-05T16:49:09+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T16:49:09+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(47) "Hotel farah demander pas M.Skali Haut priorité"
+  ["prix"] => string(8) "12000.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2002-05-20"
+  ["date_fin"] => string(10) "2021-05-20"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T16:49:09+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 15)
+2012-05-05T16:49:09+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-05T16:49:09+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-05T16:49:21+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:21+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-05T16:49:26+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:26+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "15"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "15"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-05T16:49:30+02:00 INFO (6): Fonction init() executée
+2012-05-05T16:49:30+02:00 INFO (6): Projet modifyAction()
+2012-05-05T16:49:30+02:00 INFO (6): Request body : {"date_debut" : "2002-05-20","date_fin" : "2021-05-20","description" : "Hotel farah demander pas M.Skali Haut priorité","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "12000.00","id" : "15","commande" : "1","type_projet" : "Desktop application","progression" : "100"}
+2012-05-05T16:49:30+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-05T16:49:30+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T16:49:30+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(47) "Hotel farah demander pas M.Skali Haut priorité"
+  ["prix"] => string(8) "12000.00"
+  ["progression"] => string(3) "100"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2002-05-20"
+  ["date_fin"] => string(10) "2021-05-20"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T16:49:30+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 15)
+2012-05-05T16:49:30+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-05T16:49:30+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-05T17:19:33+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:19:33+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-05T17:19:38+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:19:41+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:19:45+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:19:45+02:00 INFO (6):  projet addAction() 
+2012-05-05T17:19:45+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-05T17:19:46+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:20:23+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:20:23+02:00 INFO (6): Projet submitAction()
+2012-05-05T17:20:23+02:00 INFO (6): Request body : {"date_debut" : "31.05.2012","date_fin" : "30.06.2012","description" : "project description","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix" : "6600.00","commande" : "1","type_projet" : "Desktop application","progression" : "0","employes" : [{"name " : "mendili"},{"name " : "alami"}]}
+2012-05-05T17:20:23+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-05T17:20:23+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T17:20:23+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(19) "project description"
+  ["prix"] => string(7) "6600.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "31.05.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T17:20:23+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T17:20:23+02:00 INFO (6): last inserted ID = 56
+2012-05-05T17:20:23+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-05T17:20:23+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-05T17:20:23+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-05T17:20:23+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "56"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-05T17:20:23+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T17:20:23+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T17:20:23+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-05T17:20:23+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "56"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-05T17:20:23+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T17:20:23+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T17:20:42+02:00 INFO (6): Fonction init() executée
+2012-05-05T17:20:42+02:00 INFO (6): Projet submitAction()
+2012-05-05T17:20:42+02:00 INFO (6): Request body : {"date_debut" : "02.06.2012","date_fin" : "27.06.2012","description" : "project description","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix" : "6600.00","commande" : "1","type_projet" : "Mobile application","progression" : "0","employes" : [{"name " : "mendili"},{"name " : "alami"}]}
+2012-05-05T17:20:42+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-05T17:20:42+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-05T17:20:42+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(19) "project description"
+  ["prix"] => string(7) "6600.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.06.2012"
+  ["date_fin"] => string(10) "27.06.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T17:20:42+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T17:20:42+02:00 INFO (6): last inserted ID = 57
+2012-05-05T17:20:42+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-05T17:20:42+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-05T17:20:42+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-05T17:20:42+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "57"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-05T17:20:42+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T17:20:42+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T17:20:42+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-05T17:20:42+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "57"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-05T17:20:42+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T17:20:42+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T18:47:19+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:47:19+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-05T18:47:30+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:47:30+02:00 INFO (6): service modifyform()
+2012-05-05T18:47:30+02:00 INFO (6): <pre>object(stdClass)#117 (10) {
+  ["id_service"] => string(1) "4"
+  ["description"] => string(12) "test service"
+  ["prix"] => string(4) "1250"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["id_pack"] => NULL
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:47:43+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:47:43+02:00 INFO (6): service modifyACtion()
+2012-05-05T18:47:43+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "31.05.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T18:47:43+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T18:47:43+02:00 INFO (6): pack = aucun
+2012-05-05T18:47:43+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T18:47:43+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:47:43+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T18:47:43+02:00 INFO (6): insertion - service - OUI
+2012-05-05T18:51:00+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:51:00+02:00 INFO (6): service modifyACtion()
+2012-05-05T18:51:00+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "31.05.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T18:51:00+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T18:51:00+02:00 INFO (6): pack = aucun
+2012-05-05T18:51:00+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T18:51:00+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:51:00+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T18:51:00+02:00 INFO (6): insertion - service - OUI
+2012-05-05T18:51:05+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:51:05+02:00 INFO (6): service modifyACtion()
+2012-05-05T18:51:05+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "30.06.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T18:51:05+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T18:51:05+02:00 INFO (6): pack = aucun
+2012-05-05T18:51:05+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T18:51:05+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:51:06+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T18:51:06+02:00 INFO (6): insertion - service - OUI
+2012-05-05T18:51:39+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:51:39+02:00 INFO (6): service modifyACtion()
+2012-05-05T18:51:39+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "31.07.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T18:51:39+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T18:51:39+02:00 INFO (6): pack = aucun
+2012-05-05T18:51:39+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T18:51:39+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:51:39+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T18:51:39+02:00 INFO (6): insertion - service - OUI
+2012-05-05T18:51:50+02:00 INFO (6): Fonction init() executée
+2012-05-05T18:51:50+02:00 INFO (6): service modifyACtion()
+2012-05-05T18:51:50+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "30.06.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T18:51:50+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T18:51:50+02:00 INFO (6): pack = aucun
+2012-05-05T18:51:50+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T18:51:50+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.06.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T18:51:50+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T18:51:50+02:00 INFO (6): insertion - service - OUI
+2012-05-05T19:01:26+02:00 INFO (6): Fonction init() executée
+2012-05-05T19:01:26+02:00 INFO (6): service modifyACtion()
+2012-05-05T19:01:26+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "12.06.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T19:01:26+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "12.06.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T19:01:26+02:00 INFO (6): pack = aucun
+2012-05-05T19:01:26+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T19:01:26+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "12.06.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T19:01:26+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T19:01:26+02:00 INFO (6): insertion - service - OUI
+2012-05-05T19:01:35+02:00 INFO (6): Fonction init() executée
+2012-05-05T19:01:35+02:00 INFO (6): service modifyACtion()
+2012-05-05T19:01:35+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "30.05.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T19:01:35+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T19:01:35+02:00 INFO (6): pack = aucun
+2012-05-05T19:01:35+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T19:01:35+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T19:01:35+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T19:01:35+02:00 INFO (6): insertion - service - OUI
+2012-05-05T19:12:49+02:00 INFO (6): Fonction init() executée
+2012-05-05T19:12:49+02:00 INFO (6): service modifyACtion()
+2012-05-05T19:12:49+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "05.01.2012","date_fin" : "21.06.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-05T19:12:49+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "21.06.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-05T19:12:49+02:00 INFO (6): pack = aucun
+2012-05-05T19:12:49+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T19:12:49+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "05.01.2012"
+  ["date_fin"] => string(10) "21.06.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T19:12:49+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-05T19:12:49+02:00 INFO (6): insertion - service - OUI
