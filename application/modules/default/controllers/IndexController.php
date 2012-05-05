@@ -104,7 +104,7 @@ class IndexController extends Zend_Controller_Action {
 		//send list of services and type_service to view
 		$sql = 'SELECT *
 		FROM service NATURAL JOIN type_service';
-		$this->view->services__types = $this->db->fetchRow ( $sql );
+		$this->view->services__types = $this->db->fetchAssoc ( $sql );
 		
 		
 	}
