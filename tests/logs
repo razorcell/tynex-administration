@@ -1364,3 +1364,912 @@
 </pre>
 2012-05-04T19:01:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
 2012-05-04T19:01:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T00:17:52+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:17:52+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T00:37:21+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:37:21+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T00:37:24+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:37:24+02:00 INFO (6): Client modifyform()
+2012-05-05T00:37:24+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T00:37:24+02:00 INFO (6): client = particulier
+2012-05-05T00:42:08+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:42:08+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T00:44:15+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:44:15+02:00 INFO (6): Client modifyform()
+2012-05-05T00:44:15+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "2"
+  ["nom"] => string(6) "Fadili"
+  ["prenom"] => string(5) "Ahmed"
+  ["tel"] => NULL
+  ["tel_societe"] => string(10) "0521625342"
+  ["fax"] => NULL
+  ["email"] => NULL
+  ["adresse"] => NULL
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => NULL
+  ["societe"] => string(4) "AKWA"
+  ["email_societe"] => string(13) "akwa@akwa.com"
+}
+</pre>
+2012-05-05T00:44:15+02:00 INFO (6): client = entreprise
+2012-05-05T00:45:19+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:45:19+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T00:45:29+02:00 INFO (6): Fonction init() executée
+2012-05-05T00:45:29+02:00 INFO (6): Client modifyform()
+2012-05-05T00:45:29+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "5"
+  ["nom"] => string(6) "ahmadi"
+  ["prenom"] => string(6) "toriya"
+  ["tel"] => string(10) "0667564532"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(24) "touriya.ahmadi@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Femme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T00:45:29+02:00 INFO (6): client = particulier
+2012-05-05T14:44:05+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:44:05+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T14:44:08+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:44:10+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:50:20+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:50:20+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T14:50:24+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:50:24+02:00 INFO (6): Client modifyform()
+2012-05-05T14:50:24+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:50:24+02:00 INFO (6): client = particulier
+2012-05-05T14:51:29+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:51:29+02:00 INFO (6): Client modifyform()
+2012-05-05T14:51:29+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:51:29+02:00 INFO (6): client = particulier
+2012-05-05T14:53:52+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:53:52+02:00 INFO (6): Client modifyform()
+2012-05-05T14:53:52+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:53:52+02:00 INFO (6): client = particulier
+2012-05-05T14:54:18+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:54:18+02:00 INFO (6): client modifyAction()
+2012-05-05T14:54:18+02:00 INFO (6): Request body : {"nom_p" : "Kevin","prenom_p" : "nixon","adresse_p" : "Bloc A N56 Rabat","email_p" : "kevin@gmail.com","tel_p" : "0600548565","id" : "1","gender_p" : "0","type":"particulier"}
+2012-05-05T14:54:18+02:00 INFO (6): Decoded data from user : <pre>array(8) {
+  ["nom_p"] => string(5) "Kevin"
+  ["prenom_p"] => string(5) "nixon"
+  ["adresse_p"] => string(16) "Bloc A N56 Rabat"
+  ["email_p"] => string(15) "kevin@gmail.com"
+  ["tel_p"] => string(10) "0600548565"
+  ["id"] => string(1) "1"
+  ["gender_p"] => string(1) "0"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-05-05T14:54:18+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-05-05T14:54:18+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:54:18+02:00 INFO (6): client particulier update condition : id_client = 1
+2012-05-05T14:54:18+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 1)
+2012-05-05T14:54:18+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-05-05T14:54:21+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:54:21+02:00 INFO (6): Client modifyform()
+2012-05-05T14:54:21+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:54:21+02:00 INFO (6): client = particulier
+2012-05-05T14:55:20+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:55:20+02:00 INFO (6): Client modifyform()
+2012-05-05T14:55:20+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:55:20+02:00 INFO (6): client = particulier
+2012-05-05T14:56:13+02:00 INFO (6): Fonction init() executée
+2012-05-05T14:56:13+02:00 INFO (6): Client modifyform()
+2012-05-05T14:56:13+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T14:56:13+02:00 INFO (6): client = particulier
+2012-05-05T15:01:42+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:01:42+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-05T15:01:44+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:01:44+02:00 INFO (6):  service addAction() 
+2012-05-05T15:01:44+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-05T15:01:46+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:01:51+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:01:51+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-05T15:01:51+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-05T15:01:51+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-05T15:02:07+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:07+02:00 INFO (6): service submitAction()
+2012-05-05T15:02:07+02:00 INFO (6): Request body : {"prix" : "2,650.00","status" : "1","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","description" : "service desc","date_debut" : "01.05.2012","date_fin" : "30.05.2012","commande" : "1","type_service" : "Hebergement","pack" : "Pack Professionnel"}
+2012-05-05T15:02:07+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["prix"] => string(8) "2,650.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(12) "service desc"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(11) "Hebergement"
+  ["pack"] => string(18) "Pack Professionnel"
+}
+</pre>
+2012-05-05T15:02:07+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-05T15:02:07+02:00 INFO (6): id type_service trouvé = 13
+2012-05-05T15:02:07+02:00 INFO (6): id pack trouvé = 8
+2012-05-05T15:02:07+02:00 INFO (6): id pack trouvé = 14
+2012-05-05T15:02:07+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(8) "2,650.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "14"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:02:07+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:02:07+02:00 INFO (6): last inserted ID = 5
+2012-05-05T15:02:07+02:00 INFO (6): insertion - service - OUI
+2012-05-05T15:02:10+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:10+02:00 INFO (6): Request body : {"type_service":"Referencement"}
+2012-05-05T15:02:10+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [12] => array(3) {
+    ["id_pack"] => string(2) "12"
+    ["libelle_pack"] => string(14) "Pack Débutant"
+    ["id_type_service"] => string(2) "15"
+  }
+  [13] => array(3) {
+    ["id_pack"] => string(2) "13"
+    ["libelle_pack"] => string(12) "Pack Amateur"
+    ["id_type_service"] => string(2) "15"
+  }
+  [14] => array(3) {
+    ["id_pack"] => string(2) "14"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-05T15:02:10+02:00 INFO (6): {"12":{"id_pack":"12","libelle_pack":"Pack D\u00e9butant","id_type_service":"15"},"13":{"id_pack":"13","libelle_pack":"Pack Amateur","id_type_service":"15"},"14":{"id_pack":"14","libelle_pack":"Pack Professionnel","id_type_service":"15"}}
+2012-05-05T15:02:20+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:20+02:00 INFO (6): service submitAction()
+2012-05-05T15:02:20+02:00 INFO (6): Request body : {"prix" : "3,050.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "service desc","date_debut" : "09.05.2012","date_fin" : "24.05.2012","commande" : "1","type_service" : "Referencement","pack" : "Pack Professionnel"}
+2012-05-05T15:02:20+02:00 INFO (6): Decoded data from user : <pre>array(9) {
+  ["prix"] => string(8) "3,050.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "service desc"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(13) "Referencement"
+  ["pack"] => string(18) "Pack Professionnel"
+}
+</pre>
+2012-05-05T15:02:20+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-05T15:02:20+02:00 INFO (6): id type_service trouvé = 15
+2012-05-05T15:02:20+02:00 INFO (6): id pack trouvé = 8
+2012-05-05T15:02:20+02:00 INFO (6): id pack trouvé = 14
+2012-05-05T15:02:20+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(8) "3,050.00"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "15"
+  ["id_pack"] => string(2) "14"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:02:20+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:02:20+02:00 INFO (6): last inserted ID = 6
+2012-05-05T15:02:20+02:00 INFO (6): insertion - service - OUI
+2012-05-05T15:02:23+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:23+02:00 INFO (6): Request body : {"type_service":"Vectors"}
+2012-05-05T15:02:23+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-05-05T15:02:23+02:00 INFO (6): []
+2012-05-05T15:02:32+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:32+02:00 INFO (6): service submitAction()
+2012-05-05T15:02:32+02:00 INFO (6): Request body : {"prix" : "3,650.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "service desc","date_debut" : "03.05.2012","date_fin" : "30.05.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun"}
+2012-05-05T15:02:32+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["prix"] => string(8) "3,650.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(12) "service desc"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["pack"] => string(5) "aucun"
+}
+</pre>
+2012-05-05T15:02:32+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-05T15:02:32+02:00 INFO (6): pack = aucun
+2012-05-05T15:02:32+02:00 INFO (6): id type service trouvé = 16
+2012-05-05T15:02:32+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(8) "3,650.00"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:02:32+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:02:32+02:00 INFO (6): last inserted ID = 7
+2012-05-05T15:02:32+02:00 INFO (6): insertion - service - OUI
+2012-05-05T15:02:34+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:34+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-05T15:02:34+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-05T15:02:34+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-05T15:02:45+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:45+02:00 INFO (6): service submitAction()
+2012-05-05T15:02:45+02:00 INFO (6): Request body : {"prix" : "1,750.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "service desc","date_debut" : "16.05.2012","date_fin" : "29.05.2012","commande" : "1","type_service" : "Hebergement","pack" : "Pack Etudiant"}
+2012-05-05T15:02:45+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["prix"] => string(8) "1,750.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(12) "service desc"
+  ["date_debut"] => string(10) "16.05.2012"
+  ["date_fin"] => string(10) "29.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(11) "Hebergement"
+  ["pack"] => string(13) "Pack Etudiant"
+}
+</pre>
+2012-05-05T15:02:45+02:00 INFO (6): *********************PHASE D INSERTION D UNE ENTREPRISE************
+2012-05-05T15:02:45+02:00 INFO (6): id type_service trouvé = 13
+2012-05-05T15:02:45+02:00 INFO (6): id pack trouvé = 7
+2012-05-05T15:02:45+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(8) "1,750.00"
+  ["date_debut"] => string(10) "16.05.2012"
+  ["date_fin"] => string(10) "29.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "7"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:02:45+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:02:45+02:00 INFO (6): last inserted ID = 8
+2012-05-05T15:02:45+02:00 INFO (6): insertion - service - OUI
+2012-05-05T15:02:48+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:48+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-05T15:02:50+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:02:50+02:00 INFO (6):  projet addAction() 
+2012-05-05T15:02:50+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-05T15:02:52+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:03:12+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:03:12+02:00 INFO (6): Projet submitAction()
+2012-05-05T15:03:12+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "18.05.2012","description" : "project desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix" : "2800.00","commande" : "1","type_projet" : "Desktop application","progression" : "60","employes" : [{"name " : "mendili"},{"name " : "alami"}]}
+2012-05-05T15:03:12+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-05T15:03:12+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T15:03:12+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(7) "2800.00"
+  ["progression"] => string(2) "60"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "18.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:12+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:03:12+02:00 INFO (6): last inserted ID = 53
+2012-05-05T15:03:12+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-05T15:03:12+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-05T15:03:12+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-05T15:03:12+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "53"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-05T15:03:12+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:12+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:12+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-05T15:03:12+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "53"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:12+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:12+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:38+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:03:38+02:00 INFO (6): Projet submitAction()
+2012-05-05T15:03:38+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description" : "project desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix" : "9700.00","commande" : "1","type_projet" : "Web application","progression" : "25","employes" : [{"name " : "mendili"},{"name " : "alami"}]}
+2012-05-05T15:03:38+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-05T15:03:38+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-05T15:03:38+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(7) "9700.00"
+  ["progression"] => string(2) "25"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:38+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:03:38+02:00 INFO (6): last inserted ID = 54
+2012-05-05T15:03:38+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-05T15:03:38+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-05T15:03:38+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-05T15:03:38+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "54"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-05T15:03:38+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:38+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:38+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-05T15:03:38+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "54"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:38+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:38+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:49+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:03:49+02:00 INFO (6): Projet submitAction()
+2012-05-05T15:03:49+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "22.05.2012","description" : "project desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix" : "9300.00","commande" : "1","type_projet" : "Desktop application","progression" : "25","employes" : [{"name " : "mendili"},{"name " : "alami"},{"name " : "rmili"}]}
+2012-05-05T15:03:49+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-05T15:03:49+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-05T15:03:49+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(7) "9300.00"
+  ["progression"] => string(2) "25"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "22.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:49+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-05T15:03:49+02:00 INFO (6): last inserted ID = 55
+2012-05-05T15:03:49+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-05T15:03:49+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-05T15:03:49+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-05T15:03:49+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "55"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-05T15:03:49+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:49+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-05T15:03:49+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "55"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-05T15:03:49+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:03:49+02:00 INFO (6): MATCH FOUND : nom employe trouvé rmili<-------> nom employe from user rmili
+2012-05-05T15:03:49+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "55"
+  ["id_employe"] => string(1) "4"
+}
+</pre>
+2012-05-05T15:03:49+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-05T15:03:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-05T15:10:47+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:10:47+02:00 INFO (6): Client modifyform()
+2012-05-05T15:10:47+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:10:47+02:00 INFO (6): client = particulier
+2012-05-05T15:11:45+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:11:45+02:00 INFO (6): Client modifyform()
+2012-05-05T15:11:45+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:11:45+02:00 INFO (6): client = particulier
+2012-05-05T15:13:10+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:13:10+02:00 INFO (6): Client modifyform()
+2012-05-05T15:13:10+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:13:10+02:00 INFO (6): client = particulier
+2012-05-05T15:16:56+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:16:56+02:00 INFO (6): Client modifyform()
+2012-05-05T15:16:56+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:16:56+02:00 INFO (6): client = particulier
+2012-05-05T15:18:51+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:18:51+02:00 INFO (6): Client modifyform()
+2012-05-05T15:18:51+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:18:51+02:00 INFO (6): client = particulier
+2012-05-05T15:19:24+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:19:24+02:00 INFO (6): Client modifyform()
+2012-05-05T15:19:24+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:19:24+02:00 INFO (6): client = particulier
+2012-05-05T15:20:17+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:20:17+02:00 INFO (6): Client modifyform()
+2012-05-05T15:20:17+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:20:17+02:00 INFO (6): client = particulier
+2012-05-05T15:20:23+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:20:23+02:00 INFO (6): Client modifyform()
+2012-05-05T15:20:23+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:20:23+02:00 INFO (6): client = particulier
+2012-05-05T15:21:21+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:21:21+02:00 INFO (6): Client modifyform()
+2012-05-05T15:21:21+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:21:21+02:00 INFO (6): client = particulier
+2012-05-05T15:22:53+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:22:53+02:00 INFO (6): Client modifyform()
+2012-05-05T15:22:53+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:22:53+02:00 INFO (6): client = particulier
+2012-05-05T15:24:11+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:11+02:00 INFO (6): Client modifyform()
+2012-05-05T15:24:11+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:24:11+02:00 INFO (6): client = particulier
+2012-05-05T15:24:25+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:28+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:28+02:00 INFO (6): Client modifyform()
+2012-05-05T15:24:28+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:24:28+02:00 INFO (6): client = particulier
+2012-05-05T15:24:35+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:36+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:36+02:00 INFO (6): Client modifyform()
+2012-05-05T15:24:36+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:24:36+02:00 INFO (6): client = particulier
+2012-05-05T15:24:46+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:49+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:24:49+02:00 INFO (6): Client modifyform()
+2012-05-05T15:24:49+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:24:49+02:00 INFO (6): client = particulier
+2012-05-05T15:25:04+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:06+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:06+02:00 INFO (6): Client modifyform()
+2012-05-05T15:25:06+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:25:06+02:00 INFO (6): client = particulier
+2012-05-05T15:25:17+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:18+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:18+02:00 INFO (6): Client modifyform()
+2012-05-05T15:25:18+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:25:18+02:00 INFO (6): client = particulier
+2012-05-05T15:25:27+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:28+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:28+02:00 INFO (6): Client modifyform()
+2012-05-05T15:25:28+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:25:28+02:00 INFO (6): client = particulier
+2012-05-05T15:25:51+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:25:51+02:00 INFO (6): Client modifyform()
+2012-05-05T15:25:51+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(16) "Bloc A N56 Rabat"
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-05T15:25:51+02:00 INFO (6): client = particulier
+2012-05-05T15:26:32+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:26:32+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-05T15:26:37+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:26:37+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-05T15:26:41+02:00 INFO (6): Fonction init() executée
+2012-05-05T15:26:41+02:00 INFO (6): Client modifyform()
+2012-05-05T15:26:41+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "4"
+  ["nom"] => string(4) "Omar"
+  ["prenom"] => string(7) "mahmoud"
+  ["tel"] => string(0) ""
+  ["tel_societe"] => string(10) "0534543465"
+  ["fax"] => string(0) ""
+  ["email"] => string(19) "omar@clubmoving.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(11) "Club Moving"
+  ["email_societe"] => string(21) "moving@clubmoving.com"
+}
+</pre>
+2012-05-05T15:26:41+02:00 INFO (6): client = entreprise
