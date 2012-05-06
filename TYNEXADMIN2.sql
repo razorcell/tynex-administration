@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Jeu 03 Mai 2012 à 23:07
+-- Généré le : Sam 05 Mai 2012 à 19:50
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `client` (
 --
 
 INSERT INTO `client` (`id_client`, `nom`, `prenom`, `tel`, `tel_societe`, `fax`, `email`, `adresse`, `type`, `gender`, `societe`, `email_societe`) VALUES
-(1, 'Kevin', 'nixon', '0600548565', '', '', 'kevin@gmail.com', '', 'Particulier', 'Homme', '', ''),
+(1, 'Kevin', 'nixon', '0600548565', '', '', 'kevin@gmail.com', 'Bloc A N56 Rabat', 'Particulier', 'Homme', '', ''),
 (2, 'Fadili', 'Ahmed', NULL, '0521625342', NULL, NULL, NULL, 'Entreprise', NULL, 'AKWA', 'akwa@akwa.com'),
 (3, 'Slimani', 'ahmed', '0621458595', '0562125242', '', 'slimani@kotobia.com', 'Bloc N marrakech', 'Entreprise', 'Homme', 'Koutobia', 'koutobia@kotobia.com'),
 (4, 'Omar', 'mahmoud', '', '0534543465', '', 'omar@clubmoving.com', '', 'Entreprise', 'Homme', 'Club Moving', 'moving@clubmoving.com'),
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
   PRIMARY KEY (`id_commande`),
   UNIQUE KEY `id_commande` (`id_commande`,`id_client`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `commande`
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
 
 INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
 (1, 1, 'Economic forum, from M.ALAMI'),
-(18, 4, 'Organization d''un evenement pour rassembler les experts et professionnel du sport');
+(2, 1, 'commande desc');
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `employe` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `id_poste` (`id_poste`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `employe`
@@ -123,7 +123,8 @@ CREATE TABLE IF NOT EXISTS `employe` (
 INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES
 (1, 'alami', 'hassan', 'Homme', 'hassan', 'pass', '0632125242', 'hassan@gmail.com', 'Bloc A Agadir', 7),
 (2, 'mendili', 'karima', 'Femme', 'karima', 'pass', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7),
-(3, 'sefrioui', 'abderahman', 'Homme', 'adbo', 'pass', '0635626894', 'adbo@gmail.com', 'Bloc C Agadir', 7);
+(3, 'sefrioui', 'abderahman', 'Homme', 'adbo', 'pass', '0635626894', 'adbo@gmail.com', 'Bloc C Agadir', 7),
+(4, 'rmili', 'khalifa', 'Homme', 'khalifa', 'pass', '0600775184', 'khalifa@gmail.com', 'bloc A Agadir', 6);
 
 -- --------------------------------------------------------
 
@@ -143,15 +144,14 @@ CREATE TABLE IF NOT EXISTS `intervention` (
 --
 
 INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
-(1, 14),
-(2, 14),
-(1, 15),
-(2, 15),
-(3, 15),
-(3, 43),
-(1, 43),
-(3, 44),
-(1, 44);
+(1, 58),
+(2, 58),
+(1, 59),
+(2, 59),
+(1, 60),
+(2, 60),
+(1, 61),
+(2, 61);
 
 -- --------------------------------------------------------
 
@@ -197,6 +197,8 @@ CREATE TABLE IF NOT EXISTS `occuper` (
 
 INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES
 (1, 11),
+(4, 11),
+(4, 14),
 (2, 15),
 (3, 15);
 
@@ -262,25 +264,25 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `prix` float NOT NULL,
   `progression` int(11) NOT NULL,
   `status` enum('Actif','Interrompu') NOT NULL,
-  `date_debut` date NOT NULL,
-  `date_fin` date NOT NULL,
+  `date_debut` text NOT NULL,
+  `date_fin` text NOT NULL,
   `id_type_projet` int(11) NOT NULL,
   `paye` enum('Non','Oui') NOT NULL,
   `id_commande` int(11) NOT NULL,
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
 
 --
 -- Contenu de la table `projet`
 --
 
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
-(14, 'Festival Mawazin', 10100, 21, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
-(15, 'Hotel farah demander pas M.Skali Haut prioritÃ©', 12000, 35, 'Actif', '2002-05-20', '2021-05-20', 3, 'Oui', 1),
-(43, 'Fort recommendation sur le style(couleur, banniÃ©re...), contrainte de couleur : bleu', 5000, 30, 'Actif', '2001-05-20', '2031-05-20', 4, 'Oui', 18),
-(44, 'application mobile pour le partage de photo et de video PUB, au cour de l''evenement', 6000, 0, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 18);
+(58, 'project desc', 6300, 0, 'Interrompu', '01.05.2012', '27.09.2012', 3, 'Non', 2),
+(59, 'project desc', 6300, 100, 'Actif', '01.05.2012', '18.10.2012', 4, 'Non', 2),
+(60, 'project desc', 6300, 100, 'Actif', '01.05.2012', '22.05.2012', 4, 'Oui', 2),
+(61, 'project desc', 6300, 100, 'Actif', '01.05.2012', '25.05.2012', 4, 'Non', 2);
 
 -- --------------------------------------------------------
 
@@ -303,17 +305,17 @@ CREATE TABLE IF NOT EXISTS `service` (
   KEY `id_pack` (`id_pack`),
   KEY `id_commande` (`id_commande`),
   KEY `id_type_service` (`id_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `service`
 --
 
 INSERT INTO `service` (`id_service`, `description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES
-(4, 'test service', 1250, '01.05.2012', '31.05.2012', 'Interrompu', 16, NULL, 'Oui', 1),
-(13, '', 1200, '01.04.2012', '31.07.2012', 'Interrompu', 13, 9, 'Oui', 18),
-(14, '', 700, '01.04.2012', '31.07.2012', 'Interrompu', 15, 14, 'Oui', 18),
-(15, '', 700, '01.04.2012', '31.07.2012', 'Actif', 16, NULL, 'Oui', 18);
+(4, 'test service', 1250, '05.01.2012', '21.06.2012', 'Interrompu', 16, NULL, 'Non', 1),
+(9, 'service desc', 2300, '05.05.2012', '20.09.2012', 'Interrompu', 13, 14, 'Non', 2),
+(10, 'service desc', 2300, '05.05.2012', '20.09.2012', 'Interrompu', 14, 11, 'Non', 2),
+(11, 'service desc', 2300, '05.05.2012', '23.05.2012', 'Interrompu', 15, 13, 'Non', 2);
 
 -- --------------------------------------------------------
 
