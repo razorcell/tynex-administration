@@ -5,7 +5,31 @@ $(document)
 					var all_rows_selected = false;
 					$('form#entreprise').validationEngine();
 					$('form#particulier').validationEngine();
-
+					$(".liste_type").iphoneStyle({ // Custom Label With onChange
+						// function
+						checkedLabel : "Services",
+						uncheckedLabel : "Projets",
+						labelWidth : '85px',
+						onChange : function() {
+							if(this.elem.is(':checked')){//services
+								$('div#services').show();
+								$('div#projets').hide();
+								}
+							else{//projets
+								$('div#services').hide();
+								$('div#projets').show();
+							}
+							var chek = $(".list_type").attr('checked');
+							if (chek) {
+								$(".disabled_map").fadeOut();
+							} else {
+								$(".disabled_map").fadeIn();
+							}
+							// $("#show_service").click(function () {
+							//$(".formEl_b").slideToggle("slow");
+							// });
+						}
+					});
 					$(".type").iphoneStyle({ // Custom Label With onChange
 						// function
 						checkedLabel : "Particulier",
@@ -57,14 +81,192 @@ $(document)
 
 						e.preventDefault();
 					});
-
-
+					//select rows in tables
+					$('.client_projet tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('.client_service tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					//select all buttons
+					$('.selectall_projet')
+					.click(
+							function() {
+								if (all_rows_selected == false) {
+									$('.client_projet tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'false') {
+															$(this)
+																	.addClass(
+																			'row_selected');
+														}
+														all_rows_selected = true;
+													});
+								} else {
+									$('.client_projet tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'true') {
+															$(this)
+																	.removeClass(
+																			'row_selected');
+														}
+														all_rows_selected = false;
+													});
+								}
+							});
+					$('.selectall_service')
+					.click(
+							function() {
+								if (all_rows_selected == false) {
+									$('.client_service tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'false') {
+															$(this)
+																	.addClass(
+																			'row_selected');
+														}
+														all_rows_selected = true;
+													});
+								} else {
+									$('.client_service tbody tr')
+											.each(
+													function(i, row) {
+														if ($(this)
+																.hasClass(
+																		'row_selected')
+																.toString() == 'true') {
+															$(this)
+																	.removeClass(
+																			'row_selected');
+														}
+														all_rows_selected = false;
+													});
+								}
+							});
 					$('.edit').click(function() {
 						$('.client tbody tr').each(function(i, row) {
 							$(this).removeClass('row_selected');
 						});
 					});
+					//delete buttons
+					$('.delete_b_commande_projet')
+					.click(
+							function() {
+								var lines_to_delete = [];
+								$('.client_projet tbody tr')
+										.each(
+												function(i, row) {
 
+													if ($(this)
+															.hasClass(
+																	'row_selected')
+															.toString() == 'true') {
+														var id_projet_courant = $(
+																this)
+																.find(
+																		'.id_projet')
+																.html();
+														lines_to_delete
+																.push(id_projet_courant);
+													}
+
+												});
+
+								if (lines_to_delete.length > 0) {
+									DeleteAll(lines_to_delete,
+											'project');
+								} else {
+									showWarning(
+											'Vous n\'avez rien selectionner',
+											5000);
+								}
+
+							});
+					$('.delete_b_commande_service')
+					.click(
+							function() {
+								
+								var lines_to_delete = [];
+								$('.client_service tbody tr')
+										.each(
+												function(i, row) {
+
+													if ($(this)
+															.hasClass(
+																	'row_selected')
+															.toString() == 'true') {
+														var id_service_courant = $(
+																this)
+																.find(
+																		'.id_service')
+																.html();
+														lines_to_delete
+																.push(id_service_courant);
+													}
+
+												});
+
+								if (lines_to_delete.length > 0) {
+									DeleteAll(lines_to_delete,
+											'service');
+								} else {
+									showWarning(
+											'Vous n\'avez rien selectionner',
+											5000);
+								}
+
+							});
+					//delete tips buttons
+					$(".Delete_projet").live(
+							'click',
+							function() {
+								$('.client_projet tbody tr').each(function(i, row) {
+									$(this).removeClass('row_selected');
+								});
+							
+								var row = $(this).parents('tr');
+
+								var action_destination = '/project/delete';
+
+								var description = row.find('.nom').html();
+
+								var id_projet = row.find('.id_projet')
+										.html();
+								
+								Delete(id_projet, description, row, 0,
+										action_destination);
+							});
+					$(".Delete_service").live(
+							'click',
+							function() {
+								$('.client_service tbody tr').each(function(i, row) {
+									$(this).removeClass('row_selected');
+								});
+							
+								var row = $(this).parents('tr');
+
+								var action_destination = '/service/delete';
+
+								var description = row.find('.nom').html();
+
+								var id_service = row.find('.id_service')
+										.html();
+
+								Delete(id_service, description, row, 0,
+										action_destination);
+							});
 					$('.selectall')
 							.click(
 									function() {
@@ -222,9 +424,7 @@ $(document)
 													'Veuillez revoir le formulaire de l\'entreprise',
 													3000);
 										}
-
 									});
-
 					$('.add_client_particulier')
 							.click(
 									function() {
@@ -439,7 +639,6 @@ $(document)
 									 else{
 										 json_to_send = json_to_send + ',"gender_p" : "1"';
 									 }
-									 
 									json_to_send = json_to_send
 											+ ',"type":"particulier"';
 									json_to_send = json_to_send + '}';

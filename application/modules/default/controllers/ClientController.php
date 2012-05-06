@@ -127,6 +127,7 @@ class ClientController extends Zend_Controller_Action {
 			$gender = $data_from_user ['gender_p'];
 			$email = $data_from_user ['email_p'];
 			$tel = $data_from_user ['tel_p'];
+			$adresse = $data_from_user ['adresse_p'];
 			
 			// PHASE D INSERTION DE L client DANS LA TABLE 'client'
 			
@@ -140,7 +141,7 @@ class ClientController extends Zend_Controller_Action {
 				$gender_string = 'Femme';
 			}
 			// construire le tableau pour l'enregistrement de l'client
-			$client_to_save = array ('nom' => $nom, 'prenom' => $prenom, 'tel' => $tel, 'tel_societe' => '', 'fax' => '', 'email' => $email, 'adresse' => '', 'type' => 'Particulier', 'gender' => $gender_string, 'societe' => '', 'email_societe' => '' );
+			$client_to_save = array ('nom' => $nom, 'prenom' => $prenom, 'tel' => $tel, 'tel_societe' => '', 'fax' => '', 'email' => $email, 'adresse' => $adresse, 'type' => 'Particulier', 'gender' => $gender_string, 'societe' => '', 'email_societe' => '' );
 			$this->logger->info ( 'Client to save ' . html_entity_decode ( Zend_Debug::dump ( $client_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 			try {
 				$this->db->insert ( 'client', $client_to_save );
@@ -170,10 +171,39 @@ class ClientController extends Zend_Controller_Action {
 		$req_id = $this->getRequest ()->getParam ( 'id' );
 		$id = $this->db->quote ( $req_id );
 		
-		// recupperation des infos de l'client stocker dans la table client
-		
 		$sql = "SELECT * FROM client WHERE id_client = $id";
 		$client = $this->db->fetchRow ( $sql );
+		
+		// recupperation des infos de l'client stocker dans la table client
+		//GET SERVICES LIST FOR THIS CLIENT
+		$sql = "SELECT id_service, 
+					date_debut, 
+					date_fin, 
+					status, 
+					paye,
+					id_type_service 
+					FROM client natural join commande natural join service 
+					WHERE id_client = $id";
+		$this->view->list_services = $this->db->fetchAssoc ( $sql );
+		
+		$sql = "SELECT * FROM type_service";
+		$this->view->list_types_services = $this->db->fetchAssoc ( $sql );
+		
+		//GET PROJECTS LIST FOR THIS CLIENT
+		$sql = "SELECT id_projet,
+		date_debut,
+		date_fin,
+		status,
+		paye,
+		id_type_projet
+		FROM client natural join commande natural join projet
+		WHERE id_client = $id";
+		$this->view->list_projets = $this->db->fetchAssoc ( $sql );
+		
+		$sql = "SELECT * FROM type_projet";
+		$this->view->list_types_projets = $this->db->fetchAssoc ( $sql );
+		
+		
 		$this->logger->info ( html_entity_decode ( Zend_Debug::dump ( $client, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 		// recupperation de la liste des poste pour la convertion id_poste =>
 		// nom_poste
@@ -270,7 +300,6 @@ class ClientController extends Zend_Controller_Action {
 				$reponse = 'Erreur';
 				$this->logger->info ( 'Requete erreur : ' . $e->getMessage () );
 			}
-		
 		}
 		// si particulier
 		if ($data_from_user ['type'] == 'particulier') {
@@ -280,6 +309,7 @@ class ClientController extends Zend_Controller_Action {
 			$gender = $data_from_user ['gender_p'];
 			$email = $data_from_user ['email_p'];
 			$tel = $data_from_user ['tel_p'];
+			$adresse = $data_from_user ['adresse_p'];
 			
 			// PHASE D INSERTION DE L client DANS LA TABLE 'client'
 			
@@ -293,7 +323,7 @@ class ClientController extends Zend_Controller_Action {
 				$gender_string = 'Femme';
 			}
 			// construire le tableau pour l'enregistrement de l'client
-			$client_to_save = array ('nom' => $nom, 'prenom' => $prenom, 'tel' => $tel, 'tel_societe' => '', 'fax' => '', 'email' => $email, 'adresse' => '', 'type' => 'Particulier', 'gender' => $gender_string, 'societe' => '', 'email_societe' => '' );
+			$client_to_save = array ('nom' => $nom, 'prenom' => $prenom, 'tel' => $tel, 'tel_societe' => '', 'fax' => '', 'email' => $email, 'adresse' => $adresse, 'type' => 'Particulier', 'gender' => $gender_string, 'societe' => '', 'email_societe' => '' );
 			$this->logger->info ( 'Client to save ' . html_entity_decode ( Zend_Debug::dump ( $client_to_save, $label = null, $echo = false ), ENT_COMPAT, "utf-8" ) );
 			try {
 				

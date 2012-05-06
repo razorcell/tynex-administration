@@ -3,58 +3,67 @@
 <link rel="stylesheet" type="text/css"
 	href="<?php echo $this->baseUrl('style.css');?>" />
 </head>
+<?php 
 
-
+echo '
 <div class="right_content">
-	<h2>Bienvenue !</h2>
+	<h2></h2>
+	<div class="widgets">
+		
+		
 	<div class="widgets">
 		<div class="oneTwo">
 			<div class="widget">
 				<div class="header">
-					<span><span class="ico color location"></span> Services </span>
-				</div>
-				<div class="content"></div>
-			</div>
-		</div>
-		<div class="oneTwo">
-			<div class="widget">
-				<div class="header">
-					<span><span class="ico color stats_lines"></span>Projets en cours</span>
-				</div>
-				<div class="content"></div>
-			</div>
-		</div>
-
-	</div>
-	<div class="widgets">
-		<div class="oneTwo">
-			<div class="widget">
-				<div class="header">
-					<span><span class="ico gray stats_lines"></span>Site Statistics</span>
+					<span><span class="ico gray stats_lines"></span>Statistiques</span>
 				</div>
 				<div class="content">
 					<br class="clear" />
-
 
 					<!-- Third / Half column-->
 					<div class="widgets">
 						<div class="oneThree">
 							<div class="shoutcutBox">
-								<span class="ico color chat-exclamation"></span> <strong>23</strong>
-								<em>Service actifs</em>
+								<span class="ico color chat-exclamation"></span> <strong>'.$this->services_actifs->totale.'</strong>
+								<em>Services actifs</em>
 							</div>
+							
+							<div class="shoutcutBox">
+							<span class="ico color chat-exclamation"></span> <strong>'.$this->services_interrompus->totale.'</strong>
+								<em>Services Interrompus</em>
+							</div>
+							
+							<div class="shoutcutBox">
+								<span class="ico color chat-exclamation"></span> <strong>'.$this->projets_actifs->totale.'</strong>
+								<em>Projets actifs</em>
+								
+							</div>
+							<div class="shoutcutBox">
+							<span class="ico color chat-exclamation"></span> <strong>'.$this->projets_interrompus->totale.'</strong>
+								<em>Projets Interrompus</em>
+							</div>
+							
 							<div class="breaks">
 								<span></span>
 							</div>
+							
 							<!-- // breaks -->
+							
 							<div class="shoutcutBox">
-								<span class="ico color item"></span> <strong>1,538</strong> <em>
+								<span class="ico color item"></span> <strong>'.$this->projets_en_cour.'</strong> <em>
 									Projets en création</em>
 							</div>
+							
 							<div class="shoutcutBox">
-								<span class="ico color group"></span> <strong>4,452</strong> <em>Total
+								<span class="ico color item"></span> <strong>'.$this->projets_fini.'</strong> <em>
+									Projets finis</em>
+							</div>
+							
+							<div class="shoutcutBox">
+								<span class="ico color group"></span> <strong>'.$this->employes->totale.'</strong> <em>Total
 									Employés</em>
 							</div>
+							
 							<br />
 							<br />
 						</div>
@@ -78,9 +87,25 @@
 					<span><span class="ico color stats_lines"></span>Alertes</span>
 				</div>
 				<div class="content">
-					<div class="alertMessage SE">3 SERVICE NE SONT PAS ENCORE PAYE</div>
-					<div class="alertMessage success SE">FELICITATION 1 PROJET EST FINI</div>
-					<div class="alertMessage warning SE">ATTENTION 3 Nom de domaine vont expirer dans 1 mois</div>
+				<div class="alertMessage SE">'.$this->projets_non_paye->totale.' PROJETS NON PAYE</div>
+				<div class="alertMessage SE">'.$this->services_non_paye->totale.' SERVICES NON PAYE</div>
+';
+				//print list of expired services
+foreach($this->services_expired as $expired_service){//tab des id
+	foreach($this->services__types as $service_type){//tab de toutes les info
+		if($expired_service['id_service'] == $service_type['id_service']){
+			//on doit afficher ce service
+			$diff = $expired_service['diff'];
+			$months = floor(((($diff/60)/60)/24)/30);
+			$days = floor(((($diff-(2592000*$months))/60)/60)/24);
+			echo '<div class="alertMessage warning SE">['.$service_type['libelle_type_service'].'] N° '.$service_type['id_service'].' EXPIRATION dans '.$months.' mois et '.$days.' jours</div>';
+
+		}
+	}
+}
+echo '
+					
+					
 				</div>
 			</div>
 		</div>
@@ -88,3 +113,5 @@
 	</div>
 </div>
 </html>
+';
+?>

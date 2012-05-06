@@ -332,8 +332,6 @@ class CommandeController extends Zend_Controller_Action {
 		//get employes list
 		$sql = "SELECT * FROM employe";
 		$this->view->list_employes = $this->db->fetchAssoc ( $sql );
-		
-	
 	}
 	
 	public function deleteAction() {
