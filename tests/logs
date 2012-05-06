@@ -4239,3 +4239,33 @@
 2012-05-05T19:36:19+02:00 INFO (6): Fonction init() executée
 2012-05-05T19:36:19+02:00 INFO (6): get all projets : SELECT * FROM type_projet
 >>>>>>> a5602058393bba93a2738bffd1edfc29c3dd981c
+2012-05-06T19:16:51+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:16:51+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:17:41+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:17:41+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-06T19:18:13+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:18:13+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-06T19:27:12+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:27:12+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-06T19:28:53+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:28:53+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:29:00+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:29:01+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:33:53+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:33:53+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:36:22+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:36:22+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:36:36+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:36:36+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:37:17+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:18+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:37:35+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:35+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:37:45+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:45+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:37:47+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:47+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:37:48+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:49+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:59+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:37:59+02:00 INFO (6): get all clients : SELECT * FROM client
