@@ -14,8 +14,6 @@ class AuthenticationController extends Zend_Controller_Action {
 		} catch ( Zend_Exception $e ) {
 			echo $e->getMessage ();
 		}
-	
-	
 	}
 	public function indexAction() {
 		$this->_forward ( 'login' );
@@ -43,18 +41,17 @@ class AuthenticationController extends Zend_Controller_Action {
 						
 						// $this->render('loggedin');
 					} else { // rong identification
-						$this->view->message = 'invalid identifications';
+						$this->view->message = 'Identification incorrecte';
 						// $this->_redirect('/Authentication/login');
 						// $this->render('logout');
 					}
-				
 			} // end if request isPost()
 		
 	}
 	public function logoutAction() {
 		$auth = Zend_Auth::getInstance ();
 		$auth->clearIdentity ();
-		//$this->view->message = 'you are logged out';
+		$this->view->message = 'you are logged out';
 		$this->_redirect ( '/' );
 		// $this->render('logout');
 	}

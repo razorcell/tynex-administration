@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Sam 05 Mai 2012 à 19:50
+-- Généré le : Dim 06 Mai 2012 à 21:25
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -110,21 +110,20 @@ CREATE TABLE IF NOT EXISTS `employe` (
   `email` varchar(35) NOT NULL,
   `adresse` text NOT NULL,
   `id_poste` int(11) NOT NULL,
+  `role` enum('administrateur','invite') NOT NULL DEFAULT 'invite',
   PRIMARY KEY (`id_employe`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `id_poste` (`id_poste`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `employe`
 --
 
-INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES
-(1, 'alami', 'hassan', 'Homme', 'hassan', 'pass', '0632125242', 'hassan@gmail.com', 'Bloc A Agadir', 7),
-(2, 'mendili', 'karima', 'Femme', 'karima', 'pass', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7),
-(3, 'sefrioui', 'abderahman', 'Homme', 'adbo', 'pass', '0635626894', 'adbo@gmail.com', 'Bloc C Agadir', 7),
-(4, 'rmili', 'khalifa', 'Homme', 'khalifa', 'pass', '0600775184', 'khalifa@gmail.com', 'bloc A Agadir', 6);
+INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`, `role`) VALUES
+(2, 'mendili', 'karima', 'Femme', 'karima', 'pass', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7, 'administrateur'),
+(5, 'test', 'test', 'Homme', 'test', 'test', '0632521245', 'test@test.com', 'bloc chi l3ba', 6, 'invite');
 
 -- --------------------------------------------------------
 
@@ -144,13 +143,9 @@ CREATE TABLE IF NOT EXISTS `intervention` (
 --
 
 INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
-(1, 58),
 (2, 58),
-(1, 59),
 (2, 59),
-(1, 60),
 (2, 60),
-(1, 61),
 (2, 61);
 
 -- --------------------------------------------------------
@@ -198,9 +193,11 @@ CREATE TABLE IF NOT EXISTS `occuper` (
 INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES
 (1, 11),
 (4, 11),
+(5, 12),
 (4, 14),
 (2, 15),
-(3, 15);
+(3, 15),
+(5, 15);
 
 -- --------------------------------------------------------
 
@@ -279,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
 --
 
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
-(58, 'project desc', 6300, 0, 'Interrompu', '01.05.2012', '27.09.2012', 3, 'Non', 2),
+(58, 'project desc', 6300, 54, 'Interrompu', '01.05.2012', '27.09.2012', 3, 'Non', 2),
 (59, 'project desc', 6300, 100, 'Actif', '01.05.2012', '18.10.2012', 4, 'Non', 2),
 (60, 'project desc', 6300, 100, 'Actif', '01.05.2012', '22.05.2012', 4, 'Oui', 2),
 (61, 'project desc', 6300, 100, 'Actif', '01.05.2012', '25.05.2012', 4, 'Non', 2);
