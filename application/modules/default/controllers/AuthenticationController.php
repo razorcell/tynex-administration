@@ -54,8 +54,8 @@ class AuthenticationController extends Zend_Controller_Action {
 	public function logoutAction() {
 		$auth = Zend_Auth::getInstance ();
 		$auth->clearIdentity ();
-		$this->view->message = 'you are logged out';
-		$this->_redirect ( '/login' );
+		//$this->view->message = 'you are logged out';
+		$this->_redirect ( '/' );
 		// $this->render('logout');
 	}
 	public function getAuthAdapter() {

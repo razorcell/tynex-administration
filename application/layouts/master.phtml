@@ -139,21 +139,15 @@
 	<!-- Header -->
 	<div id="header">
 		<div id="account_info">
-		
-			<div class="setting" title="Profile Setting">
-				<div class="setting" title="Profile Setting">
-					<b>Salutation,</b> <b class="red">John Doe</b><img
-						src="<?php echo $this->baseUrl('images/gear.png');?>" class="gear"
-						alt="Profile Setting">
-				</div>
-
-			</div>
-			<div class="logout" title="Disconnect">
-				<b>Logout</b> <img
+			<a href="<?php echo $this->url(array('controller' => 'authentication', 'action' => 'logout' ),'default',true);?>">
+			<div class="logout" title="Se deconnecter">
+				<b>Logout</b> 
+				<img
 					src="<?php echo $this->baseUrl('images/connect.png');?>"
-					name="connect" class="disconnect" alt="disconnect">
+					name="connect" class="disconnect" alt="Se deconnecter">
 			
 			</div>
+			</a>
 		</div>
 	</div>
 	<!-- End Header -->

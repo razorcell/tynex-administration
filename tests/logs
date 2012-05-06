@@ -2,3 +2,15 @@
 2012-05-06T19:20:54+02:00 INFO (6): get all clients : SELECT * FROM client
 2012-05-06T19:20:57+02:00 INFO (6): Fonction init() executée
 2012-05-06T19:20:59+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:48:26+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:48:26+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:48:29+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:48:31+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:48:36+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:48:36+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-06T19:50:04+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:50:04+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:50:17+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:50:17+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-06T19:50:55+02:00 INFO (6): Fonction init() executée
+2012-05-06T19:50:55+02:00 INFO (6): get all clients : SELECT * FROM client
