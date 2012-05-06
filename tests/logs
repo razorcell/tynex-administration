@@ -100,6 +100,7 @@
 2012-05-04T00:40:59+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 44)
 2012-05-04T00:40:59+02:00 INFO (6): MISE A JOUR - PROJET - OUI
 2012-05-04T00:40:59+02:00 INFO (6): Aucun employe definie pour ce projet
+<<<<<<< HEAD
 2012-05-04T17:11:37+02:00 INFO (6): Fonction init() executée
 2012-05-04T17:11:44+02:00 INFO (6): Fonction init() executée
 2012-05-04T17:11:44+02:00 INFO (6): get all clients : SELECT * FROM client
@@ -200,15 +201,88 @@
 2012-05-04T17:20:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
 2012-05-04T17:20:49+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
 2012-05-04T17:20:49+02:00 INFO (6): <pre>array(2) {
-  ["id_projet"] => string(2) "46"
-  ["id_employe"] => string(1) "3"
+=======
+2012-05-04T14:05:40+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "31.05.2012","description_projet" : "android embeded app","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "4700.00","request_type" : "projet","client" : "Fouad","type_projet" : "Mobile application","progression" : "22","description_commande" : "commande de fouad","employes" : [{"name " : "mendili"}]}
+2012-05-04T14:05:40+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T14:05:40+02:00 INFO (6): NEW COMMANDE
+2012-05-04T14:05:40+02:00 INFO (6): client_id trouvé = 6
+2012-05-04T14:05:40+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "6"
+  ["libelle_commande"] => string(17) "commande de fouad"
 }
 </pre>
-2012-05-04T17:20:49+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
-2012-05-04T17:20:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
-2012-05-04T17:20:59+02:00 INFO (6): Fonction init() executée
-2012-05-04T17:20:59+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
-2012-05-04T17:20:59+02:00 INFO (6): packs Assoc <pre>array(3) {
+2012-05-04T14:05:40+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-04T14:05:40+02:00 INFO (6): last inserted ID = 19
+2012-05-04T14:05:40+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-04T14:05:40+02:00 INFO (6): INSERT PROJET
+2012-05-04T14:05:40+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T14:05:40+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-04T14:05:40+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(19) "android embeded app"
+  ["prix"] => string(7) "4700.00"
+  ["progression"] => string(2) "22"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "19"
+}
+</pre>
+2012-05-04T14:05:40+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T14:05:40+02:00 INFO (6): last inserted ID = 45
+2012-05-04T14:05:40+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T14:05:40+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T14:05:40+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T14:05:40+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "45"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T14:05:40+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T14:05:40+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T14:07:43+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "30.05.2012","description_projet" : "JAVA app managing production projects sales clients and orders","status" : "1","status_hidden" : "actif","paye_hidden" : "Non","prix_projet" : "24900.00","request_type" : "projet","client" : "ahmadi","type_projet" : "Desktop application","progression" : "22","description_commande" : "Organization de l'atelier de dessin","employes" : [{"name " : "alami"}]}
+2012-05-04T14:07:43+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T14:07:43+02:00 INFO (6): NEW COMMANDE
+2012-05-04T14:07:43+02:00 INFO (6): client_id trouvé = 5
+2012-05-04T14:07:43+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "5"
+  ["libelle_commande"] => string(35) "Organization de l&#039;atelier de dessin"
+}
+</pre>
+2012-05-04T14:07:43+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-04T14:07:43+02:00 INFO (6): last inserted ID = 20
+2012-05-04T14:07:43+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-04T14:07:43+02:00 INFO (6): INSERT PROJET
+2012-05-04T14:07:43+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T14:07:43+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T14:07:43+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(62) "JAVA app managing production projects sales clients and orders"
+  ["prix"] => string(8) "24900.00"
+  ["progression"] => string(2) "22"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "30.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-04T14:07:43+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T14:07:43+02:00 INFO (6): last inserted ID = 46
+2012-05-04T14:07:43+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T14:07:43+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T14:07:43+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T14:07:43+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "46"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T14:07:43+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T14:07:43+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T14:08:04+02:00 INFO (6): Fonction init() executée
+2012-05-04T14:08:04+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T14:08:04+02:00 INFO (6): packs Assoc <pre>array(3) {
   [7] => array(3) {
     ["id_pack"] => string(1) "7"
     ["libelle_pack"] => string(13) "Pack Etudiant"
@@ -226,6 +300,190 @@
   }
 }
 </pre>
+2012-05-04T14:08:04+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T14:08:26+02:00 INFO (6): Fonction init() executée
+2012-05-04T14:08:26+02:00 INFO (6): Request body : {"type_service":"Vectors"}
+2012-05-04T14:08:26+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-05-04T14:08:26+02:00 INFO (6): []
+2012-05-04T14:08:54+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "28.02.2013","status_service" : "1","status_hidden" : "Actif","paye_hidden" : "Non","description_service" : "Des affiches pour expliquer l'app au personnel","prix_service" : "1000.00","request_type" : "service","client" : "ahmadi","id_commande" : "20","description_commande" : "Organization de l'atelier de dessin","type_service" : "Vectors","pack" : "aucun"}
+2012-05-04T14:08:54+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T14:08:54+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T14:08:54+02:00 INFO (6): INSERT SERVICE
+2012-05-04T14:08:54+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T14:08:54+02:00 INFO (6): pack = aucun
+2012-05-04T14:08:54+02:00 INFO (6): id type service trouvé = 16
+2012-05-04T14:08:54+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(46) "Des affiches pour expliquer l&#039;app au personnel"
+  ["prix"] => string(7) "1000.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "28.02.2013"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-04T14:08:54+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T14:08:54+02:00 INFO (6): last inserted ID = 16
+2012-05-04T14:08:54+02:00 INFO (6): insertion - service - OUI
+2012-05-04T15:29:53+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:29:58+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:30:00+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:32:24+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:32:24+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:32:25+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:32:26+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:35:12+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:35:13+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:35:19+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:35:19+02:00 INFO (6): submitAction()
+2012-05-04T15:35:19+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa@gmail.com","adresse" : "bloc A Agadir","tel" : "0600775184","username" : "khalifa","password" : "pass","passwordCon" : "pass","poste" : "Stagiaire","occupations" : [{"name " : "Programmer"},{"name " : "Network security expert"}]}
+2012-05-04T15:35:19+02:00 INFO (6): Programmer
+2012-05-04T15:35:19+02:00 INFO (6): Network security expert
+2012-05-04T15:35:19+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-05-04T15:35:19+02:00 INFO (6): id poste trouvé = 6
+2012-05-04T15:35:19+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(7) "khalifa"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(17) "khalifa@gmail.com"
+  ["adresse"] => string(13) "bloc A Agadir"
+  ["id_poste"] => string(1) "6"
+}
+</pre>
+2012-05-04T15:35:19+02:00 INFO (6): add an employe : INSERT INTO `employe` (`nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T15:35:19+02:00 INFO (6): last inserted ID = 4
+2012-05-04T15:35:19+02:00 INFO (6): insertion - EMPLOYE - OUI
+2012-05-04T15:35:19+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-05-04T15:35:19+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "4"
+  ["id_occup"] => string(2) "11"
+}
+</pre>
+2012-05-04T15:35:19+02:00 INFO (6): add occupation : INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES (?, ?)
+2012-05-04T15:35:19+02:00 INFO (6): insertion - OCCUPER - OUI
+2012-05-04T15:35:19+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "4"
+  ["id_occup"] => string(2) "14"
+}
+</pre>
+2012-05-04T15:35:19+02:00 INFO (6): add occupation : INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES (?, ?)
+2012-05-04T15:35:19+02:00 INFO (6): insertion - OCCUPER - OUI
+2012-05-04T15:36:54+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:36:54+02:00 INFO (6): submitAction()
+2012-05-04T15:36:54+02:00 INFO (6): Request body : {"nom" : "rmili","prenom" : "khalifa","gender" : "0","email" : "khalifa@gmail.com","adresse" : "bloc A Agadir","tel" : "0600775184","username" : "khalifa","password" : "pass","passwordCon" : "pass","poste" : "Stagiaire","occupations" : [{"name " : "Programmer"},{"name " : "Network security expert"}]}
+2012-05-04T15:36:54+02:00 INFO (6): Programmer
+2012-05-04T15:36:54+02:00 INFO (6): Network security expert
+2012-05-04T15:36:54+02:00 INFO (6): *********************PHASE D INSERTION DE L EMPLOYE************
+2012-05-04T15:36:54+02:00 INFO (6): id poste trouvé = 6
+2012-05-04T15:36:54+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "rmili"
+  ["prenom"] => string(7) "khalifa"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(7) "khalifa"
+  ["password"] => string(4) "pass"
+  ["tel"] => string(10) "0600775184"
+  ["email"] => string(17) "khalifa@gmail.com"
+  ["adresse"] => string(13) "bloc A Agadir"
+  ["id_poste"] => string(1) "6"
+}
+</pre>
+2012-05-04T15:38:34+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:38:34+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-04T15:38:37+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:38:37+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "46"
+  }
+}
+</pre>
+2012-05-04T15:39:28+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:39:28+02:00 INFO (6): Projet modifyAction()
+2012-05-04T15:39:28+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "25.05.2012","description" : "JAVA app managing production projects sales clients and orders","status_hidden" : "interrompu","paye_hidden" : "Non","prix" : "26400.00","id" : "46","commande" : "20","type_projet" : "Desktop application","progression" : "52","employes" : [{"name " : "alami"},{"name " : "sefrioui"}]}
+2012-05-04T15:39:28+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T15:39:28+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T15:39:28+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(62) "JAVA app managing production projects sales clients and orders"
+  ["prix"] => string(8) "26400.00"
+  ["progression"] => string(2) "52"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "25.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-04T15:39:29+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 46)
+2012-05-04T15:39:29+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T15:39:29+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_projet existant************
+2012-05-04T15:39:29+02:00 INFO (6): Intervention delete condition : id_projet = 46
+2012-05-04T15:39:29+02:00 INFO (6): Delete query : DELETE FROM `intervention` WHERE (id_projet = 46)
+2012-05-04T15:39:29+02:00 INFO (6): *****************PHASE INSERTION DES NOUVEAUX  TUPLES id_projet | id_employe************
+2012-05-04T15:39:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T15:39:29+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "46"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T15:39:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T15:39:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T15:39:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-04T15:39:29+02:00 INFO (6): <pre>array(2) {
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
+  ["id_projet"] => string(2) "46"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+<<<<<<< HEAD
+2012-05-04T17:20:49+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:20:49+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:20:59+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:20:59+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T17:20:59+02:00 INFO (6): packs Assoc <pre>array(3) {
+=======
+2012-05-04T15:39:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T15:39:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T15:39:36+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:39:36+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "46"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "46"
+  }
+}
+</pre>
+2012-05-04T15:41:19+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:41:19+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T15:41:19+02:00 INFO (6): packs Assoc <pre>array(3) {
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+<<<<<<< HEAD
 2012-05-04T17:20:59+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
 2012-05-04T17:21:21+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "01.08.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "www.opensource.com","prix_service" : "1000.00","request_type" : "service","client" : "Koutobia","id_commande" : "19","description_commande" : "Pour la journée opensource","type_service" : "Hebergement","pack" : "Pack Professionnel"}
 2012-05-04T17:21:21+02:00 INFO (6): PART 1 SOLVE COMMANDE
@@ -381,10 +639,204 @@
   ["adresse"] => string(0) ""
   ["type"] => string(11) "Particulier"
   ["gender"] => string(5) "Homme"
+=======
+2012-05-04T15:41:19+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T15:41:25+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:41:25+02:00 INFO (6): Request body : {"type_service":"Vectors"}
+2012-05-04T15:41:25+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-05-04T15:41:25+02:00 INFO (6): []
+2012-05-04T15:41:31+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:41:31+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-04T15:41:31+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-04T15:41:31+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-04T15:42:15+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "24.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service desc","prix_service" : "1000.00","request_type" : "service","client" : "Koutobia","description_commande" : "desc","type_service" : "Nom de Domaine","pack" : "Pack Gold"}
+2012-05-04T15:42:15+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T15:42:15+02:00 INFO (6): NEW COMMANDE
+2012-05-04T15:42:15+02:00 INFO (6): client_id trouvé = 3
+2012-05-04T15:42:15+02:00 INFO (6): Commande to save : <pre>array(2) {
+  ["id_client"] => string(1) "3"
+  ["libelle_commande"] => string(4) "desc"
+}
+</pre>
+2012-05-04T15:42:15+02:00 INFO (6): add commande : INSERT INTO `commande` (`id_client`, `libelle_commande`) VALUES (?, ?)
+2012-05-04T15:42:15+02:00 INFO (6): last inserted ID = 21
+2012-05-04T15:42:15+02:00 INFO (6): insertion - COMMANDE - OUI
+2012-05-04T15:42:15+02:00 INFO (6): INSERT SERVICE
+2012-05-04T15:42:15+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T15:42:15+02:00 INFO (6): id type_service trouvé = 14
+2012-05-04T15:42:15+02:00 INFO (6): id pack trouvé = 11
+2012-05-04T15:42:15+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(7) "1000.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "14"
+  ["id_pack"] => string(2) "11"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "21"
+}
+</pre>
+2012-05-04T15:42:15+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T15:42:15+02:00 INFO (6): last inserted ID = 17
+2012-05-04T15:42:15+02:00 INFO (6): insertion - service - OUI
+2012-05-04T15:43:10+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "17.05.2012","description_projet" : "project desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "8900.00","request_type" : "projet","client" : "Koutobia","id_commande" : "21","type_projet" : "Desktop application","progression" : "0","description_commande" : "desc","employes" : [{"name " : "rmili"},{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-04T15:43:10+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T15:43:10+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T15:43:10+02:00 INFO (6): INSERT PROJET
+2012-05-04T15:43:10+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T15:43:10+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T15:43:10+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(7) "8900.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "17.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "21"
+}
+</pre>
+2012-05-04T15:43:10+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T15:43:10+02:00 INFO (6): last inserted ID = 47
+2012-05-04T15:43:10+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T15:43:10+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T15:43:10+02:00 INFO (6): MATCH FOUND : nom employe trouvé rmili<-------> nom employe from user rmili
+2012-05-04T15:43:10+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "47"
+  ["id_employe"] => string(1) "4"
+}
+</pre>
+2012-05-04T15:43:10+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T15:43:10+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T15:43:10+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T15:43:10+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "47"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T15:43:10+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T15:43:10+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T15:43:10+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T15:43:10+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "47"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T15:43:10+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T15:43:10+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T15:48:37+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:48:37+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-04T15:48:41+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:48:41+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-04T15:53:51+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:53:51+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-04T15:54:33+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:54:33+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-04T15:55:00+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:55:00+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-04T15:56:17+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:56:17+02:00 INFO (6): Projet modifyAction()
+2012-05-04T15:56:17+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Festival Mawazin","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "10100.00","id" : "14","commande" : "1","type_projet" : "Mobile application","progression" : "36"}
+2012-05-04T15:56:17+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T15:56:17+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-04T15:56:17+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "36"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T15:56:17+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 14)
+2012-05-04T15:56:17+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T15:56:17+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-04T15:56:24+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:56:24+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T15:56:30+02:00 INFO (6): Fonction init() executée
+2012-05-04T15:56:31+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:25:41+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:25:41+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T16:26:28+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:26:28+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T16:26:32+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:26:32+02:00 INFO (6): Client modifyform()
+2012-05-04T16:26:32+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "4"
+  ["nom"] => string(4) "Omar"
+  ["prenom"] => string(7) "mahmoud"
+  ["tel"] => string(0) ""
+  ["tel_societe"] => string(10) "0534543465"
+  ["fax"] => string(0) ""
+  ["email"] => string(19) "omar@clubmoving.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(10) "Entreprise"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(11) "Club Moving"
+  ["email_societe"] => string(21) "moving@clubmoving.com"
+}
+</pre>
+2012-05-04T16:26:32+02:00 INFO (6): client = entreprise
+2012-05-04T16:42:58+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:42:58+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T16:43:03+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:43:03+02:00 INFO (6): Client modifyform()
+2012-05-04T16:43:03+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "5"
+  ["nom"] => string(6) "ahmadi"
+  ["prenom"] => string(6) "toriya"
+  ["tel"] => string(10) "0667564532"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(24) "touriya.ahmadi@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Femme"
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
   ["societe"] => string(0) ""
   ["email_societe"] => string(0) ""
 }
 </pre>
+<<<<<<< HEAD
 2012-05-04T17:30:14+02:00 INFO (6): client = particulier
 2012-05-04T17:32:54+02:00 INFO (6): Fonction init() executée
 2012-05-04T17:32:54+02:00 INFO (6): get all clients : SELECT * FROM client
@@ -1008,6 +1460,103 @@
 2012-05-04T18:23:52+02:00 INFO (6): Fonction init() executée
 2012-05-04T18:23:52+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
 2012-05-04T18:23:52+02:00 INFO (6): packs Assoc <pre>array(9) {
+=======
+2012-05-04T16:43:03+02:00 INFO (6): client = particulier
+2012-05-04T16:55:39+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "29.05.2012","description_projet" : "project desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "7200.00","request_type" : "projet","client" : "Club Moving","id_commande" : "18","type_projet" : "Desktop application","progression" : "58","description_commande" : "undefined","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-04T16:55:39+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T16:55:39+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T16:55:39+02:00 INFO (6): INSERT PROJET
+2012-05-04T16:55:39+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T16:55:39+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T16:55:39+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(12) "project desc"
+  ["prix"] => string(7) "7200.00"
+  ["progression"] => string(2) "58"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "29.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T16:55:39+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T16:55:39+02:00 INFO (6): last inserted ID = 48
+2012-05-04T16:55:39+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T16:55:39+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T16:55:39+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T16:55:39+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "48"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T16:55:39+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T16:55:39+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T16:55:39+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T16:55:39+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "48"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T16:55:39+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T16:55:39+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T16:58:40+02:00 INFO (6): Request body : {"date_debut" : "02.05.2012","date_fin" : "31.05.2012","description_projet" : "project 10 description","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "6800.00","request_type" : "projet","client" : "Club Moving","id_commande" : "18","type_projet" : "Mobile application","progression" : "40","description_commande" : "Organization d'un evenement pour rassembler les experts et professionnel du sport","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-04T16:58:40+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T16:58:40+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T16:58:40+02:00 INFO (6): INSERT PROJET
+2012-05-04T16:58:40+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T16:58:40+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-04T16:58:40+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(22) "project 10 description"
+  ["prix"] => string(7) "6800.00"
+  ["progression"] => string(2) "40"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T16:58:40+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T16:58:40+02:00 INFO (6): last inserted ID = 49
+2012-05-04T16:58:40+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T16:58:40+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T16:58:40+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T16:58:40+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "49"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T16:58:40+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T16:58:40+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T16:58:40+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T16:58:40+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "49"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T16:58:40+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T16:58:40+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T16:59:45+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:59:45+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-04T16:59:45+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-04T16:59:45+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-04T16:59:59+02:00 INFO (6): Fonction init() executée
+2012-05-04T16:59:59+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T16:59:59+02:00 INFO (6): packs Assoc <pre>array(3) {
   [7] => array(3) {
     ["id_pack"] => string(1) "7"
     ["libelle_pack"] => string(13) "Pack Etudiant"
@@ -1023,6 +1572,305 @@
     ["libelle_pack"] => string(15) "Pack Entreprise"
     ["id_type_service"] => string(2) "13"
   }
+}
+</pre>
+2012-05-04T16:59:59+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T17:00:42+02:00 INFO (6): Request body : {"pack" : "","date_debut_service" : "01.05.2012","date_fin_service" : "31.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service 10  desc ","prix_service" : "1000.00","request_type" : "service","client" : "Club Moving","id_commande" : "18","description_commande" : "Organization d'un evenement pour rassembler les experts et professionnel du sport","type_service" : "Hebergement","pack" : "aucun"}
+2012-05-04T17:00:42+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:00:42+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:00:42+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:00:42+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:00:42+02:00 INFO (6): pack = aucun
+2012-05-04T17:00:42+02:00 INFO (6): id type service trouvé = 13
+2012-05-04T17:00:42+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(17) "service 10  desc "
+  ["prix"] => string(7) "1000.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:00:42+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:00:42+02:00 INFO (6): last inserted ID = 18
+2012-05-04T17:00:42+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:01:01+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:01:01+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T17:01:01+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-04T17:01:01+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T17:01:18+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "31.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service 11  desc avec pack","prix_service" : "1000.00","request_type" : "service","client" : "Club Moving","id_commande" : "18","description_commande" : "Organization d'un evenement pour rassembler les experts et professionnel du sport","type_service" : "Hebergement","pack" : "Pack Etudiant"}
+2012-05-04T17:01:18+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:01:18+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:01:18+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:01:18+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:01:18+02:00 INFO (6): id type_service trouvé = 13
+2012-05-04T17:01:18+02:00 INFO (6): id pack trouvé = 7
+2012-05-04T17:01:18+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(26) "service 11  desc avec pack"
+  ["prix"] => string(7) "1000.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "7"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:01:18+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:01:18+02:00 INFO (6): last inserted ID = 19
+2012-05-04T17:01:18+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:01:41+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:01:41+02:00 INFO (6): service modifyform()
+2012-05-04T17:01:41+02:00 INFO (6): <pre>object(stdClass)#114 (10) {
+  ["id_service"] => string(2) "19"
+  ["description"] => string(26) "service 11  desc avec pack"
+  ["prix"] => string(4) "1000"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "7"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:02:34+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:02:34+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T17:02:34+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+2012-05-04T17:02:34+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T17:02:58+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "31.05.2012","status_hidden" : "Interrompu","paye_hidden" : "Non","description_service" : "service 12  desc avec pack entreprise","prix_service" : "1000.00","request_type" : "service","client" : "Club Moving","id_commande" : "18","description_commande" : "Organization d'un evenement pour rassembler les experts et professionnel du sport","type_service" : "Hebergement","pack" : "Pack Entreprise"}
+2012-05-04T17:02:58+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:02:58+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:02:58+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:02:58+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:02:58+02:00 INFO (6): id type_service trouvé = 13
+2012-05-04T17:02:58+02:00 INFO (6): id pack trouvé = 9
+2012-05-04T17:02:58+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(37) "service 12  desc avec pack entreprise"
+  ["prix"] => string(7) "1000.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "9"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:02:58+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:02:58+02:00 INFO (6): last inserted ID = 20
+2012-05-04T17:02:58+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:03:29+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:03:29+02:00 INFO (6): service modifyform()
+2012-05-04T17:03:29+02:00 INFO (6): <pre>object(stdClass)#114 (10) {
+  ["id_service"] => string(2) "20"
+  ["description"] => string(37) "service 12  desc avec pack entreprise"
+  ["prix"] => string(4) "1000"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "9"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:06:03+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:27:17+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:27:17+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-04T17:27:17+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-04T17:27:17+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-04T17:27:21+02:00 INFO (6): Request body : {"date_debut_service" : "01.05.2012","date_fin_service" : "03.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "","prix_service" : "1350.00","request_type" : "service","client" : "Club Moving","id_commande" : "18","description_commande" : "Organization d'un evenement pour rassembler les experts et professionnel du sport","type_service" : "Nom de Domaine","pack" : "Pack Silver"}
+2012-05-04T17:27:21+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:27:21+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:27:21+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:27:21+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:27:21+02:00 INFO (6): id type_service trouvé = 14
+2012-05-04T17:27:21+02:00 INFO (6): id pack trouvé = 10
+2012-05-04T17:27:21+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(0) ""
+  ["prix"] => string(7) "1350.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "03.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "14"
+  ["id_pack"] => string(2) "10"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-04T17:27:21+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:27:21+02:00 INFO (6): last inserted ID = 21
+2012-05-04T17:27:21+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:36:12+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:36:16+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:36:16+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "48"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "48"
+  }
+}
+</pre>
+2012-05-04T17:36:44+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:37:00+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:48:24+02:00 INFO (6): Request body : {"date_debut" : "01.05.2012","date_fin" : "24.05.2012","description_projet" : "Project description","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix_projet" : "8900.00","request_type" : "projet","client" : "Kevin","id_commande" : "1","type_projet" : "Desktop application","progression" : "37","description_commande" : "Economic forum, from M.ALAMI","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-04T17:48:24+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:48:24+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:48:24+02:00 INFO (6): INSERT PROJET
+2012-05-04T17:48:24+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T17:48:24+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T17:48:24+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(19) "Project description"
+  ["prix"] => string(7) "8900.00"
+  ["progression"] => string(2) "37"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:48:24+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:48:24+02:00 INFO (6): last inserted ID = 50
+2012-05-04T17:48:24+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T17:48:24+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T17:48:24+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T17:48:24+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "50"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:48:24+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:48:24+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:48:24+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T17:48:24+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "50"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T17:48:24+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:48:24+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:48:43+02:00 INFO (6): Request body : {"date_debut" : "09.05.2012","date_fin" : "26.05.2012","description_projet" : "Project 2 description","status_hidden" : "interrompu","paye_hidden" : "Non","prix_projet" : "8900.00","request_type" : "projet","client" : "Kevin","id_commande" : "1","type_projet" : "Web application","progression" : "64","description_commande" : "Economic forum, from M.ALAMI","employes" : [{"name " : "alami"},{"name " : "mendili"},{"name " : "sefrioui"}]}
+2012-05-04T17:48:43+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:48:43+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:48:43+02:00 INFO (6): INSERT PROJET
+2012-05-04T17:48:43+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T17:48:43+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-04T17:48:43+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(21) "Project 2 description"
+  ["prix"] => string(7) "8900.00"
+  ["progression"] => string(2) "64"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "09.05.2012"
+  ["date_fin"] => string(10) "26.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:48:43+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:48:43+02:00 INFO (6): last inserted ID = 51
+2012-05-04T17:48:43+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T17:48:43+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T17:48:43+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T17:48:43+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "51"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:48:44+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:48:44+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:48:44+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T17:48:44+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "51"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T17:48:44+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:48:44+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:48:44+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-04T17:48:44+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "51"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-04T17:48:44+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:48:44+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:48:57+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:49:46+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:49:46+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T17:49:46+02:00 INFO (6): packs Assoc <pre>array(3) {
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+    ["id_type_service"] => string(2) "13"
+  }
+<<<<<<< HEAD
   [20] => array(3) {
     ["id_pack"] => string(2) "20"
     ["libelle_pack"] => string(11) "tm Etudiant"
@@ -1051,10 +1899,276 @@
   [25] => array(3) {
     ["id_pack"] => string(2) "25"
     ["libelle_pack"] => string(10) "tm VPServe"
+=======
+}
+</pre>
+2012-05-04T17:49:46+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T17:49:58+02:00 INFO (6): Request body : {"date_debut_service" : "02.05.2012","date_fin_service" : "24.05.2012","status_service" : "1","status_hidden" : "Actif","paye_hidden" : "Non","description_service" : "service desc","prix_service" : "950.00","request_type" : "service","client" : "Kevin","id_commande" : "1","description_commande" : "Economic forum, from M.ALAMI","type_service" : "Hebergement","pack" : "Pack Professionnel"}
+2012-05-04T17:49:58+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:49:58+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:49:58+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:49:58+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:49:58+02:00 INFO (6): id type_service trouvé = 13
+2012-05-04T17:49:58+02:00 INFO (6): id pack trouvé = 8
+2012-05-04T17:49:58+02:00 INFO (6): id pack trouvé = 14
+2012-05-04T17:49:58+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(12) "service desc"
+  ["prix"] => string(6) "950.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "14"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:49:58+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:49:58+02:00 INFO (6): last inserted ID = 22
+2012-05-04T17:49:58+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:50:08+02:00 INFO (6): Request body : {"date_debut_service" : "02.05.2012","date_fin_service" : "24.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service 2 desc","prix_service" : "950.00","request_type" : "service","client" : "Kevin","id_commande" : "1","description_commande" : "Economic forum, from M.ALAMI","type_service" : "Hebergement","pack" : "Pack Etudiant"}
+2012-05-04T17:50:08+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:50:08+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:50:08+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:50:08+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:50:08+02:00 INFO (6): id type_service trouvé = 13
+2012-05-04T17:50:08+02:00 INFO (6): id pack trouvé = 7
+2012-05-04T17:50:08+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(14) "service 2 desc"
+  ["prix"] => string(6) "950.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "7"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:50:08+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:50:08+02:00 INFO (6): last inserted ID = 23
+2012-05-04T17:50:08+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:50:11+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:50:11+02:00 INFO (6): Request body : {"type_service":"Referencement"}
+2012-05-04T17:50:11+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [12] => array(3) {
+    ["id_pack"] => string(2) "12"
+    ["libelle_pack"] => string(14) "Pack Débutant"
+    ["id_type_service"] => string(2) "15"
+  }
+  [13] => array(3) {
+    ["id_pack"] => string(2) "13"
+    ["libelle_pack"] => string(12) "Pack Amateur"
+    ["id_type_service"] => string(2) "15"
+  }
+  [14] => array(3) {
+    ["id_pack"] => string(2) "14"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-04T17:50:11+02:00 INFO (6): {"12":{"id_pack":"12","libelle_pack":"Pack D\u00e9butant","id_type_service":"15"},"13":{"id_pack":"13","libelle_pack":"Pack Amateur","id_type_service":"15"},"14":{"id_pack":"14","libelle_pack":"Pack Professionnel","id_type_service":"15"}}
+2012-05-04T17:50:16+02:00 INFO (6): Request body : {"date_debut_service" : "02.05.2012","date_fin_service" : "24.05.2012","status_service" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description_service" : "service 2 desc","prix_service" : "950.00","request_type" : "service","client" : "Kevin","id_commande" : "1","description_commande" : "Economic forum, from M.ALAMI","type_service" : "Referencement","pack" : "Pack Professionnel"}
+2012-05-04T17:50:16+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:50:16+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:50:16+02:00 INFO (6): INSERT SERVICE
+2012-05-04T17:50:16+02:00 INFO (6): *********************PHASE D INSERTION SERVICE************
+2012-05-04T17:50:16+02:00 INFO (6): id type_service trouvé = 15
+2012-05-04T17:50:16+02:00 INFO (6): id pack trouvé = 8
+2012-05-04T17:50:16+02:00 INFO (6): id pack trouvé = 14
+2012-05-04T17:50:16+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(14) "service 2 desc"
+  ["prix"] => string(6) "950.00"
+  ["date_debut"] => string(10) "02.05.2012"
+  ["date_fin"] => string(10) "24.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "15"
+  ["id_pack"] => string(2) "14"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:50:16+02:00 INFO (6): inserer service : INSERT INTO `service` (`description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:50:16+02:00 INFO (6): last inserted ID = 24
+2012-05-04T17:50:16+02:00 INFO (6): insertion - service - OUI
+2012-05-04T17:50:32+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:50:51+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:51:37+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "23.05.2012","description_projet" : "projet 3 desc","status_hidden" : "interrompu","paye_hidden" : "Non","prix_projet" : "5800.00","request_type" : "projet","client" : "Kevin","id_commande" : "1","type_projet" : "Desktop application","progression" : "49","description_commande" : "Economic forum, from M.ALAMI","employes" : [{"name " : "alami"},{"name " : "mendili"}]}
+2012-05-04T17:51:37+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:51:37+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:51:37+02:00 INFO (6): INSERT PROJET
+2012-05-04T17:51:37+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T17:51:37+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T17:51:37+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "projet 3 desc"
+  ["prix"] => string(7) "5800.00"
+  ["progression"] => string(2) "49"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "23.05.2012"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:37+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:51:37+02:00 INFO (6): last inserted ID = 52
+2012-05-04T17:51:37+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T17:51:37+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T17:51:37+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T17:51:37+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:37+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:37+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:37+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T17:51:37+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T17:51:37+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:37+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:51+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "23.05.2012","description_projet" : "projet 3 desc","status_hidden" : "interrompu","paye" : "1","paye_hidden" : "Oui","prix_projet" : "9600.00","request_type" : "projet","client" : "Kevin","id_commande" : "1","type_projet" : "Web application","progression" : "71","description_commande" : "Economic forum, from M.ALAMI","employes" : [{"name " : "alami"},{"name " : "mendili"},{"name " : "sefrioui"}]}
+2012-05-04T17:51:51+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:51:51+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:51:51+02:00 INFO (6): INSERT PROJET
+2012-05-04T17:51:51+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T17:51:51+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-04T17:51:51+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "projet 3 desc"
+  ["prix"] => string(7) "9600.00"
+  ["progression"] => string(2) "71"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "23.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:51+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:51:51+02:00 INFO (6): last inserted ID = 53
+2012-05-04T17:51:51+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T17:51:51+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T17:51:51+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T17:51:51+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "53"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:51+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:51+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:51+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T17:51:51+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "53"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T17:51:51+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:51+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:51+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-04T17:51:51+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "53"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-04T17:51:51+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:51+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:54+02:00 INFO (6): Request body : {"date_debut" : "03.05.2012","date_fin" : "23.05.2012","description_projet" : "projet 3 desc","status_hidden" : "interrompu","paye" : "1","paye_hidden" : "Oui","prix_projet" : "9600.00","request_type" : "projet","client" : "Kevin","id_commande" : "1","type_projet" : "Web application","progression" : "0","description_commande" : "Economic forum, from M.ALAMI","employes" : [{"name " : "alami"},{"name " : "mendili"},{"name " : "sefrioui"}]}
+2012-05-04T17:51:54+02:00 INFO (6): PART 1 SOLVE COMMANDE
+2012-05-04T17:51:54+02:00 INFO (6): COMMANDE EXIST
+2012-05-04T17:51:54+02:00 INFO (6): INSERT PROJET
+2012-05-04T17:51:54+02:00 INFO (6): *********************PHASE D INSERTION DU PROJET************
+2012-05-04T17:51:54+02:00 INFO (6): type_projet_id trouvé = 4
+2012-05-04T17:51:54+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "projet 3 desc"
+  ["prix"] => string(7) "9600.00"
+  ["progression"] => string(1) "0"
+  ["status"] => string(10) "interrompu"
+  ["date_debut"] => string(10) "03.05.2012"
+  ["date_fin"] => string(10) "23.05.2012"
+  ["id_type_projet"] => string(1) "4"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:54+02:00 INFO (6): add a project : INSERT INTO `projet` (`description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2012-05-04T17:51:54+02:00 INFO (6): last inserted ID = 54
+2012-05-04T17:51:54+02:00 INFO (6): insertion - PROJET - OUI
+2012-05-04T17:51:54+02:00 INFO (6): *****************HASE D INSERTION DES TUPLES id_projet | id_employe************
+2012-05-04T17:51:54+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T17:51:54+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "54"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T17:51:54+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:54+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:54+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T17:51:54+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "54"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T17:51:54+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:54+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:51:54+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-04T17:51:54+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "54"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-04T17:51:54+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T17:51:54+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T17:54:54+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:55:09+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:56:31+02:00 INFO (6): Fonction init() executée
+2012-05-04T17:56:31+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T17:56:31+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
     ["id_type_service"] => string(2) "13"
   }
 }
 </pre>
+2012-05-04T17:56:31+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T18:14:16+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:14:16+02:00 INFO (6): Request body : {"type_service":"Hebergement"}
+2012-05-04T18:14:16+02:00 INFO (6): packs Assoc <pre>array(3) {
+  [7] => array(3) {
+    ["id_pack"] => string(1) "7"
+    ["libelle_pack"] => string(13) "Pack Etudiant"
+    ["id_type_service"] => string(2) "13"
+  }
+  [8] => array(3) {
+    ["id_pack"] => string(1) "8"
+    ["libelle_pack"] => string(18) "Pack Professionnel"
+    ["id_type_service"] => string(2) "13"
+  }
+  [9] => array(3) {
+    ["id_pack"] => string(1) "9"
+    ["libelle_pack"] => string(15) "Pack Entreprise"
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
+    ["id_type_service"] => string(2) "13"
+  }
+}
+</pre>
+<<<<<<< HEAD
 2012-05-04T18:23:52+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"},"20":{"id_pack":"20","libelle_pack":"tm Etudiant","id_type_service":"13"},"21":{"id_pack":"21","libelle_pack":"tm Start ","id_type_service":"13"},"22":{"id_pack":"22","libelle_pack":"tm Basic","id_type_service":"13"},"23":{"id_pack":"23","libelle_pack":"tm Business","id_type_service":"13"},"24":{"id_pack":"24","libelle_pack":"tm Pro","id_type_service":"13"},"25":{"id_pack":"25","libelle_pack":"tm VPServe","id_type_service":"13"}}
 2012-05-04T18:24:27+02:00 INFO (6): Fonction init() executée
 2012-05-04T18:24:27+02:00 INFO (6): service submitAction()
@@ -1212,3 +2326,129 @@
 2012-05-04T19:13:25+02:00 INFO (6): Fonction init() executée
 2012-05-04T19:13:52+02:00 INFO (6): Fonction init() executée
 2012-05-04T19:13:54+02:00 INFO (6): Fonction init() executée
+=======
+2012-05-04T18:14:16+02:00 INFO (6): {"7":{"id_pack":"7","libelle_pack":"Pack Etudiant","id_type_service":"13"},"8":{"id_pack":"8","libelle_pack":"Pack Professionnel","id_type_service":"13"},"9":{"id_pack":"9","libelle_pack":"Pack Entreprise","id_type_service":"13"}}
+2012-05-04T18:31:52+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:31:52+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-04T18:31:56+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:31:56+02:00 INFO (6): service modifyform()
+2012-05-04T18:31:56+02:00 INFO (6): <pre>object(stdClass)#117 (10) {
+  ["id_service"] => string(1) "4"
+  ["description"] => string(12) "test service"
+  ["prix"] => string(4) "1250"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["id_pack"] => NULL
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T18:32:00+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:32:00+02:00 INFO (6): service modifyACtion()
+2012-05-04T18:32:00+02:00 INFO (6): Request body : {"pack" : "","prix" : "1250.00","status_hidden" : "Interrompu","paye_hidden" : "Non","description" : "test service","date_debut" : "01.05.2012","date_fin" : "31.05.2012","commande" : "1","type_service" : "Vectors","pack" : "aucun","id" : "4"}
+2012-05-04T18:32:00+02:00 INFO (6): Decoded data from user : <pre>array(10) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(7) "1250.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye_hidden"] => string(3) "Non"
+  ["description"] => string(12) "test service"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["commande"] => string(1) "1"
+  ["type_service"] => string(7) "Vectors"
+  ["id"] => string(1) "4"
+}
+</pre>
+2012-05-04T18:32:00+02:00 INFO (6): pack = aucun
+2012-05-04T18:32:00+02:00 INFO (6): id type service trouvé = 16
+2012-05-04T18:32:00+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(12) "test service"
+  ["prix"] => string(7) "1250.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "31.05.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "16"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T18:32:00+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 4)
+2012-05-04T18:32:00+02:00 INFO (6): insertion - service - OUI
+2012-05-04T18:53:46+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:53:46+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-04T18:53:55+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:53:57+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:57:59+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:57:59+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-04T18:58:05+02:00 INFO (6): Fonction init() executée
+2012-05-04T18:58:05+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "52"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_projet"] => string(2) "52"
+  }
+}
+</pre>
+2012-05-04T19:01:28+02:00 INFO (6): Fonction init() executée
+2012-05-04T19:01:29+02:00 INFO (6): Projet modifyAction()
+2012-05-04T19:01:29+02:00 INFO (6): Request body : {"date_debut" : "05.05.2012","date_fin" : "2023-05-20","description" : "projet 3 desc","status" : "1","status_hidden" : "actif","paye" : "1","paye_hidden" : "Oui","prix" : "6400.00","id" : "52","commande" : "1","type_projet" : "Desktop application","progression" : "66","employes" : [{"name " : "sefrioui"},{"name " : "mendili"},{"name " : "alami"},{"name " : "rmili"}]}
+2012-05-04T19:01:29+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-04T19:01:29+02:00 INFO (6): type_projet_id trouvé = 3
+2012-05-04T19:01:29+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(13) "projet 3 desc"
+  ["prix"] => string(7) "6400.00"
+  ["progression"] => string(2) "66"
+  ["status"] => string(5) "actif"
+  ["date_debut"] => string(10) "05.05.2012"
+  ["date_fin"] => string(10) "2023-05-20"
+  ["id_type_projet"] => string(1) "3"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-04T19:01:29+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 52)
+2012-05-04T19:01:29+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-04T19:01:29+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_projet existant************
+2012-05-04T19:01:29+02:00 INFO (6): Intervention delete condition : id_projet = 52
+2012-05-04T19:01:29+02:00 INFO (6): Delete query : DELETE FROM `intervention` WHERE (id_projet = 52)
+2012-05-04T19:01:29+02:00 INFO (6): *****************PHASE INSERTION DES NOUVEAUX  TUPLES id_projet | id_employe************
+2012-05-04T19:01:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé sefrioui<-------> nom employe from user sefrioui
+2012-05-04T19:01:29+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "3"
+}
+</pre>
+2012-05-04T19:01:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T19:01:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T19:01:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé mendili<-------> nom employe from user mendili
+2012-05-04T19:01:29+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "2"
+}
+</pre>
+2012-05-04T19:01:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T19:01:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T19:01:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-04T19:01:29+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-04T19:01:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T19:01:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-04T19:01:29+02:00 INFO (6): MATCH FOUND : nom employe trouvé rmili<-------> nom employe from user rmili
+2012-05-04T19:01:29+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "52"
+  ["id_employe"] => string(1) "4"
+}
+</pre>
+2012-05-04T19:01:29+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-04T19:01:29+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+>>>>>>> fb2c7264f350663f99744a21d3f414d0a3b98983
+2012-05-05T01:32:00+02:00 INFO (6): Fonction init() executée
+2012-05-05T01:32:00+02:00 INFO (6): get all clients : SELECT * FROM client

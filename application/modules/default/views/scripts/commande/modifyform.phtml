@@ -56,16 +56,44 @@ $(document).ready(function(){
 echo '
 <div class="widget" style="border:0px">
 <form style="margin:20px">
-<div class="section">
+<input value="modify" type="hidden" id="type_form" name="type_form" class="type_form">
+<div class="section id_commande">
 		<label> Id <small></small></label>
 		<div>
-			<input disabled="disabled" id="id" name="id" type="text" class="validate[required] medium id_pack" maxlength="20" value="' . $this->commande->id_commande . '">
+			<input id="id_commande" name="id_commande" type="text" class="validate[required] medium" maxlength="20" value="' . $this->commande->id_commande . '" readonly>
 		</div>
-	</div>
+	</div>';
+//client
+$client_string = NULL;
+foreach($this->list_clients as $client){
+	if($client['id_client'] == $this->commande->id_client){
+		if($client['type'] == 'Entreprise'){
+			$client_string = $client['societe'];
+		}else{
+			$client_string = $client['nom'];
+		}
+	}
+}
+echo '<div class="section client">
+<label>Client<small></small></label>
+<div>
+<select data-placeholder="'.$client_string.'"
+class="chzn-select " tabindex="2">
+<option value=""></option>';
+foreach ( $this->list_clients as $client ) {
+	if ($client ['type'] == 'Entreprise') {
+		echo "<option value=" . $client ['societe'] . ">" . $client ['societe'] . "</option>";
+	} else {
+		echo "<option value=" . $client ['nom'] . ">" . $client ['nom'] . "</option>";
+	}
+}
+echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
+</div>
+</div>	
 	<div class="section alphaonly">
 		<label>Description<small>Un petit mot sur le service</small></label>
 		<div>
-			<textarea name="description">'.$this->commande->libelle_commande.'</textarea>
+			<textarea name="description" class="description_commande">'.$this->commande->libelle_commande.'</textarea>
 			<a class="button green back modify_commande">Mettre à jour la commande</a> 
 		</div>
 	</div>
@@ -73,6 +101,8 @@ echo '
 		<label>Documents : <small>utiliser cette solution pour generer des documents cette commande</small></label>
 		<div>
 			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'facture' ).'" class="button blue serif skew facture" data-icon="✔">Facture</a>
+			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'reglement' ).'" class="button blue serif skew facture" data-icon="$">Reglement</a>
+			
 		</div>
 	</div>
 	<div class="section">
@@ -88,9 +118,8 @@ echo '
 
 //add commande start
 	echo '
-	
 	<br><br>
-	<div class="commande_add" style="display:none">
+	<div class="commande_add">
 <div class="widget" style="border:1px; margin:5px">
 <form style="margin:20px">
 <div class="section">
@@ -350,7 +379,7 @@ echo '	</div>
 		
 $i = 0;
 echo '
-<a class="delete_b_projet button pink glossy glass">- Supprimer</a>
+<a class="delete_b_commande_projet button pink glossy glass">- Supprimer</a>
 <a class="selectall_projet button blue morph">De/Selectionner tous</a>
 <div id="UITab_projets">
 
@@ -361,7 +390,7 @@ echo '
 
 <form>
 <div class="tableName inTab">
-<table class="display data_table2 projet"  id="projets">
+<table class="display data_table2 commande_projet"  id="projets">
 <thead>
 <tr>
 
@@ -425,16 +454,14 @@ echo '</tbody>
 <div class="clear"></div>
 ';
 ?>
-		
-		
-		</div>
 
-	
+</div>
+
 	<div id="services" style="display:none">
 		<?php
 $i = 0;
 echo '
-<a class="delete_b_service button pink glossy glass">- Supprimer</a>
+<a class="delete_b_commande_service button pink glossy glass">- Supprimer</a>
 <a class="selectall_service button blue morph">De/Selectionner tous</a>
 <div id="UITab_services">
 
@@ -446,7 +473,7 @@ echo '
 <form>
 <div class="tableName inTab">
 
-<table class="display data_table2 service"  id="services">
+<table class="display data_table2 commande_service"  id="services">
 <thead>
 <tr>
 

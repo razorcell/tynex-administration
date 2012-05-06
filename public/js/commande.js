@@ -125,6 +125,27 @@ $(document)
 							$(this).removeClass('row_selected');
 						});
 					});
+					$('.commande tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('.commande_projet tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('.commande_service tr').live('click', function() {
+						$(this).toggleClass('row_selected');
+					});
+					$('#reset_p').click(function() {
+						$('input:not(.id_commande_p)').val('');// ne pas
+						// supprimer
+						// id_commande
+						showError('formulaire vidé', 3000);
+					});
+					$('#reset_e').click(function() {
+						$('input:not(.id_commande_e)').val('');
+
+						// $('input').val('');
+						showError('formulaire vidé', 3000);
+					});
 					$(".Delete").live(
 							'click',
 							function() {
@@ -147,26 +168,26 @@ $(document)
 					$(".Delete_projet").live(
 							'click',
 							function() {
-								$('.projet tbody tr').each(function(i, row) {
+								$('.commande_projet tbody tr').each(function(i, row) {
 									$(this).removeClass('row_selected');
 								});
 							
 								var row = $(this).parents('tr');
 
-								var action_destination = '/projet/delete';
+								var action_destination = '/project/delete';
 
 								var description = row.find('.nom').html();
 
 								var id_projet = row.find('.id_projet')
 										.html();
-
+								
 								Delete(id_projet, description, row, 0,
 										action_destination);
 							});
 					$(".Delete_service").live(
 							'click',
 							function() {
-								$('.service tbody tr').each(function(i, row) {
+								$('.commande_service tbody tr').each(function(i, row) {
 									$(this).removeClass('row_selected');
 								});
 							
@@ -282,39 +303,12 @@ $(document)
 													});
 								}
 							});
-					$('.commande tr').live('click', function() {
-						$(this).toggleClass('row_selected');
-					});
-					$('.projet tr').live('click', function() {
-						$(this).toggleClass('row_selected');
-					});
-					$('.service tr').live('click', function() {
-						$(this).toggleClass('row_selected');
-					});
-					$('.commande tr').live('click', function() {
-						$(this).toggleClass('row_selected');
-					});
-
-					$('#reset_p').click(function() {
-						$('input:not(.id_commande_p)').val('');// ne pas
-						// supprimer
-						// id_commande
-
-						// $('input').val('');
-						showError('formulaire vidé', 3000);
-					});
-					$('#reset_e').click(function() {
-						$('input:not(.id_commande_e)').val('');
-
-						// $('input').val('');
-						showError('formulaire vidé', 3000);
-					});
-
-					$('.delete_b')
+					
+					
+					$('.delete_b_commande')//liste des commandes
 							.click(
 									function() {
-
-										$('.test').html('');
+	
 										var lines_to_delete = [];
 										$('.commande tbody tr')
 												.each(
@@ -345,6 +339,73 @@ $(document)
 										}
 
 									});
+					$('.delete_b_commande_projet')
+					.click(
+							function() {
+								var lines_to_delete = [];
+								$('.commande_projet tbody tr')
+										.each(
+												function(i, row) {
+
+													if ($(this)
+															.hasClass(
+																	'row_selected')
+															.toString() == 'true') {
+														var id_projet_courant = $(
+																this)
+																.find(
+																		'.id_projet')
+																.html();
+														lines_to_delete
+																.push(id_projet_courant);
+													}
+
+												});
+
+								if (lines_to_delete.length > 0) {
+									DeleteAll(lines_to_delete,
+											'project');
+								} else {
+									showWarning(
+											'Vous n\'avez rien selectionner',
+											5000);
+								}
+
+							});
+					$('.delete_b_commande_service')
+					.click(
+							function() {
+								
+								var lines_to_delete = [];
+								$('.commande_service tbody tr')
+										.each(
+												function(i, row) {
+
+													if ($(this)
+															.hasClass(
+																	'row_selected')
+															.toString() == 'true') {
+														var id_service_courant = $(
+																this)
+																.find(
+																		'.id_service')
+																.html();
+														lines_to_delete
+																.push(id_service_courant);
+													}
+
+												});
+
+								if (lines_to_delete.length > 0) {
+									DeleteAll(lines_to_delete,
+											'service');
+								} else {
+									showWarning(
+											'Vous n\'avez rien selectionner',
+											5000);
+								}
+
+							});
 					$('.display tr').click(function() {
 
 					});
@@ -504,8 +565,11 @@ $(document)
 																// SI
 																// id_commande
 																// exists
-																$('div.client').hide();
-																$('.commande_description').hide();
+																var type_form = $('.type_form').attr('value');
+																if(type_form == 'add'){
+																	$('div.client').hide();
+																	$('.commande_description').hide();
+																}
 																if(json.commande_exists == 'non'){//si commande nouvelle
 																	$(
 																			'.id_commande')
@@ -541,9 +605,7 @@ $(document)
 													'Veuillez revoir le formulaire',
 													3000);
 										}
-
 									});
-
 					$('.add_commande_service')
 							.click(
 									function() {
@@ -672,8 +734,11 @@ $(document)
 																// SI
 																// id_commande
 																// exists
-																$('div.client').hide();
-																$('.commande_description').hide();
+																var type_form = $('.type_form').attr('value');
+																if(type_form == 'add'){
+																	$('div.client').hide();
+																	$('.commande_description').hide();
+																}
 																if (json.commande_exists == 'non') {// SI
 																	// NOUVELLE
 																	// COMMANDE
@@ -693,7 +758,7 @@ $(document)
 																	showSuccess(
 																			'Commande et Service ajoutés',
 																			3000);
-																} else {// SI
+																} else { // SI
 																	// COMMANDE
 																	// EXISTSTE
 																	// DEJA
@@ -713,7 +778,9 @@ $(document)
 													'Veuillez revoir le formulaire',
 													3000);
 										}
-
 									});
-					$('#id_commande').attr('value','');//clear id after page refresh
+					var type_form = $('.type_form').attr('value');
+					if(type_form == 'add'){
+						$('#id_commande').attr('value','');//clear id after page refresh IF ADD form
+					}
 				});

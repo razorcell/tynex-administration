@@ -111,66 +111,16 @@ $(document).ready(
 			$('.f_s_modify').submit(function(e) {
 				e.preventDefault();
 			});
-			$('.edit').click(function(){
-				$('.service tbody tr').each(
-						function(i, row) {				
-								$(this).removeClass('row_selected');
-						});
-			});
-			$('.selectall').click(function(){
-				if(all_rows_selected == false)
-					{
-						$('.service tbody tr').each(
-							function(i, row) {
-								if($(this).hasClass('row_selected').toString() == 'false'){
-									$(this).addClass('row_selected');
-								}
-								all_rows_selected = true;
-							});
-					}
-				else{
-					$('.service tbody tr').each(
-							function(i, row) {
-								if($(this).hasClass('row_selected').toString() == 'true'){
-									$(this).removeClass('row_selected');
-								}
-								all_rows_selected = false;
-							});
-				}
-			});
-			$('.service tr').live('click',function(){
-				$(this).toggleClass('row_selected');
-			});
-		
+			
+			
+			
 			$('#reset').click(function() {
 				$('input:not(.id_service)').val('');
 			//	$('input').val('');
 				showError('formulaire vidé', 3000);
 			});
-			$('.delete_b').click(
-					function() {
-						
-						$('.test').html('');
-						var lines_to_delete = [];
-						$('.service tbody tr').each(
-								function(i, row) {
-									if($(this).hasClass('row_selected').toString() == 'true'){
-										var id_service_courant = $(this).find('.id_service').html();
-										lines_to_delete.push(id_service_courant);
-									}
-								});
-						
-						 if(lines_to_delete.length > 0)
-							 {
-							 	DeleteAll(lines_to_delete,'service');
-							 }
-						 else
-							 {
-								showWarning('Vous n\'avez rien selectionner',5000);
-							 }
-					});
-			$('.display tr').click(function() {
-			});
+			
+			
 			$('.add_service').click(function() {
 				var form_data = $('.f_s_add').serializeArray();
 				var i=0;
@@ -255,108 +205,5 @@ $(document).ready(
 						showError('Veuillez revoir le formulaire', 3000);
 					}
 			});
-			$(".Delete").live('click',function() { 
-				$('.service tbody tr').each(
-						function(i, row) {				
-								$(this).removeClass('row_selected');
-				});
-				$('.test').html('');
-				  var row=$(this).parents('tr');
-				
-				  var action_destination = '/service/delete';
-				
-				  var description = row.find('.id_service').html();
-				
-				  var id_service = row.find('.id_service').html();
-				
-				  Delete(id_service,description,row,0,action_destination);
-			});
-			$('.modify_service').click(function() {
-				var form_data = $('.f_s_modify').serializeArray();
-				var i=0;
-				var pack = null;
-				//get pack
-				
-				//form validation
-				var valide = true;
-				if($('.prix').value == 0){
-						valide = false;
-					}
-				else if($('.date_debut').val().length == 0){
-						valide = false;
-					}
-				else if($('.date_fin').val().length == 0){
-					valide = false;
-				}
-				var commande = $('.commande').find('span').html();
-				if(commande == 'Veuillez choisir une commande...'){
-						valide =false;
-					}
-				var type_service = $('.type_service').find('span').html();
-				if(type_service == 'Veuillez choisir un type de service...'){
-					valide =false;
-				}else{// si type de service choisi
-					if($('div.pack').hasClass('visible')){
-						if($('.list_packs').find('li.ui-selected').length > 0){
-							pack = $('.list_packs').find('li.ui-selected').html();
-						}else{//il y a des pack mais auccun choisi
-							valide = false;
-						}
-					}else{//ca marche il n'existe aucun pack
-						pack = 'aucun';
-					}
-				}
-				if(valide)
-					{
-					var json_to_send = '{';
-					
-					for(i=0;i<form_data.length;i++)
-						{
-							if(i==0){
-									json_to_send = json_to_send + '"'+form_data[i].name+'" : "'+form_data[i].value+'"';
-								}
-							else{
-								if(form_data[i].name == 'prix'){
-									var price = form_data[i].value.replace(',','');
-									json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+price+'"';
-								}else{
-								json_to_send = json_to_send + ',"'+form_data[i].name+'" : "'+form_data[i].value+'"';
-								}
-							}
-						}
-					//add commande
-					 json_to_send = json_to_send + ',"commande" : "'+commande+'"';
-					 //add type service
-					//add commande
-					 json_to_send = json_to_send + ',"type_service" : "'+type_service+'"';
-					// add price
-				 json_to_send = json_to_send + ',"pack" : "'+pack+'"';
-				var id = $('#id').attr('value');
-				 json_to_send = json_to_send + ',"id" : "'+id+'"';
-				i=0;
-					json_to_send = json_to_send + '}';
-					//$('.test').html(json_to_send);
-					//json_to_send = $.parseJSON(json_to_send);
-					$.ajax({ 
-						type : "POST",
-						url : "/service/modify",
-						data : json_to_send,
-						success : function(data) {
-							//alert('success');
-							//var json = $.parseJSON(data);
-						
-							if (data == 'success') {// maintenant on peut
-								showSuccess('Service modifié', 3000);
-								
-							} else {
-								showError(data, 3000);
-							}
-						}
-					});
-					}else{
-						showError('Veuillez revoir le formulaire', 3000);
-					}
-			});//end modify.click()
-	
 		});
 
