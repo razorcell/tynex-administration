@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2012-05-04T00:27:09+02:00 INFO (6): Fonction init() executée
 2012-05-04T00:27:09+02:00 INFO (6): get all clients : SELECT * FROM client
 2012-05-04T00:27:14+02:00 INFO (6): Fonction init() executée
@@ -4572,10 +4573,66 @@
 2012-05-07T10:49:37+02:00 INFO (6): <pre>array(1) {
   [0] => array(2) {
     ["id_employe"] => string(1) "3"
+=======
+2012-05-07T13:41:07+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:41:07+02:00 INFO (6): 9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684
+2012-05-07T13:41:07+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:41:08+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:41:08+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:44:43+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:11+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:16+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:16+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "2"
     ["id_occup"] => string(2) "15"
   }
 }
 </pre>
+2012-05-07T13:45:27+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:27+02:00 INFO (6): modifyAction()
+2012-05-07T13:45:27+02:00 INFO (6): Request body : {"nom" : "mendili","prenom" : "karima","email" : "karima@gmail.com","adresse" : "Bloc A Agadir","tel" : "0632201252","username" : "karima","password" : "pass","passwordCon" : "pass","id" : "2","poste" : "Personnel","gender" : "1"}
+2012-05-07T13:45:27+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-05-07T13:45:27+02:00 INFO (6): id poste trouvé = 7
+2012-05-07T13:45:27+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(7) "mendili"
+  ["prenom"] => string(6) "karima"
+  ["genre"] => string(5) "Femme"
+  ["username"] => string(6) "karima"
+  ["password"] => string(40) "9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684"
+  ["tel"] => string(10) "0632201252"
+  ["email"] => string(16) "karima@gmail.com"
+  ["adresse"] => string(13) "Bloc A Agadir"
+  ["id_poste"] => string(1) "7"
+}
+</pre>
+2012-05-07T13:45:27+02:00 INFO (6): employe update condition : id_employe = 2
+2012-05-07T13:45:27+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 2)
+2012-05-07T13:45:27+02:00 INFO (6): nbr de lignes  = 1
+2012-05-07T13:45:27+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-05-07T13:45:28+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:28+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "2"
+    ["id_occup"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-07T13:45:54+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:58+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:45:58+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "5"
+    ["id_occup"] => string(2) "12"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "5"
+>>>>>>> 2748a6239e85fa80e37835077efefe9a51132dc3
+    ["id_occup"] => string(2) "15"
+  }
+}
+</pre>
+<<<<<<< HEAD
 2012-05-07T10:49:46+02:00 INFO (6): Fonction init() executée
 2012-05-07T10:49:46+02:00 INFO (6): modifyAction()
 2012-05-07T10:49:46+02:00 INFO (6): Request body : {"nom" : "sefrioui","prenom" : "abderahman","email" : "adbo@gmail.com","adresse" : "Bloc C Agadir","tel" : "0635626894","username" : "adbo","password" : "pass","passwordCon" : "pass","id" : "3","poste" : "Personnel","gender" : "0","occupations" : [{"name " : "Assistant logistique"},{"name " : "Assistant en gestion des "}]}
@@ -5131,3 +5188,51 @@
 2012-05-07T11:44:01+02:00 INFO (6): get all services : SELECT * FROM service
 2012-05-07T11:52:21+02:00 INFO (6): Fonction init() executée
 2012-05-07T11:52:21+02:00 INFO (6): get all services : SELECT * FROM service
+=======
+2012-05-07T13:46:08+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:08+02:00 INFO (6): modifyAction()
+2012-05-07T13:46:08+02:00 INFO (6): Request body : {"nom" : "test","prenom" : "test","email" : "test@test.com","adresse" : "bloc chi l3ba","tel" : "0632521245","username" : "test","password" : "test","passwordCon" : "test","id" : "5","poste" : "Stagiaire","gender" : "0"}
+2012-05-07T13:46:08+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-05-07T13:46:08+02:00 INFO (6): id poste trouvé = 6
+2012-05-07T13:46:08+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(4) "test"
+  ["prenom"] => string(4) "test"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(4) "test"
+  ["password"] => string(40) "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3"
+  ["tel"] => string(10) "0632521245"
+  ["email"] => string(13) "test@test.com"
+  ["adresse"] => string(13) "bloc chi l3ba"
+  ["id_poste"] => string(1) "6"
+}
+</pre>
+2012-05-07T13:46:08+02:00 INFO (6): employe update condition : id_employe = 5
+2012-05-07T13:46:08+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 5)
+2012-05-07T13:46:08+02:00 INFO (6): nbr de lignes  = 1
+2012-05-07T13:46:08+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-05-07T13:46:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:09+02:00 INFO (6): <pre>array(2) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "5"
+    ["id_occup"] => string(2) "12"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "5"
+    ["id_occup"] => string(2) "15"
+  }
+}
+</pre>
+2012-05-07T13:46:44+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:44+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:45+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:45+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:55+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:46:55+02:00 INFO (6): 9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684
+2012-05-07T13:47:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:10+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:10+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:17+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:47:17+02:00 INFO (6): a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+>>>>>>> 2748a6239e85fa80e37835077efefe9a51132dc3

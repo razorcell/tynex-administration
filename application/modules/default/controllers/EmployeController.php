@@ -81,7 +81,7 @@ class EmployeController extends Zend_Controller_Action {
 		$adress = $data_from_user ['adresse'];
 		$tel = $data_from_user ['tel'];
 		$username = $data_from_user ['username'];
-		$password = $data_from_user ['password'];
+		$password = sha1($data_from_user ['password']);
 		$employe_poste_string = $data_from_user ['poste'];
 		
 		
@@ -196,7 +196,7 @@ class EmployeController extends Zend_Controller_Action {
 		$adress = $data_from_user ['adresse'];
 		$tel = $data_from_user ['tel'];
 		$username = $data_from_user ['username'];
-		$password = $data_from_user ['password'];
+		$password = sha1($data_from_user ['password']);
 		$employe_poste_string = $data_from_user ['poste'];
 		
 		

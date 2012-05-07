@@ -2,7 +2,7 @@
 // video 1
 class Tynex_Models_TynexAcl extends Zend_Acl {
 	public function __construct() {
-		$controllers = array ('index', 'client', 'project', 'service', 'commande', 'employe', 'occupation', 'pack', 'poste', 'typeprojet', 'typeservice', 'authentication' );
+		$controllers = array ('error', 'index', 'client', 'project', 'service', 'commande', 'employe', 'occupation', 'pack', 'poste', 'typeprojet', 'typeservice', 'authentication' );
 		$roles = array ('administrateur', 'invite');
 		
 		foreach ( $roles as $role ) {

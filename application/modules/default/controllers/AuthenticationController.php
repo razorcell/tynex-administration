@@ -4,6 +4,11 @@ class AuthenticationController extends Zend_Controller_Action {
 	private $config = NULL;
 	private $db = NULL;
 	public function init() {
+		$this->writer = new Zend_Log_Writer_Stream ( APPLICATION_PATH . '/../tests/logs' );
+		$this->logger = new Zend_Log ( $this->writer );
+		
+		$this->logger->info ( 'Fonction init() executée' );
+		
 		$this->config = new Zend_Config_Ini ( APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV );
 		try {
 			$this->db = Zend_Db::factory ( $this->config->database );
@@ -28,7 +33,8 @@ class AuthenticationController extends Zend_Controller_Action {
 					$password = $data_from_user['password'];
 					
 					$authAdapter = $this->getAuthAdapter ();//look down to see the definition of this function
-					$authAdapter->setIdentity ( $username )->setCredential ( $password );
+					$authAdapter->setIdentity ( $username )->setCredential ( sha1($password) );
+					$this->logger->info ( sha1($password)  );
 					
 					$auth = Zend_Auth::getInstance ();
 					$result = $auth->authenticate ( $authAdapter );

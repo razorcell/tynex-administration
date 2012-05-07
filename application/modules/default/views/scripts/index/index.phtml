@@ -98,8 +98,10 @@ foreach($this->services_expired as $expired_service){//tab des id
 			$diff = $expired_service['diff'];
 			$months = floor(((($diff/60)/60)/24)/30);
 			$days = floor(((($diff-(2592000*$months))/60)/60)/24);
-			echo '<div class="alertMessage warning SE">['.$service_type['libelle_type_service'].'] N° '.$service_type['id_service'].' EXPIRATION dans '.$months.' mois et '.$days.' jours</div>';
-
+			echo '<div class="alertMessage warning SE"><a  title="Edit" class="edit" href="'.$this->url ( array ('id' => $expired_service ['id_service'] ), 'servicemodify' )
+			.'">['.$service_type['libelle_type_service'].'] N° '.$service_type['id_service'].' EXPIRATION dans '.$months.' mois et '.$days.' jours</a>
+			</div>';
+			
 		}
 	}
 }
