@@ -16,7 +16,7 @@ class TypeserviceController extends Zend_Controller_Action {
 		} catch ( Zend_Exception $e ) {
 			echo $e->getMessage ();
 		}
-		$this->view->general_icon = 'ico color certificate';
+		$this->view->general_icon = 'ico color shadow coin';
 	}
 	public function indexAction() {
 		$this->action = $this->_request->getActionName ();

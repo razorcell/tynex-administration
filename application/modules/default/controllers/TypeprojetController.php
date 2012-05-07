@@ -22,7 +22,7 @@ class TypeprojetController extends Zend_Controller_Action {
 		} catch ( Zend_Exception $e ) {
 			echo $e->getMessage ();
 		}
-		$this->view->general_icon = 'ico color coin';
+		$this->view->general_icon = 'ico color shadow stop ';
 	}
 	public function indexAction() {
 		$this->action = $this->_request->getActionName ();

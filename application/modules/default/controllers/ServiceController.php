@@ -25,7 +25,7 @@ class ServiceController extends Zend_Controller_Action {
 		} catch ( Zend_Exception $e ) {
 			echo $e->getMessage ();
 		}
-		$this->view->general_icon = 'ico color stats_lines';
+		$this->view->general_icon = ' ico color location';
 	}
 	public function indexAction() {
 		$this->action = $this->_request->getActionName ();

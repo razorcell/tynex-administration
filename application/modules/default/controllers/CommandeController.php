@@ -21,7 +21,7 @@ class CommandeController extends Zend_Controller_Action {
 		} catch ( Zend_Exception $e ) {
 			echo $e->getMessage ();
 		}
-		$this->view->general_icon = 'ico color certificate';
+		$this->view->general_icon = 'ico color shadow list' ;
 	}
 	public function indexAction() {
 		$this->action = $this->_request->getActionName ();

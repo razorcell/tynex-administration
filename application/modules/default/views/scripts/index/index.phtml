@@ -24,40 +24,42 @@ echo '
 					<div class="widgets">
 						<div class="oneThree">
 							<div class="shoutcutBox">
-								<span class="ico color chat-exclamation"></span> <strong>'.$this->services_actifs->totale.'</strong>
+								<span class="ico color hourglass"></span> <strong>'.$this->services_actifs->totale.'</strong>
 								<em>Services actifs</em>
 							</div>
 							
 							<div class="shoutcutBox">
-							<span class="ico color chat-exclamation"></span> <strong>'.$this->services_interrompus->totale.'</strong>
+							<span class="ico color cross"></span> <strong>'.$this->services_interrompus->totale.'</strong>
 								<em>Services Interrompus</em>
-							</div>
-							
-							<div class="shoutcutBox">
-								<span class="ico color chat-exclamation"></span> <strong>'.$this->projets_actifs->totale.'</strong>
-								<em>Projets actifs</em>
-								
-							</div>
-							<div class="shoutcutBox">
-							<span class="ico color chat-exclamation"></span> <strong>'.$this->projets_interrompus->totale.'</strong>
-								<em>Projets Interrompus</em>
 							</div>
 							
 							<div class="breaks">
 								<span></span>
 							</div>
+
+							<div class="shoutcutBox">
+								<span class="ico color hourglass"></span> <strong>'.$this->projets_actifs->totale.'</strong>
+								<em>Projets Actifs</em>
+							</div>
+							<div class="shoutcutBox">
+								<span class="ico color brush"></span> <strong>'.$this->projets_en_cour.'</strong> <em>
+									Projets En Cours</em>
+							</div>
+							<div class="shoutcutBox">
+							<span class="ico color cross"></span> <strong>'.$this->projets_interrompus->totale.'</strong>
+								<em>Projets Interrompus</em>
+							</div>
+							<div class="shoutcutBox">
+								<span class="ico color checkmark2"></span> <strong>'.$this->projets_fini.'</strong> <em>
+									Projets Finis</em>
+							</div>
+		
 							
 							<!-- // breaks -->
-							
-							<div class="shoutcutBox">
-								<span class="ico color item"></span> <strong>'.$this->projets_en_cour.'</strong> <em>
-									Projets en création</em>
+							<div class="breaks">
+								<span></span>
 							</div>
 							
-							<div class="shoutcutBox">
-								<span class="ico color item"></span> <strong>'.$this->projets_fini.'</strong> <em>
-									Projets finis</em>
-							</div>
 							
 							<div class="shoutcutBox">
 								<span class="ico color group"></span> <strong>'.$this->employes->totale.'</strong> <em>Total
