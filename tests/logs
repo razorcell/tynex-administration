@@ -6132,3 +6132,99 @@
 2012-05-07T18:07:17+02:00 INFO (6): insertion - service - OUI
 2012-05-07T18:07:18+02:00 INFO (6): Fonction init() executée
 2012-05-07T18:07:18+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:14:03+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:14:03+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:15:10+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:15:10+02:00 INFO (6): service modifyform()
+2012-05-07T18:15:10+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "21"
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(3) "450"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "17"
+  ["id_pack"] => string(2) "11"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:15:20+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:15:20+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:15:20+02:00 INFO (6): Request body : {"pack" : "","prix" : "450.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "pas de referencema","date_debut" : "01.05.2012","date_fin" : "09.05.2012","commande" : "20","type_service" : "Conseil et Audi","pack" : "aucun","id" : "21"}
+2012-05-07T18:15:20+02:00 INFO (6): Decoded data from user : <pre>array(12) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(6) "450.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(18) "pas de referencema"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "09.05.2012"
+  ["commande"] => string(2) "20"
+  ["type_service"] => string(15) "Conseil et Audi"
+  ["id"] => string(2) "21"
+}
+</pre>
+2012-05-07T18:15:20+02:00 INFO (6): pack = aucun
+2012-05-07T18:15:20+02:00 INFO (6): id type service trouvé = 17
+2012-05-07T18:15:20+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(6) "450.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "09.05.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "17"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:15:20+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 21)
+2012-05-07T18:15:20+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:15:47+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:15:47+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:15:55+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:15:55+02:00 INFO (6): Client modifyform()
+2012-05-07T18:15:55+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "5"
+  ["nom"] => string(6) "ahmadi"
+  ["prenom"] => string(6) "toriya"
+  ["tel"] => string(10) "0667564532"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(24) "touriya.ahmadi@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Femme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:15:55+02:00 INFO (6): client = particulier
+2012-05-07T18:16:23+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:23+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:16:27+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:27+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:16:28+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:28+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:35+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:35+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:16:37+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:16:37+02:00 INFO (6): Client modifyform()
+2012-05-07T18:16:38+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:16:38+02:00 INFO (6): client = particulier

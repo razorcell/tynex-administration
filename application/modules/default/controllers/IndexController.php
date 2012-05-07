@@ -88,23 +88,24 @@ class IndexController extends Zend_Controller_Action {
 		$services_expired = array();
 		$current_date = Zend_Date::now();
 		//get the services that will expire in 1 month
-		$sql = 'SELECT * FROM service';
+		$sql = 'SELECT * FROM service WHERE status = \'Actif\'';
 		$list_services = $this->db->fetchAssoc ( $sql );
 		foreach($list_services as $service){
 			$date_fin_string = $service['date_fin'];
 			$date_fin = new Zend_Date($date_fin_string);
 			$diff = $date_fin->sub($current_date)->toValue();
 			$months = floor(((($diff/60)/60)/24)/30);
-			if($months <= 1){
+			if($months <= 1 && $months >= 0){
 				array_push($services_expired, array('id_service' => $service['id_service'],
 																		'diff' => $diff));
 			}
 		}
 		$this->view->services_expired = $services_expired;
+		$this->db->setFetchMode ( Zend_Db::FETCH_ASSOC );
 		//send list of services and type_service to view
 		$sql = 'SELECT *
 		FROM service NATURAL JOIN type_service';
-		$this->view->services__types = $this->db->fetchAssoc ( $sql );
+		$this->view->services__types = $this->db->fetchAll ( $sql );
 		
 		
 	}
