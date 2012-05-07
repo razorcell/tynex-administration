@@ -44,3 +44,6 @@
   ["id_commande"] => string(1) "1"
 }
 </pre>
+2012-05-07T13:05:57+02:00 INFO (6): Fonction init() executée
+2012-05-07T13:05:57+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T13:06:02+02:00 INFO (6): Fonction init() executée
