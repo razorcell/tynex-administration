@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Lun 07 Mai 2012 à 01:36
+-- Généré le : Lun 07 Mai 2012 à 16:59
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `TYNEXADMIN2`
+-- Base de données: `TYNEXADMIN`
 --
 
 -- --------------------------------------------------------
@@ -40,19 +40,27 @@ CREATE TABLE IF NOT EXISTS `client` (
   `societe` varchar(35) DEFAULT NULL,
   `email_societe` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Contenu de la table `client`
 --
 
 INSERT INTO `client` (`id_client`, `nom`, `prenom`, `tel`, `tel_societe`, `fax`, `email`, `adresse`, `type`, `gender`, `societe`, `email_societe`) VALUES
-(1, 'Kevin', 'nixon', '0600548565', '', '', 'kevin@gmail.com', 'Bloc A N56 Rabat', 'Particulier', 'Homme', '', ''),
+(1, 'Kevin', 'nixon', '0600548565', '', '', 'kevin@gmail.com', '', 'Particulier', 'Homme', '', ''),
 (2, 'Fadili', 'Ahmed', NULL, '0521625342', NULL, NULL, NULL, 'Entreprise', NULL, 'AKWA', 'akwa@akwa.com'),
 (3, 'Slimani', 'ahmed', '0621458595', '0562125242', '', 'slimani@kotobia.com', 'Bloc N marrakech', 'Entreprise', 'Homme', 'Koutobia', 'koutobia@kotobia.com'),
 (4, 'Omar', 'mahmoud', '', '0534543465', '', 'omar@clubmoving.com', '', 'Entreprise', 'Homme', 'Club Moving', 'moving@clubmoving.com'),
 (5, 'ahmadi', 'toriya', '0667564532', '', '', 'touriya.ahmadi@gmail.com', '', 'Particulier', 'Femme', '', ''),
-(6, 'Fouad', 'tanjaoui', '0665453426', '', '', 'fouad.tanjaoui@gmail.com', '', 'Particulier', 'Homme', '', '');
+(6, 'Fouad', 'tanjaoui', '0665453426', '', '', 'fouad.tanjaoui@gmail.com', '', 'Particulier', 'Homme', '', ''),
+(7, 'COULIBALY', 'Mahamadou', '05 45 96 23', '', '', 'mamadou@yahoo.fr', '', 'Particulier', 'Homme', '', ''),
+(8, 'COULIBALY', 'Mamadou', '05 65 89 78', '', '', 'mahamadou@yahoo.fr', '', 'Particulier', 'Homme', '', ''),
+(9, 'CISSE', 'Jolie', '05 78 89 78', '', '', 'jolie@yahoo.fr', '', 'Particulier', 'Femme', '', ''),
+(10, 'DOUMBIA', 'KadiJolie', '64 73 08 88', '', '', 'kadijolie@yahoo.fr', '', 'Particulier', 'Femme', '', ''),
+(11, 'Sissoko', 'Dialla', '45 65 98 78', '02 35 78 98', '05 45 78 96', 'dialla@yahoo.fr', 'Bamako, Doumanzana', 'Entreprise', 'Homme', 'SErvices-Ntic', 'services@gmail.com'),
+(12, 'Sissoko', 'Mamadou', '45 12 98 78', '45 65 78 98', '45 65 78 98', 'sissoko@yahoo.fr', 'Bamako, Medina Coura', 'Entreprise', 'Homme', 'OuagadouSoft', 'ouagadou@ouagadou.net'),
+(13, 'Dembele', 'Mariam', '45 12 98 78 78', '85 96 74 52', '15 59 75 53', 'mariam@yahoo.fr', 'Kalaban Coura', 'Entreprise', 'Femme', 'KokoSoft', 'kokosoft@kokosotf.org'),
+(14, 'Tidjani', 'CISSE', '12 45 78 98', '45 78 98 45 65', '25 85 36 96 45', 'tidjani@yahoo.fr', 'Kalaban Coura', 'Entreprise', 'Homme', 'Freres CISSE', 'frerescisse@frerescisse.fr');
 
 -- --------------------------------------------------------
 
@@ -67,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
   PRIMARY KEY (`id_commande`),
   UNIQUE KEY `id_commande` (`id_commande`,`id_client`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Contenu de la table `commande`
@@ -75,7 +83,8 @@ CREATE TABLE IF NOT EXISTS `commande` (
 
 INSERT INTO `commande` (`id_commande`, `id_client`, `libelle_commande`) VALUES
 (1, 1, 'Economic forum, from M.ALAMI'),
-(2, 1, 'commande desc');
+(18, 4, 'Organization d''un evenement pour rassembler les experts et professionnel du sport'),
+(19, 3, 'Pour la journÃ©e opensource');
 
 -- --------------------------------------------------------
 
@@ -105,25 +114,30 @@ CREATE TABLE IF NOT EXISTS `employe` (
   `prenom` varchar(30) NOT NULL,
   `genre` enum('Femme','Homme') NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL,
+  `password` text NOT NULL,
   `tel` varchar(15) NOT NULL,
   `email` varchar(35) NOT NULL,
   `adresse` text NOT NULL,
   `id_poste` int(11) NOT NULL,
-  `role` enum('administrateur','invite') NOT NULL DEFAULT 'invite',
+  `role` enum('invite','administrateur') NOT NULL DEFAULT 'invite',
   PRIMARY KEY (`id_employe`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `id_poste` (`id_poste`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `employe`
 --
 
 INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`, `role`) VALUES
-(2, 'mendili', 'karima', 'Femme', 'karima', 'pass', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7, 'administrateur'),
-(5, 'test', 'test', 'Homme', 'test', 'test', '0632521245', 'test@test.com', 'bloc chi l3ba', 6, 'invite');
+(1, 'alami', 'hassan', 'Homme', 'hassan', 'pass', '0632125242', 'hassan@gmail.com', 'Bloc A Agadir', 7, 'invite'),
+(2, 'mendili', 'karima', 'Femme', 'karima', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7, 'administrateur'),
+(3, 'sefrioui', 'abderahman', 'Homme', 'adbo', 'pass', '0635626894', 'adbo@gmail.com', 'Bloc C Agadir', 7, 'invite'),
+(4, 'ElGati', 'Saadia', 'Femme', 'saadia', 'saadia', '12 45 78 65 32', 'ssadia@yahoo.fr', 'Dahkal', 6, 'invite'),
+(5, 'MANKOU', 'Farel', 'Homme', 'farel', 'farel', '78 98 65 45 12', 'farel@yahoo.fr', 'Salam, Agadir', 8, 'invite'),
+(11, 'AHOMAGNON', 'Frejus', 'Homme', 'frejus', 'frejus', '12 45 98 56 32', 'Frejus@yahoo.fr', 'Al Inbiaat', 7, 'invite'),
+(12, 'CISSE', 'Aboul', 'Homme', 'pacha', '22c5e56746f01253289ee57dbbfab78a4f9ebda0', '05 27 68 47 03', 'aboulhcisse@gmail.com', 'Dahkla, Residence Al_wid', 6, 'invite');
 
 -- --------------------------------------------------------
 
@@ -143,10 +157,21 @@ CREATE TABLE IF NOT EXISTS `intervention` (
 --
 
 INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
-(2, 58),
-(2, 59),
-(2, 60),
-(2, 61);
+(1, 15),
+(2, 15),
+(3, 15),
+(3, 43),
+(1, 43),
+(3, 44),
+(1, 44),
+(1, 45),
+(2, 45),
+(1, 46),
+(2, 46),
+(3, 46),
+(3, 14),
+(5, 14),
+(1, 14);
 
 -- --------------------------------------------------------
 
@@ -159,19 +184,24 @@ CREATE TABLE IF NOT EXISTS `occupation` (
   `nom_occup` varchar(25) NOT NULL,
   PRIMARY KEY (`id_occup`),
   UNIQUE KEY `nom_occup` (`nom_occup`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Contenu de la table `occupation`
 --
 
 INSERT INTO `occupation` (`id_occup`, `nom_occup`) VALUES
+(18, 'Assistant en gestion admi'),
+(21, 'Assistant en gestion des '),
+(17, 'Assistant logistique'),
 (12, 'Designer'),
 (15, 'Manager'),
 (14, 'Network security expert'),
 (11, 'Programmer'),
+(19, 'Responsable des affaires '),
+(20, 'SecrÃ©taire d''Ã©dition'),
 (13, 'SEO expert'),
-(16, 'testooo');
+(16, 'test');
 
 -- --------------------------------------------------------
 
@@ -192,12 +222,18 @@ CREATE TABLE IF NOT EXISTS `occuper` (
 
 INSERT INTO `occuper` (`id_employe`, `id_occup`) VALUES
 (1, 11),
-(4, 11),
-(5, 12),
+(12, 11),
+(12, 12),
+(4, 13),
 (4, 14),
+(11, 14),
 (2, 15),
-(3, 15),
-(5, 15);
+(5, 15),
+(11, 15),
+(5, 16),
+(11, 16),
+(3, 17),
+(3, 21);
 
 -- --------------------------------------------------------
 
@@ -212,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `pack` (
   PRIMARY KEY (`id_pack`),
   KEY `libelle_pack` (`libelle_pack`),
   KEY `id_type_service` (`id_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Contenu de la table `pack`
@@ -226,7 +262,18 @@ INSERT INTO `pack` (`id_pack`, `libelle_pack`, `id_type_service`) VALUES
 (11, 'Pack Gold', 14),
 (12, 'Pack DÃ©butant', 15),
 (13, 'Pack Amateur', 15),
-(14, 'Pack Professionnel', 15);
+(14, 'Pack Professionnel', 15),
+(15, 'Pack  Z3em', 15),
+(16, 'Pack  Z3em', 15),
+(17, 'Pack Ya Salam', 15),
+(18, 'Pack Maftou7', 15),
+(19, 'Pack Add Klimat', 15),
+(20, 'tm Etudiant', 13),
+(21, 'tm Start ', 13),
+(22, 'tm Basic', 13),
+(23, 'tm Business', 13),
+(24, 'tm Pro', 13),
+(25, 'tm VPServe', 13);
 
 -- --------------------------------------------------------
 
@@ -238,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `poste` (
   `id_poste` int(11) NOT NULL AUTO_INCREMENT,
   `nom_poste` varchar(15) NOT NULL,
   PRIMARY KEY (`id_poste`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `poste`
@@ -247,7 +294,9 @@ CREATE TABLE IF NOT EXISTS `poste` (
 INSERT INTO `poste` (`id_poste`, `nom_poste`) VALUES
 (6, 'Stagiaire'),
 (7, 'Personnel'),
-(8, 'Freelance');
+(8, 'Freelance'),
+(9, 'Directeur'),
+(10, 'MenagÃ¨re');
 
 -- --------------------------------------------------------
 
@@ -261,25 +310,27 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `prix` float NOT NULL,
   `progression` int(11) NOT NULL,
   `status` enum('Actif','Interrompu') NOT NULL,
-  `date_debut` text NOT NULL,
-  `date_fin` text NOT NULL,
+  `date_debut` date NOT NULL,
+  `date_fin` date NOT NULL,
   `id_type_projet` int(11) NOT NULL,
   `paye` enum('Non','Oui') NOT NULL,
   `id_commande` int(11) NOT NULL,
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=47 ;
 
 --
 -- Contenu de la table `projet`
 --
 
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
-(58, 'project desc', 6300, 54, 'Interrompu', '01.05.2012', '27.09.2012', 3, 'Non', 2),
-(59, 'project desc', 6300, 100, 'Actif', '01.05.2012', '18.10.2012', 4, 'Non', 2),
-(60, 'project desc', 6300, 100, 'Actif', '01.05.2012', '22.05.2012', 4, 'Oui', 2),
-(61, 'project desc', 6300, 100, 'Actif', '01.05.2012', '25.05.2012', 4, 'Non', 2);
+(14, 'Festival Mawazin', 10100, 78, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
+(15, 'Hotel farah demander pas M.Skali Haut prioritÃ©', 12000, 35, 'Actif', '2002-05-20', '2021-05-20', 3, 'Oui', 1),
+(43, 'Fort recommendation sur le style(couleur, banniÃ©re...), contrainte de couleur : bleu', 5000, 30, 'Actif', '2001-05-20', '2031-05-20', 4, 'Oui', 18),
+(44, 'application mobile pour le partage de photo et de video PUB, au cour de l''evenement', 6000, 0, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 18),
+(45, 'ergonomique, couleur bleu', 5700, 45, 'Actif', '2001-05-20', '2031-05-20', 4, 'Non', 19),
+(46, 'chatroom  intranet en plein envenema', 7200, 18, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 19);
 
 -- --------------------------------------------------------
 
@@ -302,17 +353,20 @@ CREATE TABLE IF NOT EXISTS `service` (
   KEY `id_pack` (`id_pack`),
   KEY `id_commande` (`id_commande`),
   KEY `id_type_service` (`id_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Contenu de la table `service`
 --
 
 INSERT INTO `service` (`id_service`, `description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES
-(4, 'test service', 1250, '05.01.2012', '21.06.2012', 'Interrompu', 16, NULL, 'Non', 1),
-(9, 'service desc', 2300, '05.05.2012', '20.09.2012', 'Interrompu', 13, 14, 'Non', 2),
-(10, 'service desc', 2300, '05.05.2012', '20.09.2012', 'Interrompu', 14, 11, 'Non', 2),
-(11, 'service desc', 2300, '05.05.2012', '23.05.2012', 'Interrompu', 15, 13, 'Non', 2);
+(13, 'l''hebergement pack entreprise', 1200, '01.04.2012', '31.07.2012', 'Interrompu', 13, 9, 'Oui', 18),
+(14, '', 700, '01.04.2012', '31.07.2012', 'Interrompu', 15, 14, 'Oui', 18),
+(16, 'www.opensource.com', 1000, '01.05.2012', '01.08.2012', 'Actif', 13, 14, 'Oui', 19),
+(17, 'prioritÃ© google', 1000, '01.05.2012', '01.08.2012', 'Actif', 15, 14, 'Oui', 19),
+(18, 'www.rien.fr', 500, '29.05.2012', '18.05.2012', 'Interrompu', 13, 22, 'Oui', 18),
+(19, 'L''entreprise Kokosoft', 800, '16.05.2012', '15.05.2012', 'Actif', 13, 9, 'Oui', 19),
+(20, 'www.etudiant.com', 1, '01.05.2012', '02.05.2012', 'Interrompu', 13, 7, 'Oui', 18);
 
 -- --------------------------------------------------------
 
@@ -325,13 +379,14 @@ CREATE TABLE IF NOT EXISTS `type_projet` (
   `nom_type_projet` varchar(30) NOT NULL,
   PRIMARY KEY (`id_type_projet`),
   UNIQUE KEY `nom_type_projet` (`nom_type_projet`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `type_projet`
 --
 
 INSERT INTO `type_projet` (`id_type_projet`, `nom_type_projet`) VALUES
+(5, 'CD-Rom Interactifs'),
 (3, 'Desktop application'),
 (2, 'Mobile application'),
 (4, 'Web application');
@@ -347,17 +402,17 @@ CREATE TABLE IF NOT EXISTS `type_service` (
   `libelle_type_service` varchar(30) NOT NULL,
   PRIMARY KEY (`id_type_service`),
   UNIQUE KEY `libelle_type_service` (`libelle_type_service`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Contenu de la table `type_service`
 --
 
 INSERT INTO `type_service` (`id_type_service`, `libelle_type_service`) VALUES
+(17, 'Conseil & Audi'),
 (13, 'Hebergement'),
 (14, 'Nom de Domaine'),
-(15, 'Referencement'),
-(16, 'Vectors');
+(15, 'Referencement');
 
 --
 -- Contraintes pour les tables exportées
