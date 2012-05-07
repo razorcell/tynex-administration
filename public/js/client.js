@@ -189,7 +189,7 @@ $(document)
 											'project');
 								} else {
 									showWarning(
-											'Vous n\'avez rien selectionner',
+											'Vous n\'avez rien selectionné',
 											5000);
 								}
 
@@ -223,7 +223,7 @@ $(document)
 											'service');
 								} else {
 									showWarning(
-											'Vous n\'avez rien selectionner',
+											'Vous n\'avez rien selectionné',
 											5000);
 								}
 
@@ -348,7 +348,7 @@ $(document)
 											DeleteAll(lines_to_delete, 'client');
 										} else {
 											showWarning(
-													'Vous n\'avez rien selectionner',
+													'Vous n\'avez rien selectionné',
 													5000);
 										}
 
@@ -488,7 +488,7 @@ $(document)
 													});
 										} else {
 											showError(
-													'Veuillez revoir le formulaire de particulier',
+													'Veuillez revoir le formulaire du client particulier',
 													3000);
 										}
 

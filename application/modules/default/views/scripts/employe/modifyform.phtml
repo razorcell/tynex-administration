@@ -39,7 +39,7 @@ echo '
 		</div>
 	</div>
 	<div class="section ">
-		<label>gender<small>Text custom</small></label>
+		<label>gender<small></small></label>
 		<div>
 			<div>
 				<input type="radio" name="gender" id="radio-1" value="0"
@@ -53,38 +53,32 @@ echo '
 			</div>
 		</div>
 	</div>
-
 	<div class="section">
-		<label> E-mail<small>Text custom</small></label>
+		<label> E-mail<small></small></label>
 		<div>
 			<input type="text" class="validate[required,custom[email]]  large email"
 				name="email" id="e_required" value="' . $this->employe->email . '">
 		</div>
 	</div>
 	<div class="section">
-		<label> Adresse <small>Text custom</small></label>
+		<label> Adresse <small></small></label>
 		<div>
-			<input type="text" name="adresse" class=" full" value="' . $this->employe->adresse . '"/><span class="f_help">Text
-				custom help</span>
+			<input type="text" name="adresse" class=" full" value="' . $this->employe->adresse . '"/><span class="f_help"></span>
 		</div>
 	</div>
-
-
-
 	<div class="section numericonly">
-		<label> Telephone <small>Text custom</small></label>
+		<label> Telephone <small></small></label>
 		<div>
 			<input id="tel" name="tel" type="text" class="validate[required] small" maxlength="20" value="' . $this->employe->tel . '">
 		</div>
 	</div>
 
 	<div class="section">
-		<label> Compte d\'utilisateur <small>Text custom</small></label>
+		<label> Compte d\'utilisateur <small></small></label>
 		<div>
 			<input type="text" name="username" id="username"
 				class="validate[required,minSize[3],maxSize[20],] medium" value="' . $this->employe->username . '"/><label>Nom
-				d\'utilisateur</label> <span class="f_help"> Username login or
-				register. <br />Should be between 3 and not more than 20 characters.
+				d\'utilisateur</label> <span class="f_help"> Doit etre compris entre 3 et 20 caractères.
 			</span>
 		</div>
 		<div>
@@ -95,8 +89,7 @@ echo '
 			<input type="password"
 				class="validate[required,equals[password]] medium"
 				name="passwordCon" id="passwordCon" value="' . $this->employe->password . '"/><label>Confirmer le mot de
-				passe</label> <span class="f_help"> Your password should be at least
-				6 characters.</span>
+				passe</label> <span class="f_help">Votre mot de passe doit contenir au moins 3 caractères.</span>
 		</div>
 	</div>';
 // Affichage du poste
@@ -107,7 +100,7 @@ foreach ( $this->list_postes as $poste ) {
 	}
 }
 echo '<div class="section">
-	<label>Poste<small>some text</small></label>
+	<label>Poste<small></small></label>
 	<div>
 	<select data-placeholder="' . $poste_string . '"
 	class="chzn-select" tabindex="2">
@@ -158,8 +151,7 @@ echo '	</select>
 
 echo'<div class="section last">
 		<div>
-			<a class="button blue back submit_form modify_employe" data-icon="⏏">Update</a>
-			<a id="reset" class="button pink glossy glass">Reset</a>
+			<a class="button blue back submit_form modify_employe" data-icon="⏏">Appliquer la modification</a>
 			<input class="hidden_gender" type="hidden" value="' . ($this->employe->genre == "Homme" ? "0" : "1") . '">
 		</div>
 	</div>

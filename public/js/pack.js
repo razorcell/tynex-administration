@@ -57,7 +57,7 @@ $(document).ready(function() {
 		if (lines_to_delete.length > 0) {
 			DeleteAll(lines_to_delete, 'pack');
 		} else {
-			showWarning('Vous n\'avez rien selectionner', 5000);
+			showWarning('Vous n\'avez rien selectionné', 5000);
 		}
 
 	});

@@ -334,7 +334,7 @@ $(document)
 													'commande');
 										} else {
 											showWarning(
-													'Vous n\'avez rien selectionner',
+													'Vous n\'avez rien selectionné',
 													5000);
 										}
 
@@ -367,7 +367,7 @@ $(document)
 											'project');
 								} else {
 									showWarning(
-											'Vous n\'avez rien selectionner',
+											'Vous n\'avez rien selectionné',
 											5000);
 								}
 
@@ -401,7 +401,7 @@ $(document)
 											'service');
 								} else {
 									showWarning(
-											'Vous n\'avez rien selectionner',
+											'Vous n\'avez rien selectionné',
 											5000);
 								}
 
@@ -590,7 +590,7 @@ $(document)
 															}else{
 																//si commande existe deja
 														showSuccess(
-																'Projet ajoutés',
+																'Projet ajouté',
 																3000);
 															}
 															} else {// SI ERROR

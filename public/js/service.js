@@ -166,7 +166,7 @@ $(document).ready(
 							 }
 						 else
 							 {
-								showWarning('Vous n\'avez rien selectionner',5000);
+								showWarning('Vous n\'avez rien selectionné',5000);
 							 }
 					});
 			$('.display tr').click(function() {

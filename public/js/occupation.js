@@ -1,6 +1,6 @@
 $(document).ready(
 		function() {
-			var all_rows_selected = false;//pour savoir si tous le elements sont selectionner ou pas (index)
+			var all_rows_selected = false;//pour savoir si tous le elements sont selectionné ou pas (index)
 			$('.f_o_add').submit(function(e) {
 				// On désactive le comportement par défaut du navigateur
 				// (qui consiste à appeler la page action du formulaire) pour
@@ -99,7 +99,7 @@ $(document).ready(
 							 }
 						 else
 							 {
-							 showWarning('Vous n\'avez rien selectionner',5000);
+							 showWarning('Vous n\'avez rien selectionné',5000);
 							 }
 				 
 				

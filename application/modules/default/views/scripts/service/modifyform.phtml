@@ -20,7 +20,7 @@ echo '<div class="section">
 </div>';
 //commande
 echo '<div class="section commande">
-<label>Commande<small>La commande à laquel ce service appartient</small></label>
+<label>Commande<small>La commande du service appartenu</small></label>
 <div>
 <select data-placeholder="'.$this->service->id_commande.'"
 class="chzn-select commande" tabindex="2">
@@ -72,7 +72,6 @@ if($packs_exists){
 		}
 	}
 	echo '</ul></div>';
-	
 	echo '<input type="hidden" class="pack_hidden" value="'.$pack_string.'" name="pack">
 	</div>';
 }else{//if no packs for this type_service exists
@@ -81,9 +80,7 @@ if($packs_exists){
 	</div>';
 }
 
-
 echo '
-
 <div class="section">
      <label>Prix<small>Donner un prix</small></label>
          <div>
@@ -133,15 +130,12 @@ if($this->service->status == 'Actif'){
 			<input type="text" id="datepick2" class="datepicker date_fin"
 				readonly="readonly" name="date_fin" value="'.$this->service->date_fin.'"/>
 		</div>
-	</div>
-	
-
+	</div>	
 	';
 	echo '	
 	<div class="section last">
 		<div>
-			<a class="button green back modify_service">Ajouter</a> 
-			<a id="reset" class="button pink glossy glass">Reset</a>
+			<a class="button green back modify_service">Appliquer les modifications</a> 
 		</div>
 	</div>
 
@@ -162,6 +156,5 @@ $(document).ready(
 		});
 	}
 });
-
 //-->
 </script>

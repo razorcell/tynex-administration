@@ -131,7 +131,7 @@ $(document)
 											DeleteAll(lines_to_delete, 'project');
 										} else {
 											showWarning(
-													'Vous n\'avez rien selectionner',
+													'Vous n\'avez rien selectionné',
 													5000);
 										}
 									});

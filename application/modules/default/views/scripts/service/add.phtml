@@ -42,9 +42,7 @@ echo '</select><span class="f_help">Veuillez choisir un type de service</span>
 echo '<div class="section pack" style="display:none">
 <input type="hidden" class="pack" value="" name="pack"></input>
 </div>';
-
-echo '
-
+echo'
 <div class="section">
      <label>Prix<small>Donner un prix</small></label>
          <div>
@@ -55,8 +53,7 @@ echo '
 		<label>Status<small>Veuillez definir un status initial pour ce service</small></label>
 		<div>
 			<input type="checkbox" id="status" name="status" class="status" value="1" checked="checked"> 
-			<span class="f_help"></span>
-				
+			<span class="f_help"></span>		
 		</div>
 	</div>
 	<input value="Interrompu" type="hidden" id="status_hidden" name="status_hidden" class="status_hidden"/>
@@ -73,8 +70,7 @@ echo '
 		<div>
 			<textarea name="description"></textarea>
 		</div>
-	</div>
-	
+	</div>	
 	<div class="section">
 		<label>Date debut</label>
 		<div>
@@ -82,24 +78,17 @@ echo '
 				readonly="readonly" name="date_debut" />
 		</div>
 	</div>
-
 	<div class="section">
 		<label>Date fin</label>
 		<div>
 			<input type="text" id="datepick2" class="datepicker date_fin"
 				readonly="readonly" name="date_fin" />
 		</div>
-	</div>
-	
-
-	';
-	echo '	
-	
-	
+	</div>';
+	echo '
 	<div class="section last">
 		<div>
 			<a class="button green back add_service">Ajouter</a> 
-			<a id="reset" class="button pink glossy glass">Reset</a>
 		</div>
 	</div>
 
