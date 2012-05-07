@@ -83,8 +83,7 @@ $(document).ready(function(){
 		<div class="section last">
 			<div>
 				<a class="button blue morph submit_form modify_client_particulier"
-					data-icon="⏏">Update</a> <a id="reset_p"
-					class="button pink glossy glass">Reset</a>
+					data-icon="⏏">Update</a> 
 					<input class="hidden_gender" type="hidden" value="' . ($this->client['gender'] == "Homme" ? "0" : "1") . '">
 			</div>
 		</div>
@@ -106,7 +105,7 @@ echo '
 	
 	$i = 0;
 	echo '
-	<a class="delete_b_commande_projet button pink glossy glass">- Supprimer</a>
+	<a class="delete_b_commande_projet button pink morph">- Supprimer</a>
 	<a class="selectall_projet button blue morph">De/Selectionner tous</a>
 	<div id="UITab_projets">
 	
@@ -188,7 +187,7 @@ echo '
 			<?php
 	$i = 0;
 	echo '
-	<a class="delete_b_commande_service button pink glossy glass">- Supprimer</a>
+	<a class="delete_b_commande_service button pink morph">- Supprimer</a>
 	<a class="selectall_service button blue morph">De/Selectionner tous</a>
 	<div id="UITab_services">
 	

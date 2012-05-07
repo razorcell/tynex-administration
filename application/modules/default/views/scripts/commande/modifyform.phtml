@@ -94,14 +94,14 @@ echo '</select><span class="f_help">Veuillez choisir un type de projet</span>
 		<label>Description<small>Un petit mot sur le service</small></label>
 		<div>
 			<textarea name="description" class="description_commande">'.$this->commande->libelle_commande.'</textarea>
-			<a class="button green back modify_commande">Mettre à jour la commande</a> 
+			<a class="button green morph modify_commande">Mettre à jour la commande</a> 
 		</div>
 	</div>
 	<div class="section">
 		<label>Documents : <small>utiliser cette solution pour generer des documents cette commande</small></label>
 		<div>
-			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'facture' ).'" class="button blue serif skew facture" data-icon="✔">Facture</a>
-			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'reglement' ).'" class="button blue serif skew facture" data-icon="$">Reglement</a>
+			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'facture' ).'" class="button morph facture" data-icon="✔">Facture</a>
+			<a href="'.$this->url ( array ('id' => $this->commande->id_commande ), 'reglement' ).'" class="button morph facture" data-icon="$">Reglement</a>
 			
 		</div>
 	</div>
@@ -265,8 +265,8 @@ echo '	</select>
 	
 	<div class="section last">
 		<div>
-			<a class="button green back add_commande_projet">Ajouter</a> 
-			<a id="reset" class="button pink glossy glass">Reset</a>
+			<a class="button green morph add_commande_projet">Ajouter</a> 
+			
 		</div>
 	</div>
 </fieldset>
@@ -348,7 +348,7 @@ echo '
 	
 	<div class="section last">
 		<div>
-			<a class="button green back add_commande_service">Ajouter</a> 
+			<a class="button green morph add_commande_service">Ajouter</a> 
 			<a id="reset" class="button pink glossy glass">Reset</a>
 		</div>
 	</div>
@@ -379,7 +379,7 @@ echo '	</div>
 		
 $i = 0;
 echo '
-<a class="delete_b_commande_projet button pink glossy glass">- Supprimer</a>
+<a class="delete_b_commande_projet button pink morph">- Supprimer</a>
 <a class="selectall_projet button blue morph">De/Selectionner tous</a>
 <div id="UITab_projets">
 
@@ -461,7 +461,7 @@ echo '</tbody>
 		<?php
 $i = 0;
 echo '
-<a class="delete_b_commande_service button pink glossy glass">- Supprimer</a>
+<a class="delete_b_commande_service button pink morph">- Supprimer</a>
 <a class="selectall_service button blue morph">De/Selectionner tous</a>
 <div id="UITab_services">
 

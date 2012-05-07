@@ -6228,3 +6228,520 @@
 }
 </pre>
 2012-05-07T18:16:38+02:00 INFO (6): client = particulier
+2012-05-07T18:18:14+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:18:14+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:18:17+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:18:17+02:00 INFO (6): Client modifyform()
+2012-05-07T18:18:17+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:18:17+02:00 INFO (6): client = particulier
+2012-05-07T18:20:14+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:20:14+02:00 INFO (6): Client modifyform()
+2012-05-07T18:20:14+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:20:14+02:00 INFO (6): client = particulier
+2012-05-07T18:20:42+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:20:42+02:00 INFO (6): Client modifyform()
+2012-05-07T18:20:42+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:20:42+02:00 INFO (6): client = particulier
+2012-05-07T18:21:00+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:00+02:00 INFO (6): Client modifyform()
+2012-05-07T18:21:00+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:21:00+02:00 INFO (6): client = particulier
+2012-05-07T18:21:05+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:05+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:21:06+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:06+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:12+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:12+02:00 INFO (6): get all clients : SELECT * FROM client
+2012-05-07T18:21:18+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:18+02:00 INFO (6): Client modifyform()
+2012-05-07T18:21:18+02:00 INFO (6): <pre>array(12) {
+  ["id_client"] => string(1) "1"
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:21:18+02:00 INFO (6): client = particulier
+2012-05-07T18:21:22+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:22+02:00 INFO (6): client modifyAction()
+2012-05-07T18:21:22+02:00 INFO (6): Request body : {"nom_p" : "Kevin","prenom_p" : "nixon","adresse_p" : "","email_p" : "kevin@gmail.com","tel_p" : "0600548565","id" : "1","gender_p" : "0","type":"particulier"}
+2012-05-07T18:21:22+02:00 INFO (6): Decoded data from user : <pre>array(8) {
+  ["nom_p"] => string(5) "Kevin"
+  ["prenom_p"] => string(5) "nixon"
+  ["adresse_p"] => string(0) ""
+  ["email_p"] => string(15) "kevin@gmail.com"
+  ["tel_p"] => string(10) "0600548565"
+  ["id"] => string(1) "1"
+  ["gender_p"] => string(1) "0"
+  ["type"] => string(11) "particulier"
+}
+</pre>
+2012-05-07T18:21:22+02:00 INFO (6): *********************PHASE DE MODIFICATION D UN PARTICULIER************
+2012-05-07T18:21:22+02:00 INFO (6): Client to save <pre>array(11) {
+  ["nom"] => string(5) "Kevin"
+  ["prenom"] => string(5) "nixon"
+  ["tel"] => string(10) "0600548565"
+  ["tel_societe"] => string(0) ""
+  ["fax"] => string(0) ""
+  ["email"] => string(15) "kevin@gmail.com"
+  ["adresse"] => string(0) ""
+  ["type"] => string(11) "Particulier"
+  ["gender"] => string(5) "Homme"
+  ["societe"] => string(0) ""
+  ["email_societe"] => string(0) ""
+}
+</pre>
+2012-05-07T18:21:22+02:00 INFO (6): client particulier update condition : id_client = 1
+2012-05-07T18:21:22+02:00 INFO (6): mise à jour entreprise : UPDATE `client` SET `nom` = ?, `prenom` = ?, `tel` = ?, `tel_societe` = ?, `fax` = ?, `email` = ?, `adresse` = ?, `type` = ?, `gender` = ?, `societe` = ?, `email_societe` = ? WHERE (id_client = 1)
+2012-05-07T18:21:22+02:00 INFO (6): mise à jour  - particulier - OUI
+2012-05-07T18:21:28+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:28+02:00 INFO (6): <pre>array(3) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "3"
+    ["id_projet"] => string(2) "14"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "5"
+    ["id_projet"] => string(2) "14"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-07T18:21:32+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:32+02:00 INFO (6): Projet modifyAction()
+2012-05-07T18:21:32+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Festival Mawazin","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "10100.00","id" : "14","commande" : "1","type_projet" : "Mobile application","progression" : "40"}
+2012-05-07T18:21:32+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-07T18:21:32+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-07T18:21:32+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "40"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-07T18:21:32+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 14)
+2012-05-07T18:21:32+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-07T18:21:32+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-07T18:21:37+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:37+02:00 INFO (6): Projet modifyAction()
+2012-05-07T18:21:37+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Festival Mawazin","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "10100.00","id" : "14","commande" : "1","type_projet" : "Mobile application","progression" : "40","employes" : [{"name " : "alami"}]}
+2012-05-07T18:21:37+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-07T18:21:37+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-07T18:21:37+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "40"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-07T18:21:37+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 14)
+2012-05-07T18:21:37+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-07T18:21:37+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_projet existant************
+2012-05-07T18:21:37+02:00 INFO (6): Intervention delete condition : id_projet = 14
+2012-05-07T18:21:37+02:00 INFO (6): Delete query : DELETE FROM `intervention` WHERE (id_projet = 14)
+2012-05-07T18:21:37+02:00 INFO (6): *****************PHASE INSERTION DES NOUVEAUX  TUPLES id_projet | id_employe************
+2012-05-07T18:21:37+02:00 INFO (6): MATCH FOUND : nom employe trouvé alami<-------> nom employe from user alami
+2012-05-07T18:21:37+02:00 INFO (6): <pre>array(2) {
+  ["id_projet"] => string(2) "14"
+  ["id_employe"] => string(1) "1"
+}
+</pre>
+2012-05-07T18:21:38+02:00 INFO (6): add intervention : INSERT INTO `intervention` (`id_projet`, `id_employe`) VALUES (?, ?)
+2012-05-07T18:21:38+02:00 INFO (6): insertion - INTERVENTION - OUI                FIN
+2012-05-07T18:21:48+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:21:48+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-07T18:31:25+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:31:25+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-07T18:31:27+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:31:27+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-07T18:31:32+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:31:32+02:00 INFO (6): Projet modifyAction()
+2012-05-07T18:31:32+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Festival Mawazin","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "10100.00","id" : "14","commande" : "1","type_projet" : "Mobile application","progression" : "75"}
+2012-05-07T18:31:32+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-07T18:31:32+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-07T18:31:32+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "75"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-07T18:31:32+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 14)
+2012-05-07T18:31:32+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-07T18:31:32+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-07T18:35:28+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:28+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-07T18:35:31+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:31+02:00 INFO (6):  projet addAction() 
+2012-05-07T18:35:31+02:00 INFO (6): get all clients : SELECT * FROM employe
+2012-05-07T18:35:31+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:44+02:00 INFO (6): type_projet : submitAction()
+2012-05-07T18:35:47+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:47+02:00 INFO (6): get all projets : SELECT * FROM type_projet
+2012-05-07T18:35:50+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:50+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_projet"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-07T18:35:52+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:35:52+02:00 INFO (6): Projet modifyAction()
+2012-05-07T18:35:52+02:00 INFO (6): Request body : {"date_debut" : "2001-05-20","date_fin" : "2031-05-20","description" : "Festival Mawazin","status" : "1","status_hidden" : "Actif","paye_hidden" : "Non","prix" : "10100.00","id" : "14","commande" : "1","type_projet" : "Mobile application","progression" : "75"}
+2012-05-07T18:35:52+02:00 INFO (6): *********************PHASE DE MISE A JOUR DU PROJET************
+2012-05-07T18:35:52+02:00 INFO (6): type_projet_id trouvé = 2
+2012-05-07T18:35:52+02:00 INFO (6): <pre>array(9) {
+  ["description"] => string(16) "Festival Mawazin"
+  ["prix"] => string(8) "10100.00"
+  ["progression"] => string(2) "75"
+  ["status"] => string(5) "Actif"
+  ["date_debut"] => string(10) "2001-05-20"
+  ["date_fin"] => string(10) "2031-05-20"
+  ["id_type_projet"] => string(1) "2"
+  ["paye"] => string(3) "Non"
+  ["id_commande"] => string(1) "1"
+}
+</pre>
+2012-05-07T18:35:52+02:00 INFO (6): modify project : UPDATE `projet` SET `description` = ?, `prix` = ?, `progression` = ?, `status` = ?, `date_debut` = ?, `date_fin` = ?, `id_type_projet` = ?, `paye` = ?, `id_commande` = ? WHERE (id_projet = 14)
+2012-05-07T18:35:52+02:00 INFO (6): MISE A JOUR - PROJET - OUI
+2012-05-07T18:35:52+02:00 INFO (6): Aucun employe definie pour ce projet
+2012-05-07T18:36:00+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:00+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:36:03+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:03+02:00 INFO (6): service modifyform()
+2012-05-07T18:36:03+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "13"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(4) "1200"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(1) "9"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:08+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:08+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:36:08+02:00 INFO (6): Request body : {"pack" : "Pack Entreprise","prix" : "1200.00","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","description" : "l'hebergement pack entreprise","date_debut" : "01.04.2012","date_fin" : "31.07.2012","commande" : "18","type_service" : "Hebergement","pack" : "tm Basic","id" : "13"}
+2012-05-07T18:36:08+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["pack"] => string(8) "tm Basic"
+  ["prix"] => string(7) "1200.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["commande"] => string(2) "18"
+  ["type_service"] => string(11) "Hebergement"
+  ["id"] => string(2) "13"
+}
+</pre>
+2012-05-07T18:36:08+02:00 INFO (6): id type_service trouvé = 13
+2012-05-07T18:36:08+02:00 INFO (6): id pack trouvé = 22
+2012-05-07T18:36:08+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(7) "1200.00"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "22"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:08+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `id_pack` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 13)
+2012-05-07T18:36:08+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:36:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:09+02:00 INFO (6): service modifyform()
+2012-05-07T18:36:09+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "13"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(4) "1200"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "22"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:13+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:13+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:36:13+02:00 INFO (6): Request body : {"pack" : "tm Basic","prix" : "1200.00","status_hidden" : "Interrompu","paye" : "1","paye_hidden" : "Oui","description" : "l'hebergement pack entreprise","date_debut" : "01.04.2012","date_fin" : "31.07.2012","commande" : "18","type_service" : "Hebergement","pack" : "tm VPServe","id" : "13"}
+2012-05-07T18:36:13+02:00 INFO (6): Decoded data from user : <pre>array(11) {
+  ["pack"] => string(10) "tm VPServe"
+  ["prix"] => string(7) "1200.00"
+  ["status_hidden"] => string(10) "Interrompu"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["commande"] => string(2) "18"
+  ["type_service"] => string(11) "Hebergement"
+  ["id"] => string(2) "13"
+}
+</pre>
+2012-05-07T18:36:13+02:00 INFO (6): id type_service trouvé = 13
+2012-05-07T18:36:13+02:00 INFO (6): id pack trouvé = 25
+2012-05-07T18:36:13+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(7) "1200.00"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "25"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:13+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `id_pack` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 13)
+2012-05-07T18:36:13+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:36:15+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:15+02:00 INFO (6): service modifyform()
+2012-05-07T18:36:15+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "13"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(4) "1200"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(10) "Interrompu"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "25"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:24+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:24+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:36:24+02:00 INFO (6): Request body : {"pack" : "tm VPServe","prix" : "1200.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "l'hebergement pack entreprise","date_debut" : "01.04.2012","date_fin" : "31.07.2012","commande" : "18","type_service" : "Hebergement","pack" : "tm VPServe","id" : "13"}
+2012-05-07T18:36:24+02:00 INFO (6): Decoded data from user : <pre>array(12) {
+  ["pack"] => string(10) "tm VPServe"
+  ["prix"] => string(7) "1200.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["commande"] => string(2) "18"
+  ["type_service"] => string(11) "Hebergement"
+  ["id"] => string(2) "13"
+}
+</pre>
+2012-05-07T18:36:24+02:00 INFO (6): id type_service trouvé = 13
+2012-05-07T18:36:24+02:00 INFO (6): id pack trouvé = 25
+2012-05-07T18:36:24+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(7) "1200.00"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "25"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:24+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `id_pack` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 13)
+2012-05-07T18:36:24+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:36:26+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:26+02:00 INFO (6): service modifyform()
+2012-05-07T18:36:26+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "13"
+  ["description"] => string(29) "l&#039;hebergement pack entreprise"
+  ["prix"] => string(4) "1200"
+  ["date_debut"] => string(10) "01.04.2012"
+  ["date_fin"] => string(10) "31.07.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "25"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:36:44+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:47+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:36:47+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:37:03+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:37:05+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:37:05+02:00 INFO (6): <pre>array(1) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_occup"] => string(2) "11"
+  }
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:37:14+02:00 INFO (6): modifyAction()
+2012-05-07T18:37:14+02:00 INFO (6): Request body : {"nom" : "alami","prenom" : "hassan","email" : "hassan@gmail.com","adresse" : "Bloc A Agadir","tel" : "0632125242","username" : "hassan","password" : "pass","passwordCon" : "pass","id" : "1","poste" : "Personnel","gender" : "0","occupations" : [{"name " : "Assistant en gestion admi"},{"name " : "Assistant en gestion des "},{"name " : "Assistant logistique"},{"name " : "Designer"}]}
+2012-05-07T18:37:14+02:00 INFO (6): *********************PHASE DE MISE A JOUR DE L EMPLOYE************
+2012-05-07T18:37:14+02:00 INFO (6): id poste trouvé = 7
+2012-05-07T18:37:14+02:00 INFO (6): <pre>array(9) {
+  ["nom"] => string(5) "alami"
+  ["prenom"] => string(6) "hassan"
+  ["genre"] => string(5) "Homme"
+  ["username"] => string(6) "hassan"
+  ["password"] => string(40) "9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684"
+  ["tel"] => string(10) "0632125242"
+  ["email"] => string(16) "hassan@gmail.com"
+  ["adresse"] => string(13) "Bloc A Agadir"
+  ["id_poste"] => string(1) "7"
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): employe update condition : id_employe = 1
+2012-05-07T18:37:14+02:00 INFO (6): update query : UPDATE `employe` SET `nom` = ?, `prenom` = ?, `genre` = ?, `username` = ?, `password` = ?, `tel` = ?, `email` = ?, `adresse` = ?, `id_poste` = ? WHERE (id_employe = 1)
+2012-05-07T18:37:14+02:00 INFO (6): nbr de lignes  = 1
+2012-05-07T18:37:14+02:00 INFO (6): MISE A JOUR - EMPLOYE - OUI
+2012-05-07T18:37:14+02:00 INFO (6): *****************PHASE DE SUPPRESSION DES TUPLES id_employ | id_occupation existant************
+2012-05-07T18:37:14+02:00 INFO (6): Occuper delete condition : id_employe = 1
+2012-05-07T18:37:14+02:00 INFO (6): update query : DELETE FROM `occuper` WHERE (id_employe = 1)
+2012-05-07T18:37:14+02:00 INFO (6): *****************PHASE D INSERTION DES TUPLES id_employ | id_occupation************
+2012-05-07T18:37:14+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "1"
+  ["id_occup"] => string(2) "18"
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-05-07T18:37:14+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "1"
+  ["id_occup"] => string(2) "21"
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-05-07T18:37:14+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "1"
+  ["id_occup"] => string(2) "17"
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-05-07T18:37:14+02:00 INFO (6): <pre>array(2) {
+  ["id_employe"] => string(1) "1"
+  ["id_occup"] => string(2) "12"
+}
+</pre>
+2012-05-07T18:37:14+02:00 INFO (6): MISE A JOUR - OCCUPER - OUI
+2012-05-07T18:37:15+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:37:15+02:00 INFO (6): <pre>array(4) {
+  [0] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_occup"] => string(2) "12"
+  }
+  [1] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_occup"] => string(2) "17"
+  }
+  [2] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_occup"] => string(2) "18"
+  }
+  [3] => array(2) {
+    ["id_employe"] => string(1) "1"
+    ["id_occup"] => string(2) "21"
+  }
+}
+</pre>
+2012-05-07T18:37:51+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:38:32+02:00 INFO (6): Fonction init() executée

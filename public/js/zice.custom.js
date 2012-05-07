@@ -523,8 +523,8 @@ $(function() {
 			'title': 'CONFIRMATION DE LA SUPPRESSION','message': " <strong>VOUS VOULLEZ VRAIMMANT SUPPRIMER</strong><br /><font color=red>' "+ id +" ' </font> ",
 			'buttons': 
 							{'Yes': 
-								{//'class': 'special',
-								'class': 'green',
+								{//'class': 'morph',
+								'class': 'morph pink',
 								'action': function(){		
 													
 													var json_to_send = '{"id" : "'+id+'"}';
@@ -556,7 +556,7 @@ $(function() {
 									}//end action attribut
 								},//end YES attribut
 								
-							'No'	: {'class': 'pink',
+							'No'	: {'class': 'morph',
 										'action': function(){
 											showInfo('Opeartion annulée',3000);
 								}//end action attribut
@@ -571,7 +571,7 @@ $(function() {
 					'title': 'CONFIRMATION DE LA SUPPRESSION','message': " <strong>VOUS VOULLEZ VRAIMMANT SUPPRIMER LES ELEMENTS SELECTIONNER</strong><br /><font color=red></font> ",
 					'buttons': 
 									{'Yes': 
-										{'class': 'green',
+										{'class': 'morph pink',
 										'action': function(){
 												var json_to_send = '{';
 															$.each(lines_to_delete, function(i,id_courant){
@@ -616,7 +616,7 @@ $(function() {
 											}//end action attribut
 										},//end YES attribut
 										
-									'No'	: {'class'	: 'pink',
+									'No'	: {'class'	: 'morph',
 												'action': function(){
 													showInfo('Opeartion annulée',3000);
 										}//end action attribut
