@@ -5938,3 +5938,197 @@
 2012-05-07T17:59:29+02:00 INFO (6): Fonction init() executée
 2012-05-07T18:00:11+02:00 INFO (6): Fonction init() executée
 2012-05-07T18:00:12+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:38+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:38+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:05:41+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:41+02:00 INFO (6): service modifyform()
+2012-05-07T18:05:41+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "21"
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(3) "450"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "13"
+  ["id_pack"] => string(2) "23"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:05:44+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:44+02:00 INFO (6): Request body : {"type_service":"Conseil &amp; Audi"}
+2012-05-07T18:05:47+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:47+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:05:47+02:00 INFO (6): Request body : {"pack" : "tm Business","prix" : "450.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "pas de referencema","date_debut" : "01.05.2012","date_fin" : "08.06.2012","commande" : "20","type_service" : "Conseil &amp; Audi","pack" : "tm Business","id" : "21"}
+2012-05-07T18:05:47+02:00 INFO (6): Decoded data from user : <pre>array(12) {
+  ["pack"] => string(11) "tm Business"
+  ["prix"] => string(6) "450.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(18) "pas de referencema"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["commande"] => string(2) "20"
+  ["type_service"] => string(18) "Conseil &amp; Audi"
+  ["id"] => string(2) "21"
+}
+</pre>
+2012-05-07T18:05:47+02:00 INFO (6): id pack trouvé = 23
+2012-05-07T18:05:47+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(6) "450.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => NULL
+  ["id_pack"] => string(2) "23"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:05:47+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `id_pack` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 21)
+2012-05-07T18:05:47+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:05:51+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:05:51+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:06:24+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:06:24+02:00 INFO (6): service modifyform()
+2012-05-07T18:06:24+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "21"
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(3) "450"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => NULL
+  ["id_pack"] => string(2) "23"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:06:25+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:06:25+02:00 INFO (6): service modifyform()
+2012-05-07T18:06:25+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "21"
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(3) "450"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => NULL
+  ["id_pack"] => string(2) "23"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:06:32+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:06:32+02:00 INFO (6): Request body : {"type_service":"Nom de Domaine"}
+2012-05-07T18:06:32+02:00 INFO (6): packs Assoc <pre>array(2) {
+  [10] => array(3) {
+    ["id_pack"] => string(2) "10"
+    ["libelle_pack"] => string(11) "Pack Silver"
+    ["id_type_service"] => string(2) "14"
+  }
+  [11] => array(3) {
+    ["id_pack"] => string(2) "11"
+    ["libelle_pack"] => string(9) "Pack Gold"
+    ["id_type_service"] => string(2) "14"
+  }
+}
+</pre>
+2012-05-07T18:06:32+02:00 INFO (6): {"10":{"id_pack":"10","libelle_pack":"Pack Silver","id_type_service":"14"},"11":{"id_pack":"11","libelle_pack":"Pack Gold","id_type_service":"14"}}
+2012-05-07T18:06:37+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:06:37+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:06:37+02:00 INFO (6): Request body : {"prix" : "450.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "pas de referencema","date_debut" : "01.05.2012","date_fin" : "08.06.2012","commande" : "20","type_service" : "Nom de Domaine","pack" : "Pack Gold","id" : "21"}
+2012-05-07T18:06:37+02:00 INFO (6): Decoded data from user : <pre>array(12) {
+  ["prix"] => string(6) "450.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(18) "pas de referencema"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["commande"] => string(2) "20"
+  ["type_service"] => string(14) "Nom de Domaine"
+  ["pack"] => string(9) "Pack Gold"
+  ["id"] => string(2) "21"
+}
+</pre>
+2012-05-07T18:06:37+02:00 INFO (6): id type_service trouvé = 14
+2012-05-07T18:06:37+02:00 INFO (6): id pack trouvé = 11
+2012-05-07T18:06:37+02:00 INFO (6): service to save <pre>array(9) {
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(6) "450.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "14"
+  ["id_pack"] => string(2) "11"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:06:37+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `id_pack` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 21)
+2012-05-07T18:06:37+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:06:41+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:06:41+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:07:09+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:07:09+02:00 INFO (6): get all services : SELECT * FROM service
+2012-05-07T18:07:12+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:07:12+02:00 INFO (6): service modifyform()
+2012-05-07T18:07:12+02:00 INFO (6): <pre>object(stdClass)#122 (10) {
+  ["id_service"] => string(2) "21"
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(3) "450"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "14"
+  ["id_pack"] => string(2) "11"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:07:14+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:07:14+02:00 INFO (6): Request body : {"type_service":"Conseil et Audi"}
+2012-05-07T18:07:14+02:00 INFO (6): packs Assoc <pre>array(0) {
+}
+</pre>
+2012-05-07T18:07:14+02:00 INFO (6): []
+2012-05-07T18:07:17+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:07:17+02:00 INFO (6): service modifyACtion()
+2012-05-07T18:07:17+02:00 INFO (6): Request body : {"pack" : "Pack Gold","prix" : "450.00","status" : "1","status_hidden" : "Actif","paye" : "1","paye_hidden" : "Oui","description" : "pas de referencema","date_debut" : "01.05.2012","date_fin" : "08.06.2012","commande" : "20","type_service" : "Conseil et Audi","pack" : "aucun","id" : "21"}
+2012-05-07T18:07:17+02:00 INFO (6): Decoded data from user : <pre>array(12) {
+  ["pack"] => string(5) "aucun"
+  ["prix"] => string(6) "450.00"
+  ["status"] => string(1) "1"
+  ["status_hidden"] => string(5) "Actif"
+  ["paye"] => string(1) "1"
+  ["paye_hidden"] => string(3) "Oui"
+  ["description"] => string(18) "pas de referencema"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["commande"] => string(2) "20"
+  ["type_service"] => string(15) "Conseil et Audi"
+  ["id"] => string(2) "21"
+}
+</pre>
+2012-05-07T18:07:17+02:00 INFO (6): pack = aucun
+2012-05-07T18:07:17+02:00 INFO (6): id type service trouvé = 17
+2012-05-07T18:07:17+02:00 INFO (6): service to save <pre>array(8) {
+  ["description"] => string(18) "pas de referencema"
+  ["prix"] => string(6) "450.00"
+  ["date_debut"] => string(10) "01.05.2012"
+  ["date_fin"] => string(10) "08.06.2012"
+  ["status"] => string(5) "Actif"
+  ["id_type_service"] => string(2) "17"
+  ["paye"] => string(3) "Oui"
+  ["id_commande"] => string(2) "20"
+}
+</pre>
+2012-05-07T18:07:17+02:00 INFO (6): update service : UPDATE `service` SET `description` = ?, `prix` = ?, `date_debut` = ?, `date_fin` = ?, `status` = ?, `id_type_service` = ?, `paye` = ?, `id_commande` = ? WHERE (id_service = 21)
+2012-05-07T18:07:17+02:00 INFO (6): insertion - service - OUI
+2012-05-07T18:07:18+02:00 INFO (6): Fonction init() executée
+2012-05-07T18:07:18+02:00 INFO (6): get all services : SELECT * FROM service
