@@ -21,7 +21,7 @@
 	$('#but_login').click(function(e){				
 		  if(document.formLogin.username.value == "" || document.formLogin.password.value == "")
 		  {
-			  showError("Please Input Username / Password");
+			  showError("Veuillez saisir le Compte d\'utilisateur / Password");
 			  $('.inner').jrumble({ x: 4,y: 0,rotation: 0 });	
 			  $('.inner').trigger('startRumble');
 			  setTimeout('$(".inner").trigger("stopRumble")',500);
