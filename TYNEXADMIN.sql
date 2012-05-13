@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Lun 07 Mai 2012 à 16:59
+-- Généré le : Jeu 10 Mai 2012 à 01:34
 -- Version du serveur: 5.5.16
 -- Version de PHP: 5.3.8
 
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `employe` (
 --
 
 INSERT INTO `employe` (`id_employe`, `nom`, `prenom`, `genre`, `username`, `password`, `tel`, `email`, `adresse`, `id_poste`, `role`) VALUES
-(1, 'alami', 'hassan', 'Homme', 'hassan', 'pass', '0632125242', 'hassan@gmail.com', 'Bloc A Agadir', 7, 'invite'),
+(1, 'alami', 'hassan', 'Homme', 'hassan', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', '0632125242', 'hassan@gmail.com', 'Bloc A Agadir', 7, 'invite'),
 (2, 'mendili', 'karima', 'Femme', 'karima', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', '0632201252', 'karima@gmail.com', 'Bloc A Agadir', 7, 'administrateur'),
 (3, 'sefrioui', 'abderahman', 'Homme', 'adbo', 'pass', '0635626894', 'adbo@gmail.com', 'Bloc C Agadir', 7, 'invite'),
 (4, 'ElGati', 'Saadia', 'Femme', 'saadia', 'saadia', '12 45 78 65 32', 'ssadia@yahoo.fr', 'Dahkal', 6, 'invite'),
@@ -161,17 +161,7 @@ INSERT INTO `intervention` (`id_employe`, `id_projet`) VALUES
 (2, 15),
 (3, 15),
 (3, 43),
-(1, 43),
-(3, 44),
-(1, 44),
-(1, 45),
-(2, 45),
-(1, 46),
-(2, 46),
-(3, 46),
-(3, 14),
-(5, 14),
-(1, 14);
+(1, 43);
 
 -- --------------------------------------------------------
 
@@ -318,19 +308,15 @@ CREATE TABLE IF NOT EXISTS `projet` (
   PRIMARY KEY (`id_projet`),
   KEY `id_type_projet` (`id_type_projet`),
   KEY `id_commande` (`id_commande`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=47 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
 -- Contenu de la table `projet`
 --
 
 INSERT INTO `projet` (`id_projet`, `description`, `prix`, `progression`, `status`, `date_debut`, `date_fin`, `id_type_projet`, `paye`, `id_commande`) VALUES
-(14, 'Festival Mawazin', 10100, 78, 'Actif', '2001-05-20', '2031-05-20', 2, 'Non', 1),
 (15, 'Hotel farah demander pas M.Skali Haut prioritÃ©', 12000, 35, 'Actif', '2002-05-20', '2021-05-20', 3, 'Oui', 1),
-(43, 'Fort recommendation sur le style(couleur, banniÃ©re...), contrainte de couleur : bleu', 5000, 30, 'Actif', '2001-05-20', '2031-05-20', 4, 'Oui', 18),
-(44, 'application mobile pour le partage de photo et de video PUB, au cour de l''evenement', 6000, 0, 'Actif', '2001-05-20', '2031-05-20', 2, 'Oui', 18),
-(45, 'ergonomique, couleur bleu', 5700, 45, 'Actif', '2001-05-20', '2031-05-20', 4, 'Non', 19),
-(46, 'chatroom  intranet en plein envenema', 7200, 18, 'Interrompu', '2001-05-20', '2031-05-20', 2, 'Non', 19);
+(43, 'Fort recommendation sur le style(couleur, banniÃ©re...), contrainte de couleur : bleu', 5000, 30, 'Actif', '2001-05-20', '2031-05-20', 4, 'Oui', 18);
 
 -- --------------------------------------------------------
 
@@ -360,12 +346,12 @@ CREATE TABLE IF NOT EXISTS `service` (
 --
 
 INSERT INTO `service` (`id_service`, `description`, `prix`, `date_debut`, `date_fin`, `status`, `id_type_service`, `id_pack`, `paye`, `id_commande`) VALUES
-(13, 'l''hebergement pack entreprise', 1200, '01.04.2012', '31.07.2012', 'Interrompu', 13, 9, 'Oui', 18),
+(13, 'l''hebergement pack entreprise', 1200, '01.04.2012', '24.06.2012', 'Interrompu', 13, 9, 'Oui', 18),
 (14, '', 700, '01.04.2012', '31.07.2012', 'Interrompu', 15, 14, 'Oui', 18),
-(16, 'www.opensource.com', 1000, '01.05.2012', '01.08.2012', 'Actif', 13, 14, 'Oui', 19),
-(17, 'prioritÃ© google', 1000, '01.05.2012', '01.08.2012', 'Actif', 15, 14, 'Oui', 19),
+(16, 'www.opensource.com', 1000, '01.05.2012', '09.05.2012', 'Actif', 13, 14, 'Oui', 19),
+(17, 'prioritÃ© google', 1000, '01.05.2012', '07.06.2012', 'Actif', 15, 14, 'Oui', 19),
 (18, 'www.rien.fr', 500, '29.05.2012', '18.05.2012', 'Interrompu', 13, 22, 'Oui', 18),
-(19, 'L''entreprise Kokosoft', 800, '16.05.2012', '15.05.2012', 'Actif', 13, 9, 'Oui', 19),
+(19, 'L''entreprise Kokosoft', 800, '01.05.2012', '15.05.2012', 'Actif', 13, 9, 'Oui', 19),
 (20, 'www.etudiant.com', 1, '01.05.2012', '02.05.2012', 'Interrompu', 13, 7, 'Oui', 18);
 
 -- --------------------------------------------------------
@@ -409,7 +395,7 @@ CREATE TABLE IF NOT EXISTS `type_service` (
 --
 
 INSERT INTO `type_service` (`id_type_service`, `libelle_type_service`) VALUES
-(17, 'Conseil & Audi'),
+(17, 'Conseil et Audi'),
 (13, 'Hebergement'),
 (14, 'Nom de Domaine'),
 (15, 'Referencement');
